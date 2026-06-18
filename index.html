@@ -651,22 +651,5 @@
             });
         });
     </script>
-
-    <!-- Lenis Smooth Scroll -->
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
-    <script>
-        const lenis = new Lenis({
-            lerp: 0.2, // Snappier and more natural than fixed duration
-            smoothWheel: true,
-            wheelMultiplier: 1.5, // Faster wheel movement
-        });
-
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-    </script>
 </body>
 </html>
