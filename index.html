@@ -59,12 +59,21 @@
             -webkit-text-fill-color: transparent;
             animation: shine 4s linear infinite;
         }
+
+        .metallic-silver {
+            background: linear-gradient(135deg, #d4d4d8 0%, #ffffff 25%, #a1a1aa 50%, #ffffff 75%, #d4d4d8 100%);
+            background-size: 200% auto;
+            animation: shine 6s linear infinite;
+            color: #0A0A0A !important;
+            border-color: rgba(255, 255, 255, 0.4) !important;
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5);
+        }
         
         /* Fade in animations */
         .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; will-change: opacity, visibility; }
         .fade-in-section.is-visible { opacity: 1; transform: none; }
         
-        .shadow-hard { box-shadow: 10px 10px 0px rgba(0,0,0,1); }
+        .shadow-hard { box-shadow: 10px 10px 0px rgba(200, 200, 200, 0.9); }
         .shadow-hard-white { box-shadow: 10px 10px 0px rgba(255,255,255,0.2); }
     </style>
 </head>
@@ -321,7 +330,7 @@
             
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 fade-in-section bg-neutral-800 border border-neutral-800">
                 <!-- Card 1 -->
-                <div class="bg-neutral-black p-8 hover:bg-neutral-900 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-b border-r border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
+                <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-b border-r border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgreen mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
                             <path d="M10 40 Q40 15 70 40 Q40 65 10 40" stroke="#00EB80" stroke-width="2" class="animate-pulse"></path>
@@ -333,7 +342,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-neutral-black p-8 hover:bg-neutral-900 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-b border-r border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
+                <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-b border-r border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgreen mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
                             <path d="M40 10 Q40 40 10 40 Q40 40 40 70 Q40 40 70 40 Q40 40 40 10 Z" fill="#00EB80" opacity="0.8" class="animate-pulse origin-center" style="animation-duration: 3s;"></path>
@@ -347,7 +356,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-neutral-black p-8 hover:bg-neutral-900 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-b border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
+                <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-b border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgreen mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 48 48" class="w-16 h-16 text-[#00EB80]">
                             <defs>
@@ -367,7 +376,7 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="bg-neutral-black p-8 hover:bg-neutral-900 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-b border-r border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
+                <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-b border-r border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgreen mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="-4 -4 32 32" fill="none" stroke="#00EB80" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 animate-pulse">
                             <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z" />
@@ -379,7 +388,7 @@
                 </div>
 
                 <!-- Card 5 -->
-                <div class="bg-neutral-black p-8 hover:bg-neutral-900 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-b border-r border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
+                <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-b border-r border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgreen mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
                             <path d="M40 10 L65 20 L65 45 Q65 65 40 75 Q15 65 15 45 L15 20 Z" stroke="#00EB80" stroke-width="2" class="animate-pulse"></path>
@@ -391,7 +400,7 @@
                 </div>
 
                 <!-- Card 6 -->
-                <div class="bg-neutral-black p-8 hover:bg-neutral-900 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-b border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
+                <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-b border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgreen mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
                             <ellipse cx="30" cy="45" rx="12" ry="20" stroke="#00EB80" stroke-width="2" fill="none" class="animate-pulse origin-center" style="animation-duration: 2.5s"></ellipse>
@@ -403,7 +412,7 @@
                 </div>
 
                 <!-- Card 7 -->
-                <div class="bg-neutral-black p-8 hover:bg-neutral-900 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-r border-neutral-800 md:border-b-0 border-b group flex flex-col items-start justify-center relative z-10 hover:z-20">
+                <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-r border-neutral-800 md:border-b-0 border-b group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgreen mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
                             <path d="M35 25 C 40 10, 10 15, 15 40 C 20 60, 35 55, 30 45 C 25 35, 25 30, 35 25 Z" stroke="#00EB80" stroke-width="2" fill="rgba(0,235,128,0.1)"></path>
@@ -418,7 +427,7 @@
                 </div>
 
                 <!-- Card 8 -->
-                <div class="bg-neutral-black p-8 hover:bg-neutral-900 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-r border-neutral-800 md:border-b-0 border-b group flex flex-col items-start justify-center relative z-10 hover:z-20">
+                <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 border-r border-neutral-800 md:border-b-0 border-b group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgreen mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
                             <path d="M30 5 L30 20 C 20 20, 20 30, 35 30 C 40 25, 40 25, 45 30 C 60 30, 60 20, 50 20 L50 5" stroke="#00EB80" stroke-width="2" fill="rgba(0,235,128,0.1)"></path>
@@ -431,7 +440,7 @@
                 </div>
 
                 <!-- Card 9 -->
-                <div class="bg-neutral-black p-8 hover:bg-neutral-900 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 group flex flex-col items-start justify-center relative z-10 hover:z-20">
+                <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgreen transition-all duration-500 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgreen mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
                             <path d="M25 60 Q25 40 15 20 M40 65 Q40 40 40 15 M55 60 Q55 40 65 20" stroke="#00EB80" stroke-width="2" stroke-linecap="round" class="animate-pulse"></path>
