@@ -56,6 +56,21 @@
         @keyframes gradient-move {
             to { background-position: 300% center; }
         }
+        .header-dark {
+            background-color: rgba(26, 28, 32, 0.75) !important;
+            border-color: rgba(255, 255, 255, 0.05) !important;
+        }
+        .header-dark a.text-neutral-black,
+        .header-dark button.text-neutral-black {
+            color: white !important;
+        }
+        .header-dark button.text-neutral-black:hover,
+        .header-dark a.text-neutral-black:hover {
+            color: #E3D82C !important;
+        }
+        .header-dark img.mix-blend-multiply {
+            mix-blend-mode: screen !important;
+        }
         .gradient-text-animated {
             background: linear-gradient(90deg, #E3D82C, #FFF466, #E3D82C, #F3E5AB, #E3D82C);
             background-size: 300% auto;
@@ -731,5 +746,33 @@
         </svg>
         <span class="absolute -top-12 -left-20 bg-neutral-900 text-white text-xs font-mono font-bold py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg">Задайте вопрос ИИ!</span>
     </a>
+    <script>
+        // Dynamic Header Blur based on Section Background
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (!header) return;
+            
+            const sections = document.querySelectorAll('section, footer');
+            let currentDark = false;
+            
+            sections.forEach(sec => {
+                const rect = sec.getBoundingClientRect();
+                // Check if the middle of the header (y=40) is within this section
+                if (rect.top <= 40 && rect.bottom >= 40) {
+                    if (sec.classList.contains('metallic-dark-gray') || sec.classList.contains('text-white') || sec.classList.contains('bg-neutral-900')) {
+                        currentDark = true;
+                    }
+                }
+            });
+            
+            if (currentDark) {
+                header.classList.add('header-dark');
+            } else {
+                header.classList.remove('header-dark');
+            }
+        });
+        // Initial check
+        setTimeout(() => window.dispatchEvent(new Event('scroll')), 100);
+    </script>
 </body>
 </html>
