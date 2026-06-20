@@ -68,7 +68,7 @@
         .header-dark a.text-neutral-black:hover {
             color: #FFD700 !important;
         }
-        .header-dark #logo-light {
+        .header-dark #logo-light, .header-dark #logo-blur-light {
             display: none !important;
         }
         .header-dark #logo-dark, .header-dark #logo-blur {
@@ -126,6 +126,7 @@
             
             <!-- Center: Logo -->
             <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-5 md:h-7 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
+                <div id="logo-blur-light" class="absolute inset-[-20px] bg-white/90 blur-md rounded-full -z-10 pointer-events-none"></div>
                 <div id="logo-blur" class="hidden absolute inset-[-20px] bg-[#1A1C20] blur-md rounded-full -z-10 pointer-events-none"></div>
                 <img id="logo-light" src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain mix-blend-multiply invert contrast-125 grayscale relative z-10">
                 <img id="logo-dark" src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain hidden mix-blend-screen relative z-10">
@@ -715,8 +716,8 @@
     <!-- Footer Legal Block -->
     <footer class="bg-[#1A1C20] border-t border-neutral-800">
         <div class="container mx-auto px-6 py-8 max-w-7xl flex flex-col lg:flex-row justify-between items-center text-xs text-neutral-400 font-mono gap-6">
-            <div class="flex flex-col gap-2 text-center lg:text-left">
-                <img src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-6 md:h-8 w-auto object-contain mix-blend-screen mb-4 mx-auto lg:mx-0">
+            <div class="flex flex-col gap-2 text-center lg:text-left items-center lg:items-start">
+                <img src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-6 md:h-8 w-auto object-contain object-left mix-blend-screen mb-4 mx-auto lg:mx-0 translate-x-2 lg:translate-x-3">
                 <p class="font-bold text-white">ООО «ЛОНВИ БИОСАЙЕНСИЗ».</p>
                 <p>ОГРН: 1267700015880 | ИНН: 9714086810</p>
                 <p>Адрес: 125252, г. Москва, б-р Ходынский, д. 2, помещ. 110Д</p>
