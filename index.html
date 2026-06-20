@@ -17,8 +17,8 @@
             theme: {
                 extend: {
                     colors: {
-                        brandgold: '#E3D82C', // Yellow
-                        brandgoldHover: '#FFF466', // Pantone 100 C Light Yellow
+                        brandgold: '#FFD700', // Yellow
+                        brandgoldHover: '#FFE866', // Pantone 100 C Light Yellow
                         secondary: '#1A1A1A',
                         neutral: {
                             white: '#FFFFFF',
@@ -66,7 +66,7 @@
         }
         .header-dark button.text-neutral-black:hover,
         .header-dark a.text-neutral-black:hover {
-            color: #E3D82C !important;
+            color: #FFD700 !important;
         }
         .header-dark #logo-light {
             display: none !important;
@@ -75,7 +75,7 @@
             display: block !important;
         }
         .gradient-text-animated {
-            background: linear-gradient(90deg, #E3D82C, #FFF466, #E3D82C, #F3E5AB, #E3D82C);
+            background: linear-gradient(90deg, #FFD700, #FFE866, #FFD700, #F3E5AB, #FFD700);
             background-size: 300% auto;
             -webkit-background-clip: text;
             background-clip: text;
@@ -126,7 +126,7 @@
             
             <!-- Center: Logo -->
             <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-5 md:h-7 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
-                <div id="logo-blur" class="hidden absolute inset-[-20px] bg-black/70 blur-md rounded-full -z-10 pointer-events-none"></div>
+                <div id="logo-blur" class="hidden absolute inset-[-20px] bg-[#1A1C20] blur-md rounded-full -z-10 pointer-events-none"></div>
                 <img id="logo-light" src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain mix-blend-multiply invert contrast-125 grayscale relative z-10">
                 <img id="logo-dark" src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain hidden mix-blend-screen relative z-10">
             </div>
@@ -241,7 +241,7 @@
             <div class="relative w-full aspect-video bg-neutral-900 border-2 border-neutral-700 shadow-hard-white flex items-center justify-center group cursor-pointer fade-in-section hover:border-brandgold transition-colors">
                 <!-- Play Button -->
                 <div class="absolute inset-0 flex items-center justify-center z-20">
-                    <div class="w-20 h-20 bg-[#E3D82C] rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-[#FFF466] transition-all shadow-xl border-4 border-white/20">
+                    <div class="w-20 h-20 bg-[#FFD700] rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-[#FFE866] transition-all shadow-xl border-4 border-white/20">
                         <svg class="w-8 h-8 text-white ml-2 group-hover:text-neutral-900 transition-colors" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
                     </div>
                 </div>
@@ -265,13 +265,13 @@
                     <div class="absolute -top-4 left-8 bg-brandgold text-white px-4 py-1 text-sm font-bold tracking-wider">01</div>
                     <div class="w-24 h-24 mx-auto mb-6 mt-2 relative group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-full h-full">
-                            <circle cx="20" cy="25" r="8" fill="#E3D82C" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 0s"></circle>
-                            <circle cx="45" cy="20" r="6" fill="#E3D82C" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 1s"></circle>
-                            <circle cx="60" cy="35" r="7" fill="#E3D82C" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 2s"></circle>
-                            <circle cx="25" cy="55" r="7" fill="#E3D82C" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 1.5s"></circle>
+                            <circle cx="20" cy="25" r="8" fill="#FFD700" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 0s"></circle>
+                            <circle cx="45" cy="20" r="6" fill="#FFD700" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 1s"></circle>
+                            <circle cx="60" cy="35" r="7" fill="#FFD700" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 2s"></circle>
+                            <circle cx="25" cy="55" r="7" fill="#FFD700" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 1.5s"></circle>
                             <circle cx="40" cy="45" r="9" fill="#1a1a1a" stroke="#C45C26" stroke-width="2" stroke-dasharray="3 2" class="origin-[40px_45px] animate-[spin_8s_linear_infinite]"></circle>
                             <circle cx="55" cy="60" r="7" fill="#1a1a1a" stroke="#C45C26" stroke-width="2" stroke-dasharray="3 2" class="origin-[55px_60px] animate-[spin_8s_linear_infinite_reverse]"></circle>
-                            <path d="M5 40 Q40 35 75 40" stroke="#E3D82C" stroke-width="1.5" stroke-dasharray="4px 4px" fill="none" class="animate-pulse" style="animation-duration: 4s;"></path>
+                            <path d="M5 40 Q40 35 75 40" stroke="#FFD700" stroke-width="1.5" stroke-dasharray="4px 4px" fill="none" class="animate-pulse" style="animation-duration: 4s;"></path>
                             <circle cx="40" cy="45" r="14" stroke="#C45C26" stroke-width="1" fill="none" opacity="0.6" class="animate-pulse" style="animation-duration: 4s;"></circle>
                             <circle cx="55" cy="60" r="12" stroke="#C45C26" stroke-width="1" fill="none" opacity="0.6" class="animate-pulse" style="animation-duration: 4s; animation-delay: 2s;"></circle>
                         </svg>
@@ -284,10 +284,10 @@
                     <div class="absolute -top-4 left-8 bg-brandgold text-white px-4 py-1 text-sm font-bold tracking-wider">02</div>
                     <div class="w-24 h-24 mx-auto mb-6 mt-2 relative group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-full h-full">
-                            <circle cx="20" cy="25" r="8" fill="#E3D82C" opacity="0.8" class="animate-pulse" style="animation-duration: 4s;"></circle>
-                            <circle cx="45" cy="20" r="6" fill="#E3D82C" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 1s;"></circle>
-                            <circle cx="60" cy="35" r="7" fill="#E3D82C" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 2s;"></circle>
-                            <circle cx="25" cy="55" r="7" fill="#E3D82C" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 3s;"></circle>
+                            <circle cx="20" cy="25" r="8" fill="#FFD700" opacity="0.8" class="animate-pulse" style="animation-duration: 4s;"></circle>
+                            <circle cx="45" cy="20" r="6" fill="#FFD700" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 1s;"></circle>
+                            <circle cx="60" cy="35" r="7" fill="#FFD700" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 2s;"></circle>
+                            <circle cx="25" cy="55" r="7" fill="#FFD700" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 3s;"></circle>
                             <g class="animate-pulse" style="animation-duration: 4s;">
                                 <circle cx="40" cy="45" r="9" fill="#1a1a1a" opacity="0.4"></circle>
                                 <path d="M35 40 L45 50 M45 40 L35 50" stroke="#C45C26" stroke-width="2"></path>
@@ -296,7 +296,7 @@
                                 <circle cx="55" cy="60" r="7" fill="#1a1a1a" opacity="0.4"></circle>
                                 <path d="M51 56 L59 64 M59 56 L51 64" stroke="#C45C26" stroke-width="2"></path>
                             </g>
-                            <path d="M40 55 L40 70 M35 65 L40 70 L45 65" stroke="#E3D82C" stroke-width="2" class="animate-pulse" style="animation-duration: 3s;"></path>
+                            <path d="M40 55 L40 70 M35 65 L40 70 L45 65" stroke="#FFD700" stroke-width="2" class="animate-pulse" style="animation-duration: 3s;"></path>
                         </svg>
                     </div>
                     <h3 class="text-xl font-wild font-bold text-center mb-4 text-neutral-black group-hover:text-brandgold transition-colors uppercase">Очищение</h3>
@@ -307,14 +307,14 @@
                     <div class="absolute -top-4 left-8 bg-brandgold text-white px-4 py-1 text-sm font-bold tracking-wider">03</div>
                     <div class="w-24 h-24 mx-auto mb-6 mt-2 relative group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-full h-full">
-                            <circle cx="20" cy="25" r="8" fill="#E3D82C" class="animate-pulse" style="animation-duration: 4s;"></circle>
-                            <circle cx="45" cy="20" r="6" fill="#E3D82C" class="animate-pulse" style="animation-duration: 4s; animation-delay: 1s;"></circle>
-                            <circle cx="60" cy="35" r="7" fill="#E3D82C" class="animate-pulse" style="animation-duration: 4s; animation-delay: 2s;"></circle>
-                            <circle cx="25" cy="55" r="7" fill="#E3D82C" class="animate-pulse" style="animation-duration: 4s; animation-delay: 3s;"></circle>
-                            <circle cx="50" cy="55" r="6" fill="#E3D82C" class="animate-pulse" style="animation-duration: 4s; animation-delay: 4s;"></circle>
-                            <circle cx="40" cy="40" r="9" fill="#E3D82C" class="animate-pulse" style="animation-duration: 4s; animation-delay: 5s;"></circle>
-                            <circle cx="40" cy="40" r="25" fill="none" stroke="#E3D82C" stroke-width="1" class="animate-pulse origin-center" style="animation-duration: 6s; opacity: 0.3;"></circle>
-                            <circle cx="40" cy="40" r="32" fill="none" stroke="#E3D82C" stroke-width="0.5" class="animate-pulse origin-center" style="animation-duration: 6s; animation-delay: 3s; opacity: 0.2;"></circle>
+                            <circle cx="20" cy="25" r="8" fill="#FFD700" class="animate-pulse" style="animation-duration: 4s;"></circle>
+                            <circle cx="45" cy="20" r="6" fill="#FFD700" class="animate-pulse" style="animation-duration: 4s; animation-delay: 1s;"></circle>
+                            <circle cx="60" cy="35" r="7" fill="#FFD700" class="animate-pulse" style="animation-duration: 4s; animation-delay: 2s;"></circle>
+                            <circle cx="25" cy="55" r="7" fill="#FFD700" class="animate-pulse" style="animation-duration: 4s; animation-delay: 3s;"></circle>
+                            <circle cx="50" cy="55" r="6" fill="#FFD700" class="animate-pulse" style="animation-duration: 4s; animation-delay: 4s;"></circle>
+                            <circle cx="40" cy="40" r="9" fill="#FFD700" class="animate-pulse" style="animation-duration: 4s; animation-delay: 5s;"></circle>
+                            <circle cx="40" cy="40" r="25" fill="none" stroke="#FFD700" stroke-width="1" class="animate-pulse origin-center" style="animation-duration: 6s; opacity: 0.3;"></circle>
+                            <circle cx="40" cy="40" r="32" fill="none" stroke="#FFD700" stroke-width="0.5" class="animate-pulse origin-center" style="animation-duration: 6s; animation-delay: 3s; opacity: 0.2;"></circle>
                         </svg>
                     </div>
                     <h3 class="text-xl font-wild font-bold text-center mb-4 text-neutral-black group-hover:text-brandgold transition-colors uppercase">Омоложение</h3>
@@ -364,9 +364,9 @@
                 <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgold transition-all duration-500 border-b border-r border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgold mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
-                            <path d="M10 40 Q40 15 70 40 Q40 65 10 40" stroke="#E3D82C" stroke-width="2" class="animate-pulse"></path>
-                            <circle cx="40" cy="40" r="10" fill="#E3D82C" class="animate-ping origin-center" style="animation-duration: 3s;"></circle>
-                            <circle cx="40" cy="40" r="5" fill="#E3D82C"></circle>
+                            <path d="M10 40 Q40 15 70 40 Q40 65 10 40" stroke="#FFD700" stroke-width="2" class="animate-pulse"></path>
+                            <circle cx="40" cy="40" r="10" fill="#FFD700" class="animate-ping origin-center" style="animation-duration: 3s;"></circle>
+                            <circle cx="40" cy="40" r="5" fill="#FFD700"></circle>
                         </svg>
                     </div>
                     <h3 class="font-wild text-lg font-medium uppercase tracking-widest group-hover:text-brandgold transition-colors">Омоложение сетчатки</h3>
@@ -376,11 +376,11 @@
                 <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgold transition-all duration-500 border-b border-r border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgold mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
-                            <path d="M40 10 Q40 40 10 40 Q40 40 40 70 Q40 40 70 40 Q40 40 40 10 Z" fill="#E3D82C" opacity="0.8" class="animate-pulse origin-center" style="animation-duration: 3s;"></path>
-                            <circle cx="40" cy="40" r="8" fill="#E3D82C" class="animate-pulse origin-center" style="animation-duration: 3s; opacity: 0.5"></circle>
-                            <circle cx="20" cy="20" r="3" fill="#E3D82C" class="animate-pulse" style="animation-duration: 2s;"></circle>
-                            <circle cx="60" cy="60" r="2" fill="#E3D82C" class="animate-pulse" style="animation-duration: 2.5s;"></circle>
-                            <circle cx="65" cy="25" r="3" fill="#E3D82C" class="animate-pulse" style="animation-duration: 3.5s;"></circle>
+                            <path d="M40 10 Q40 40 10 40 Q40 40 40 70 Q40 40 70 40 Q40 40 40 10 Z" fill="#FFD700" opacity="0.8" class="animate-pulse origin-center" style="animation-duration: 3s;"></path>
+                            <circle cx="40" cy="40" r="8" fill="#FFD700" class="animate-pulse origin-center" style="animation-duration: 3s; opacity: 0.5"></circle>
+                            <circle cx="20" cy="20" r="3" fill="#FFD700" class="animate-pulse" style="animation-duration: 2s;"></circle>
+                            <circle cx="60" cy="60" r="2" fill="#FFD700" class="animate-pulse" style="animation-duration: 2.5s;"></circle>
+                            <circle cx="65" cy="25" r="3" fill="#FFD700" class="animate-pulse" style="animation-duration: 3.5s;"></circle>
                         </svg>
                     </div>
                     <h3 class="font-wild text-lg font-medium uppercase tracking-widest group-hover:text-brandgold transition-colors">Эстетика молодости</h3>
@@ -389,7 +389,7 @@
                 <!-- Card 3 -->
                 <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgold transition-all duration-500 border-b border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgold mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <svg viewBox="0 0 48 48" class="w-16 h-16 text-[#E3D82C]">
+                        <svg viewBox="0 0 48 48" class="w-16 h-16 text-[#FFD700]">
                             <defs>
                                 <filter id="thin-gut">
                                     <feMorphology operator="erode" radius="0.4"></feMorphology>
@@ -409,10 +409,10 @@
                 <!-- Card 4 -->
                 <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgold transition-all duration-500 border-b border-r border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgold mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <svg viewBox="-4 -4 32 32" fill="none" stroke="#E3D82C" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 animate-pulse">
+                        <svg viewBox="-4 -4 32 32" fill="none" stroke="#FFD700" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 animate-pulse">
                             <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z" />
                             <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z" />
-                            <circle cx="12" cy="12" r="1" fill="#E3D82C" class="animate-ping origin-center" style="animation-duration: 2s; stroke: none;"></circle>
+                            <circle cx="12" cy="12" r="1" fill="#FFD700" class="animate-ping origin-center" style="animation-duration: 2s; stroke: none;"></circle>
                         </svg>
                     </div>
                     <h3 class="font-wild text-lg font-medium uppercase tracking-widest group-hover:text-brandgold transition-colors">Нейрозащита</h3>
@@ -422,9 +422,9 @@
                 <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgold transition-all duration-500 border-b border-r border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgold mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
-                            <path d="M40 10 L65 20 L65 45 Q65 65 40 75 Q15 65 15 45 L15 20 Z" stroke="#E3D82C" stroke-width="2" class="animate-pulse"></path>
-                            <circle cx="40" cy="45" r="10" fill="#E3D82C" opacity="0.8"></circle>
-                            <circle cx="40" cy="45" r="18" stroke="#E3D82C" stroke-width="1.5" stroke-dasharray="3 3" class="origin-[40px_45px] animate-[spin_5s_linear_infinite]"></circle>
+                            <path d="M40 10 L65 20 L65 45 Q65 65 40 75 Q15 65 15 45 L15 20 Z" stroke="#FFD700" stroke-width="2" class="animate-pulse"></path>
+                            <circle cx="40" cy="45" r="10" fill="#FFD700" opacity="0.8"></circle>
+                            <circle cx="40" cy="45" r="18" stroke="#FFD700" stroke-width="1.5" stroke-dasharray="3 3" class="origin-[40px_45px] animate-[spin_5s_linear_infinite]"></circle>
                         </svg>
                     </div>
                     <h3 class="font-wild text-lg font-medium uppercase tracking-widest group-hover:text-brandgold transition-colors">Перезагрузка иммунитета</h3>
@@ -434,9 +434,9 @@
                 <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgold transition-all duration-500 border-b border-neutral-800 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgold mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
-                            <ellipse cx="30" cy="45" rx="12" ry="20" stroke="#E3D82C" stroke-width="2" fill="none" class="animate-pulse origin-center" style="animation-duration: 2.5s"></ellipse>
-                            <ellipse cx="50" cy="45" rx="12" ry="20" stroke="#E3D82C" stroke-width="2" fill="none" class="animate-pulse origin-center" style="animation-duration: 2.5s; animation-delay: 0.2s"></ellipse>
-                            <path d="M40 15 L40 35 M30 45 Q40 55 50 45" stroke="#E3D82C" stroke-width="2"></path>
+                            <ellipse cx="30" cy="45" rx="12" ry="20" stroke="#FFD700" stroke-width="2" fill="none" class="animate-pulse origin-center" style="animation-duration: 2.5s"></ellipse>
+                            <ellipse cx="50" cy="45" rx="12" ry="20" stroke="#FFD700" stroke-width="2" fill="none" class="animate-pulse origin-center" style="animation-duration: 2.5s; animation-delay: 0.2s"></ellipse>
+                            <path d="M40 15 L40 35 M30 45 Q40 55 50 45" stroke="#FFD700" stroke-width="2"></path>
                         </svg>
                     </div>
                     <h3 class="font-wild text-lg font-medium uppercase tracking-widest group-hover:text-brandgold transition-colors">Восстановление функции лёгких</h3>
@@ -446,12 +446,12 @@
                 <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgold transition-all duration-500 border-r border-neutral-800 md:border-b-0 border-b group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgold mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
-                            <path d="M35 25 C 40 10, 10 15, 15 40 C 20 60, 35 55, 30 45 C 25 35, 25 30, 35 25 Z" stroke="#E3D82C" stroke-width="2" fill="rgba(45,163,173,0.1)"></path>
-                            <path d="M45 25 C 40 10, 70 15, 65 40 C 60 60, 45 55, 50 45 C 55 35, 55 30, 45 25 Z" stroke="#E3D82C" stroke-width="2" fill="rgba(45,163,173,0.1)"></path>
+                            <path d="M35 25 C 40 10, 10 15, 15 40 C 20 60, 35 55, 30 45 C 25 35, 25 30, 35 25 Z" stroke="#FFD700" stroke-width="2" fill="rgba(45,163,173,0.1)"></path>
+                            <path d="M45 25 C 40 10, 70 15, 65 40 C 60 60, 45 55, 50 45 C 55 35, 55 30, 45 25 Z" stroke="#FFD700" stroke-width="2" fill="rgba(45,163,173,0.1)"></path>
                             <g class="animate-[ping_3s_linear_infinite] origin-center opacity-80" style="transform-origin: 40px 40px;">
-                                <path d="M36 30 L44 30 L44 36 L50 36 L50 44 L44 44 L44 50 L36 50 L36 44 L30 44 L30 36 L36 36 Z" fill="#E3D82C"></path>
+                                <path d="M36 30 L44 30 L44 36 L50 36 L50 44 L44 44 L44 50 L36 50 L36 44 L30 44 L30 36 L36 36 Z" fill="#FFD700"></path>
                             </g>
-                            <path d="M23 20 h4 v-4 h2 v4 h4 v2 h-4 v4 h-2 v-4 h-4 z" fill="#E3D82C" opacity="0.5" class="animate-pulse" style="animation-duration: 2s"></path>
+                            <path d="M23 20 h4 v-4 h2 v4 h4 v2 h-4 v4 h-2 v-4 h-4 z" fill="#FFD700" opacity="0.5" class="animate-pulse" style="animation-duration: 2s"></path>
                         </svg>
                     </div>
                     <h3 class="font-wild text-lg font-medium uppercase tracking-widest group-hover:text-brandgold transition-colors">Регенерация почек</h3>
@@ -461,8 +461,8 @@
                 <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgold transition-all duration-500 border-r border-neutral-800 md:border-b-0 border-b group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgold mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
-                            <path d="M30 5 L30 20 C 20 20, 20 30, 35 30 C 40 25, 40 25, 45 30 C 60 30, 60 20, 50 20 L50 5" stroke="#E3D82C" stroke-width="2" fill="rgba(45,163,173,0.1)"></path>
-                            <path d="M30 75 L30 60 C 20 60, 20 50, 35 50 C 40 55, 40 55, 45 50 C 60 50, 60 60, 50 60 L50 75" stroke="#E3D82C" stroke-width="2" fill="rgba(45,163,173,0.1)"></path>
+                            <path d="M30 5 L30 20 C 20 20, 20 30, 35 30 C 40 25, 40 25, 45 30 C 60 30, 60 20, 50 20 L50 5" stroke="#FFD700" stroke-width="2" fill="rgba(45,163,173,0.1)"></path>
+                            <path d="M30 75 L30 60 C 20 60, 20 50, 35 50 C 40 55, 40 55, 45 50 C 60 50, 60 60, 50 60 L50 75" stroke="#FFD700" stroke-width="2" fill="rgba(45,163,173,0.1)"></path>
                             <circle cx="40" cy="40" r="8" fill="#C45C26" opacity="0.6" class="animate-pulse origin-center"></circle>
                             <circle cx="40" cy="40" r="12" stroke="#C45C26" stroke-width="1.5" stroke-dasharray="3 3" class="origin-center animate-[spin_4s_linear_infinite]"></circle>
                         </svg>
@@ -474,10 +474,10 @@
                 <div class="metallic-silver p-8 hover:-translate-y-2 hover:shadow-2xl hover:border-brandgold transition-all duration-500 group flex flex-col items-start justify-center relative z-10 hover:z-20">
                     <div class="text-brandgold mb-6 group-hover:scale-110 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-16 h-16">
-                            <path d="M25 60 Q25 40 15 20 M40 65 Q40 40 40 15 M55 60 Q55 40 65 20" stroke="#E3D82C" stroke-width="2" stroke-linecap="round" class="animate-pulse"></path>
-                            <circle cx="25" cy="65" r="5" fill="#E3D82C" opacity="0.8"></circle>
-                            <circle cx="40" cy="70" r="6" fill="#E3D82C" opacity="0.8"></circle>
-                            <circle cx="55" cy="65" r="5" fill="#E3D82C" opacity="0.8"></circle>
+                            <path d="M25 60 Q25 40 15 20 M40 65 Q40 40 40 15 M55 60 Q55 40 65 20" stroke="#FFD700" stroke-width="2" stroke-linecap="round" class="animate-pulse"></path>
+                            <circle cx="25" cy="65" r="5" fill="#FFD700" opacity="0.8"></circle>
+                            <circle cx="40" cy="70" r="6" fill="#FFD700" opacity="0.8"></circle>
+                            <circle cx="55" cy="65" r="5" fill="#FFD700" opacity="0.8"></circle>
                         </svg>
                     </div>
                     <h3 class="font-wild text-lg font-medium uppercase tracking-widest group-hover:text-brandgold transition-colors">Стимуляция волосяных фолликул</h3>
@@ -490,8 +490,8 @@
     <section class="py-16 md:py-24 bg-neutral-100 text-neutral-900 border-t border-neutral-200">
         <div class="container mx-auto px-6 max-w-5xl fade-in-section">
             <div class="text-center mb-16 px-2">
-                <span class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-4 text-[#E3D82C] block break-words">[ ЧТО ГОВОРЯТ КЛИЕНТЫ ]</span>
-                <h2 class="text-3xl md:text-5xl font-wild font-bold tracking-tighter uppercase break-words mb-4">РЕАЛЬНЫЕ РЕЗУЛЬТАТЫ.<br><span class="font-light text-[#E3D82C]">РЕАЛЬНЫЕ ЛЮДИ.</span></h2>
+                <span class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-4 text-[#FFD700] block break-words">[ ЧТО ГОВОРЯТ КЛИЕНТЫ ]</span>
+                <h2 class="text-3xl md:text-5xl font-wild font-bold tracking-tighter uppercase break-words mb-4">РЕАЛЬНЫЕ РЕЗУЛЬТАТЫ.<br><span class="font-light text-[#FFD700]">РЕАЛЬНЫЕ ЛЮДИ.</span></h2>
                 <p class="font-mono text-sm text-neutral-500 max-w-2xl mx-auto">Сводные отзывы приведены для иллюстрации.<br>Индивидуальные результаты могут отличаться.</p>
             </div>
             
@@ -505,7 +505,7 @@
                         <div class="w-12 h-12 rounded-full bg-neutral-900 group-hover:bg-white flex items-center justify-center text-white group-hover:text-neutral-900 font-wild font-bold text-lg transition-colors">MC</div>
                         <div>
                             <p class="font-bold text-neutral-900 group-hover:text-white uppercase tracking-widest text-sm transition-colors">Dr. Michael Chen</p>
-                            <p class="font-mono text-xs text-[#E3D82C] uppercase tracking-widest">Врач, 52 года</p>
+                            <p class="font-mono text-xs text-[#FFD700] uppercase tracking-widest">Врач, 52 года</p>
                         </div>
                     </div>
                 </div>
@@ -519,7 +519,7 @@
                         <div class="w-12 h-12 rounded-full bg-neutral-900 group-hover:bg-white flex items-center justify-center text-white group-hover:text-neutral-900 font-wild font-bold text-lg transition-colors">JW</div>
                         <div>
                             <p class="font-bold text-neutral-900 group-hover:text-white uppercase tracking-widest text-sm transition-colors">James Walker</p>
-                            <p class="font-mono text-xs text-[#E3D82C] uppercase tracking-widest">Программист, 58 лет</p>
+                            <p class="font-mono text-xs text-[#FFD700] uppercase tracking-widest">Программист, 58 лет</p>
                         </div>
                     </div>
                 </div>
@@ -533,7 +533,7 @@
                         <div class="w-12 h-12 rounded-full bg-neutral-900 group-hover:bg-white flex items-center justify-center text-white group-hover:text-neutral-900 font-wild font-bold text-lg transition-colors">SM</div>
                         <div>
                             <p class="font-bold text-neutral-900 group-hover:text-white uppercase tracking-widest text-sm transition-colors">Sarah Mitchell</p>
-                            <p class="font-mono text-xs text-[#E3D82C] uppercase tracking-widest">Биолог, 44 года</p>
+                            <p class="font-mono text-xs text-[#FFD700] uppercase tracking-widest">Биолог, 44 года</p>
                         </div>
                     </div>
                 </div>
