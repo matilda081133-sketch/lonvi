@@ -151,8 +151,7 @@
     </header>
 
     <!-- Hero Section (Copied from reference structure) -->
-    <div class="metallic-dark-gray text-white">
-    <section class="relative min-h-screen pt-20 flex flex-col justify-center overflow-hidden text-white">
+    <section class="relative min-h-screen pt-20 flex flex-col justify-center overflow-hidden text-white metallic-dark-gray">
         <div class="absolute top-1/4 -right-20 w-[200px] md:w-[450px] lg:w-[600px] h-[200px] md:h-[450px] lg:h-[600px] bg-brandgold/20 rounded-full blur-[80px] md:blur-[100px]"></div>
 
         
@@ -195,8 +194,10 @@
     </section>
 
     <!-- 3 Overlapping Cards Section (Exactly like reference) -->
-    <section class="py-16 md:py-24 overflow-hidden text-white">
-        <div class="container mx-auto px-6">
+    <section class="relative py-16 md:py-24 overflow-hidden text-white bg-cover bg-center bg-fixed" style="background-image: url('https://matilda081133-sketch.github.io/lonvi/assets/bg-cells.jpg')">
+        <div class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-[#1A1C20] to-transparent z-0 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
+        <div class="container mx-auto px-6 relative z-10">
             <div class="grid md:grid-cols-3 gap-6 md:gap-8 relative max-w-6xl mx-auto">
                 <!-- Card 1 -->
                 <div class="relative p-6 md:p-12 min-h-[350px] md:min-h-[500px] flex flex-col justify-between text-white bg-black/40 backdrop-blur-md border border-white/10 fade-in-section overflow-hidden cursor-pointer group hover:-translate-y-4 hover:bg-black/60 hover:border-brandgold hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500">
@@ -230,7 +231,6 @@
             </div>
         </div>
     </section>
-    </div>
 
     <!-- Video Section -->
     <section class="relative py-16 md:py-24 text-white bg-cover bg-center bg-fixed" style="background-image: url('https://matilda081133-sketch.github.io/lonvi/assets/bg-cells.jpg')">
