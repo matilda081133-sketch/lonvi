@@ -255,14 +255,27 @@
                 </div>
                 
                 <!-- Certificates -->
-                <div class="mt-12 md:mt-16 p-4 md:p-5 rounded-2xl bg-white/90 backdrop-blur-md flex items-center flex-wrap gap-6 md:gap-8 shadow-xl inline-flex group/certs">
-                    <img src="./assets/cert-fda.jpg" alt="FDA" class="h-8 md:h-10 mix-blend-multiply opacity-90 hover:scale-110 hover:opacity-100 transition-all duration-300 cursor-pointer">
-                    <div class="overflow-hidden h-8 w-8 md:h-10 md:w-10 relative mix-blend-multiply opacity-90 hover:scale-110 hover:opacity-100 transition-all duration-300 cursor-pointer">
-                        <img src="./assets/cert-gmp.jpg" alt="GMP" class="absolute top-0 left-0 h-full w-auto max-w-none">
+                <div class="mt-12 md:mt-16 pt-8 border-t border-white/10 flex items-center flex-wrap gap-4 md:gap-6 z-20 relative">
+                    <!-- FDA: Circle -->
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
+                        <img src="./assets/cert-fda.jpg" alt="FDA" class="h-[120%] max-w-none mix-blend-multiply">
                     </div>
-                    <img src="./assets/cert-halal.jpg" alt="HALAL" class="h-8 md:h-10 mix-blend-multiply opacity-90 hover:scale-110 hover:opacity-100 transition-all duration-300 cursor-pointer">
-                    <img src="./assets/cert-vegan.jpg" alt="VEGAN" class="h-8 md:h-10 mix-blend-multiply opacity-90 hover:scale-110 hover:opacity-100 transition-all duration-300 cursor-pointer">
-                    <img src="./assets/cert-chestny.jpg" alt="Честный Знак" class="h-8 md:h-10 mix-blend-multiply opacity-90 hover:scale-110 hover:opacity-100 transition-all duration-300 cursor-pointer">
+                    <!-- GMP: Circle (Crop to the green one on the right) -->
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg relative">
+                        <img src="./assets/cert-gmp.jpg" alt="GMP" class="h-full w-[220%] max-w-none mix-blend-multiply absolute right-0 object-cover object-right">
+                    </div>
+                    <!-- HALAL: Circle -->
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
+                        <img src="./assets/cert-halal.jpg" alt="HALAL" class="h-[110%] max-w-none mix-blend-multiply">
+                    </div>
+                    <!-- VEGAN: Circle -->
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
+                        <img src="./assets/cert-vegan.jpg" alt="VEGAN" class="h-[110%] max-w-none mix-blend-multiply">
+                    </div>
+                    <!-- Честный Знак: Rectangle -->
+                    <div class="h-10 md:h-12 w-auto bg-[#FFD700] rounded overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg border border-white/10">
+                        <img src="./assets/cert-chestny.jpg" alt="Честный Знак" class="h-[110%] mix-blend-multiply">
+                    </div>
                 </div>
             </div>
             
