@@ -113,13 +113,13 @@
             <!-- Left: Account & Icons -->
             <div class="flex items-center gap-4">
                 <a href="#" class="hidden lg:block text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors mr-2">Мой аккаунт</a>
-                <button class="text-neutral-black hover:text-brandgold transition-colors p-1" aria-label="Поиск">
+                <button id="search-btn" class="text-neutral-black hover:text-brandgold transition-colors p-1" aria-label="Поиск">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
                 </button>
-                <button class="text-neutral-black hover:text-brandgold transition-colors p-1" aria-label="Избранное">
+                <button id="fav-btn" class="text-neutral-black hover:text-brandgold transition-colors p-1" aria-label="Избранное">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                 </button>
-                <button class="text-neutral-black hover:text-brandgold transition-colors relative p-1" aria-label="Корзина">
+                <button id="cart-btn" class="text-neutral-black hover:text-brandgold transition-colors relative p-1" aria-label="Корзина">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 22A2 2 0 109 18a2 2 0 000 4zM20 22A2 2 0 1020 18a2 2 0 000 4z"></path><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
                     <span class="absolute -top-1 -right-1 bg-brandgold text-neutral-900 font-bold text-[9px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-mono">0</span>
                 </button>
@@ -164,6 +164,65 @@
             <li><a href="#" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">Производство</a></li>
             <li><a href="#" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">Новости</a></li>
         </ul>
+    </div>
+
+    <!-- Search Overlay -->
+    <div id="search-overlay" class="fixed inset-0 bg-white/95 backdrop-blur-md z-[70] flex flex-col items-center justify-center transition-all duration-300 opacity-0 pointer-events-none">
+        <button id="close-search-btn" class="absolute top-6 right-6 text-neutral-900 hover:text-brandgold transition-colors">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+        </button>
+        <div class="w-full max-w-3xl px-6">
+            <form onsubmit="event.preventDefault(); document.getElementById('close-search-btn').click();" class="relative">
+                <input type="text" placeholder="Что вы ищете?" class="w-full text-3xl md:text-5xl font-wild text-neutral-900 bg-transparent border-b-2 border-neutral-300 focus:border-brandgold outline-none py-4 placeholder-neutral-400 transition-colors">
+                <button type="submit" class="absolute right-0 top-1/2 -translate-y-1/2 text-neutral-900 hover:text-brandgold transition-colors">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+                </button>
+            </form>
+            <div class="mt-8 flex flex-wrap gap-4 justify-center">
+                <span class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-500">Популярное:</span>
+                <a href="#science" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-900 hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">Сенолитики</a>
+                <a href="#how-it-works" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-900 hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">Клеточное омоложение</a>
+                <a href="#faq" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-900 hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">PCC1</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div id="cart-overlay" class="fixed inset-0 z-[70] transition-all duration-300 opacity-0 pointer-events-none flex justify-end">
+        <div id="cart-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        <div id="cart-drawer" class="relative w-full md:w-[450px] bg-white h-full flex flex-col translate-x-full transition-transform duration-500 ease-out">
+            <div class="p-6 border-b border-neutral-200 flex items-center justify-between bg-neutral-50">
+                <h2 class="text-xl font-bold uppercase tracking-[0.1em] text-neutral-900">Корзина</h2>
+                <button id="close-cart-btn" class="text-neutral-900 hover:text-brandgold transition-colors">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div class="flex-1 p-6 flex flex-col items-center justify-center text-center overflow-y-auto bg-white">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-neutral-300 mb-6"><path d="M9 22A2 2 0 109 18a2 2 0 000 4zM20 22A2 2 0 1020 18a2 2 0 000 4z"></path><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
+                <h3 class="text-lg font-bold text-neutral-900 mb-2">Ваша корзина пуста</h3>
+                <p class="text-sm text-neutral-500 font-mono mb-8">Начните покупки, чтобы добавить товары</p>
+                <button id="cart-shop-btn" class="px-8 py-4 bg-brandgold text-neutral-900 font-bold uppercase tracking-[0.2em] hover:bg-brandgoldHover transition-colors w-full">Перейти в магазин</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Favorites Overlay -->
+    <div id="fav-overlay" class="fixed inset-0 z-[70] transition-all duration-300 opacity-0 pointer-events-none flex justify-end">
+        <div id="fav-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        <div id="fav-drawer" class="relative w-full md:w-[450px] bg-white h-full flex flex-col translate-x-full transition-transform duration-500 ease-out">
+            <div class="p-6 border-b border-neutral-200 flex items-center justify-between bg-neutral-50">
+                <h2 class="text-xl font-bold uppercase tracking-[0.1em] text-neutral-900">Избранное</h2>
+                <button id="close-fav-btn" class="text-neutral-900 hover:text-brandgold transition-colors">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div class="flex-1 p-6 flex flex-col items-center justify-center text-center overflow-y-auto bg-white">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-neutral-300 mb-6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                <h3 class="text-lg font-bold text-neutral-900 mb-2">У вас пока нет избранных товаров</h3>
+                <p class="text-sm text-neutral-500 font-mono mb-8">Сохраняйте понравившиеся товары, чтобы вернуться к ним позже</p>
+                <button id="fav-shop-btn" class="px-8 py-4 bg-brandgold text-neutral-900 font-bold uppercase tracking-[0.2em] hover:bg-brandgoldHover transition-colors w-full">Перейти в магазин</button>
+            </div>
+        </div>
     </div>
 
     <!-- Hero Section (Copied from reference structure) -->
@@ -817,6 +876,83 @@
                     mobileMenu.classList.add('opacity-0', 'pointer-events-none');
                 });
             });
+        }
+
+        // Search Overlay Logic
+        const searchBtn = document.getElementById('search-btn');
+        const closeSearchBtn = document.getElementById('close-search-btn');
+        const searchOverlay = document.getElementById('search-overlay');
+        const searchInput = searchOverlay ? searchOverlay.querySelector('input') : null;
+        
+        if(searchBtn && closeSearchBtn && searchOverlay) {
+            searchBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                searchOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                if(searchInput) setTimeout(() => searchInput.focus(), 100);
+            });
+            closeSearchBtn.addEventListener('click', () => {
+                searchOverlay.classList.add('opacity-0', 'pointer-events-none');
+            });
+        }
+
+        // Cart Overlay Logic
+        const cartBtn = document.getElementById('cart-btn');
+        const closeCartBtn = document.getElementById('close-cart-btn');
+        const cartOverlay = document.getElementById('cart-overlay');
+        const cartDrawer = document.getElementById('cart-drawer');
+        const cartBackdrop = document.getElementById('cart-backdrop');
+        const cartShopBtn = document.getElementById('cart-shop-btn');
+        
+        const openCart = (e) => {
+            if(e) e.preventDefault();
+            cartOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                cartDrawer.classList.remove('translate-x-full');
+            }, 10);
+        };
+        
+        const closeCart = () => {
+            cartDrawer.classList.add('translate-x-full');
+            setTimeout(() => {
+                cartOverlay.classList.add('opacity-0', 'pointer-events-none');
+            }, 300); // match transition duration
+        };
+
+        if(cartBtn && closeCartBtn && cartOverlay) {
+            cartBtn.addEventListener('click', openCart);
+            closeCartBtn.addEventListener('click', closeCart);
+            if(cartBackdrop) cartBackdrop.addEventListener('click', closeCart);
+            if(cartShopBtn) cartShopBtn.addEventListener('click', closeCart);
+        }
+
+        // Favorites Overlay Logic
+        const favBtn = document.getElementById('fav-btn');
+        const closeFavBtn = document.getElementById('close-fav-btn');
+        const favOverlay = document.getElementById('fav-overlay');
+        const favDrawer = document.getElementById('fav-drawer');
+        const favBackdrop = document.getElementById('fav-backdrop');
+        const favShopBtn = document.getElementById('fav-shop-btn');
+        
+        const openFav = (e) => {
+            if(e) e.preventDefault();
+            favOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                favDrawer.classList.remove('translate-x-full');
+            }, 10);
+        };
+        
+        const closeFav = () => {
+            favDrawer.classList.add('translate-x-full');
+            setTimeout(() => {
+                favOverlay.classList.add('opacity-0', 'pointer-events-none');
+            }, 300); // match transition duration
+        };
+
+        if(favBtn && closeFavBtn && favOverlay) {
+            favBtn.addEventListener('click', openFav);
+            closeFavBtn.addEventListener('click', closeFav);
+            if(favBackdrop) favBackdrop.addEventListener('click', closeFav);
+            if(favShopBtn) favShopBtn.addEventListener('click', closeFav);
         }
     </script>
 </body>
