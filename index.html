@@ -126,7 +126,7 @@
             </div>
             
             <!-- Center: Logo -->
-            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-5 md:h-7 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
+            <div class="absolute left-[60%] md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-5 md:h-7 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
                 <div id="logo-blur-light" class="absolute inset-[-20px] bg-white/90 blur-md rounded-full -z-10 pointer-events-none"></div>
                 <div id="logo-blur" class="hidden absolute inset-[-20px] bg-[#1A1C20] blur-md rounded-full -z-10 pointer-events-none"></div>
                 <img id="logo-light" src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain mix-blend-multiply invert contrast-125 grayscale relative z-10">
@@ -146,11 +146,25 @@
             </nav>
 
             <!-- Mobile Menu Toggle -->
-            <button class="lg:hidden text-neutral-black hover:text-brandgold">
+            <button id="mobile-menu-btn" class="lg:hidden text-neutral-black hover:text-brandgold">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
             </button>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#1A1C20] z-[60] flex flex-col items-center justify-center transition-all duration-300 opacity-0 pointer-events-none">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-brandgold">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+        </button>
+        <ul class="flex flex-col gap-8 text-center">
+            <li><a href="#" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">Магазин</a></li>
+            <li><a href="#" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">О нас</a></li>
+            <li><a href="#faq" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">FAQ</a></li>
+            <li><a href="#" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">Производство</a></li>
+            <li><a href="#" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">Новости</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section (Copied from reference structure) -->
     <section class="relative min-h-screen pt-20 flex flex-col justify-center overflow-hidden text-white metallic-dark-gray">
@@ -188,8 +202,8 @@
                     <div class="relative w-full h-full z-10 flex items-center justify-center animate-float">
                         <img src="https://matilda081133-sketch.github.io/lonvi/assets/product-box-new.png" class="w-full h-auto object-contain scale-125 md:scale-150 drop-shadow-2xl brightness-100 -translate-x-6 md:-translate-x-10" alt="LONVI PCC1 Box">
                     </div>
-                    <div class="absolute -inset-10 border-2 border-brandgold rounded-full z-0 opacity-50 border-dashed animate-spin-slow"></div>
-                    <div class="absolute -inset-20 border border-brandgold rounded-full z-0 opacity-30 animate-spin-slow-reverse"></div>
+                    <div class="absolute -inset-4 md:-inset-10 border-2 border-brandgold rounded-full z-0 opacity-50 border-dashed animate-spin-slow"></div>
+                    <div class="absolute -inset-8 md:-inset-20 border border-brandgold rounded-full z-0 opacity-30 animate-spin-slow-reverse"></div>
                 </div>
             </div>
         </div>
@@ -784,6 +798,26 @@
         });
         // Initial check
         setTimeout(() => window.dispatchEvent(new Event('scroll')), 100);
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        
+        if(mobileMenuBtn && closeMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            });
+            closeMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            });
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                });
+            });
+        }
     </script>
 </body>
 </html>
