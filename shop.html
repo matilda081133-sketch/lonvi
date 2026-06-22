@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LONVI PCC1 | РРЅРЅРѕРІР°С†РёРѕРЅРЅС‹Р№ С„РёС‚РѕСЃРѕРјР°Р»СЊРЅС‹Р№ РєРѕРјРїР»РµРєСЃ</title>
+    
+    <!-- Fonts like in reference -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandgold: '#FFD700', // Yellow
+                        brandgoldHover: '#FFE866', // Pantone 100 C Light Yellow
+                        secondary: '#1A1A1A',
+                        neutral: {
+                            white: '#FFFFFF',
+                            gray: '#F5F5F5',
+                            darkgray: '#E5E5E5',
+                            black: '#0A0A0A'
+                        }
+                    },
+                    fontFamily: {
+                        wild: ['Outfit', 'sans-serif'], // Bold headers
+                        mono: ['JetBrains Mono', 'monospace'], // Technical text
+                        sans: ['Inter', 'sans-serif'], // Body
+                        roboto: ['Roboto', 'sans-serif'] // Reviews
+                    },
+                    animation: {
+                        'spin-slow': 'spin 15s linear infinite',
+                        'spin-slow-reverse': 'spin 20s linear infinite reverse',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F5F5F5; color: #0A0A0A; overflow-x: hidden; scroll-behavior: smooth; }
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+        @keyframes gradient-move {
+            to { background-position: 300% center; }
+        }
+        .header-dark {
+            background-color: rgba(26, 28, 32, 0.75) !important;
+            border-color: rgba(255, 255, 255, 0.05) !important;
+        }
+        .header-dark a.text-neutral-black,
+        .header-dark button.text-neutral-black {
+            color: white !important;
+        }
+        .header-dark button.text-neutral-black:hover,
+        .header-dark a.text-neutral-black:hover {
+            color: #FFD700 !important;
+        }
+        .header-dark #logo-light, .header-dark #logo-blur-light {
+            display: none !important;
+        }
+        .header-dark #logo-dark, .header-dark #logo-blur {
+            display: block !important;
+        }
+        .gradient-text-animated {
+            background: linear-gradient(90deg, #FFD700, #FFE866, #FFD700, #F3E5AB, #FFD700);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-move 8s linear infinite;
+        }
+
+        .metallic-silver {
+            background-color: rgba(20, 20, 22, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            color: #ffffff !important;
+            border-color: rgba(255, 255, 255, 0.05) !important;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Fade in animations */
+        .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; will-change: opacity, visibility; }
+        .fade-in-section.is-visible { opacity: 1; transform: none; }
+        
+        .shadow-hard { box-shadow: 10px 10px 0px rgba(200, 200, 200, 0.9); }
+        .shadow-hard-white { box-shadow: 10px 10px 0px rgba(255,255,255,0.2); }
+        .shadow-hard-gold { box-shadow: 10px 10px 0px rgba(255, 215, 0, 0.4); }
+    
+        .metallic-dark-gray {
+            background: linear-gradient(145deg, #373A40 0%, #1A1C20 40%, #15171A 80%, #2A2D32 100%);
+        }
+</style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Main Header -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200/50 transition-all duration-300">
+        <div class="container max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Left: Account & Icons -->
+            <div class="flex items-center gap-4">
+                <a href="#" class="hidden lg:block text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors mr-2">РњРѕР№ Р°РєРєР°СѓРЅС‚</a>
+                <button id="search-btn" class="text-neutral-black hover:text-brandgold transition-colors p-1" aria-label="РџРѕРёСЃРє">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+                </button>
+                <button id="fav-btn" class="text-neutral-black hover:text-brandgold transition-colors p-1" aria-label="РР·Р±СЂР°РЅРЅРѕРµ">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </button>
+                <button id="cart-btn" class="text-neutral-black hover:text-brandgold transition-colors relative p-1" aria-label="РљРѕСЂР·РёРЅР°">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 22A2 2 0 109 18a2 2 0 000 4zM20 22A2 2 0 1020 18a2 2 0 000 4z"></path><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
+                    <span class="absolute -top-1 -right-1 bg-brandgold text-neutral-900 font-bold text-[9px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-mono">0</span>
+                </button>
+            </div>
+            
+            <!-- Center: Logo -->
+            <div class="absolute left-[60%] md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-5 md:h-7 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
+                <div id="logo-blur-light" class="absolute inset-[-20px] bg-white/90 blur-md rounded-full -z-10 pointer-events-none"></div>
+                <div id="logo-blur" class="hidden absolute inset-[-20px] bg-[#1A1C20] blur-md rounded-full -z-10 pointer-events-none"></div>
+                <img id="logo-light" src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain mix-blend-multiply invert contrast-125 grayscale relative z-10">
+                <img id="logo-dark" src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain hidden mix-blend-screen relative z-10">
+            </div>
+
+            <!-- Right: Links -->
+            <nav class="hidden lg:block">
+                <ul class="flex gap-8 items-center">
+                    <li><a href="#" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors">РњР°РіР°Р·РёРЅ</a></li>
+                    <li><a href="#" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors">Рћ РЅР°СЃ</a></li>
+                    
+                    <li><a href="#faq" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors">FAQ</a></li>
+                    <li><a href="#" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors">РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ</a></li>
+                    <li><a href="#" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors">РќРѕРІРѕСЃС‚Рё</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="lg:hidden text-neutral-black hover:text-brandgold">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#1A1C20] z-[60] flex flex-col items-center justify-center transition-all duration-300 opacity-0 pointer-events-none">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-brandgold">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+        </button>
+        <ul class="flex flex-col gap-8 text-center">
+            <li><a href="#" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">РњР°РіР°Р·РёРЅ</a></li>
+            <li><a href="#" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">Рћ РЅР°СЃ</a></li>
+            <li><a href="#faq" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">FAQ</a></li>
+            <li><a href="#" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ</a></li>
+            <li><a href="#" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">РќРѕРІРѕСЃС‚Рё</a></li>
+        </ul>
+    </div>
+
+    <!-- Search Overlay -->
+    <div id="search-overlay" class="fixed inset-0 bg-white/95 backdrop-blur-md z-[70] flex flex-col items-center justify-center transition-all duration-300 opacity-0 pointer-events-none">
+        <button id="close-search-btn" class="absolute top-6 right-6 text-neutral-900 hover:text-brandgold transition-colors">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+        </button>
+        <div class="w-full max-w-3xl px-6">
+            <form onsubmit="event.preventDefault(); document.getElementById('close-search-btn').click();" class="relative">
+                <input type="text" placeholder="Р§С‚Рѕ РІС‹ РёС‰РµС‚Рµ?" class="w-full text-3xl md:text-5xl font-wild text-neutral-900 bg-transparent border-b-2 border-neutral-300 focus:border-brandgold outline-none py-4 placeholder-neutral-400 transition-colors">
+                <button type="submit" class="absolute right-0 top-1/2 -translate-y-1/2 text-neutral-900 hover:text-brandgold transition-colors">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+                </button>
+            </form>
+            <div class="mt-8 flex flex-wrap gap-4 justify-center">
+                <span class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-500">РџРѕРїСѓР»СЏСЂРЅРѕРµ:</span>
+                <a href="#science" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-900 hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">РЎРµРЅРѕР»РёС‚РёРєРё</a>
+                <a href="#how-it-works" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-900 hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">РљР»РµС‚РѕС‡РЅРѕРµ РѕРјРѕР»РѕР¶РµРЅРёРµ</a>
+                <a href="#faq" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-900 hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">PCC1</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div id="cart-overlay" class="fixed inset-0 z-[70] transition-all duration-300 opacity-0 pointer-events-none flex justify-end">
+        <div id="cart-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        <div id="cart-drawer" class="relative w-full md:w-[450px] bg-white h-full flex flex-col translate-x-full transition-transform duration-500 ease-out">
+            <div class="p-6 border-b border-neutral-200 flex items-center justify-between bg-neutral-50">
+                <h2 class="text-xl font-bold uppercase tracking-[0.1em] text-neutral-900">РљРѕСЂР·РёРЅР°</h2>
+                <button id="close-cart-btn" class="text-neutral-900 hover:text-brandgold transition-colors">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div class="flex-1 p-6 flex flex-col items-center justify-center text-center overflow-y-auto bg-white">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-neutral-300 mb-6"><path d="M9 22A2 2 0 109 18a2 2 0 000 4zM20 22A2 2 0 1020 18a2 2 0 000 4z"></path><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
+                <h3 class="text-lg font-bold text-neutral-900 mb-2">Р’Р°С€Р° РєРѕСЂР·РёРЅР° РїСѓСЃС‚Р°</h3>
+                <p class="text-sm text-neutral-500 font-mono mb-8">РќР°С‡РЅРёС‚Рµ РїРѕРєСѓРїРєРё, С‡С‚РѕР±С‹ РґРѕР±Р°РІРёС‚СЊ С‚РѕРІР°СЂС‹</p>
+                <button id="cart-shop-btn" class="px-8 py-4 bg-brandgold text-neutral-900 font-bold uppercase tracking-[0.2em] hover:bg-brandgoldHover transition-colors w-full">РџРµСЂРµР№С‚Рё РІ РјР°РіР°Р·РёРЅ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Favorites Overlay -->
+    <div id="fav-overlay" class="fixed inset-0 z-[70] transition-all duration-300 opacity-0 pointer-events-none flex justify-end">
+        <div id="fav-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        <div id="fav-drawer" class="relative w-full md:w-[450px] bg-white h-full flex flex-col translate-x-full transition-transform duration-500 ease-out">
+            <div class="p-6 border-b border-neutral-200 flex items-center justify-between bg-neutral-50">
+                <h2 class="text-xl font-bold uppercase tracking-[0.1em] text-neutral-900">РР·Р±СЂР°РЅРЅРѕРµ</h2>
+                <button id="close-fav-btn" class="text-neutral-900 hover:text-brandgold transition-colors">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div class="flex-1 p-6 flex flex-col items-center justify-center text-center overflow-y-auto bg-white">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-neutral-300 mb-6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                <h3 class="text-lg font-bold text-neutral-900 mb-2">РЈ РІР°СЃ РїРѕРєР° РЅРµС‚ РёР·Р±СЂР°РЅРЅС‹С… С‚РѕРІР°СЂРѕРІ</h3>
+                <p class="text-sm text-neutral-500 font-mono mb-8">РЎРѕС…СЂР°РЅСЏР№С‚Рµ РїРѕРЅСЂР°РІРёРІС€РёРµСЃСЏ С‚РѕРІР°СЂС‹, С‡С‚РѕР±С‹ РІРµСЂРЅСѓС‚СЊСЃСЏ Рє РЅРёРј РїРѕР·Р¶Рµ</p>
+                <button id="fav-shop-btn" class="px-8 py-4 bg-brandgold text-neutral-900 font-bold uppercase tracking-[0.2em] hover:bg-brandgoldHover transition-colors w-full">РџРµСЂРµР№С‚Рё РІ РјР°РіР°Р·РёРЅ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shop Section -->
+    <section class="relative min-h-screen pt-32 pb-16 md:pt-40 md:pb-24 flex flex-col justify-start bg-neutral-white text-neutral-black">
+        <div class="container max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 lg:gap-20 items-start relative z-10">
+            
+            <!-- Left: Product Image -->
+            <div class="relative bg-neutral-gray rounded-3xl p-8 md:p-16 flex items-center justify-center sticky top-32 border border-neutral-200/50 shadow-sm">
+                <img src="./assets/product-box-new.png" alt="LONVI PCC1 Box" class="w-full max-w-md object-contain drop-shadow-2xl">
+            </div>
+
+            <!-- Right: Product Details & Pricing -->
+            <div class="flex flex-col">
+                <p class="text-xs font-bold tracking-[0.2em] uppercase text-brandgold mb-4">[ Инновационный комплекс ]</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-wild font-bold uppercase tracking-tight mb-4">LONVI PCC1</h1>
+                <p class="text-lg font-mono text-neutral-600 mb-8 leading-relaxed">
+                    Одна упаковка содержит месячный курс для активации глобальных процессов клеточного омоложения.
+                </p>
+
+                <form id="shop-form" class="flex flex-col gap-4 mb-10">
+                    <!-- Option 1: Monthly -->
+                    <label class="relative border-2 border-neutral-200 rounded-2xl p-6 cursor-pointer hover:border-brandgold transition-colors flex flex-col gap-2 group">
+                        <input type="radio" name="plan" value="monthly" data-price="21 000 ₽" class="peer absolute opacity-0" checked>
+                        <div class="absolute inset-0 rounded-2xl border-2 border-transparent peer-checked:border-brandgold pointer-events-none transition-colors"></div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold uppercase tracking-wider group-hover:text-brandgold transition-colors">Ежемесячно</span>
+                            <span class="text-2xl font-wild font-bold">21 000 ₽ <span class="text-sm text-neutral-500 font-mono">/ мес</span></span>
+                        </div>
+                    </label>
+
+                    <!-- Option 2: Quarterly -->
+                    <label class="relative border-2 border-neutral-200 rounded-2xl p-6 cursor-pointer hover:border-brandgold transition-colors flex flex-col gap-2 overflow-hidden group">
+                        <div class="absolute top-0 right-0 bg-brandgold text-neutral-900 text-[10px] font-bold uppercase px-3 py-1 tracking-wider">Выгода 5%</div>
+                        <input type="radio" name="plan" value="quarterly" data-price="59 850 ₽" class="peer absolute opacity-0">
+                        <div class="absolute inset-0 rounded-2xl border-2 border-transparent peer-checked:border-brandgold pointer-events-none transition-colors"></div>
+                        <div class="flex justify-between items-center mt-2">
+                            <span class="text-xl font-bold uppercase tracking-wider group-hover:text-brandgold transition-colors">Ежеквартально</span>
+                            <span class="text-2xl font-wild font-bold">19 950 ₽ <span class="text-sm text-neutral-500 font-mono">/ мес</span></span>
+                        </div>
+                        <div class="flex justify-between text-sm font-mono text-neutral-500 mt-2">
+                            <span>Итого раз в 3 месяца: <span class="font-bold text-neutral-900">59 850 ₽</span></span>
+                            <span class="line-through">63 000 ₽</span>
+                        </div>
+                    </label>
+
+                    <!-- Option 3: Annually -->
+                    <label class="relative border-2 border-neutral-200 rounded-2xl p-6 cursor-pointer hover:border-neutral-900 transition-colors flex flex-col gap-2 overflow-hidden group">
+                        <div class="absolute top-0 right-0 bg-neutral-900 text-brandgold text-[10px] font-bold uppercase px-3 py-1 tracking-wider">Выгода 10%</div>
+                        <input type="radio" name="plan" value="annually" data-price="226 800 ₽" class="peer absolute opacity-0">
+                        <div class="absolute inset-0 rounded-2xl border-2 border-transparent peer-checked:border-neutral-900 pointer-events-none transition-colors"></div>
+                        <div class="flex justify-between items-center mt-2">
+                            <span class="text-xl font-bold uppercase tracking-wider group-hover:text-brandgold transition-colors">Ежегодно</span>
+                            <span class="text-2xl font-wild font-bold">18 900 ₽ <span class="text-sm text-neutral-500 font-mono">/ мес</span></span>
+                        </div>
+                        <div class="flex justify-between text-sm font-mono text-neutral-500 mt-2">
+                            <span>Итого раз в год: <span class="font-bold text-neutral-900">226 800 ₽</span></span>
+                            <span class="line-through">252 000 ₽</span>
+                        </div>
+                    </label>
+
+                    <button type="button" class="mt-6 w-full py-5 bg-brandgold hover:bg-brandgoldHover text-neutral-900 font-bold uppercase tracking-[0.2em] transition-colors rounded-xl text-lg flex items-center justify-center gap-3 shadow-[4px_4px_0px_#1A1A1A] active:shadow-none active:translate-y-1 active:translate-x-1">
+                        ДОБАВИТЬ В КОРЗИНУ 
+                        <span id="btn-price" class="font-wild font-bold border-l border-neutral-900/20 pl-3 ml-1">21 000 ₽</span>
+                    </button>
+                    <p class="text-center text-xs font-mono text-neutral-400 mt-2">Безопасная оплата. Быстрая доставка.</p>
+                </form>
+
+                <!-- Product details -->
+                <div class="border-t border-neutral-200 pt-8 space-y-6">
+                    <div>
+                        <h3 class="text-sm font-bold uppercase tracking-wider mb-2 text-neutral-900">Описание</h3>
+                        <p class="text-sm font-mono text-neutral-600 leading-relaxed">
+                            PCC1 направлен на селективное устранение стареющих (сенесцентных) клеток, снижая уровень воспаления и запуская процессы естественного обновления организма.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold uppercase tracking-wider mb-2 text-neutral-900">Как принимать</h3>
+                        <p class="text-sm font-mono text-neutral-600 leading-relaxed">
+                            3 капсулы в день в течение 3 дней, один раз в месяц. Одна упаковка рассчитана на один месячный курс.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Shop pricing logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const radios = document.querySelectorAll('input[name="plan"]');
+            const btnPrice = document.getElementById('btn-price');
+            
+            radios.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    if(e.target.checked) {
+                        btnPrice.textContent = e.target.dataset.price;
+                    }
+                });
+            });
+            
+            // Adjust header on shop page to always be light theme since bg is white
+            const header = document.querySelector('header');
+            if(header) {
+                header.classList.remove('header-dark');
+                header.classList.add('bg-white/80', 'border-b', 'border-neutral-200/50');
+            }
+        });
+    </script>                    <div class="space-y-6 font-mono text-lg mb-12">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full border border-neutral-700 flex items-center justify-center text-brandgold">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <a href="tel:+79394999909" class="hover:text-brandgold transition-colors">+7 939 499-99-09</a>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full border border-neutral-700 flex items-center justify-center text-brandgold">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <a href="mailto:lonvibio@mail.ru" class="hover:text-brandgold transition-colors">lonvibio@mail.ru</a>
+                        </div>
+                    </div>
+
+                    <p class="font-mono text-xs tracking-[0.2em] text-neutral-500 uppercase mb-4">РќР°С€Рё СЃРѕС†РёР°Р»СЊРЅС‹Рµ СЃРµС‚Рё</p>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/lonvibio" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/lonvi_biosciences/" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="https://t.me/lonvi_russia" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/></svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@lonvibio?_r=1&_t=ZS-96YFDr0DHT6" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                        </a>
+                        <a href="https://vk.ru/lonvi_russia" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M15.071 18.232c-.93 0-3.52-.073-6.528-3.32C5.467 11.583 3.633 6.012 3.513 5.652c-.105-.316.016-.48.337-.48h2.89c.273 0 .408.145.503.35 0 0 1.439 3.535 3.473 5.829.658.636.953.839 1.226.839.136 0 .337-.203.337-.803V5.626c0-.361-.106-.523-.41-.523h-1.32c-.179 0-.251-.237-.091-.397.35-.357 1.408-.475 2.502-.475 1.54 0 1.84.116 1.84.805v4.542c0 .438.2.6.337.6.196 0 .584-.162 1.624-1.18 1.002-1.026 1.802-3.13 1.802-3.13.085-.246.335-.367.625-.367h2.89c.35 0 .438.175.337.525-.136.466-1.503 2.527-3.056 4.316-.763.874-.958 1.107-.958 1.458 0 .35.253.641.778 1.185 1.487 1.457 1.854 2.894 1.954 3.342.062.29-.044.524-.467.524h-2.89c-.311 0-.584-.204-.778-.582 0 0-1.168-2.683-2.589-2.934-.407-.074-.583.133-.583.568v2.247c0 .29-.117.436-.61.436z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right: Form -->
+                <div class="bg-neutral-900 p-8 md:p-10 border border-neutral-800 shadow-hard-white">
+                    <p class="font-mono text-xs tracking-[0.3em] uppercase mb-8 text-brandgold font-bold">[ РћРЎРўРђР’РРўР¬ Р—РђРЇР’РљРЈ ]</p>
+                    <form class="flex flex-col gap-5 font-mono text-sm">
+                        <input type="text" placeholder="Р’РђРЁР• РРњРЇ" class="w-full px-5 py-4 bg-transparent border border-neutral-700 text-white placeholder:text-neutral-500 focus:border-brandgold outline-none transition-colors">
+                        <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full px-5 py-4 bg-transparent border border-neutral-700 text-white placeholder:text-neutral-500 focus:border-brandgold outline-none transition-colors">
+                        <button type="button" class="w-full px-6 py-4 bg-brandgold text-neutral-900 font-bold tracking-[0.2em] uppercase hover:bg-brandgoldHover transition-colors mt-4">РћРЎРўРђР’РРўР¬ Р—РђРЇР’РљРЈ &rarr;</button>
+                        <p class="text-xs text-neutral-500 mt-2 text-center leading-relaxed">
+                            РќР°Р¶РёРјР°СЏ РЅР° РєРЅРѕРїРєСѓ, РІС‹ РґР°РµС‚Рµ СЃРѕРіР»Р°СЃРёРµ РЅР° РѕР±СЂР°Р±РѕС‚РєСѓ РїРµСЂСЃРѕРЅР°Р»СЊРЅС‹С… РґР°РЅРЅС‹С… Рё СЃРѕРіР»Р°С€Р°РµС‚РµСЃСЊ c <a href="#" class="underline hover:text-white transition-colors">РџРѕР»РёС‚РёРєРѕР№ РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</a> Рё <a href="#" class="underline hover:text-white transition-colors">РћС„РµСЂС‚РѕР№</a>.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Legal Block -->
+    <footer class="bg-[#1A1C20] border-t border-neutral-800">
+        <div class="container mx-auto px-6 py-8 max-w-7xl flex flex-col lg:flex-row justify-between items-center text-xs text-neutral-400 font-mono gap-6">
+            <div class="flex flex-col gap-2 text-center lg:text-left items-center lg:items-start">
+                <img src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-6 md:h-8 w-auto object-contain object-left mix-blend-screen mb-4 mx-auto lg:mx-0 translate-x-2 lg:translate-x-3">
+                <p class="font-bold text-white">РћРћРћ В«Р›РћРќР’Р Р‘РРћРЎРђР™Р•РќРЎРР—В».</p>
+                <p>РћР“Р Рќ: 1267700015880 | РРќРќ: 9714086810</p>
+                <p>РђРґСЂРµСЃ: 125252, Рі. РњРѕСЃРєРІР°, Р±-СЂ РҐРѕРґС‹РЅСЃРєРёР№, Рґ. 2, РїРѕРјРµС‰. 110Р”</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-4 md:gap-8 text-center lg:text-right">
+                <a href="#" class="font-bold text-white hover:text-brandgold transition-colors">Р”РѕРєСѓРјРµРЅС‚С‹</a>
+                <a href="#" class="hover:text-white transition-colors">РџРѕР»РёС‚РёРєР° РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</a>
+                <a href="#" class="hover:text-white transition-colors">Р”РѕРіРѕРІРѕСЂ РїСѓР±Р»РёС‡РЅРѕР№ РѕС„РµСЂС‚С‹</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Intersection Observer for scroll animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.fade-in-section').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+    <!-- AI Assistant Floating Button -->
+    <a href="#ai-chat" id="ai-assistant" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 flex items-center justify-center w-16 h-16 bg-brandgold text-neutral-900 rounded-full shadow-2xl hover:scale-110 hover:bg-brandgoldHover transition-all duration-300 cursor-pointer group">
+        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+        </svg>
+        <span class="absolute -top-12 -left-20 bg-neutral-900 text-white text-xs font-mono font-bold py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg">Р—Р°РґР°Р№С‚Рµ РІРѕРїСЂРѕСЃ РР!</span>
+    </a>
+    <script>
+        // Dynamic Header Blur based on Section Background
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (!header) return;
+            
+            const sections = document.querySelectorAll('section, footer');
+            let currentDark = false;
+            
+            sections.forEach(sec => {
+                const rect = sec.getBoundingClientRect();
+                // Check if the middle of the header (y=40) is within this section
+                if (rect.top <= 40 && rect.bottom >= 40) {
+                    if (sec.classList.contains('metallic-dark-gray') || sec.classList.contains('text-white') || sec.classList.contains('bg-neutral-900')) {
+                        currentDark = true;
+                    }
+                }
+            });
+            
+            if (currentDark) {
+                header.classList.add('header-dark');
+            } else {
+                header.classList.remove('header-dark');
+            }
+        });
+        // Initial check
+        setTimeout(() => window.dispatchEvent(new Event('scroll')), 100);
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        
+        if(mobileMenuBtn && closeMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+            });
+            closeMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+            });
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                });
+            });
+        }
+
+        // Search Overlay Logic
+        const searchBtn = document.getElementById('search-btn');
+        const closeSearchBtn = document.getElementById('close-search-btn');
+        const searchOverlay = document.getElementById('search-overlay');
+        const searchInput = searchOverlay ? searchOverlay.querySelector('input') : null;
+        
+        if(searchBtn && closeSearchBtn && searchOverlay) {
+            searchBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                searchOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                if(searchInput) setTimeout(() => searchInput.focus(), 100);
+            });
+            closeSearchBtn.addEventListener('click', () => {
+                searchOverlay.classList.add('opacity-0', 'pointer-events-none');
+            });
+        }
+
+        // Cart Overlay Logic
+        const cartBtn = document.getElementById('cart-btn');
+        const closeCartBtn = document.getElementById('close-cart-btn');
+        const cartOverlay = document.getElementById('cart-overlay');
+        const cartDrawer = document.getElementById('cart-drawer');
+        const cartBackdrop = document.getElementById('cart-backdrop');
+        const cartShopBtn = document.getElementById('cart-shop-btn');
+        
+        const openCart = (e) => {
+            if(e) e.preventDefault();
+            cartOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                cartDrawer.classList.remove('translate-x-full');
+            }, 10);
+        };
+        
+        const closeCart = () => {
+            cartDrawer.classList.add('translate-x-full');
+            setTimeout(() => {
+                cartOverlay.classList.add('opacity-0', 'pointer-events-none');
+            }, 300); // match transition duration
+        };
+
+        if(cartBtn && closeCartBtn && cartOverlay) {
+            cartBtn.addEventListener('click', openCart);
+            closeCartBtn.addEventListener('click', closeCart);
+            if(cartBackdrop) cartBackdrop.addEventListener('click', closeCart);
+            if(cartShopBtn) cartShopBtn.addEventListener('click', closeCart);
+        }
+
+        // Favorites Overlay Logic
+        const favBtn = document.getElementById('fav-btn');
+        const closeFavBtn = document.getElementById('close-fav-btn');
+        const favOverlay = document.getElementById('fav-overlay');
+        const favDrawer = document.getElementById('fav-drawer');
+        const favBackdrop = document.getElementById('fav-backdrop');
+        const favShopBtn = document.getElementById('fav-shop-btn');
+        
+        const openFav = (e) => {
+            if(e) e.preventDefault();
+            favOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                favDrawer.classList.remove('translate-x-full');
+            }, 10);
+        };
+        
+        const closeFav = () => {
+            favDrawer.classList.add('translate-x-full');
+            setTimeout(() => {
+                favOverlay.classList.add('opacity-0', 'pointer-events-none');
+            }, 300); // match transition duration
+        };
+
+        if(favBtn && closeFavBtn && favOverlay) {
+            favBtn.addEventListener('click', openFav);
+            closeFavBtn.addEventListener('click', closeFav);
+            if(favBackdrop) favBackdrop.addEventListener('click', closeFav);
+            if(favShopBtn) favShopBtn.addEventListener('click', closeFav);
+        }
+    </script>
+</body>
+</html>
+
