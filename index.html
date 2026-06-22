@@ -253,35 +253,31 @@
                         <span class="relative z-10">ПОДРОБНЕЕ</span>
                     </a>
                 </div>
-                
-                <!-- Certificates -->
-                <div class="mt-12 md:mt-16 pt-8 border-t border-white/10 flex items-center flex-wrap gap-4 md:gap-6 z-20 relative">
-                    <!-- FDA: Circle -->
-                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
-                        <img src="./assets/cert-fda.jpg" alt="FDA" class="h-[120%] max-w-none mix-blend-multiply">
-                    </div>
-                    <!-- GMP: Circle (Crop to the green one on the right) -->
-                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg relative">
-                        <img src="./assets/cert-gmp.jpg" alt="GMP" class="h-full w-[220%] max-w-none mix-blend-multiply absolute right-0 object-cover object-right">
-                    </div>
-                    <!-- HALAL: Circle -->
-                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
-                        <img src="./assets/cert-halal.jpg" alt="HALAL" class="h-[110%] max-w-none mix-blend-multiply">
-                    </div>
-                    <!-- VEGAN: Circle -->
-                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
-                        <img src="./assets/cert-vegan.jpg" alt="VEGAN" class="h-[110%] max-w-none mix-blend-multiply">
-                    </div>
-                    <!-- Честный Знак: Rectangle -->
-                    <div class="h-10 md:h-12 w-auto bg-[#FFD700] rounded overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg border border-white/10">
-                        <img src="./assets/cert-chestny.jpg" alt="Честный Знак" class="h-[110%] mix-blend-multiply">
-                    </div>
-                </div>
+
             </div>
             
             <!-- Right side image -->
             <div class="md:col-span-5 relative flex items-center justify-center py-8 md:py-0 fade-in-section is-visible">
-                <div class="relative w-full max-w-[280px] md:max-w-none aspect-square md:aspect-auto md:h-[500px] lg:h-[600px] flex items-center justify-center">
+                <!-- Certificates (Moved to top right) -->
+                <div class="absolute -top-6 md:-top-10 right-0 flex flex-wrap justify-end gap-3 md:gap-4 z-40 max-w-[200px] md:max-w-none">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
+                        <img src="./assets/cert-fda.jpg" alt="FDA" class="h-[120%] max-w-none mix-blend-multiply">
+                    </div>
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg relative">
+                        <img src="./assets/cert-gmp.jpg" alt="GMP" class="h-full w-[220%] max-w-none mix-blend-multiply absolute right-0 object-cover object-right">
+                    </div>
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
+                        <img src="./assets/cert-halal.jpg" alt="HALAL" class="h-[110%] max-w-none mix-blend-multiply">
+                    </div>
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
+                        <img src="./assets/cert-vegan.jpg" alt="VEGAN" class="h-[110%] max-w-none mix-blend-multiply">
+                    </div>
+                    <div class="h-10 md:h-12 w-auto bg-[#FFD700] rounded overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg border border-white/10">
+                        <img src="./assets/cert-chestny.jpg" alt="Честный Знак" class="h-[110%] mix-blend-multiply">
+                    </div>
+                </div>
+
+                <div class="relative w-full max-w-[280px] md:max-w-none aspect-square md:aspect-auto md:h-[500px] lg:h-[600px] flex items-center justify-center mt-10 md:mt-0">
                     <div class="relative w-full h-full z-10 flex items-center justify-center animate-float">
                         <img src="https://matilda081133-sketch.github.io/lonvi/assets/product-box-new.png" class="w-full h-auto object-contain scale-125 md:scale-150 drop-shadow-2xl brightness-100 -translate-x-6 md:-translate-x-10" alt="LONVI PCC1 Box">
                     </div>
