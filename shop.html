@@ -236,8 +236,8 @@
                         <div class="absolute top-0 left-0 w-16 h-1 bg-brandgold hidden md:block"></div>
                         
                         <div>
-                            <h1 class="text-4xl md:text-5xl lg:text-7xl font-wild font-bold tracking-tighter mb-2 text-brandgold leading-none">LONVI PCC1™</h1>
-                            <p class="text-lg md:text-xl text-brandgoldHover font-mono mb-2 border-b-2 border-brandgold inline-block pb-2">Инновационный фитосомальный комплекс</p>
+                            <h1 class="text-4xl md:text-5xl lg:text-7xl font-wild font-bold tracking-tighter mb-2 text-black leading-none">LONVI PCC1™</h1>
+                            <p class="text-lg md:text-xl text-neutral-900 font-mono font-bold mb-2 border-b-2 border-brandgold inline-block pb-2">Инновационный фитосомальный комплекс</p>
                             <p class="text-base md:text-lg text-neutral-500 font-mono mb-6">Экстракт виноградных косточек · C1 · B2 · Эпикатехин</p>
                             <p class="text-base md:text-lg leading-relaxed mb-4 max-w-md text-neutral-600 font-mono">Мощные полифенолы, на которых базируется средиземноморская диета — теперь в концентрированной форме, которая отлично усваивается организмом.</p>
                             <p class="text-sm text-brandgoldHover font-mono mb-8 flex items-center gap-2">
@@ -406,7 +406,7 @@
                 <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                     <div>
                         <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgoldHover block">[ Состав ]</span>
-                        <h2 class="text-3xl md:text-5xl lg:text-6xl font-wild font-bold tracking-tighter mb-6 md:mb-8 text-neutral-black uppercase">PCC1™ Комплекс Процианидинов<br/>(C1, B2, Эпикатехин)</h2>
+                        <h2 class="text-2xl md:text-4xl lg:text-5xl font-wild font-bold tracking-tighter mb-6 md:mb-8 text-neutral-black uppercase">PCC1™ Комплекс Процианидинов<br/>(C1, B2, Эпикатехин)</h2>
                         <p class="text-lg font-mono text-neutral-600 mb-8 leading-relaxed">PCC1™ содержит концентрированную смесь процианидинов — тех самых мощных полифенолов, которые содержатся в самых полезных продуктах природы. Каждая капсула обеспечивает оптимальное соотношение компонентов.</p>
                         <div class="space-y-4">
                             <div class="flex justify-between border-b border-neutral-black/20 pb-2">
@@ -437,7 +437,7 @@
                     </div>
                     <div class="order-1 md:order-2">
                         <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgoldHover block">[ Система доставки ]</span>
-                        <h2 class="text-3xl md:text-5xl lg:text-6xl font-wild font-bold tracking-tighter mb-6 md:mb-8 text-neutral-black">ФИТОСОМАЛЬНАЯ<br/>ТЕХНОЛОГИЯ</h2>
+                        <h2 class="text-2xl md:text-4xl lg:text-5xl font-wild font-bold tracking-tighter mb-6 md:mb-8 text-neutral-black">ФИТОСОМАЛЬНАЯ<br/>ТЕХНОЛОГИЯ</h2>
                         <p class="text-lg font-mono text-neutral-600 mb-8 leading-relaxed">Обычные добавки с экстрактом виноградных косточек имеют две проблемы: плохая усвояемость и загрязненность. Наш чистый изолят процианидинов с фитосомальной доставкой намного безопаснее и эффективнее — биодоступность до 5 раз выше, чем у стандартных экстрактов.</p>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="bg-neutral-black/5 p-4 border border-neutral-black/10">
@@ -459,7 +459,7 @@
                 <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                     <div>
                         <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgoldHover block">[ Премиум качество ]</span>
-                        <h2 class="text-3xl md:text-5xl lg:text-6xl font-wild font-bold tracking-tighter mb-6 md:mb-8 text-neutral-black">СОЗДАНО ДЛЯ<br/>ДОЛГОЛЕТИЯ</h2>
+                        <h2 class="text-2xl md:text-4xl lg:text-5xl font-wild font-bold tracking-tighter mb-6 md:mb-8 text-neutral-black">СОЗДАНО ДЛЯ<br/>ДОЛГОЛЕТИЯ</h2>
                         <p class="text-lg font-mono text-neutral-600 mb-8 leading-relaxed">Каждая партия PCC1™ проходит строгие проверки на чистоту и эффективность. Качество фармацевтического уровня, которому вы можете доверять.</p>
                         <ul class="space-y-3 font-mono text-neutral-700">
                             <li class="flex items-center gap-3"><span class="w-2 h-2 bg-brandgold"></span>Производство по стандарту GMP</li>
@@ -666,17 +666,17 @@
     </footer>
 
     <!-- JS for Interactive Gallery and Layouts -->
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Gallery Logic
+            const thumbs = document.querySelectorAll('.gallery-thumb');
             const mainImg = document.getElementById('main-gallery-img');
             const mainVideo = document.getElementById('main-gallery-video');
-            const thumbs = document.querySelectorAll('.gallery-thumb');
             
-            if(mainImg && thumbs.length) {
+            if(thumbs && mainImg && mainVideo) {
                 thumbs.forEach(thumb => {
                     thumb.addEventListener('click', () => {
-                        // Update active styling
                         thumbs.forEach(t => {
                             t.classList.remove('border-brandgold');
                             t.classList.add('border-neutral-black/20');
@@ -684,56 +684,40 @@
                         thumb.classList.add('border-brandgold');
                         thumb.classList.remove('border-neutral-black/20');
                         
-                        // Update main media
                         const type = thumb.dataset.type;
                         const src = thumb.dataset.src;
                         
-                        if (type === 'video') {
-                            mainImg.classList.add('hidden');
-                            mainVideo.classList.remove('hidden');
-                            mainVideo.src = src;
-                            mainVideo.play();
-                        } else {
+                        if (type === 'image') {
                             mainVideo.classList.add('hidden');
                             mainVideo.pause();
-                            mainImg.classList.remove('hidden');
                             mainImg.src = src;
+                            mainImg.classList.remove('hidden');
+                        } else if (type === 'video') {
+                            mainImg.classList.add('hidden');
+                            mainVideo.src = src;
+                            mainVideo.classList.remove('hidden');
+                            mainVideo.play();
                         }
                     });
                 });
             }
 
-            // Radio button logic (visual and pricing summary)
-            const radioLabels = document.querySelectorAll('label:has(input[type="radio"])');
-            
-            const pricingData = {
-                'monthly': { title: 'Ежемесячно', price: '19 000₽', old: '20 000₽', new: '19 000₽', savings: 'Вы экономите 1 000₽' },
-                'quarterly': { title: 'Ежеквартально', price: '18 000₽', old: '60 000₽', new: '54 000₽', savings: 'Вы экономите 6 000₽' },
-                'annual': { title: 'Ежегодно', price: '16 000₽', old: '240 000₽', new: '192 000₽', savings: 'Вы экономите 48 000₽' }
-            };
-            
-            const summaryTitle = document.getElementById('summary-title');
-            const summaryPrice = document.getElementById('summary-price');
-            const summaryOld = document.getElementById('summary-old');
-            const summaryNew = document.getElementById('summary-new');
-            const summarySavings = document.getElementById('summary-savings');
-
-            radioLabels.forEach(label => {
-                const radio = label.querySelector('input[type="radio"]');
-                radio.addEventListener('change', () => {
-                    // Update classes
-                    radioLabels.forEach(l => {
-                        l.classList.remove('border-brandgold', 'bg-brandgold/5', 'border-l-brandgold');
-                        const svg = l.querySelector('svg');
-                        if(svg) svg.classList.remove('opacity-100');
-                        const circle = l.querySelector('.w-5.h-5');
-                        if(circle) {
-                            circle.classList.remove('border-brandgold', 'bg-brandgold');
-                            circle.classList.add('border-neutral-black/40');
-                        }
-                    });
-                    
-                    if(radio.checked) {
+            // Options Selection Logic
+            const planLabels = document.querySelectorAll('label.cursor-pointer');
+            if(planLabels) {
+                planLabels.forEach(label => {
+                    label.addEventListener('click', () => {
+                        planLabels.forEach(l => {
+                            l.classList.remove('border-brandgold', 'bg-brandgold/5', 'border-l-brandgold');
+                            const svg = l.querySelector('svg');
+                            if(svg) svg.classList.remove('opacity-100');
+                            const circle = l.querySelector('.w-5.h-5');
+                            if(circle) {
+                                circle.classList.remove('border-brandgold', 'bg-brandgold');
+                                circle.classList.add('border-neutral-black/40');
+                            }
+                        });
+                        
                         label.classList.add('border-brandgold', 'bg-brandgold/5');
                         if (label.classList.contains('border-l-4')) label.classList.add('border-l-brandgold');
                         const svg = label.querySelector('svg');
@@ -743,20 +727,162 @@
                             circle.classList.remove('border-neutral-black/40');
                             circle.classList.add('border-brandgold', 'bg-brandgold');
                         }
-                        
-                        // Update Summary Box
-                        const data = pricingData[radio.value];
-                        if(data) {
-                            if(summaryTitle) summaryTitle.textContent = data.title;
-                            if(summaryPrice) summaryPrice.textContent = data.price;
-                            if(summaryOld) summaryOld.textContent = data.old;
-                            if(summaryNew) summaryNew.textContent = data.new;
-                            if(summarySavings) summarySavings.textContent = data.savings;
-                        }
-                    }
+                    });
                 });
-            });
+            }
+
+            // Search Overlay Logic
+            const searchBtn = document.getElementById('search-btn');
+            const closeSearchBtn = document.getElementById('close-search-btn');
+            const searchOverlay = document.getElementById('search-overlay');
+            const searchInput = searchOverlay ? searchOverlay.querySelector('input') : null;
+            
+            if(searchBtn && closeSearchBtn && searchOverlay) {
+                searchBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    searchOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                    if(searchInput) setTimeout(() => searchInput.focus(), 100);
+                });
+                closeSearchBtn.addEventListener('click', () => {
+                    searchOverlay.classList.add('opacity-0', 'pointer-events-none');
+                });
+            }
+
+            // Favorites Overlay Logic
+            const favBtn = document.getElementById('fav-btn');
+            const closeFavBtn = document.getElementById('close-fav-btn');
+            const favOverlay = document.getElementById('fav-overlay');
+            const favDrawer = document.getElementById('fav-drawer');
+            const favBackdrop = document.getElementById('fav-backdrop');
+            const favShopBtn = document.getElementById('fav-shop-btn');
+            
+            const openFav = (e) => {
+                if(e) e.preventDefault();
+                if(favOverlay && favDrawer) {
+                    favOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                    setTimeout(() => {
+                        favDrawer.classList.remove('translate-x-full');
+                    }, 10);
+                }
+            };
+            
+            const closeFav = () => {
+                if(favOverlay && favDrawer) {
+                    favDrawer.classList.add('translate-x-full');
+                    setTimeout(() => {
+                        favOverlay.classList.add('opacity-0', 'pointer-events-none');
+                    }, 300);
+                }
+            };
+
+            if(favBtn && closeFavBtn && favOverlay) {
+                favBtn.addEventListener('click', openFav);
+                closeFavBtn.addEventListener('click', closeFav);
+                if(favBackdrop) favBackdrop.addEventListener('click', closeFav);
+                if(favShopBtn) favShopBtn.addEventListener('click', closeFav);
+            }
+
+            // Cart Overlay Logic
+            const cartBtn = document.getElementById('cart-btn');
+            const closeCartBtn = document.getElementById('close-cart-btn');
+            const cartOverlay = document.getElementById('cart-overlay');
+            const cartDrawer = document.getElementById('cart-drawer');
+            const cartBackdrop = document.getElementById('cart-backdrop');
+            
+            const openCart = (e) => {
+                if(e && e.preventDefault) e.preventDefault();
+                if(cartOverlay && cartDrawer) {
+                    cartOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                    setTimeout(() => {
+                        cartDrawer.classList.remove('translate-x-full');
+                    }, 10);
+                }
+            };
+            
+            const closeCart = () => {
+                if(cartOverlay && cartDrawer) {
+                    cartDrawer.classList.add('translate-x-full');
+                    setTimeout(() => {
+                        cartOverlay.classList.add('opacity-0', 'pointer-events-none');
+                    }, 300);
+                }
+            };
+
+            if(cartBtn && closeCartBtn && cartOverlay) {
+                cartBtn.addEventListener('click', openCart);
+                closeCartBtn.addEventListener('click', closeCart);
+                if(cartBackdrop) cartBackdrop.addEventListener('click', closeCart);
+            }
+
+            // Add to Cart Logic
+            const cartBadge = document.querySelector('#cart-btn span');
+            const addToCartBtn = document.getElementById('add-to-cart-btn');
+            const cartContainer = document.querySelector('#cart-drawer .flex-1');
+            
+            let cartItems = 0;
+
+            if(addToCartBtn && cartContainer) {
+                addToCartBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    cartItems++;
+                    
+                    if(cartBadge) {
+                        cartBadge.textContent = cartItems;
+                        cartBadge.classList.add('scale-125', 'bg-neutral-800', 'text-brandgold');
+                        setTimeout(() => cartBadge.classList.remove('scale-125', 'bg-neutral-800', 'text-brandgold'), 300);
+                    }
+
+                    const selectedPlanInput = document.querySelector('input[name="plan"]:checked');
+                    if(selectedPlanInput) {
+                        const selectedPlanLabel = selectedPlanInput.closest('label');
+                        const planName = selectedPlanLabel.querySelector('.font-bold.text-lg').textContent;
+                        const planPrice = selectedPlanLabel.querySelector('.text-2xl').textContent;
+                        
+                        cartContainer.innerHTML = `
+                            <div class="w-full h-full flex flex-col pt-4">
+                                <div class="flex gap-4 items-center border-b border-neutral-200 pb-6 mb-4 text-left">
+                                    <img src="./assets/product-box-leaves.jpg" class="w-24 h-24 object-cover border border-neutral-200 shadow-sm rounded-lg">
+                                    <div class="flex-1">
+                                        <div class="font-wild font-bold text-xl leading-none uppercase text-black">LONVI PCC1™</div>
+                                        <div class="text-xs text-brandgold font-mono mt-1 font-bold">Тариф: ${planName}</div>
+                                        <div class="font-mono font-bold mt-3 text-lg text-black">${planPrice}</div>
+                                        <div class="flex items-center gap-2 mt-2 text-black">
+                                            <button class="w-6 h-6 flex items-center justify-center border border-neutral-300 rounded hover:border-black hover:bg-neutral-100 transition-colors">-</button>
+                                            <span class="font-mono text-sm">${cartItems}</span>
+                                            <button class="w-6 h-6 flex items-center justify-center border border-neutral-300 rounded hover:border-black hover:bg-neutral-100 transition-colors">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-auto pt-6 border-t border-neutral-200">
+                                    <div class="flex justify-between font-bold mb-2">
+                                        <span class="font-mono uppercase text-sm text-neutral-500">Доставка:</span>
+                                        <span class="font-mono uppercase text-sm text-green-500">Бесплатно</span>
+                                    </div>
+                                    <div class="flex justify-between font-bold mb-6 text-xl text-black">
+                                        <span class="font-wild uppercase">Итого:</span>
+                                        <span class="font-mono">${(parseInt(planPrice.replace(/\D/g, '')) * cartItems).toLocaleString('ru-RU')} ₽</span>
+                                    </div>
+                                    <button class="w-full py-4 bg-brandgold text-neutral-900 font-bold tracking-[0.2em] uppercase hover:bg-brandgoldHover transition-colors shadow-lg group">
+                                        <span class="transition-colors">Оформить заказ</span>
+                                    </button>
+                                    <button id="cart-continue-btn" class="w-full py-3 mt-2 text-xs font-bold tracking-[0.1em] uppercase text-neutral-500 hover:text-black transition-colors">
+                                        Продолжить покупки
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                        
+                        setTimeout(() => {
+                            const continueBtn = document.getElementById('cart-continue-btn');
+                            if(continueBtn) {
+                                continueBtn.addEventListener('click', closeCart);
+                            }
+                        }, 50);
+                    }
+
+                    openCart();
+                });
+            }
         });
     </script>
 </body>
-</html>
