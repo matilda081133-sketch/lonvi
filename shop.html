@@ -134,9 +134,69 @@
     <!-- Favorites Overlay -->
 
     <!-- MAIN PRODUCT LAYOUT EXACTLY LIKE REFERENCE -->
+    <!-- Search Overlay -->
+    <div id="search-overlay" class="fixed inset-0 bg-white/95 backdrop-blur-md z-[70] flex flex-col items-center justify-center transition-all duration-300 opacity-0 pointer-events-none">
+        <button id="close-search-btn" class="absolute top-6 right-6 text-neutral-900 hover:text-brandgold transition-colors">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+        </button>
+        <div class="w-full max-w-3xl px-6">
+            <form onsubmit="event.preventDefault(); document.getElementById('close-search-btn').click();" class="relative">
+                <input type="text" placeholder="Что вы ищете?" class="w-full text-3xl md:text-5xl font-wild text-neutral-900 bg-transparent border-b-2 border-neutral-300 focus:border-brandgold outline-none py-4 placeholder-neutral-400 transition-colors">
+                <button type="submit" class="absolute right-0 top-1/2 -translate-y-1/2 text-neutral-900 hover:text-brandgold transition-colors">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+                </button>
+            </form>
+            <div class="mt-8 flex flex-wrap gap-4 justify-center">
+                <span class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-500">Популярное:</span>
+                <a href="#science" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-900 hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">Сенолитики</a>
+                <a href="#how-it-works" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-900 hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">Клеточное омоложение</a>
+                <a href="#faq" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-900 hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">PCC1</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div id="cart-overlay" class="fixed inset-0 z-[70] transition-all duration-300 opacity-0 pointer-events-none flex justify-end">
+        <div id="cart-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        <div id="cart-drawer" class="relative w-full md:w-[450px] bg-white h-full flex flex-col translate-x-full transition-transform duration-500 ease-out">
+            <div class="p-6 border-b border-neutral-200 flex items-center justify-between bg-neutral-50">
+                <h2 class="text-xl font-bold uppercase tracking-[0.1em] text-neutral-900">Корзина</h2>
+                <button id="close-cart-btn" class="text-neutral-900 hover:text-brandgold transition-colors">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div class="flex-1 p-6 flex flex-col items-center justify-center text-center overflow-y-auto bg-white">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-neutral-300 mb-6"><path d="M9 22A2 2 0 109 18a2 2 0 000 4zM20 22A2 2 0 1020 18a2 2 0 000 4z"></path><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
+                <h3 class="text-lg font-bold text-neutral-900 mb-2">Ваша корзина пуста</h3>
+                <p class="text-sm text-neutral-500 font-mono mb-8">Начните покупки, чтобы добавить товары</p>
+                <button id="cart-shop-btn" class="px-8 py-4 bg-brandgold text-neutral-900 font-bold uppercase tracking-[0.2em] hover:bg-brandgoldHover transition-colors w-full">Перейти в магазин</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Favorites Overlay -->
+    <div id="fav-overlay" class="fixed inset-0 z-[70] transition-all duration-300 opacity-0 pointer-events-none flex justify-end">
+        <div id="fav-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+        <div id="fav-drawer" class="relative w-full md:w-[450px] bg-white h-full flex flex-col translate-x-full transition-transform duration-500 ease-out">
+            <div class="p-6 border-b border-neutral-200 flex items-center justify-between bg-neutral-50">
+                <h2 class="text-xl font-bold uppercase tracking-[0.1em] text-neutral-900">Избранное</h2>
+                <button id="close-fav-btn" class="text-neutral-900 hover:text-brandgold transition-colors">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div class="flex-1 p-6 flex flex-col items-center justify-center text-center overflow-y-auto bg-white">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-neutral-300 mb-6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                <h3 class="text-lg font-bold text-neutral-900 mb-2">У вас пока нет избранных товаров</h3>
+                <p class="text-sm text-neutral-500 font-mono mb-8">Сохраняйте понравившиеся товары, чтобы вернуться к ним позже</p>
+                <button id="fav-shop-btn" class="px-8 py-4 bg-brandgold text-neutral-900 font-bold uppercase tracking-[0.2em] hover:bg-brandgoldHover transition-colors w-full">Перейти в магазин</button>
+            </div>
+        </div>
+    </div>
+
+    
     <main id="main-content" class="min-h-screen">
         <div class="pt-20 lg:pt-32 min-h-screen flex flex-col bg-neutral-white text-neutral-black pb-16">
-            <div class="container max-w-7xl mx-auto px-6 flex-1 flex flex-col">
+            <div class="container max-w-6xl mx-auto px-6 flex-1 flex flex-col">
                 <div class="flex-1 grid md:grid-cols-2 gap-8 lg:gap-16 items-start relative">
                     <!-- Left side (gallery) -->
                     <div class="relative overflow-hidden bg-neutral-gray flex flex-col rounded-3xl border border-neutral-200/50 shadow-sm md:sticky md:top-32 z-20">
@@ -176,7 +236,7 @@
                         <div class="absolute top-0 left-0 w-16 h-1 bg-brandgold hidden md:block"></div>
                         
                         <div>
-                            <h1 class="text-4xl md:text-5xl lg:text-7xl font-wild font-bold tracking-tighter mb-2 gradient-text-vertical leading-none">LONVI PCC1™</h1>
+                            <h1 class="text-4xl md:text-5xl lg:text-7xl font-wild font-bold tracking-tighter mb-2 text-brandgold leading-none">LONVI PCC1™</h1>
                             <p class="text-lg md:text-xl text-brandgoldHover font-mono mb-2 border-b-2 border-brandgold inline-block pb-2">Инновационный фитосомальный комплекс</p>
                             <p class="text-base md:text-lg text-neutral-500 font-mono mb-6">Экстракт виноградных косточек · C1 · B2 · Эпикатехин</p>
                             <p class="text-base md:text-lg leading-relaxed mb-4 max-w-md text-neutral-600 font-mono">Мощные полифенолы, на которых базируется средиземноморская диета — теперь в концентрированной форме, которая отлично усваивается организмом.</p>
@@ -333,7 +393,7 @@
 
         <!-- Additional Information Sections -->
         <section class="bg-white text-black py-8 md:py-12 border-t border-neutral-200">
-            <div class="container mx-auto px-6 max-w-7xl">
+            <div class="container mx-auto px-6 max-w-6xl">
                 <div class="max-w-3xl mx-auto text-center">
                     <p class="text-lg md:text-xl font-mono leading-relaxed"><span class="text-brandgoldHover font-bold">Сенесцентные "зомби" клетки</span> накапливаются с возрастом, выделяя воспалительные белки. PCC1™ доставляет процианидины, необходимые вашему организму для поддержки естественного клеточного обновления.</p>
                     <a href="index.html#science" class="inline-block mt-4 text-sm font-bold uppercase tracking-wider text-brandgoldHover hover:text-black transition-colors border-b-2 border-current pb-1">Изучить науку →</a>
@@ -342,7 +402,7 @@
         </section>
         
         <section class="bg-neutral-gray text-neutral-black py-12 md:py-24 border-t border-neutral-darkgray">
-            <div class="container mx-auto px-6 max-w-7xl">
+            <div class="container mx-auto px-6 max-w-6xl">
                 <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                     <div>
                         <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgoldHover block">[ Состав ]</span>
@@ -370,7 +430,7 @@
 
     
         <section class="bg-neutral-white text-neutral-black py-12 md:py-24 border-t border-neutral-darkgray">
-            <div class="container mx-auto px-6 max-w-7xl">
+            <div class="container mx-auto px-6 max-w-6xl">
                 <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                     <div class="relative order-2 md:order-1 flex justify-center">
                         <img src="./assets/lonvi-original.jpg" alt="PCC1™ Phytosomal Technology" class="w-full max-w-md object-contain rounded-2xl shadow-xl">
@@ -395,7 +455,7 @@
         </section>
 
         <section class="bg-neutral-gray text-neutral-black py-12 md:py-24 border-t border-neutral-darkgray relative overflow-hidden">
-            <div class="container mx-auto px-6 max-w-7xl">
+            <div class="container mx-auto px-6 max-w-6xl">
                 <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                     <div>
                         <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgoldHover block">[ Премиум качество ]</span>
