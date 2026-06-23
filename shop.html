@@ -67,14 +67,14 @@
                 </button>
                 <button id="cart-btn" class="text-neutral-black hover:text-brandgold transition-colors relative p-1" aria-label="Корзина">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 22A2 2 0 109 18a2 2 0 000 4zM20 22A2 2 0 1020 18a2 2 0 000 4z"></path><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
-                    <span class="absolute -top-1 -right-1 bg-brandgold text-neutral-900 font-bold text-[9px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-mono">0</span>
+                    <span class="absolute -top-1 -right-1 bg-brandgold text-neutral-900 font-bold text-[9px] w-3.5 h-3.5 flex items-center justify-center font-mono">0</span>
                 </button>
             </div>
             
             <!-- Center: Logo -->
             <div class="absolute left-[60%] md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-5 md:h-7 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
-                <div id="logo-blur-light" class="absolute inset-[-20px] bg-white/90 blur-md rounded-full -z-10 pointer-events-none"></div>
-                <div id="logo-blur" class="hidden absolute inset-[-20px] bg-[#1A1C20] blur-md rounded-full -z-10 pointer-events-none"></div>
+                <div id="logo-blur-light" class="absolute inset-[-20px] bg-white/90 blur-md -z-10 pointer-events-none"></div>
+                <div id="logo-blur" class="hidden absolute inset-[-20px] bg-[#1A1C20] blur-md -z-10 pointer-events-none"></div>
                 <img id="logo-light" src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain mix-blend-multiply invert contrast-125 grayscale relative z-10">
                 <img id="logo-dark" src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain hidden mix-blend-screen relative z-10">
             </div>
@@ -204,8 +204,8 @@
                         
                         <!-- Main Image Viewport -->
                         <div class="relative z-10 w-full aspect-square lg:aspect-[4/3] flex items-center justify-center p-8">
-                            <img id="main-gallery-img" src="./assets/product-box-leaves.jpg" alt="LONVI PCC1 Box" class="w-full h-full object-cover drop-shadow-xl transition-opacity duration-300 rounded-xl hidden">
-                            <video id="main-gallery-video" src="./assets/product-video-1.mp4" class="w-full h-full object-cover rounded-xl" loop muted playsinline autoplay controls></video>
+                            <img id="main-gallery-img" src="./assets/product-box-leaves.jpg" alt="LONVI PCC1 Box" class="w-full h-full object-cover drop-shadow-xl transition-opacity duration-300 hidden">
+                            <video id="main-gallery-video" src="./assets/product-video-1.mp4" class="w-full h-full object-cover" loop muted playsinline autoplay controls></video>
                         </div>
 
                         <!-- Gallery Thumbnails Footer -->
@@ -241,7 +241,7 @@
                             <p class="text-base md:text-lg text-neutral-500 font-mono mb-6">Экстракт виноградных косточек · C1 · B2 · Эпикатехин</p>
                             <p class="text-base md:text-lg leading-relaxed mb-4 max-w-md text-neutral-600 font-mono">Мощные полифенолы, на которых базируется средиземноморская диета — теперь в концентрированной форме, которая отлично усваивается организмом.</p>
                             <p class="text-sm text-brandgoldHover font-mono mb-8 flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-brandgold rounded-full"></span>
+                                <span class="w-1.5 h-1.5 bg-brandgold"></span>
                                 Всего 3 дня в месяц — полный курс в каждой упаковке
                             </p>
                         </div>
@@ -249,7 +249,7 @@
                         <!-- Pricing Form Section -->
                         <div class="w-full max-w-lg mt-4">
                             <div class="flex justify-end mb-4">
-                                <div class="flex gap-1 bg-neutral-black/5 p-1 rounded-sm">
+                                <div class="flex gap-1 bg-neutral-black/5 p-1">
                                     <button class="px-3 py-1 text-xs font-mono uppercase transition-all bg-brandgold text-black font-bold">₽ RUB</button>
                                 </div>
                             </div>
@@ -260,7 +260,7 @@
                                     <input type="radio" name="plan" value="monthly" class="sr-only peer">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center gap-3">
-                                            <div class="w-5 h-5 rounded-full border-2 flex items-center justify-center border-neutral-black/40 peer-checked:border-brandgold peer-checked:bg-brandgold">
+                                            <div class="w-5 h-5 border-2 flex items-center justify-center border-neutral-black/40 peer-checked:border-brandgold peer-checked:bg-brandgold">
                                                 <svg class="w-3 h-3 text-black opacity-0 peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
                                             </div>
                                             <div>
@@ -287,7 +287,7 @@
                                     <input type="radio" name="plan" value="quarterly" class="sr-only peer" checked>
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center gap-3">
-                                            <div class="w-5 h-5 rounded-full border-2 flex items-center justify-center border-brandgold bg-brandgold">
+                                            <div class="w-5 h-5 border-2 flex items-center justify-center border-brandgold bg-brandgold">
                                                 <svg class="w-3 h-3 text-black opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
                                             </div>
                                             <div>
@@ -314,7 +314,7 @@
                                     <input type="radio" name="plan" value="annual" class="sr-only peer">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center gap-3">
-                                            <div class="w-5 h-5 rounded-full border-2 flex items-center justify-center border-neutral-black/40 peer-checked:border-brandgold peer-checked:bg-brandgold">
+                                            <div class="w-5 h-5 border-2 flex items-center justify-center border-neutral-black/40 peer-checked:border-brandgold peer-checked:bg-brandgold">
                                                 <svg class="w-3 h-3 text-black opacity-0 peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
                                             </div>
                                             <div>
@@ -405,7 +405,7 @@
             <div class="container mx-auto px-6 max-w-6xl">
                 <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                     <div>
-                        <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgold bg-black px-4 py-2 inline-block rounded-sm shadow-sm">[ Состав ]</span>
+                        <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgold bg-black px-4 py-2 inline-block shadow-sm">[ Состав ]</span>
                         <h2 class="text-2xl md:text-4xl lg:text-5xl font-wild font-bold tracking-tighter mb-6 md:mb-8 text-white uppercase">PCC1™ Комплекс Процианидинов<br/>(C1, B2, Эпикатехин)</h2>
                         <p class="text-lg font-mono text-neutral-400 mb-8 leading-relaxed">PCC1™ содержит концентрированную смесь процианидинов — тех самых мощных полифенолов, которые содержатся в самых полезных продуктах природы. Каждая капсула обеспечивает оптимальное соотношение компонентов.</p>
                         <div class="space-y-4">
@@ -421,7 +421,7 @@
                         </div>
                     </div>
                     <div class="relative">
-                        <img src="./assets/product-sachets.jpg" alt="PCC1 Sachets" class="relative z-10 w-full object-contain rounded-2xl shadow-xl">
+                        <img src="./assets/product-sachets.jpg" alt="PCC1 Sachets" class="relative z-10 w-full object-contain shadow-xl">
                     </div>
                 </div>
             </div>
@@ -433,10 +433,10 @@
             <div class="container mx-auto px-6 max-w-6xl">
                 <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                     <div class="relative order-2 md:order-1 flex justify-center">
-                        <img src="./assets/lonvi-original.jpg" alt="PCC1™ Phytosomal Technology" class="w-full max-w-md object-contain rounded-2xl shadow-xl">
+                        <img src="./assets/lonvi-original.jpg" alt="PCC1™ Phytosomal Technology" class="w-full max-w-md object-contain shadow-xl">
                     </div>
                     <div class="order-1 md:order-2">
-                        <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgold bg-black px-4 py-2 inline-block rounded-sm shadow-sm">[ Система доставки ]</span>
+                        <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgold bg-black px-4 py-2 inline-block shadow-sm">[ Система доставки ]</span>
                         <h2 class="text-2xl md:text-4xl lg:text-5xl font-wild font-bold tracking-tighter mb-6 md:mb-8 text-neutral-black">ФИТОСОМАЛЬНАЯ<br/>ТЕХНОЛОГИЯ</h2>
                         <p class="text-lg font-mono text-neutral-600 mb-8 leading-relaxed">Обычные добавки с экстрактом виноградных косточек имеют две проблемы: плохая усвояемость и загрязненность. Наш чистый изолят процианидинов с фитосомальной доставкой намного безопаснее и эффективнее — биодоступность до 5 раз выше, чем у стандартных экстрактов.</p>
                         <div class="grid grid-cols-2 gap-4">
@@ -458,7 +458,7 @@
             <div class="container mx-auto px-6 max-w-6xl">
                 <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
                     <div>
-                        <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgold bg-black px-4 py-2 inline-block rounded-sm shadow-sm">[ Премиум качество ]</span>
+                        <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgold bg-black px-4 py-2 inline-block shadow-sm">[ Премиум качество ]</span>
                         <h2 class="text-2xl md:text-4xl lg:text-5xl font-wild font-bold tracking-tighter mb-6 md:mb-8 text-neutral-black">СОЗДАНО ДЛЯ<br/>ДОЛГОЛЕТИЯ</h2>
                         <p class="text-lg font-mono text-neutral-600 mb-8 leading-relaxed">Каждая партия PCC1™ проходит строгие проверки на чистоту и эффективность. Качество фармацевтического уровня, которому вы можете доверять.</p>
                         <ul class="space-y-3 font-mono text-neutral-700">
@@ -469,7 +469,7 @@
                     </div>
                     <div class="relative">
                         <div class="absolute inset-0 bg-gradient-to-br from-brandgold/20 to-transparent blur-3xl"></div>
-                        <img src="./assets/product-sachets.jpg" alt="PCC1™ Premium Quality Product" class="relative z-10 w-full object-contain rounded-2xl shadow-xl">
+                        <img src="./assets/product-sachets.jpg" alt="PCC1™ Premium Quality Product" class="relative z-10 w-full object-contain shadow-xl">
                     </div>
                 </div>
             </div>
@@ -482,7 +482,7 @@
                 <div class="md:w-1/3 md:sticky md:top-24">
                     <div class="mb-4 flex items-center gap-2">
                         <span class="w-8 h-[1px] bg-brandgold"></span>
-                        <span class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase inline-block bg-neutral-900 text-brandgold px-4 py-2 rounded-sm border border-neutral-800 break-words">[ ИНФОРМАЦИЯ ]</span>
+                        <span class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase inline-block bg-neutral-900 text-brandgold px-4 py-2 border border-neutral-800 break-words">[ ИНФОРМАЦИЯ ]</span>
                     </div>
                     <h2 class="text-3xl md:text-5xl font-wild font-bold tracking-tighter uppercase mb-6 leading-none text-neutral-900">ПОЛЕЗНАЯ<br>ИНФОРМАЦИЯ</h2>
                     <p class="font-mono text-neutral-600 text-sm md:text-base leading-relaxed mb-8">Всё, что вам нужно знать о протоколе применения, безопасности и эффективности LONVI PCC1.</p>
@@ -501,7 +501,7 @@
                     <details class="group bg-neutral-50 border-2 border-neutral-900 p-6 md:p-8 hover:bg-neutral-900 hover:border-brandgold hover:shadow-xl transition-all duration-500 overflow-hidden relative">
                         <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-neutral-900 relative z-10">
                             <span class="pr-8 group-hover:text-brandgold transition-colors">Протокол применения</span>
-                            <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 rounded-full group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
+                            <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
                                 <span class="absolute w-3 h-[2px] bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-180"></span>
                                 <span class="absolute w-[2px] h-3 bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-90 group-open:opacity-0"></span>
                             </span>
@@ -531,7 +531,7 @@
                     <details class="group bg-neutral-50 border-2 border-neutral-900 p-6 md:p-8 hover:bg-neutral-900 hover:border-brandgold hover:shadow-xl transition-all duration-500 overflow-hidden relative">
                         <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-neutral-900 relative z-10">
                             <span class="pr-8 group-hover:text-brandgold transition-colors">Протокол мониторинга</span>
-                            <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 rounded-full group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
+                            <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
                                 <span class="absolute w-3 h-[2px] bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-180"></span>
                                 <span class="absolute w-[2px] h-3 bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-90 group-open:opacity-0"></span>
                             </span>
@@ -548,7 +548,7 @@
                     <details class="group bg-neutral-50 border-2 border-neutral-900 p-6 md:p-8 hover:bg-neutral-900 hover:border-brandgold hover:shadow-xl transition-all duration-500 overflow-hidden relative">
                         <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-neutral-900 relative z-10">
                             <span class="pr-8 group-hover:text-brandgold transition-colors">Безопасность и экологичность</span>
-                            <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 rounded-full group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
+                            <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
                                 <span class="absolute w-3 h-[2px] bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-180"></span>
                                 <span class="absolute w-[2px] h-3 bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-90 group-open:opacity-0"></span>
                             </span>
@@ -565,7 +565,7 @@
                     <details class="group bg-neutral-50 border-2 border-neutral-900 p-6 md:p-8 hover:bg-neutral-900 hover:border-brandgold hover:shadow-xl transition-all duration-500 overflow-hidden relative">
                         <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-neutral-900 relative z-10">
                             <span class="pr-8 group-hover:text-brandgold transition-colors">Эффективность + Низкая стоимость</span>
-                            <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 rounded-full group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
+                            <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
                                 <span class="absolute w-3 h-[2px] bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-180"></span>
                                 <span class="absolute w-[2px] h-3 bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-90 group-open:opacity-0"></span>
                             </span>
@@ -597,13 +597,13 @@
                     
                     <div class="space-y-6 font-mono text-lg mb-12">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-full border border-neutral-700 flex items-center justify-center text-brandgold">
+                            <div class="w-10 h-10 border border-neutral-700 flex items-center justify-center text-brandgold">
                                 <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                             </div>
                             <a href="tel:+79394999909" class="hover:text-brandgold transition-colors">+7 939 499-99-09</a>
                         </div>
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-full border border-neutral-700 flex items-center justify-center text-brandgold">
+                            <div class="w-10 h-10 border border-neutral-700 flex items-center justify-center text-brandgold">
                                 <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                             </div>
                             <a href="mailto:lonvibio@mail.ru" class="hover:text-brandgold transition-colors">lonvibio@mail.ru</a>
@@ -612,19 +612,19 @@
 
                     <p class="font-mono text-xs tracking-[0.2em] text-neutral-500 uppercase mb-4">Наши социальные сети</p>
                     <div class="flex gap-4">
-                        <a href="https://www.facebook.com/lonvibio" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
+                        <a href="https://www.facebook.com/lonvibio" target="_blank" class="w-10 h-10 bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
                             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
                         </a>
-                        <a href="https://www.instagram.com/lonvi_biosciences/" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
+                        <a href="https://www.instagram.com/lonvi_biosciences/" target="_blank" class="w-10 h-10 bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
                             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </a>
-                        <a href="https://t.me/lonvi_russia" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
+                        <a href="https://t.me/lonvi_russia" target="_blank" class="w-10 h-10 bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
                             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/></svg>
                         </a>
-                        <a href="https://www.tiktok.com/@lonvibio?_r=1&_t=ZS-96YFDr0DHT6" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
+                        <a href="https://www.tiktok.com/@lonvibio?_r=1&_t=ZS-96YFDr0DHT6" target="_blank" class="w-10 h-10 bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
                             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
                         </a>
-                        <a href="https://vk.ru/lonvi_russia" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
+                        <a href="https://vk.ru/lonvi_russia" target="_blank" class="w-10 h-10 bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
                             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M15.071 18.232c-.93 0-3.52-.073-6.528-3.32C5.467 11.583 3.633 6.012 3.513 5.652c-.105-.316.016-.48.337-.48h2.89c.273 0 .408.145.503.35 0 0 1.439 3.535 3.473 5.829.658.636.953.839 1.226.839.136 0 .337-.203.337-.803V5.626c0-.361-.106-.523-.41-.523h-1.32c-.179 0-.251-.237-.091-.397.35-.357 1.408-.475 2.502-.475 1.54 0 1.84.116 1.84.805v4.542c0 .438.2.6.337.6.196 0 .584-.162 1.624-1.18 1.002-1.026 1.802-3.13 1.802-3.13.085-.246.335-.367.625-.367h2.89c.35 0 .438.175.337.525-.136.466-1.503 2.527-3.056 4.316-.763.874-.958 1.107-.958 1.458 0 .35.253.641.778 1.185 1.487 1.457 1.854 2.894 1.954 3.342.062.29-.044.524-.467.524h-2.89c-.311 0-.584-.204-.778-.582 0 0-1.168-2.683-2.589-2.934-.407-.074-.583.133-.583.568v2.247c0 .29-.117.436-.61.436z"/></svg>
                         </a>
                     </div>
@@ -841,15 +841,15 @@
                         cartContainer.innerHTML = `
                             <div class="w-full h-full flex flex-col pt-4">
                                 <div class="flex gap-4 items-center border-b border-neutral-200 pb-6 mb-4 text-left">
-                                    <img src="./assets/product-box-leaves.jpg" class="w-24 h-24 object-cover border border-neutral-200 shadow-sm rounded-lg">
+                                    <img src="./assets/product-box-leaves.jpg" class="w-24 h-24 object-cover border border-neutral-200 shadow-sm">
                                     <div class="flex-1">
                                         <div class="font-wild font-bold text-xl leading-none uppercase text-black">LONVI PCC1™</div>
                                         <div class="text-xs text-brandgold font-mono mt-1 font-bold">Тариф: ${planName}</div>
                                         <div class="font-mono font-bold mt-3 text-lg text-black">${planPrice}</div>
                                         <div class="flex items-center gap-2 mt-2 text-black">
-                                            <button class="w-6 h-6 flex items-center justify-center border border-neutral-300 rounded hover:border-black hover:bg-neutral-100 transition-colors">-</button>
+                                            <button class="w-6 h-6 flex items-center justify-center border border-neutral-300 hover:border-black hover:bg-neutral-100 transition-colors">-</button>
                                             <span class="font-mono text-sm">${cartItems}</span>
-                                            <button class="w-6 h-6 flex items-center justify-center border border-neutral-300 rounded hover:border-black hover:bg-neutral-100 transition-colors">+</button>
+                                            <button class="w-6 h-6 flex items-center justify-center border border-neutral-300 hover:border-black hover:bg-neutral-100 transition-colors">+</button>
                                         </div>
                                     </div>
                                 </div>
