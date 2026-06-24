@@ -258,28 +258,7 @@
             
             <!-- Right side image -->
             <div class="md:col-span-5 relative flex items-center justify-center py-8 md:py-0 fade-in-section is-visible">
-                <!-- Certificates (Moved to top right) -->
-                <div class="absolute -top-6 md:-top-10 right-0 flex flex-wrap justify-end gap-3 md:gap-4 z-40 max-w-[200px] md:max-w-none">
-                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
-                        <img src="./assets/cert-fda.jpg" alt="FDA" class="h-[120%] max-w-none mix-blend-multiply">
-                    </div>
-                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg relative">
-                        <img src="./assets/cert-gmp.jpg" alt="GMP" class="h-[160%] w-[320%] max-w-none mix-blend-multiply absolute right-0 object-cover object-right">
-                    </div>
-                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
-                        <img src="./assets/cert-halal.jpg" alt="HALAL" class="h-[110%] max-w-none mix-blend-multiply">
-                    </div>
-                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg">
-                        <img src="./assets/cert-vegan.jpg" alt="VEGAN" class="h-[180%] max-w-none mix-blend-multiply">
-                    </div>
-                    <div class="h-10 md:h-12 w-auto bg-[#FFD700] rounded overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg border border-white/10">
-                        <img src="./assets/cert-chestny.jpg" alt="Честный Знак" class="h-[110%] mix-blend-multiply">
-                    </div>
-                    <!-- EAC: Rounded Square -->
-                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-lg overflow-hidden flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg border border-white/10">
-                        <img src="./assets/cert-eac.jpg" alt="EAC" class="h-[120%] max-w-none mix-blend-multiply">
-                    </div>
-                </div>
+                
 
                 <div class="relative w-full max-w-[280px] md:max-w-none aspect-square md:aspect-auto md:h-[500px] lg:h-[600px] flex items-center justify-center mt-10 md:mt-0">
                     <div class="relative w-full h-full z-10 flex items-center justify-center animate-float">
@@ -291,6 +270,63 @@
             </div>
         </div>
     </section>
+
+<!-- Certificates Strip -->
+<div class="bg-[#1A1C20] border-y border-white/5 py-8 md:py-10">
+    <div class="container mx-auto px-6 max-w-7xl">
+        <div class="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-4 opacity-90">
+            <!-- GMP -->
+            <div class="flex items-center gap-4 group cursor-default">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5" class="group-hover:scale-110 transition-transform"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                <div class="flex flex-col">
+                    <span class="text-white font-bold tracking-[0.2em] uppercase text-sm leading-none">GMP</span>
+                    <span class="text-neutral-500 font-mono text-[10px] uppercase tracking-widest mt-1.5">Сертифицировано</span>
+                </div>
+            </div>
+            <!-- FDA -->
+            <div class="flex items-center gap-4 group cursor-default">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5" class="group-hover:scale-110 transition-transform"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                <div class="flex flex-col">
+                    <span class="text-white font-bold tracking-[0.2em] uppercase text-sm leading-none">FDA</span>
+                    <span class="text-neutral-500 font-mono text-[10px] uppercase tracking-widest mt-1.5">Регистрация</span>
+                </div>
+            </div>
+            <!-- HALAL -->
+            <div class="flex items-center gap-4 group cursor-default">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5" class="group-hover:scale-110 transition-transform"><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                <div class="flex flex-col">
+                    <span class="text-white font-bold tracking-[0.2em] uppercase text-sm leading-none">HALAL</span>
+                    <span class="text-neutral-500 font-mono text-[10px] uppercase tracking-widest mt-1.5">Сертифицировано</span>
+                </div>
+            </div>
+            <!-- VEGAN -->
+            <div class="flex items-center gap-4 group cursor-default">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5" class="group-hover:scale-110 transition-transform"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                <div class="flex flex-col">
+                    <span class="text-white font-bold tracking-[0.2em] uppercase text-sm leading-none">100% VEGAN</span>
+                    <span class="text-neutral-500 font-mono text-[10px] uppercase tracking-widest mt-1.5">Растительное</span>
+                </div>
+            </div>
+            <!-- CHESTNY ZNAK -->
+            <div class="flex items-center gap-4 group cursor-default">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5" class="group-hover:scale-110 transition-transform"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M7 7h10"/><path d="M7 12h10"/><path d="M7 17h10"/></svg>
+                <div class="flex flex-col">
+                    <span class="text-white font-bold tracking-[0.2em] uppercase text-sm leading-none">ЧЕСТНЫЙ ЗНАК</span>
+                    <span class="text-neutral-500 font-mono text-[10px] uppercase tracking-widest mt-1.5">Маркировка</span>
+                </div>
+            </div>
+            <!-- EAC -->
+            <div class="flex items-center gap-4 group cursor-default">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="1.5" class="group-hover:scale-110 transition-transform"><path d="M4 4h16v16H4z"/><path d="M9 9h6v6H9z"/></svg>
+                <div class="flex flex-col">
+                    <span class="text-white font-bold tracking-[0.2em] uppercase text-sm leading-none">EAC</span>
+                    <span class="text-neutral-500 font-mono text-[10px] uppercase tracking-widest mt-1.5">Одобрено</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- 3 Overlapping Cards Section (Exactly like reference) -->
     <section class="relative pt-20 pb-10 md:pt-48 md:pb-24 overflow-hidden text-white bg-cover bg-center bg-fixed" style="background-image: url('https://matilda081133-sketch.github.io/lonvi/assets/bg-cells.jpg')">
