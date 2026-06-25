@@ -116,9 +116,7 @@
                 <button id="search-btn" class="text-neutral-black hover:text-brandgold transition-colors p-1" aria-label="Поиск">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
                 </button>
-                <button id="fav-btn" class="text-neutral-black hover:text-brandgold transition-colors p-1" aria-label="Избранное">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                </button>
+                
                 <button id="cart-btn" class="text-neutral-black hover:text-brandgold transition-colors relative p-1" aria-label="Корзина">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 22A2 2 0 109 18a2 2 0 000 4zM20 22A2 2 0 1020 18a2 2 0 000 4z"></path><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
                     <span class="absolute -top-1 -right-1 bg-brandgold text-neutral-900 font-bold text-[9px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-mono">0</span>
@@ -202,25 +200,6 @@
                 <h3 class="text-lg font-bold text-neutral-900 mb-2">Ваша корзина пуста</h3>
                 <p class="text-sm text-neutral-500 font-mono mb-8">Начните покупки, чтобы добавить товары</p>
                 <button id="cart-shop-btn" class="px-8 py-4 bg-brandgold text-neutral-900 font-bold uppercase tracking-[0.2em] hover:bg-brandgoldHover transition-colors w-full">Перейти в магазин</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Favorites Overlay -->
-    <div id="fav-overlay" class="fixed inset-0 z-[70] transition-all duration-300 opacity-0 pointer-events-none flex justify-end">
-        <div id="fav-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-        <div id="fav-drawer" class="relative w-full md:w-[450px] bg-white h-full flex flex-col translate-x-full transition-transform duration-500 ease-out">
-            <div class="p-6 border-b border-neutral-200 flex items-center justify-between bg-neutral-50">
-                <h2 class="text-xl font-bold uppercase tracking-[0.1em] text-neutral-900">Избранное</h2>
-                <button id="close-fav-btn" class="text-neutral-900 hover:text-brandgold transition-colors">
-                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
-                </button>
-            </div>
-            <div class="flex-1 p-6 flex flex-col items-center justify-center text-center overflow-y-auto bg-white">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-neutral-300 mb-6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                <h3 class="text-lg font-bold text-neutral-900 mb-2">У вас пока нет избранных товаров</h3>
-                <p class="text-sm text-neutral-500 font-mono mb-8">Сохраняйте понравившиеся товары, чтобы вернуться к ним позже</p>
-                <button id="fav-shop-btn" class="px-8 py-4 bg-brandgold text-neutral-900 font-bold uppercase tracking-[0.2em] hover:bg-brandgoldHover transition-colors w-full">Перейти в магазин</button>
             </div>
         </div>
     </div>
