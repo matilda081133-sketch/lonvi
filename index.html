@@ -219,9 +219,9 @@
 
 <!-- Mobile Creative (Under Heading) -->
 <div class="md:hidden mt-8 mb-4">
-<div class="relative w-full max-w-[280px] md:max-w-none aspect-square md:aspect-auto  flex items-center justify-center mt-2 md:mt-0">
+<div class="relative w-full max-w-[280px] md:max-w-none aspect-square md:aspect-auto flex items-center justify-center mt-2 md:mt-0 mx-auto">
                     <div class="relative w-full h-full z-10 flex items-center justify-center animate-float">
-                        <img src="https://matilda081133-sketch.github.io/lonvi/assets/product-box-new.png" class="w-full h-auto object-contain scale-125  drop-shadow-2xl brightness-100 -translate-x-6 " alt="LONVI PCC1 Box">
+                        <img src="https://matilda081133-sketch.github.io/lonvi/assets/product-box-new.png" class="w-full h-auto object-contain scale-125 drop-shadow-2xl brightness-100" alt="LONVI PCC1 Box">
                     </div>
                     <div class="absolute inset-0 md:-inset-10 border-2 border-brandgold rounded-full z-0 opacity-50 border-dashed animate-spin-slow"></div>
                     <div class="absolute -inset-4 md:-inset-20 border border-brandgold border-dashed rounded-full z-0 opacity-30 animate-spin-slow-reverse"></div>
@@ -229,18 +229,25 @@
             </div>
 
                 <p class="mt-8 md:mt-12 text-lg md:text-xl font-mono text-neutral-300 max-w-4xl mx-auto md:mx-0">
-                    <span class="block text-3xl md:text-4xl font-wild font-bold text-white mb-2 uppercase tracking-wide">LONVI PCC1</span><span class="block leading-relaxed">ИННОВАЦИОННЫЙ ФИТОСОМАЛЬНЫЙ КОМПЛЕКС<br/>ИЗ ЭКСТРАКТА ВИНОГРАДНОЙ КОСТОЧКИ.</span>
-                    <span class="text-white font-semibold mt-8 block">СЕНОЛИТИК НОВОГО ПОКОЛЕНИЯ — ЗАПУСК<br/>ВОССТАНОВЛЕНИЯ НА КЛЕТОЧНОМ УРОВНЕ.</span>
+                    <span class="block text-3xl md:text-4xl font-wild font-bold text-white mb-2 uppercase tracking-wide">LONVI PCC1</span><!-- Mobile (3 lines) -->
+                    <span class="block md:hidden leading-relaxed">ИННОВАЦИОННЫЙ ФИТОСОМАЛЬНЫЙ<br/>КОМПЛЕКС ИЗ ЭКСТРАКТА<br/>ВИНОГРАДНОЙ КОСТОЧКИ.</span>
+                    <!-- Desktop (2 lines) -->
+                    <span class="hidden md:block leading-relaxed">ИННОВАЦИОННЫЙ ФИТОСОМАЛЬНЫЙ КОМПЛЕКС<br/>ИЗ ЭКСТРАКТА ВИНОГРАДНОЙ КОСТОЧКИ.</span>
+                    <!-- Mobile (3 lines) -->
+                    <span class="text-white font-semibold mt-8 md:hidden block">СЕНОЛИТИК НОВОГО ПОКОЛЕНИЯ —<br/>ЗАПУСК ВОССТАНОВЛЕНИЯ<br/>НА КЛЕТОЧНОМ УРОВНЕ.</span>
+                    <!-- Desktop (2 lines) -->
+                    <span class="text-white font-semibold mt-8 hidden md:block">СЕНОЛИТИК НОВОГО ПОКОЛЕНИЯ — ЗАПУСК<br/>ВОССТАНОВЛЕНИЯ НА КЛЕТОЧНОМ УРОВНЕ.</span>
                 </p>
                 <p class="mt-4 text-base md:text-lg font-mono text-brandgold font-semibold">
-                    Одна упаковка активирует глобальные<br/>процессы оздоровления организма.
+                    <span class="block md:hidden">Одна упаковка активирует<br/>глобальные процессы<br/>оздоровления организма.</span>
+                    <span class="hidden md:block">Одна упаковка активирует глобальные<br/>процессы оздоровления организма.</span>
                 </p>
                 
                 <div class="mt-8 md:mt-12 flex gap-3 md:gap-4 w-full max-w-[340px] md:max-w-[400px] lg:max-w-[500px]">
-                    <a href="shop.html" class="flex-1 flex items-center justify-center text-center group relative px-2 md:px-8 py-4 bg-brandgold text-neutral-900 font-bold uppercase tracking-wider md:tracking-[0.2em] overflow-visible hover:bg-brandgoldHover transition-colors text-[11px] sm:text-sm">
+                    <a href="shop.html" class="flex-1 flex items-center justify-center text-center group relative px-2 md:px-8 py-4 bg-brandgold text-neutral-900 font-bold uppercase tracking-wider md:tracking-[0.2em] overflow-visible hover:bg-brandgoldHover transition-colors text-xs md:text-base">
                         <span class="relative z-10 flex items-center gap-2">ЗАКАЗАТЬ</span>
                     </a>
-                    <a href="#science" class="flex-1 flex items-center justify-center text-center group relative px-2 md:px-8 py-4 bg-transparent border-2 border-white text-white font-bold uppercase tracking-wider md:tracking-[0.2em] hover:bg-white hover:text-neutral-black transition-colors text-[11px] sm:text-sm">
+                    <a href="#science" class="flex-1 flex items-center justify-center text-center group relative px-2 md:px-8 py-4 bg-transparent border-2 border-white text-white font-bold uppercase tracking-wider md:tracking-[0.2em] hover:bg-white hover:text-neutral-black transition-colors text-xs md:text-base">
                         <span class="relative z-10">ПОДРОБНЕЕ</span>
                     </a>
                 </div>
