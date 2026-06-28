@@ -194,37 +194,39 @@
     </div>
 
     
-    <main id="main-content" class="min-h-screen">
-        <div class="pt-20 lg:pt-32 min-h-screen flex flex-col bg-neutral-white text-neutral-black pb-16">
-            <div class="container max-w-6xl mx-auto px-6 flex-1 flex flex-col">
+    
+    <main id="main-content" class="min-h-screen bg-[#1A1C20] text-white">
+        <div class="pt-20 lg:pt-32 min-h-screen flex flex-col pb-16">
+            <div class="container max-w-7xl mx-auto px-6 flex-1 flex flex-col">
                 <div class="flex-1 grid md:grid-cols-2 gap-8 lg:gap-16 items-start relative">
+                    
                     <!-- Left side (gallery) -->
-                    <div class="relative overflow-hidden bg-neutral-gray flex flex-col rounded-3xl border border-neutral-200/50 shadow-sm md:sticky md:top-32 z-20">
-                        <div class="absolute inset-0 bg-brandgold/5 "></div>
+                    <div class="relative overflow-hidden bg-black/40 flex flex-col rounded-3xl border border-white/10 shadow-lg md:sticky md:top-32 z-20">
+                        <div class="absolute inset-0 bg-brandgold/5"></div>
                         
                         <!-- Main Image Viewport -->
-                        <div class="relative z-10 w-full aspect-square lg:aspect-[4/3] flex items-center justify-center p-8">
-                            <img id="main-gallery-img" src="./assets/product-box-leaves.jpg" alt="LONVI PCC1 Box" class="w-full h-full object-cover drop-shadow-xl transition-opacity duration-300 hidden">
-                            <video id="main-gallery-video" src="./assets/product-video-1.mp4" class="w-full h-full object-cover" loop muted playsinline autoplay controls></video>
+                        <div class="relative z-10 w-full aspect-square lg:aspect-[4/3] flex items-center justify-center p-4 md:p-8">
+                            <img id="main-gallery-img" src="./assets/product-box-leaves.jpg" alt="LONVI PCC1 Box" class="w-full h-full object-contain drop-shadow-xl transition-opacity duration-300 hidden">
+                            <video id="main-gallery-video" src="./assets/product-video-1.mp4" class="w-full max-w-full h-auto max-h-full object-contain shadow-2xl rounded-xl" poster="./assets/product-box-leaves.jpg" loop muted playsinline autoplay controls></video>
                         </div>
 
                         <!-- Gallery Thumbnails Footer -->
-                        <div class="relative z-10 flex justify-center gap-3 py-4 md:py-6 overflow-x-auto hide-scrollbar px-4">
-                            <button data-type="image" data-src="./assets/product-box-leaves.jpg" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-neutral-black/20 hover:border-neutral-black/50">
+                        <div class="relative z-10 flex justify-center gap-3 py-4 md:py-6 overflow-x-auto hide-scrollbar px-4 border-t border-white/5">
+                            <button data-type="image" data-src="./assets/product-box-leaves.jpg" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-white/20 hover:border-brandgold/50">
                                 <img src="./assets/product-box-leaves.jpg" alt="Thumbnail 1" class="w-full h-full object-cover">
                             </button>
-                            <button data-type="image" data-src="./assets/product-sachets.jpg" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-neutral-black/20 hover:border-neutral-black/50">
+                            <button data-type="image" data-src="./assets/product-sachets.jpg" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-white/20 hover:border-brandgold/50">
                                 <img src="./assets/product-sachets.jpg" alt="Thumbnail 2" class="w-full h-full object-cover">
                             </button>
                             <button data-type="video" data-src="./assets/product-video-1.mp4" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-brandgold">
-                                <video src="./assets/product-video-1.mp4" class="w-full h-full object-cover" muted></video>
-                                <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                                <video src="./assets/product-video-1.mp4" class="w-full h-full object-cover" poster="./assets/product-box-leaves.jpg" muted></video>
+                                <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
                                     <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                                 </div>
                             </button>
-                            <button data-type="video" data-src="./assets/product-video-2.mp4" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-neutral-black/20 hover:border-neutral-black/50">
-                                <video src="./assets/product-video-2.mp4" class="w-full h-full object-cover" muted></video>
-                                <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                            <button data-type="video" data-src="./assets/product-video-2.mp4" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-white/20 hover:border-brandgold/50">
+                                <video src="./assets/product-video-2.mp4" class="w-full h-full object-cover" poster="./assets/product-sachets.jpg" muted></video>
+                                <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
                                     <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                                 </div>
                             </button>
@@ -232,51 +234,49 @@
                     </div>
 
                     <!-- Right side (content) -->
-                    <div class="flex flex-col justify-center py-8 relative bg-white">
+                    <div class="flex flex-col justify-center py-4 md:py-8 relative">
                         <div class="absolute top-0 left-0 w-16 h-1 bg-brandgold hidden md:block"></div>
                         
                         <div>
-                            <h1 class="text-4xl md:text-5xl lg:text-7xl font-wild font-bold tracking-tighter mb-2 text-black leading-none">LONVI PCC1™</h1>
-                            <p class="text-lg md:text-xl text-neutral-900 font-mono font-bold mb-2 border-b-2 border-brandgold inline-block pb-2">Инновационный фитосомальный комплекс</p>
-                            <p class="text-base md:text-lg text-neutral-500 font-mono mb-6">Экстракт виноградных косточек · C1 · B2 · Эпикатехин</p>
-                            <p class="text-base md:text-lg leading-relaxed mb-4 max-w-md text-neutral-600 font-mono">Мощные полифенолы, на которых базируется средиземноморская диета — теперь в концентрированной форме, которая отлично усваивается организмом.</p>
-                            <p class="text-sm text-brandgoldHover font-mono mb-8 flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-brandgold"></span>
-                                Всего 3 дня в месяц — полный курс в каждой упаковке
-                            </p>
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-wild font-bold tracking-tighter mb-4 text-white leading-none">LONVI PCC1</h1>
+                            <p class="text-base md:text-lg text-brandgold font-mono font-bold mb-4">ИННОВАЦИОННЫЙ ФИТОСОМАЛЬНЫЙ КОМПЛЕКС ИЗ ЭКСТРАКТА ВИНОГРАДНОЙ КОСТОЧКИ.</p>
+                            
+                            <hr class="border-white/10 my-4 md:my-6">
+                            
+                            <p class="text-sm md:text-base leading-relaxed mb-8 max-w-lg text-neutral-300 font-mono">ОСТАНОВИТЕ БИОЛОГИЧЕСКОЕ СТАРЕНИЕ НА КЛЕТОЧНОМ УРОВНЕ С ПОМОЩЬЮ СЕНОЛИТИКА НОВОГО ПОКОЛЕНИЯ</p>
                         </div>
 
                         <!-- Pricing Form Section -->
-                        <div class="w-full max-w-lg mt-4">
+                        <div class="w-full max-w-lg mt-2">
                             <div class="flex justify-end mb-4">
-                                <div class="flex gap-1 bg-neutral-black/5 p-1">
+                                <div class="flex gap-1 bg-white/5 p-1 border border-white/10 rounded">
                                     <button class="px-3 py-1 text-xs font-mono uppercase transition-all bg-brandgold text-black font-bold">₽ RUB</button>
                                 </div>
                             </div>
 
                             <form id="shop-form" class="space-y-3 mb-6">
                                 <!-- Option 1: Monthly -->
-                                <label class="block w-full p-4 border-2 transition-all text-left relative group border-neutral-black/20 hover:border-neutral-black/40 bg-neutral-black/5 cursor-pointer has-[:checked]:border-brandgold has-[:checked]:bg-brandgold/5 has-[:checked]:border-l-4">
+                                <label class="block w-full p-4 border-2 transition-all text-left relative group border-white/10 hover:border-white/20 bg-white/5 cursor-pointer has-[:checked]:border-brandgold has-[:checked]:bg-brandgold/5 has-[:checked]:border-l-4">
                                     <input type="radio" name="plan" value="monthly" class="sr-only peer">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center gap-3">
-                                            <div class="w-5 h-5 border-2 flex items-center justify-center border-neutral-black/40 peer-checked:border-brandgold peer-checked:bg-brandgold">
+                                            <div class="w-5 h-5 border-2 flex items-center justify-center border-white/20 peer-checked:border-brandgold peer-checked:bg-brandgold">
                                                 <svg class="w-3 h-3 text-black opacity-0 peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
                                             </div>
                                             <div>
-                                                <div class="font-bold text-neutral-black text-lg">Ежемесячно</div>
-                                                <div class="text-xs text-neutral-500 font-mono">Оплата раз в месяц</div>
+                                                <div class="font-bold text-white text-lg">Ежемесячно</div>
+                                                <div class="text-xs text-neutral-400 font-mono">Оплата раз в месяц</div>
                                             </div>
                                         </div>
                                         <div class="text-right">
                                             <div class="flex items-baseline gap-1 justify-end">
-                                                <span class="text-2xl font-bold text-neutral-black font-mono">19 000₽</span>
-                                                <span class="text-sm text-neutral-500 font-mono">/мес</span>
+                                                <span class="text-2xl font-bold text-white font-mono">19 000₽</span>
+                                                <span class="text-sm text-neutral-400 font-mono">/мес</span>
                                             </div>
-                                            <div class="text-xs text-neutral-500 font-mono">
-                                                <span class="line-through mr-1">20 000₽</span>итого 19 000₽
+                                            <div class="text-xs text-neutral-400 font-mono">
+                                                <span class="line-through mr-1 opacity-50">20 000₽</span>итого 19 000₽
                                             </div>
-                                            <div class="text-xs text-brandgoldHover font-bold mt-1">Выгода 5%</div>
+                                            <div class="text-xs text-brandgold font-bold mt-1">Выгода 5%</div>
                                         </div>
                                     </div>
                                 </label>
@@ -291,78 +291,78 @@
                                                 <svg class="w-3 h-3 text-black opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
                                             </div>
                                             <div>
-                                                <div class="font-bold text-neutral-black text-lg">Ежеквартально</div>
-                                                <div class="text-xs text-neutral-500 font-mono">Оплата раз в 3 месяца</div>
+                                                <div class="font-bold text-white text-lg">Ежеквартально</div>
+                                                <div class="text-xs text-neutral-400 font-mono">Оплата раз в 3 месяца</div>
                                             </div>
                                         </div>
                                         <div class="text-right">
                                             <div class="flex items-baseline gap-1 justify-end">
-                                                <span class="text-2xl font-bold text-neutral-black font-mono">18 000₽</span>
-                                                <span class="text-sm text-neutral-500 font-mono">/мес</span>
+                                                <span class="text-2xl font-bold text-white font-mono">18 000₽</span>
+                                                <span class="text-sm text-neutral-400 font-mono">/мес</span>
                                             </div>
-                                            <div class="text-xs text-neutral-500 font-mono">
-                                                <span class="line-through mr-1">60 000₽</span>итого 54 000₽
+                                            <div class="text-xs text-neutral-400 font-mono">
+                                                <span class="line-through mr-1 opacity-50">60 000₽</span>итого 54 000₽
                                             </div>
-                                            <div class="text-xs text-brandgoldHover font-bold mt-1">Выгода 10%</div>
+                                            <div class="text-xs text-brandgold font-bold mt-1">Выгода 10%</div>
                                         </div>
                                     </div>
                                 </label>
 
                                 <!-- Option 3: Annual -->
-                                <label class="block w-full p-4 border-2 transition-all text-left relative group border-neutral-black/30 bg-neutral-black/5 hover:border-neutral-black/50 border-l-4 border-l-transparent cursor-pointer has-[:checked]:border-brandgold has-[:checked]:bg-brandgold/5 has-[:checked]:border-l-brandgold">
-                                    <span class="absolute -top-3 left-4 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-[#1D1D1F] text-white shadow-sm">Выгодно</span>
+                                <label class="block w-full p-4 border-2 transition-all text-left relative group border-white/10 bg-white/5 hover:border-white/20 border-l-4 border-l-transparent cursor-pointer has-[:checked]:border-brandgold has-[:checked]:bg-brandgold/5 has-[:checked]:border-l-brandgold">
+                                    <span class="absolute -top-3 left-4 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-black border border-brandgold text-brandgold shadow-sm">Эффективность + доступная цена</span>
                                     <input type="radio" name="plan" value="annual" class="sr-only peer">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center gap-3">
-                                            <div class="w-5 h-5 border-2 flex items-center justify-center border-neutral-black/40 peer-checked:border-brandgold peer-checked:bg-brandgold">
+                                            <div class="w-5 h-5 border-2 flex items-center justify-center border-white/20 peer-checked:border-brandgold peer-checked:bg-brandgold">
                                                 <svg class="w-3 h-3 text-black opacity-0 peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
                                             </div>
                                             <div>
-                                                <div class="font-bold text-neutral-black text-lg">Ежегодно</div>
-                                                <div class="text-xs text-neutral-500 font-mono">Оплата раз в год</div>
+                                                <div class="font-bold text-white text-lg">Ежегодно</div>
+                                                <div class="text-xs text-neutral-400 font-mono">Оплата раз в год</div>
                                             </div>
                                         </div>
                                         <div class="text-right">
                                             <div class="flex items-baseline gap-1 justify-end">
-                                                <span class="text-2xl font-bold text-neutral-black font-mono">16 000₽</span>
-                                                <span class="text-sm text-neutral-500 font-mono">/мес</span>
+                                                <span class="text-2xl font-bold text-white font-mono">16 000₽</span>
+                                                <span class="text-sm text-neutral-400 font-mono">/мес</span>
                                             </div>
-                                            <div class="text-xs text-neutral-500 font-mono">
-                                                <span class="line-through mr-1">240 000₽</span>итого 192 000₽
+                                            <div class="text-xs text-neutral-400 font-mono">
+                                                <span class="line-through mr-1 opacity-50">240 000₽</span>итого 192 000₽
                                             </div>
-                                            <div class="text-xs text-brandgoldHover font-bold mt-1">Выгода 20%</div>
+                                            <div class="text-xs text-brandgold font-bold mt-1">Выгода 20%</div>
                                         </div>
                                     </div>
                                 </label>
                             </form>
 
-                            <div class="bg-neutral-black/5 border border-neutral-black/10 p-4 mb-6">
+                            <div class="bg-white/5 border border-white/10 p-4 mb-6">
                                 <div class="flex justify-between items-center mb-1">
-                                    <span id="summary-title" class="text-neutral-500 font-mono text-sm uppercase tracking-wider">Ежеквартально</span>
+                                    <span id="summary-title" class="text-neutral-400 font-mono text-sm uppercase tracking-wider">Ежеквартально</span>
                                     <div class="flex items-baseline gap-1">
-                                        <span id="summary-price" class="text-3xl font-bold text-neutral-black font-mono">18 000₽</span>
-                                        <span class="text-neutral-500 font-mono">/мес</span>
+                                        <span id="summary-price" class="text-3xl font-bold text-white font-mono">18 000₽</span>
+                                        <span class="text-neutral-400 font-mono">/мес</span>
                                     </div>
                                 </div>
                                 <div class="flex justify-between items-center text-sm">
-                                    <span class="text-neutral-500 font-mono">К оплате сегодня</span>
+                                    <span class="text-neutral-400 font-mono">К оплате сегодня</span>
                                     <div>
-                                        <span id="summary-old" class="text-neutral-500 line-through mr-2 font-mono">60 000₽</span>
-                                        <span id="summary-new" class="text-neutral-black font-mono font-bold">54 000₽</span>
+                                        <span id="summary-old" class="text-neutral-400 line-through mr-2 font-mono">60 000₽</span>
+                                        <span id="summary-new" class="text-white font-mono font-bold">54 000₽</span>
                                     </div>
                                 </div>
-                                <div id="summary-savings" class="text-right text-brandgoldHover text-sm font-bold mt-2">Вы экономите 6 000₽</div>
-                                <div class="text-xs text-neutral-500 mt-2 font-mono">Отмена в любой момент. Без обязательств.</div>
+                                <div id="summary-savings" class="text-right text-brandgold text-sm font-bold mt-2">Вы экономите 6 000₽</div>
+                                <div class="text-xs text-neutral-400 mt-2 font-mono">Отмена в любой момент. Без обязательств.</div>
                             </div>
 
                             <label class="flex items-start gap-3 mb-6 cursor-pointer group">
                                 <div class="relative mt-0.5">
                                     <input type="checkbox" class="sr-only peer" checked>
-                                    <div class="w-5 h-5 border-2 transition-all flex items-center justify-center border-neutral-black/40 peer-checked:bg-brandgold peer-checked:border-brandgold">
+                                    <div class="w-5 h-5 border-2 transition-all flex items-center justify-center border-white/20 peer-checked:bg-brandgold peer-checked:border-brandgold">
                                         <svg class="w-3 h-3 text-black opacity-0 peer-checked:opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
                                     </div>
                                 </div>
-                                <span class="text-xs font-mono text-neutral-500 leading-relaxed">Держать меня в курсе новостей, акций и обновлений продуктов</span>
+                                <span class="text-xs font-mono text-neutral-400 leading-relaxed">Держать меня в курсе новостей, акций и обновлений продуктов</span>
                             </label>
 
                             <button id="add-to-cart-btn" class="group w-full py-5 transition-all flex items-center justify-center gap-3 text-xl font-bold uppercase tracking-widest border-2 bg-brandgold text-black hover:bg-brandgoldHover border-transparent hover:border-black shadow-lg">
@@ -370,283 +370,152 @@
                                 ДОБАВИТЬ В КОРЗИНУ
                             </button>
 
-                            <p class="text-center text-xs text-neutral-500 font-mono mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+                            <p class="text-center text-xs text-neutral-400 font-mono mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
                                 <span class="flex items-center gap-1">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
                                     90 дней гарантии
                                 </span>
-                                <span class="text-neutral-300">·</span>
+                                <span class="text-neutral-600 hidden md:inline">·</span>
                                 <span class="flex items-center gap-1">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>
                                     Бесплатная доставка
                                 </span>
+                                <span class="text-neutral-600 hidden md:inline">·</span>
                                 <span class="flex items-center gap-1">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
                                     Отправка за 24ч
                                 </span>
                             </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Additional Information Sections -->
-        <section class="bg-white text-black py-8 md:py-12 border-t border-neutral-200">
-            <div class="container mx-auto px-6 max-w-6xl">
-                <div class="max-w-3xl mx-auto text-center">
-                    <p class="text-lg md:text-xl font-mono leading-relaxed"><span class="text-brandgoldHover font-bold">Сенесцентные "зомби" клетки</span> накапливаются с возрастом, выделяя воспалительные белки. PCC1™ доставляет процианидины, необходимые вашему организму для поддержки естественного клеточного обновления.</p>
-                    <a href="index.html#science" class="inline-block mt-4 text-sm font-bold uppercase tracking-wider text-brandgoldHover hover:text-black transition-colors border-b-2 border-current pb-1">Изучить науку →</a>
-                </div>
-            </div>
-        </section>
-        
-        <section class="bg-white text-neutral-black border-neutral-darkgray py-12 md:py-24 border-t border-neutral-darkgray">
-            <div class="container mx-auto px-6 max-w-6xl">
-                <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-                    <div>
-                        <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgold bg-black px-4 py-2 inline-block shadow-sm">[ Состав ]</span>
-                        <h2 class="text-2xl md:text-4xl lg:text-5xl font-wild font-bold tracking-tighter mb-6 md:mb-8 text-neutral-black uppercase">PCC1™ Комплекс Процианидинов<br/>(C1, B2, Эпикатехин)</h2>
-                        <p class="text-lg font-mono text-neutral-600 mb-8 leading-relaxed">PCC1™ содержит концентрированную смесь процианидинов — тех самых мощных полифенолов, которые содержатся в самых полезных продуктах природы. Каждая капсула обеспечивает оптимальное соотношение компонентов.</p>
-                        <div class="space-y-4">
-                            <div class="flex justify-between border-b border-neutral-black/20 pb-2">
-                                <span class="font-mono text-neutral-700">Процианидин C1</span><span class="font-bold text-brandgoldHover">Основной актив</span>
-                            </div>
-                            <div class="flex justify-between border-b border-neutral-black/20 pb-2">
-                                <span class="font-mono text-neutral-700">Процианидин B2</span><span class="font-bold text-brandgoldHover">Синергист</span>
-                            </div>
-                            <div class="flex justify-between border-b border-neutral-black/20 pb-2">
-                                <span class="font-mono text-neutral-700">Эпикатехин</span><span class="font-bold text-brandgoldHover">Биоэнхансер</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <img src="./assets/lab_chemistry.png" alt="Creative" class="w-full h-full object-cover shadow-lg grayscale opacity-90">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    
-        <section class="bg-white text-neutral-black py-12 md:py-24 border-t border-neutral-darkgray">
-            <div class="container mx-auto px-6 max-w-6xl">
-                <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-                    <div class="relative order-2 md:order-1 flex justify-center">
-                        <img src="./assets/nano_delivery.png" alt="Creative" class="w-full h-full object-cover shadow-lg grayscale opacity-90">
-                    </div>
-                    <div class="order-1 md:order-2">
-                        <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgold bg-black px-4 py-2 inline-block shadow-sm">[ Система доставки ]</span>
-                        <h2 class="text-2xl md:text-4xl lg:text-5xl font-wild font-bold tracking-tighter mb-6 md:mb-8 text-neutral-black">ФИТОСОМАЛЬНАЯ<br/>ТЕХНОЛОГИЯ</h2>
-                        <p class="text-lg font-mono text-neutral-600 mb-8 leading-relaxed">Обычные добавки с экстрактом виноградных косточек имеют две проблемы: плохая усвояемость и загрязненность. Наш чистый изолят процианидинов с фитосомальной доставкой намного безопаснее и эффективнее — биодоступность до 5 раз выше, чем у стандартных экстрактов.</p>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="bg-neutral-black/5 p-4 border border-neutral-black/10">
-                                <span class="text-3xl font-wild font-bold text-brandgoldHover">В 5 раз</span>
-                                <p class="text-sm font-mono text-neutral-600 mt-1">эффективнее обычных экстрактов</p>
-                            </div>
-                            <div class="bg-neutral-black/5 p-4 border border-neutral-black/10 flex flex-col justify-center">
-                                <span class="text-xl font-wild font-bold text-black">LONVI</span>
-                                <p class="text-sm font-mono text-neutral-600 mt-1">Стандарт качества</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-white text-neutral-black py-12 md:py-24 border-t border-neutral-darkgray relative overflow-hidden">
-            <div class="container mx-auto px-6 max-w-6xl">
-                <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-                    <div>
-                        <span class="text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgold bg-black px-4 py-2 inline-block shadow-sm">[ Премиум качество ]</span>
-                        <h2 class="text-2xl md:text-4xl lg:text-5xl font-wild font-bold tracking-tighter mb-6 md:mb-8 text-neutral-black">СОЗДАНО ДЛЯ<br/>ДОЛГОЛЕТИЯ</h2>
-                        <p class="text-lg font-mono text-neutral-600 mb-8 leading-relaxed">Каждая партия PCC1™ проходит строгие проверки на чистоту и эффективность. Качество фармацевтического уровня, которому вы можете доверять.</p>
-                        <ul class="space-y-3 font-mono text-neutral-700">
-                            <li class="flex items-center gap-3"><span class="w-2 h-2 bg-brandgold"></span>Производство по стандарту GMP</li>
-                            <li class="flex items-center gap-3"><span class="w-2 h-2 bg-brandgold"></span>Независимое тестирование чистоты</li>
-                            <li class="flex items-center gap-3"><span class="w-2 h-2 bg-brandgold"></span>Прослеживаемость сырья</li>
-                        </ul>
-                    </div>
-                    <div class="relative">
-                        
-                        <img src="./assets/premium_quality.png" alt="Creative" class="w-full h-full object-cover shadow-lg grayscale opacity-90">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-    <section id="faq" class="py-10 md:py-24 bg-neutral-100 text-neutral-900 border-t border-neutral-200">
-        <div class="container mx-auto px-6 max-w-6xl fade-in-section">
-            <div class="flex flex-col md:flex-row gap-12 justify-between items-start">
-                <div class="md:w-1/3 md:sticky md:top-24">
-                    <div class="mb-4 flex items-center gap-2">
-                        <span class="w-8 h-[1px] bg-brandgold"></span>
-                        <span class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase inline-block bg-neutral-900 text-brandgold px-4 py-2 border border-neutral-800 break-words">[ ИНФОРМАЦИЯ ]</span>
-                    </div>
-                    <h2 class="text-3xl md:text-5xl font-wild font-bold tracking-tighter uppercase mb-6 leading-none text-neutral-900">ПОЛЕЗНАЯ<br>ИНФОРМАЦИЯ</h2>
-                    <p class="font-mono text-neutral-600 text-sm md:text-base leading-relaxed mb-8">Всё, что вам нужно знать о протоколе применения, безопасности и эффективности LONVI PCC1.</p>
+                <!-- Product Details Information Block -->
+                <div class="mt-16 md:mt-24 border-t border-white/10 pt-12 max-w-4xl mx-auto">
                     
-                    <div class="p-6 bg-brandgold/5 border-l-4 border-brandgold mt-8">
-                        <h3 class="font-bold text-neutral-900 mb-2 uppercase tracking-widest text-sm">Остались вопросы?</h3>
-                        <p class="font-mono text-xs text-neutral-600 mb-4 leading-relaxed">Наш эксперт LONVI Biosciences Алекс на связи с вами. Задайте ему любой вопрос, и он мгновенно ответит!</p>
-                        <a href="#ai-assistant" class="inline-flex items-center justify-center px-6 py-3 bg-brandgold text-neutral-900 font-bold tracking-[0.1em] uppercase hover:bg-brandgoldHover transition-colors text-xs w-full text-center">
-                            СПРОСИТЬ У АЛЕКСА &rarr;
-                        </a>
+                    <!-- Премиум качество Block with Badges -->
+                    <div class="mb-16 text-center">
+                        <span class="text-sm font-bold tracking-[0.3em] uppercase mb-8 text-brandgold bg-white/5 border border-white/10 px-6 py-3 inline-block shadow-sm rounded-lg backdrop-blur-sm">[ ПРЕМИУМ КАЧЕСТВО ]</span>
+                        
+                        <div class="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 justify-items-center opacity-90 mt-8">
+                            <!-- GMP -->
+                            <div class="w-full aspect-square rounded-xl bg-black/40 border border-white/10 flex items-center justify-center p-2 md:p-4 hover:border-brandgold transition-colors">
+                                <img src="https://matilda081133-sketch.github.io/lonvi/assets/cert-gmp.png" alt="GMP" class="w-full h-full object-contain brightness-125 contrast-[2.0] grayscale invert mix-blend-screen opacity-90 scale-[0.85]">
+                            </div>
+                            <!-- FDA -->
+                            <div class="w-full aspect-square rounded-xl bg-black/40 border border-white/10 flex items-center justify-center p-2 md:p-4 hover:border-brandgold transition-colors">
+                                <img src="https://matilda081133-sketch.github.io/lonvi/assets/cert-fda.jpg" alt="FDA" class="w-full h-full object-contain brightness-125 contrast-[2.0] grayscale invert mix-blend-screen opacity-90 scale-[0.85]">
+                            </div>
+                            <!-- HALAL -->
+                            <div class="w-full aspect-square rounded-xl bg-black/40 border border-white/10 flex items-center justify-center p-2 md:p-4 hover:border-brandgold transition-colors">
+                                <div class="w-[90%] h-[90%] border border-white/50 rounded-full flex items-center justify-center p-1">
+                                    <img src="https://matilda081133-sketch.github.io/lonvi/assets/cert-halal.png" alt="HALAL" class="w-full h-full object-contain brightness-125 contrast-[2.0] grayscale invert mix-blend-screen opacity-90">
+                                </div>
+                            </div>
+                            <!-- VEGAN -->
+                            <div class="w-full aspect-square rounded-xl bg-black/40 border border-white/10 flex items-center justify-center p-2 md:p-4 hover:border-brandgold transition-colors">
+                                <img src="https://matilda081133-sketch.github.io/lonvi/assets/cert-vegan.png" alt="VEGAN" class="w-full h-full object-contain brightness-125 contrast-[2.0] grayscale invert mix-blend-screen opacity-90 scale-[1.15]">
+                            </div>
+                            <!-- CHESTNY ZNAK -->
+                            <div class="w-full aspect-square rounded-xl bg-black/40 border border-white/10 flex items-center justify-center p-2 md:p-4 hover:border-brandgold transition-colors">
+                                <svg viewBox="0 0 100 130" class="w-full h-full object-contain text-white opacity-90 scale-[0.8]">
+                                    <path fill="currentColor" d="M12.924,96.096L35.8,111.455c10.427,6.866,22.046,7.575,32.74,1.866c10.749-5.751,17.208-16.143,18.067-28.77l1.83-26.657L12.924,96.096z M86.115,19.349c-4.482-12.008-16.126-20.2-29.278-20.2L32.228,0l0,51.8l55.834-31.259 C88.291,20.155,88.423,19.753,86.115,19.349z M61.597,41.488L41.365,52.883l38.257,25.688l0.985-14.394 C81.082,56.883,72.636,50.111,61.597,41.488z"></path>
+                                    <polygon fill="currentColor" points="10.871,32.086 10.871,85.697 51.549,58.749 32.228,58.749 "></polygon>
+                                </svg>
+                            </div>
+                            <!-- EAC -->
+                            <div class="w-full aspect-square rounded-xl bg-black/40 border border-white/10 flex items-center justify-center p-2 md:p-4 hover:border-brandgold transition-colors">
+                                <svg viewBox="0 0 100 100" class="w-full h-full object-contain text-white opacity-90 scale-[0.85]">
+                                    <path fill="currentColor" d="M37.3,10.6v78.7H20V10.6H37.3z M61,10.6H42.6v78.7H61v-14H52.5v-18h8V42.7h-8v-17H61V10.6z M65,49.9 c0,19.9,1.1,39.4,17.7,39.4c13.7,0,16.5-16.6,16.5-39.2c0-21.7-2.9-39.6-17.1-39.6C66.8,10.6,65,28.8,65,49.9z M75.1,50 c0-11,1.1-23.7,6.8-23.7c6.1,0,7.1,13.7,7.1,23.8c0,11.2-1.3,23.7-6.9,23.7C76,73.8,75.1,60.8,75.1,50z"></path>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="md:w-2/3 space-y-4">
-                    <!-- FAQ 1 -->
-                    <details class="group bg-neutral-50 border-2 border-neutral-900 p-6 md:p-8 hover:bg-neutral-900 hover:border-brandgold hover:shadow-xl transition-all duration-500 overflow-hidden relative">
-                        <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-neutral-900 relative z-10">
-                            <span class="pr-8 group-hover:text-brandgold transition-colors">Протокол применения</span>
-                            <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
-                                <span class="absolute w-3 h-[2px] bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-180"></span>
-                                <span class="absolute w-[2px] h-3 bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-90 group-open:opacity-0"></span>
-                            </span>
-                        </summary>
-                        <div class="absolute -right-4 -bottom-10 text-9xl font-wild font-black text-neutral-300 opacity-20 select-none z-0 group-hover:scale-110 transition-transform duration-700 group-open:opacity-5">01</div>
-                        <div class="mt-8 text-sm md:text-base font-mono leading-relaxed text-neutral-700 group-hover:text-neutral-300 space-y-4 relative z-10 border-t border-neutral-200 group-hover:border-neutral-700 pt-6 transition-colors duration-500">
-                            <p>Принимайте по 3 таблетки (1 пакетик) в день в течение трех дней подряд. Рекомендуется принимать таблетки натощак, за 3–4 часа до плотного приема пищи. Если вы плохо переносите полифенолы, можно принимать таблетки с небольшим количеством углеводов (например крекеры) или жиров (например, со столовой ложкой оливкового масла), но без белков.</p>
-                            <p>Повторяйте этот курс раз в месяц или два раза в месяц (раз в две недели), если у вас сильное хроническое воспаление.</p>
-                            <p>В рамках трехдневного протокола мы рекомендуем за день до процедуры прекратить прием всех необязательных добавок, в частности N-ацетилцистеина, глутатиона, альфа-липоевой кислоты, витамина С, витамина Е, коэнзима Q10 и Пирролохинолинхинона. Антиоксидантные добавки оказывают защитное действие на клетки, в том числе на токсичные стареющие клетки. Поэтому PCC1 не сможет удалить стареющие клетки.</p>
-                            <p>Пожалуйста, проконсультируйтесь с врачом, если у вас есть какие-либо заболевания или вы принимаете лекарства. Если вы принимаете лекарства, ознакомьтесь с нашим Руководством по применению, чтобы узнать о возможных клинических взаимодействиях.</p>
-                            <p>Не принимайте, если вы беременны, кормите грудью или не достигли 18 лет. Храните в недоступном для детей месте.</p>
-                            <div class="bg-white p-5 mt-6 border-l-2 border-brandgold shadow-sm">
-                                <p class="font-bold text-neutral-900 mb-3 uppercase tracking-widest text-xs">Контрольный список перед началом приема:</p>
-                                <ul class="list-disc pl-5 space-y-2 text-neutral-600">
-                                    <li>Прекращение приема антиоксидантов (≥ 24 часов).</li>
-                                    <li>Проверка на прием статинов (не принимать с высокими дозами аторвастатина, симвастатина и т.д.).</li>
-                                    <li>Проверка на прием других препаратов (такролимус, циклоспорин, варфарин).</li>
-                                    <li>Статус химиотерапии.</li>
-                                    <li>Распределение питательных веществ (интервал 4 часа).</li>
-                                    <li>План по поддержанию водного баланса.</li>
+                    
+                    <div class="space-y-10 font-mono text-neutral-300">
+                        <!-- Description block -->
+                        <div>
+                            <h2 class="text-2xl font-wild font-bold text-white mb-4 uppercase">LONVI BIOSCIENCES PCC1</h2>
+                            <p class="font-bold text-brandgold mb-4 text-lg">Фитосомальный комплекс из экстракта виноградных косточек<br/>
+                            <span class="text-white font-normal">Премиальная биологически активная добавка с высокой концентрацией проантоцианидинов.</span></p>
+                            
+                            <p class="mb-4 leading-relaxed">
+                                LONVI BIOSCIENCES PCC1 — это современный продукт в удобной капсульной форме, созданный на основе фитосомального комплекса экстракта виноградных косточек и фосфолипидов из подсолнечника. Стандартизация до 88% проантоцианидинов делает формулу особенно концентрированной, а фитосомальная технология — более технологичной и комфортной в применении.[3]
+                            </p>
+                            <p class="leading-relaxed">
+                                Продукт подходит тем, кто выбирает качественный и лаконичный формат ежедневной поддержки организма. Короткий курс приема — всего 3 дня — делает PCC1 удобным решением для регулярного использования по необходимости.
+                            </p>
+                        </div>
+                        
+                        <hr class="border-white/10">
+                        
+                        <!-- Advantages -->
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-4 uppercase">Преимущества</h3>
+                            <ul class="list-disc pl-5 space-y-2 leading-relaxed">
+                                <li>Стандартизирован до 88% проантоцианидинов.</li>
+                                <li>Фитосомальная форма для лучшей технологичности формулы.</li>
+                                <li>Фосфолипиды из подсолнечника в составе.</li>
+                                <li>Удобный формат: 3 капсулы в день.</li>
+                                <li>Короткий курс — всего 3 дня.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Composition -->
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-4 uppercase">Состав</h3>
+                            <p class="leading-relaxed bg-white/5 p-6 rounded-xl border border-white/10">
+                                Фитосомальный комплекс экстракта виноградных косточек (Vitis vinifera) и фосфолипидов из подсолнечника в соотношении 1:5, микрокристаллическая целлюлоза 101, стеарат магния.
+                            </p>
+                        </div>
+                        
+                        <!-- Details Grid -->
+                        <div class="grid md:grid-cols-2 gap-8 pt-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-4 uppercase">Способ применения</h3>
+                                <p class="leading-relaxed text-brandgold">Взрослым принимать по 3 капсулы 1 раз в день натощак, перед завтраком.</p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-xl font-bold text-white mb-4 uppercase">Форма выпуска</h3>
+                                <ul class="space-y-1">
+                                    <li>• 3 пакетика по 3 капсулы.</li>
+                                    <li>• 1 пакетик — 1 дневная порция.</li>
+                                    <li>• Курс приема — 3 дня.</li>
                                 </ul>
                             </div>
                         </div>
-                    </details>
-
-                    <!-- FAQ 2 -->
-                    <details class="group bg-neutral-50 border-2 border-neutral-900 p-6 md:p-8 hover:bg-neutral-900 hover:border-brandgold hover:shadow-xl transition-all duration-500 overflow-hidden relative">
-                        <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-neutral-900 relative z-10">
-                            <span class="pr-8 group-hover:text-brandgold transition-colors">Протокол мониторинга</span>
-                            <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
-                                <span class="absolute w-3 h-[2px] bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-180"></span>
-                                <span class="absolute w-[2px] h-3 bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-90 group-open:opacity-0"></span>
-                            </span>
-                        </summary>
-                        <div class="absolute -right-4 -bottom-10 text-9xl font-wild font-black text-neutral-300 opacity-20 select-none z-0 group-hover:scale-110 transition-transform duration-700 group-open:opacity-5">02</div>
-                        <div class="mt-8 text-sm md:text-base font-mono leading-relaxed text-neutral-700 group-hover:text-neutral-300 space-y-4 relative z-10 border-t border-neutral-200 group-hover:border-neutral-700 pt-6 transition-colors duration-500">
-                            <p class="text-neutral-900 group-hover:text-white font-bold transition-colors">Комплексный анализ биологических показателей</p>
-                            <p>Фармакологическое обоснование: Сенолитики (например, PCC1, дазатиниб, физетин) вызывают апоптоз стареющих клеток посредством «физического очищения», а не только химического ингибирования. Они применяются по принципу «удар и уход», что характеризуется крайне коротким периодом полувыведения препарата.</p>
-                            <p>При взятии проб в строго определённое время влияние метаболизма препарата может быть полностью устранено, что позволяет объективно оценить степень очищения микросреды тканей, распад сети SASP (сенесцентно-ассоциированный секреторный фенотип) и прогресс восстановления функций систем организма.</p>
-                        </div>
-                    </details>
-
-                    <!-- FAQ 3 -->
-                    <details class="group bg-neutral-50 border-2 border-neutral-900 p-6 md:p-8 hover:bg-neutral-900 hover:border-brandgold hover:shadow-xl transition-all duration-500 overflow-hidden relative">
-                        <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-neutral-900 relative z-10">
-                            <span class="pr-8 group-hover:text-brandgold transition-colors">Безопасность и экологичность</span>
-                            <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
-                                <span class="absolute w-3 h-[2px] bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-180"></span>
-                                <span class="absolute w-[2px] h-3 bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-90 group-open:opacity-0"></span>
-                            </span>
-                        </summary>
-                        <div class="absolute -right-4 -bottom-10 text-9xl font-wild font-black text-neutral-300 opacity-20 select-none z-0 group-hover:scale-110 transition-transform duration-700 group-open:opacity-5">03</div>
-                        <div class="mt-8 text-sm md:text-base font-mono leading-relaxed text-neutral-700 group-hover:text-neutral-300 space-y-4 relative z-10 border-t border-neutral-200 group-hover:border-neutral-700 pt-6 transition-colors duration-500">
-                            <p>В отличие от других синтетических и натуральных сенолитиков, PCC1 — это полифенол растительного происхождения с высоким уровнем безопасности и переносимости.</p>
-                            <p>Наш продукт соответствует требованиям GMP, не содержит ГМО, веганский (не содержит ингредиентов животного происхождения), прошел лабораторные испытания (сторонних производителей) на наличие вредных химических веществ и подтвержден исследованиями.</p>
-                            <p>Доклинические исследования на людях показали, что высокоэффективная формула PCC1 от Lonvi отличается высокой переносимостью.</p>
-                        </div>
-                    </details>
-
-                    <!-- FAQ 4 -->
-                    <details class="group bg-neutral-50 border-2 border-neutral-900 p-6 md:p-8 hover:bg-neutral-900 hover:border-brandgold hover:shadow-xl transition-all duration-500 overflow-hidden relative">
-                        <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-neutral-900 relative z-10">
-                            <span class="pr-8 group-hover:text-brandgold transition-colors">Эффективность + Низкая стоимость</span>
-                            <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
-                                <span class="absolute w-3 h-[2px] bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-180"></span>
-                                <span class="absolute w-[2px] h-3 bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-90 group-open:opacity-0"></span>
-                            </span>
-                        </summary>
-                        <div class="absolute -right-4 -bottom-10 text-9xl font-wild font-black text-neutral-300 opacity-20 select-none z-0 group-hover:scale-110 transition-transform duration-700 group-open:opacity-5">04</div>
-                        <div class="mt-8 text-sm md:text-base font-mono leading-relaxed text-neutral-700 group-hover:text-neutral-300 space-y-4 relative z-10 border-t border-neutral-200 group-hover:border-neutral-700 pt-6 transition-colors duration-500">
-                            <p>Стандартные экстракты виноградных косточек обычно содержат большое количество процианидинов, но лишь 0,1–0,6 % PCC1. Кроме того, известно, что организм плохо усваивает PCC1.</p>
-                            <p>Компания Lonvi разработала уникальный метод экстракции, который позволяет повысить концентрацию активного PCC1 до 20 % (в 30 раз выше стандартной концентрации). Кроме того, Lonvi создала фитосомальный барьер, который улучшает усвоение в 6–10 раз.</p>
-                            <div class="p-4 bg-brandgold/10 border-l-2 border-brandgold mt-4">
-                                <p class="text-neutral-900 group-hover:text-white transition-colors font-bold">Одна доза Lonvi PCC1 эквивалентна употреблению трех метрических тонн винограда в пересчете на PCC1.</p>
+                        
+                        <hr class="border-white/10">
+                        
+                        <!-- Warnings & Storage -->
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-lg font-bold text-red-400 mb-2 uppercase">Противопоказания</h3>
+                                    <p class="leading-relaxed text-sm">Индивидуальная непереносимость компонентов, беременность, период грудного вскармливания, возраст до 18 лет.</p>
+                                    <p class="leading-relaxed text-sm mt-2 italic text-neutral-400">Перед применением рекомендуется проконсультироваться с врачом, особенно при нарушениях свертываемости крови или одновременном приеме лекарственных средств.</p>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-white mb-2 uppercase">Важно</h3>
+                                    <p class="leading-relaxed text-sm">Не является лекарственным средством. БАД не должна использоваться в качестве замены полноценного питания.</p>
+                                </div>
                             </div>
-                            <p>Новый запатентованный метод экстракции Lonvi является эффективным и экономичным, снижая стоимость PCC1 более чем на 95%. При использовании традиционных методов экстракции количество PCC1, содержащееся всего в одной упаковке Lonvi, обошлось бы более чем в 290 000 рублей.</p>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2 uppercase">Условия хранения</h3>
+                                <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                                    <p class="leading-relaxed text-sm">Хранить в сухом, прохладном, защищенном от прямых солнечных лучей месте, при температуре не выше 25 °C, в недоступном для детей месте.</p>
+                                    <p class="text-brandgold text-sm font-bold mt-2 border-t border-white/10 pt-2">Хранение в холодильнике не требуется.</p>
+                                </div>
+                            </div>
                         </div>
-                    </details>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Contacts Section -->
-    <section class="relative text-white border-t border-neutral-800 bg-cover bg-center bg-fixed" style="background-image: url('https://matilda081133-sketch.github.io/lonvi/assets/bg-cells.jpg')" id="contact">
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="container mx-auto px-6 py-10 md:py-24 max-w-6xl fade-in-section relative z-10">
-            <div class="grid md:grid-cols-2 gap-12 lg:gap-24">
-                <!-- Left: Info & Socials -->
-                <div class="flex flex-col justify-center">
-                    <h2 class="font-wild text-4xl md:text-5xl font-bold tracking-tighter mb-8 uppercase">СВЯЗАТЬСЯ<br/><span class="font-light text-brandgold">С НАМИ</span></h2>
-                    <p class="font-mono text-neutral-400 mb-12 max-w-md leading-relaxed text-sm md:text-base">Эксклюзивная поддержка и ценная информация. LONVI Biosciences уделяет особое внимание каждому клиенту и обеспечивает высокий уровень сервиса на всех этапах взаимодействия.</p>
-                    
-                    <div class="space-y-6 font-mono text-lg mb-12">
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 border border-neutral-700 flex items-center justify-center text-brandgold">
-                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            </div>
-                            <a href="tel:+79394999909" class="hover:text-brandgold transition-colors">+7 939 499-99-09</a>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 border border-neutral-700 flex items-center justify-center text-brandgold">
-                                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            </div>
-                            <a href="mailto:lonvibio@mail.ru" class="hover:text-brandgold transition-colors">lonvibio@mail.ru</a>
-                        </div>
-                    </div>
-
-                    <p class="font-mono text-xs tracking-[0.2em] text-neutral-500 uppercase mb-4">Наши социальные сети</p>
-                    <div class="flex gap-4">
-                        <a href="https://www.facebook.com/lonvibio" target="_blank" class="w-10 h-10 bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
-                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
-                        </a>
-                        <a href="https://www.instagram.com/lonvi_biosciences/" target="_blank" class="w-10 h-10 bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
-                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        </a>
-                        <a href="https://t.me/lonvi_russia" target="_blank" class="w-10 h-10 bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
-                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/></svg>
-                        </a>
-                        <a href="https://www.tiktok.com/@lonvibio?_r=1&_t=ZS-96YFDr0DHT6" target="_blank" class="w-10 h-10 bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
-                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-                        </a>
-                        <a href="https://vk.ru/lonvi_russia" target="_blank" class="w-10 h-10 bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
-                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M15.071 18.232c-.93 0-3.52-.073-6.528-3.32C5.467 11.583 3.633 6.012 3.513 5.652c-.105-.316.016-.48.337-.48h2.89c.273 0 .408.145.503.35 0 0 1.439 3.535 3.473 5.829.658.636.953.839 1.226.839.136 0 .337-.203.337-.803V5.626c0-.361-.106-.523-.41-.523h-1.32c-.179 0-.251-.237-.091-.397.35-.357 1.408-.475 2.502-.475 1.54 0 1.84.116 1.84.805v4.542c0 .438.2.6.337.6.196 0 .584-.162 1.624-1.18 1.002-1.026 1.802-3.13 1.802-3.13.085-.246.335-.367.625-.367h2.89c.35 0 .438.175.337.525-.136.466-1.503 2.527-3.056 4.316-.763.874-.958 1.107-.958 1.458 0 .35.253.641.778 1.185 1.487 1.457 1.854 2.894 1.954 3.342.062.29-.044.524-.467.524h-2.89c-.311 0-.584-.204-.778-.582 0 0-1.168-2.683-2.589-2.934-.407-.074-.583.133-.583.568v2.247c0 .29-.117.436-.61.436z"/></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Right: Form -->
-                <div class="bg-neutral-900 p-8 md:p-10 border border-neutral-800 shadow-hard-white">
-                    <p class="font-mono text-xs tracking-[0.3em] uppercase mb-8 text-brandgold font-bold">[ ОСТАВИТЬ ЗАЯВКУ ]</p>
-                    <form class="flex flex-col gap-5 font-mono text-sm">
-                        <input type="text" placeholder="ВАШЕ ИМЯ" class="w-full px-5 py-4 bg-transparent border border-neutral-700 text-white placeholder:text-neutral-500 focus:border-brandgold outline-none transition-colors">
-                        <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full px-5 py-4 bg-transparent border border-neutral-700 text-white placeholder:text-neutral-500 focus:border-brandgold outline-none transition-colors">
-                        <button type="button" class="w-full px-6 py-4 bg-brandgold text-neutral-900 font-bold tracking-[0.2em] uppercase hover:bg-brandgoldHover transition-colors mt-4">ОСТАВИТЬ ЗАЯВКУ &rarr;</button>
-                        <p class="text-xs text-neutral-500 mt-2 text-center leading-relaxed">
-                            Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="#" class="underline hover:text-white transition-colors">Политикой конфиденциальности</a> и <a href="#" class="underline hover:text-white transition-colors">Офертой</a>.
-                        </p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
+    </main>
 
     <!-- Footer -->
     <footer class="bg-[#1A1C20] border-t border-neutral-800">
