@@ -540,24 +540,40 @@
             <h3 class="text-2xl font-bold text-black uppercase font-wild mb-2">Оформление заказа</h3>
             <p class="text-xs text-neutral-500 font-mono mb-6 leading-relaxed">Пожалуйста, заполните данные для оформления заказа. Доставка по всей России — бесплатно.</p>
             
-            <div class="space-y-3 mb-6 ">
-                                <input type="text" id="lv-name" placeholder="ФИО получателя (для доставки)" class="w-full bg-white border border-neutral-200 p-4 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brandgold transition-colors font-mono text-sm shadow-sm" autocomplete="name" required>
-                                
-                                <input type="tel" id="lv-phone" placeholder="Телефон +7..." class="w-full bg-white border border-neutral-200 p-4 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brandgold transition-colors font-mono text-sm shadow-sm" inputmode="tel" autocomplete="tel" required>
-                                
-                                <input type="email" id="lv-email" placeholder="E-mail (для чека)" class="w-full bg-white border border-neutral-200 p-4 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brandgold transition-colors font-mono text-sm shadow-sm" inputmode="email" autocomplete="email" required>
-                                
-                                <div class="relative group">
-                                    <input type="text" id="lv-city" placeholder="Город (начните вводить...)" class="w-full bg-white border border-neutral-200 p-4 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brandgold transition-colors font-mono text-sm shadow-sm" autocomplete="off" required>
-                                    <div id="lv-city-dropdown" class="hidden absolute left-0 right-0 top-full mt-1 bg-white border border-neutral-200 shadow-lg z-50 max-h-48 overflow-y-auto">
-                                        <!-- Injected via JS -->
-                                    </div>
-                                </div>
+            <div class="space-y-4 mb-6 mt-4">
+                <div>
+                    <label for="lv-name" class="block text-[11px] font-bold uppercase tracking-widest text-neutral-500 mb-1.5 ml-1">ФИО получателя</label>
+                    <input type="text" id="lv-name" placeholder="Иван Иванов" class="w-full bg-white border border-neutral-200 p-4 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brandgold transition-colors font-mono text-sm shadow-sm" autocomplete="name" required>
+                </div>
+                
+                <div>
+                    <label for="lv-phone" class="block text-[11px] font-bold uppercase tracking-widest text-neutral-500 mb-1.5 ml-1">Номер телефона</label>
+                    <input type="tel" id="lv-phone" placeholder="+7 999 899 89 89" class="w-full bg-white border border-neutral-200 p-4 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brandgold transition-colors font-mono text-sm shadow-sm" inputmode="tel" autocomplete="tel" required>
+                </div>
+                
+                <div>
+                    <label for="lv-email" class="block text-[11px] font-bold uppercase tracking-widest text-neutral-500 mb-1.5 ml-1">E-mail (для чека)</label>
+                    <input type="email" id="lv-email" placeholder="info@mail.ru" class="w-full bg-white border border-neutral-200 p-4 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brandgold transition-colors font-mono text-sm shadow-sm" inputmode="email" autocomplete="email" required>
+                </div>
+                
+                <div>
+                    <label for="lv-city" class="block text-[11px] font-bold uppercase tracking-widest text-neutral-500 mb-1.5 ml-1">Город</label>
+                    <div class="relative group">
+                        <input type="text" id="lv-city" placeholder="Москва, Казань, и др..." class="w-full bg-white border border-neutral-200 p-4 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brandgold transition-colors font-mono text-sm shadow-sm" autocomplete="off" required>
+                        <div id="lv-city-dropdown" class="hidden absolute left-0 right-0 top-full mt-1 bg-white border border-neutral-200 shadow-lg z-50 max-h-48 overflow-y-auto">
+                            <!-- Injected via JS -->
+                        </div>
+                    </div>
+                </div>
 
-                                <input type="text" id="lv-address" placeholder="Пункт выдачи СДЭК или адрес доставки" class="w-full bg-white border border-neutral-200 p-4 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brandgold transition-colors font-mono text-sm shadow-sm" required>
-                            </div>
+                <div>
+                    <label for="lv-address" class="block text-[11px] font-bold uppercase tracking-widest text-neutral-500 mb-1.5 ml-1">Пункт выдачи СДЭК или адрес</label>
+                    <input type="text" id="lv-address" placeholder="ул. Примерная, д. 1" class="w-full bg-white border border-neutral-200 p-4 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-brandgold transition-colors font-mono text-sm shadow-sm" required>
+                </div>
+            </div>
 
-                            <label class="flex items-start gap-3 mb-6 cursor-pointer group mt-4">
+            <label class="flex items-start gap-3 mb-6 cursor-pointer group mt-4">
+
                                 <div class="relative mt-0.5">
                                     <input type="checkbox" id="lv-agree" class="sr-only peer" checked>
                                     <div class="w-5 h-5 border-2 transition-all flex items-center justify-center border-neutral-200 peer-checked:bg-brandgold peer-checked:border-brandgold shadow-sm">
