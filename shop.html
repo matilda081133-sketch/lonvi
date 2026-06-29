@@ -201,8 +201,8 @@
                 <div class="flex-1 grid md:grid-cols-2 gap-8 lg:gap-16 items-start relative">
                     
                     <!-- Left side (gallery) -->
-                    <div class="relative overflow-hidden bg-white flex flex-col rounded-none border border-white/20 shadow-xl md:sticky md:top-32 z-20">
-                        <div class="absolute inset-0 bg-brandgold/5"></div>
+                    <div class="relative overflow-hidden bg-white flex flex-col rounded-none border border-white/20 shadow-xl z-20">
+                        
                         
                         <!-- Main Image Viewport -->
                         <div class="relative z-10 w-full aspect-square lg:aspect-[4/3] flex items-center justify-center p-4 md:p-8">
@@ -259,7 +259,7 @@
 
                             <form id="shop-form" class="space-y-3 mb-6">
                                 <!-- Option 1: Monthly -->
-                                <label class="block w-full p-4 border-2 transition-all text-left relative group border-white/20 bg-white hover:bg-neutral-50 rounded-xl cursor-pointer has-[:checked]:border-brandgold has-[:checked]:bg-brandgold/5">
+                                <label class="block w-full p-4 border-2 transition-all text-left relative group border-white/20 bg-white hover:bg-neutral-50 rounded-none cursor-pointer has-[:checked]:border-brandgold has-[:checked]:bg-brandgold/5">
                                     <input type="radio" name="plan" value="monthly" class="sr-only peer">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center gap-3">
@@ -283,8 +283,8 @@
                                 </label>
 
                                 <!-- Option 2: Quarterly -->
-                                <label class="block w-full p-4 border-2 transition-all text-left relative group border-brandgold bg-white shadow-md rounded-xl cursor-pointer">
-                                    <span class="absolute -top-3 left-4 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-brandgold text-black shadow-sm rounded">Популярное</span>
+                                <label class="block w-full p-4 border-2 transition-all text-left relative group border-brandgold bg-white shadow-md rounded-none cursor-pointer">
+                                    <span class="absolute -top-3 left-4 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-brandgold text-black shadow-sm rounded-none">Популярное</span>
                                     <input type="radio" name="plan" value="quarterly" class="sr-only peer" checked>
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center gap-3">
@@ -310,8 +310,8 @@
                                 </label>
 
                                 <!-- Option 3: Annual -->
-                                <label class="block w-full p-4 border-2 transition-all text-left relative group border-white/20 bg-white hover:bg-neutral-50 rounded-xl cursor-pointer has-[:checked]:border-brandgold has-[:checked]:bg-brandgold/5">
-                                    <span class="absolute -top-3 left-4 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-black border border-brandgold text-brandgold shadow-sm rounded">Эффективность + доступная цена</span>
+                                <label class="block w-full p-4 border-2 transition-all text-left relative group border-white/20 bg-white hover:bg-neutral-50 rounded-none cursor-pointer has-[:checked]:border-brandgold has-[:checked]:bg-brandgold/5">
+                                    <span class="absolute -top-3 left-4 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-black border border-brandgold text-brandgold shadow-sm rounded-none">Эффективность + доступная цена</span>
                                     <input type="radio" name="plan" value="annual" class="sr-only peer">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center gap-3">
@@ -337,7 +337,7 @@
                                 </label>
                             </form>
 
-                            <div class="bg-white border border-neutral-200 shadow-sm rounded-xl p-4 mb-6">
+                            <div class="bg-white border border-neutral-200 shadow-sm rounded-none p-4 mb-6">
                                 <div class="flex justify-between items-center mb-1">
                                     <span id="summary-title" class="text-neutral-500 font-mono text-sm uppercase tracking-wider">Ежеквартально</span>
                                     <div class="flex items-baseline gap-1">
