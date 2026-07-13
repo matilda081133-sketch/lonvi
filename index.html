@@ -10,6 +10,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
+    
+    <style>
+        /* SUPER SPECIFIC OVERRIDE FOR FOOTER SOCIAL ICONS */
+        footer a.rounded-full, 
+        section#contact a.rounded-full, 
+        #allrecords footer a.rounded-full, 
+        #allrecords section#contact a.rounded-full, 
+        section#contact a.rounded-full, 
+        .t-rec footer a.rounded-full, 
+        .t-rec section#contact a.rounded-full, 
+        section#contact a.rounded-full,
+        footer a[href*="lonvi"].rounded-full,
+        footer a[href*="instagram"].rounded-full,
+        footer a[href*="tiktok"].rounded-full,
+        footer a[href*="t.me"].rounded-full,
+        footer a[href*="facebook"].rounded-full {
+            color: #000000 !important;
+            fill: #000000 !important;
+            stroke: #000000 !important;
+        }
+        
+        footer a.rounded-full:hover, 
+        section#contact a.rounded-full:hover, 
+        #allrecords footer a.rounded-full:hover, 
+        #allrecords section#contact a.rounded-full:hover, 
+        section#contact a.rounded-full:hover,
+        footer a[href*="lonvi"].rounded-full:hover {
+            color: #000000 !important;
+            fill: #000000 !important;
+        }
+    </style>
+        
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -68,12 +100,7 @@
         .header-dark a.text-neutral-black:hover {
             color: #FFD700 !important;
         }
-        .header-dark #logo-light, .header-dark #logo-blur-light {
-            display: none !important;
-        }
-        .header-dark #logo-dark, .header-dark #logo-blur {
-            display: block !important;
-        }
+        
         .gradient-text-animated {
             background: linear-gradient(90deg, #FFD700, #FFE866, #FFD700, #F3E5AB, #FFD700);
             background-size: 300% auto;
@@ -103,7 +130,335 @@
         .metallic-dark-gray {
             background: linear-gradient(145deg, #373A40 0%, #1A1C20 40%, #15171A 80%, #2A2D32 100%);
         }
-</style>
+    summary::-webkit-details-marker { display: none !important; }
+        summary { list-style: none !important; }
+    
+    /* Force hide Tilda's default member widget */
+    .t-member, 
+    .t-member-icon, 
+    .t-menuburger_member, 
+    #t-member-widget, 
+    .t-member-btn,
+    .t-member-circle,
+    .t-users-widget,
+    div[class*="t-member"] {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+        /* FIX SOCIAL ICONS - Keep them black and perfectly aligned */
+        a.rounded-full {
+            color: #0A0A0A !important;
+            text-decoration: none !important;
+            border-bottom: none !important;
+            line-height: 1 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            box-sizing: border-box !important;
+        }
+    
+        /* HIDE THE REST OF THE DUMMY ME401T MENU SO IT DOESNT SHOW ON PAGE */
+        #allrecords > div:not(.t123) .t-menu__container,
+        #allrecords > div:not(.t123) .t282,
+        #allrecords > div:not(.t123) .t450 {
+            display: none !important;
+        }
+        /* Except the transplanted widget which is now inside our header! */
+        header .t-menuwidgeticons__members {
+            display: flex !important;
+        }
+    </style>
+    <style>
+        /* Отменяем оранжевый цвет ссылок Тильды для наших кнопок */
+        a.bg-brandgold { color: #000000 !important; }
+        a.bg-brandgold:hover { color: #000000 !important; background-color: #FFD700 !important; }
+        a.border-white.text-white { color: #FFFFFF !important; border-color: #FFFFFF !important; }
+    </style>
+<style>
+    /* NUKE TILDA MEMBER WIDGET */
+    .t801, .t801__widget, .t-member, .t-member-icon, .t-member-circle,
+    div[class*="t801"], div[class*="member"], div[data-module="member"],
+    #t-member-widget, .t-member-btn, .t-menuburger_member, .t-members-icon {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        width: 0 !important;
+        height: 0 !important;
+        position: absolute !important;
+        z-index: -9999 !important;
+    }
+    </style>
+    <style>
+        /* Force button colors against Tilda's global settings */
+        .bg-brandgold, 
+        a.bg-brandgold, 
+        button.bg-brandgold {
+            background-color: #FFD700 !important;
+            color: #0A0A0A !important;
+        }
+        .hover\:bg-brandgoldHover:hover,
+        a.hover\:bg-brandgoldHover:hover,
+        button.hover\:bg-brandgoldHover:hover {
+            background-color: #FFE866 !important;
+            color: #0A0A0A !important;
+        }
+    </style>
+
+    
+    <style>
+        /* PROTECT HEADER BUTTONS FROM TILDA STYLES */
+        header button#search-btn, 
+        header button#cart-btn, 
+        header button#mobile-menu-btn {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        
+        /* Light theme colors (default) */
+        header button#search-btn, 
+        header button#cart-btn, 
+        header button#mobile-menu-btn,
+        header a {
+            color: #0A0A0A !important;
+        }
+        
+        /* Dark theme colors */
+        header.header-dark button#search-btn, 
+        header.header-dark button#cart-btn, 
+        header.header-dark button#mobile-menu-btn,
+        header.header-dark a {
+            color: #FFFFFF !important;
+        }
+        
+        /* Hover states */
+        header button#search-btn:hover, 
+        header button#cart-btn:hover, 
+        header button#mobile-menu-btn:hover,
+        header a:hover {
+            color: #FFD700 !important;
+        }
+        
+        /* Protect the little notification badge in the cart */
+        header button#cart-btn span {
+            background-color: #FFD700 !important;
+            color: #0A0A0A !important;
+        }
+        
+        /* Dark theme logo switching */
+        .header-dark #logo-light, .header-dark #logo-blur-light {
+            display: none !important;
+        }
+        .header-dark #logo-dark, .header-dark #logo-blur {
+            display: block !important;
+        }
+        
+        /* FIX FAQ PLUS ICON COLOR (ALWAYS BLACK) */
+        details summary svg, details[open] summary svg, details summary:hover svg {
+            color: #0A0A0A !important;
+            stroke: #0A0A0A !important;
+            fill: none !important;
+        }
+        
+        /* PROTECT ALL FOOTER AND FORM LINKS FROM TILDA ORANGE */
+        footer a, form a, .underline {
+            color: #a3a3a3 !important; /* Tailwind neutral-400/500 */
+        }
+        footer a:hover, form a:hover, .underline:hover {
+            color: #FFFFFF !important;
+        }
+    
+        /* PROTECT EMAIL AND ALL LINKS FROM TILDA ORANGE */
+        footer a, form a, .underline, a[href*="mailto"], a[href*="mail"] {
+            color: inherit !important; 
+        }
+        footer a:hover, form a:hover, .underline:hover, a[href*="mailto"]:hover, a[href*="lonvi"]:hover {
+            color: #FFD700 !important;
+        }
+    </style>
+    
+    
+    <script>
+        // SMART DYNAMIC HEADER JS FOR TILDA (V3 - ROBUST BOUNDING BOX LOGIC)
+        document.addEventListener('DOMContentLoaded', function() {
+            function isColorDark(colorStr) {
+                if (!colorStr || colorStr === 'rgba(0, 0, 0, 0)' || colorStr === 'transparent') return false;
+                var rgb = colorStr.match(/\d+/g);
+                if (rgb && rgb.length >= 3) {
+                    var r = parseInt(rgb[0]), g = parseInt(rgb[1]), b = parseInt(rgb[2]);
+                    // Ignore fully transparent colors
+                    if (rgb.length === 4 && parseFloat(rgb[3]) === 0) return false;
+                    var brightness = (r * 299 + g * 587 + b * 114) / 1000;
+                    return brightness < 128;
+                }
+                return false;
+            }
+
+            function isBlockDark(block) {
+                // 1. My custom Tailwind classes
+                if (block.classList.contains('metallic-dark-gray') || block.classList.contains('bg-neutral-900') || block.classList.contains('bg-secondary') || block.classList.contains('bg-black')) return true;
+                if (block.classList.contains('bg-neutral-100') || block.classList.contains('bg-white') || block.classList.contains('bg-brandgold')) return false;
+
+                // 2. Computed background color of the wrapper
+                var style = window.getComputedStyle(block);
+                if (isColorDark(style.backgroundColor)) return true;
+
+                // 3. Tilda cover filters (image overlays)
+                var filter = block.querySelector('.t-cover__filter');
+                if (filter) {
+                    var fStyle = window.getComputedStyle(filter);
+                    if (isColorDark(fStyle.backgroundColor)) return true;
+                    if (fStyle.backgroundImage && fStyle.backgroundImage.includes('linear-gradient') && !fStyle.backgroundImage.includes('rgba(255, 255, 255')) return true;
+                }
+
+                // 4. Text color heuristic (if background is image, text color tells us if it's a dark or light section)
+                var texts = block.querySelectorAll('h1, h2, h3, p, .t-title, .t-descr, .t-text, .t-name, .t-uptitle, .t-heading');
+                for (var i = 0; i < texts.length && i < 5; i++) {
+                    var color = window.getComputedStyle(texts[i]).color;
+                    var rgb = color.match(/\d+/g);
+                    if (rgb && rgb.length >= 3) {
+                        var brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
+                        if (brightness > 200) return true; // White/light text means dark background
+                        if (brightness < 50) return false; // Black text means light background
+                    }
+                }
+                
+                return false;
+            }
+
+            window.addEventListener('scroll', function() {
+                var header = document.querySelector('header');
+                if (!header) return;
+                
+                // Header height is h-20 (80px), check at Y=40
+                var checkY = 40; 
+                var blocks = document.querySelectorAll('.t-rec, section, footer');
+                var currentDark = false;
+                var foundBlock = null;
+
+                for (var i = blocks.length - 1; i >= 0; i--) {
+                    var rect = blocks[i].getBoundingClientRect();
+                    // If the Y=40 point is inside this block
+                    if (rect.top <= checkY && rect.bottom > checkY) {
+                        foundBlock = blocks[i];
+                        break;
+                    }
+                }
+
+                if (foundBlock) {
+                    currentDark = isBlockDark(foundBlock);
+                }
+
+                if (currentDark) {
+                    header.classList.add('header-dark');
+                } else {
+                    header.classList.remove('header-dark');
+                }
+            });
+
+            // Run initially
+            setTimeout(function() { window.dispatchEvent(new Event('scroll')); }, 300);
+            setTimeout(function() { window.dispatchEvent(new Event('scroll')); }, 1000);
+        });
+    </script>
+
+    <style>
+        
+    </style>
+
+
+
+
+
+
+<script>
+    // TRANSPLANT TILDA MEMBER WIDGET INTO OUR HEADER (BULLETPROOF)
+    document.addEventListener('DOMContentLoaded', function() {
+        var attempts = 0;
+        var maxAttempts = 20; // Try for 10 seconds
+        
+        var interval = setInterval(function() {
+            attempts++;
+            
+            // Check if Tilda rendered the member widget
+            var tildaMemberItem = document.querySelector('.t-menuwidgeticons__members, .t282__menu__item[data-menu-widget="member"], .t-member-icon');
+            var ourAccountBtn = document.getElementById('custom-login-btn');
+            
+            if (tildaMemberItem && ourAccountBtn) {
+                clearInterval(interval); // Found it!
+                
+                var ourContainer = ourAccountBtn.parentElement;
+                
+                // Keep Tilda's classes but add our styling
+                tildaMemberItem.style.listStyle = 'none';
+                tildaMemberItem.style.margin = '0';
+                tildaMemberItem.style.padding = '0';
+                tildaMemberItem.style.display = 'flex';
+                
+                var link = tildaMemberItem.querySelector('a');
+                if (link) {
+                    // Hide original SVG
+                    var svgs = link.querySelectorAll('svg, img, .t-menuwidgeticons__img');
+                    svgs.forEach(function(s) { s.style.display = 'none'; });
+                    
+                    // Add our text
+                    var textSpan = document.createElement('span');
+                    textSpan.className = "hidden md:flex items-center gap-2 hover:text-brandgold transition-colors ml-4 text-xs tracking-wider uppercase font-bold text-black";
+                    textSpan.innerText = "МОЙ АККАУНТ";
+                    textSpan.style.color = "inherit";
+                    link.style.color = "inherit";
+                    link.style.textDecoration = "none";
+                    link.appendChild(textSpan);
+                    link.classList.add('flex', 'items-center', 'h-full');
+                }
+                
+                // Transplant!
+                ourContainer.replaceChild(tildaMemberItem, ourAccountBtn);
+            } else if (attempts >= maxAttempts) {
+                clearInterval(interval); // Give up
+            }
+        }, 500);
+    });
+</script>
+
+        <style>
+            #mobile-menu a, #mobile-menu button,
+            .tmenu-mobile a, .tmenu-mobile button {
+                -webkit-tap-highlight-color: transparent !important;
+            }
+            #mobile-menu a:active, #mobile-menu button:active {
+                background-color: transparent !important;
+            }
+        </style>
+        
+
+            <style>
+                .brightness-0.invert {
+                    -webkit-filter: brightness(0) invert(1) !important;
+                    filter: brightness(0) invert(1) !important;
+                }
+            </style>
+            
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109597376', 'ym');
+
+    ym(109597376, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109597376" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
 </head>
 <body class="font-sans antialiased">
 
@@ -112,29 +467,29 @@
         <div class="container max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <!-- Left: Account & Icons -->
             <div class="flex items-center gap-4">
-                <a href="#" class="hidden lg:block text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors mr-2">Мой аккаунт</a>
+                <a href="#openmembersbar" id="custom-login-btn" class="hidden lg:flex items-center gap-2 text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors mr-2">МОЙ АККАУНТ</a>
                 <button id="search-btn" class="text-neutral-black hover:text-brandgold transition-colors p-1" aria-label="Поиск">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
                 </button>
                 
                 <button id="cart-btn" class="text-neutral-black hover:text-brandgold transition-colors relative p-1" aria-label="Корзина">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 22A2 2 0 109 18a2 2 0 000 4zM20 22A2 2 0 1020 18a2 2 0 000 4z"></path><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
-                    <span class="absolute -top-1 -right-1 bg-brandgold text-neutral-900 font-bold text-[9px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-mono">0</span>
+                    <span class="absolute -top-1 -right-1 bg-brandgold text-black font-bold text-[9px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-mono">0</span>
                 </button>
             </div>
             
             <!-- Center: Logo -->
-            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-5 md:h-7 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
-                <div id="logo-blur-light" class="absolute inset-[-20px] bg-white/90 blur-md rounded-full -z-10 pointer-events-none"></div>
-                <div id="logo-blur" class="hidden absolute inset-[-20px] bg-[#1A1C20] blur-md rounded-full -z-10 pointer-events-none"></div>
-                <img id="logo-light" src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain mix-blend-multiply contrast-[1.2] invert contrast-125 grayscale relative z-10">
-                <img id="logo-dark" src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain hidden mix-blend-screen relative z-10">
-            </div>
+            <a href="https://lonvibio.com.ru/" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-5 md:h-7 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
+                <div id="logo-blur-light" class="absolute inset-[-20px] bg-white/90 blur-md rounded-full -z-10 pointer-events-none transition-all duration-300"></div>
+                <div id="logo-blur" class="hidden absolute inset-[-20px] bg-[#1A1C20] blur-md rounded-full -z-10 pointer-events-none transition-all duration-300"></div>
+                <img id="logo-light" src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain mix-blend-multiply contrast-[1.2] invert contrast-125 grayscale relative z-10 transition-all duration-300">
+                <img id="logo-dark" src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain hidden mix-blend-screen relative z-10 transition-all duration-300">
+            </a>
 
             <!-- Right: Links -->
             <nav class="hidden lg:block">
                 <ul class="flex gap-8 items-center">
-                    <li><a href="shop.html" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors">Магазин</a></li>
+                    <li><a href="https://lonvibio.com.ru/page151461156.html" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors">Магазин</a></li>
                     <li><a href="https://lonvibio.com.ru/company" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors">О нас</a></li>
                     
                     <li><a href="https://lonvibio.com.ru/useful-info" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors">FAQ</a></li>
@@ -152,35 +507,35 @@
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 bg-[#1A1C20] z-[60] flex flex-col items-center justify-center transition-all duration-300 opacity-0 pointer-events-none">
-        <button id="close-menu-btn" class="absolute top-6 right-6 text-brandgold">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-white">
             <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
         </button>
         <ul class="flex flex-col gap-8 text-center">
-            <li><a href="shop.html" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">Магазин</a></li>
-            <li><a href="https://lonvibio.com.ru/company" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">О нас</a></li>
-            <li><a href="https://lonvibio.com.ru/useful-info" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">FAQ</a></li>
-            <li><a href="https://lonvibio.com.ru/production" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">Производство</a></li>
-            <li><a href="https://lonvibio.com.ru/news" class="text-xl font-bold uppercase tracking-[0.1em] text-white hover:text-brandgold transition-colors mobile-link">Новости</a></li>
+            <li><a href="https://lonvibio.com.ru/page151461156.html" class="text-xl font-bold uppercase tracking-[0.1em] text-white mobile-link">Магазин</a></li>
+            <li><a href="https://lonvibio.com.ru/company" class="text-xl font-bold uppercase tracking-[0.1em] text-white mobile-link">О нас</a></li>
+            <li><a href="https://lonvibio.com.ru/useful-info" class="text-xl font-bold uppercase tracking-[0.1em] text-white mobile-link">FAQ</a></li>
+            <li><a href="https://lonvibio.com.ru/production" class="text-xl font-bold uppercase tracking-[0.1em] text-white mobile-link">Производство</a></li>
+            <li><a href="https://lonvibio.com.ru/news" class="text-xl font-bold uppercase tracking-[0.1em] text-white mobile-link">Новости</a></li>
         </ul>
     </div>
 
     <!-- Search Overlay -->
     <div id="search-overlay" class="fixed inset-0 bg-white/95 backdrop-blur-md z-[70] flex flex-col items-center justify-center transition-all duration-300 opacity-0 pointer-events-none">
-        <button id="close-search-btn" class="absolute top-6 right-6 text-neutral-900 hover:text-brandgold transition-colors">
+        <button id="close-search-btn" class="absolute top-6 right-6 text-black hover:text-brandgold transition-colors">
             <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
         </button>
         <div class="w-full max-w-3xl px-6">
             <form onsubmit="event.preventDefault(); document.getElementById('close-search-btn').click();" class="relative">
-                <input type="text" placeholder="Что вы ищете?" class="w-full text-3xl md:text-5xl font-wild text-neutral-900 bg-transparent border-b-2 border-neutral-300 focus:border-brandgold outline-none py-4 placeholder-neutral-400 transition-colors">
-                <button type="submit" class="absolute right-0 top-1/2 -translate-y-1/2 text-neutral-900 hover:text-brandgold transition-colors">
+                <input type="text" placeholder="Что вы ищете?" class="w-full text-3xl md:text-5xl font-wild text-black bg-transparent border-b-2 border-neutral-300 focus:border-brandgold outline-none py-4 placeholder-neutral-400 transition-colors">
+                <button type="submit" class="absolute right-0 top-1/2 -translate-y-1/2 text-black hover:text-brandgold transition-colors">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
                 </button>
             </form>
             <div class="mt-8 flex flex-wrap gap-4 justify-center">
                 <span class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-500">Популярное:</span>
-                <a href="#science" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-900 hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">Сенолитики</a>
-                <a href="#how-it-works" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-900 hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">Клеточное омоложение</a>
-                <a href="#faq" class="text-xs font-bold uppercase tracking-[0.1em] text-neutral-900 hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">PCC1</a>
+                <a href="#science" class="text-xs font-bold uppercase tracking-[0.1em] text-black hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">Сенолитики</a>
+                <a href="#how-it-works" class="text-xs font-bold uppercase tracking-[0.1em] text-black hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">Клеточное омоложение</a>
+                <a href="#faq" class="text-xs font-bold uppercase tracking-[0.1em] text-black hover:text-brandgold border-b border-transparent hover:border-brandgold transition-all" onclick="document.getElementById('close-search-btn').click()">PCC1</a>
             </div>
         </div>
     </div>
@@ -190,22 +545,22 @@
         <div id="cart-backdrop" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
         <div id="cart-drawer" class="relative w-full md:w-[450px] bg-white h-full flex flex-col translate-x-full transition-transform duration-500 ease-out">
             <div class="p-6 border-b border-neutral-200 flex items-center justify-between bg-neutral-50">
-                <h2 class="text-xl font-bold uppercase tracking-[0.1em] text-neutral-900">Корзина</h2>
-                <button id="close-cart-btn" class="text-neutral-900 hover:text-brandgold transition-colors">
+                <h2 class="text-xl font-bold uppercase tracking-[0.1em] text-black">Корзина</h2>
+                <button id="close-cart-btn" class="text-black hover:text-brandgold transition-colors">
                     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
                 </button>
             </div>
             <div class="flex-1 p-6 flex flex-col items-center justify-center text-center overflow-y-auto bg-white">
                 <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-neutral-300 mb-6"><path d="M9 22A2 2 0 109 18a2 2 0 000 4zM20 22A2 2 0 1020 18a2 2 0 000 4z"></path><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
-                <h3 class="text-lg font-bold text-neutral-900 mb-2">Ваша корзина пуста</h3>
+                <h3 class="text-lg font-bold text-black mb-2">Ваша корзина пуста</h3>
                 <p class="text-sm text-neutral-500 font-mono mb-8">Начните покупки, чтобы добавить товары</p>
-                <button id="cart-shop-btn" class="px-8 py-4 bg-brandgold text-neutral-900 font-bold uppercase tracking-[0.2em] hover:bg-brandgoldHover transition-colors w-full">Перейти в магазин</button>
+                <button id="cart-shop-btn" class="px-8 py-4 bg-brandgold text-black font-bold uppercase tracking-[0.2em] hover:bg-brandgold hover:opacity-90 transition-colors w-full">Перейти в магазин</button>
             </div>
         </div>
     </div>
 
     <!-- Hero Section (Copied from reference structure) -->
-    <section class="relative min-h-screen pt-20 flex flex-col justify-center overflow-hidden text-white metallic-dark-gray">
+    <section class="relative min-h-screen pt-24 md:pt-40 pb-4 md:pb-8 flex flex-col justify-center overflow-hidden text-white metallic-dark-gray">
         <div class="absolute top-1/4 -right-20 w-[200px] md:w-[450px] lg:w-[600px] h-[200px] md:h-[450px] lg:h-[600px] bg-brandgold/20 rounded-full blur-[80px] md:blur-[100px]"></div>
 
         
@@ -221,7 +576,7 @@
 <div class="md:hidden mt-8 mb-4">
 <div class="relative w-full max-w-[280px] md:max-w-none aspect-square md:aspect-auto flex items-center justify-center mt-2 md:mt-0 mx-auto">
                     <div class="relative w-full h-full z-10 flex items-center justify-center animate-float" style="will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;">
-                        <img src="https://matilda081133-sketch.github.io/lonvi/assets/product-box-new.png" class="w-full h-auto object-contain scale-125 drop-shadow-2xl brightness-100 -translate-x-4" alt="LONVI PCC1 Box" style="will-change: filter, transform; backface-visibility: hidden;">
+                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/product-box-new.png" class="w-full h-auto object-contain scale-125 drop-shadow-2xl brightness-100 -translate-x-4" alt="LONVI PCC1 Box" style="will-change: filter, transform; backface-visibility: hidden;">
                     </div>
                     <div class="absolute inset-0 md:-inset-10 border-2 border-brandgold rounded-full z-0 opacity-50 border-dashed animate-spin-slow" style="will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;"></div>
                     <div class="absolute -inset-4 md:-inset-20 border border-brandgold border-dashed rounded-full z-0 opacity-30 animate-spin-slow-reverse" style="will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;"></div>
@@ -244,54 +599,37 @@
                 </p>
                 
                 <div class="mt-8 md:mt-12 grid grid-cols-2 gap-3 md:gap-4 w-full max-w-[340px] md:max-w-[400px] lg:max-w-[500px]">
-                    <a href="shop.html" class="w-full flex items-center justify-center text-center group relative px-2 md:px-8 py-4 bg-brandgold border-2 border-transparent text-neutral-900 font-bold uppercase tracking-wider md:tracking-[0.2em] overflow-visible hover:bg-brandgoldHover transition-colors text-xs md:text-base">
-                        <span class="relative z-10 flex items-center gap-2">ЗАКАЗАТЬ</span>
+                    <a href="https://lonvibio.com.ru/page151461156.html" class="w-full flex items-center justify-center text-center group relative px-2 md:px-8 py-4 bg-brandgold border-2 border-transparent text-black font-bold uppercase tracking-wider md:tracking-[0.2em] overflow-visible hover:bg-brandgold hover:opacity-90 transition-colors text-xs md:text-base" style="color: #000000 !important;" onmouseover="this.style.setProperty('color', '#000000', 'important');" onmouseout="this.style.setProperty('color', '#000000', 'important');">
+                        <span class="relative z-10 flex items-center gap-2" style="color: #000000 !important;">ЗАКАЗАТЬ</span>
                     </a>
-                    <a href="#science" class="w-full flex items-center justify-center text-center group relative px-2 md:px-8 py-4 bg-transparent border-2 border-white text-white font-bold uppercase tracking-wider md:tracking-[0.2em] hover:bg-white hover:text-neutral-black transition-colors text-xs md:text-base">
+                    <a href="#science" class="w-full flex items-center justify-center text-center group relative px-2 md:px-8 py-4 bg-transparent border-2 border-white text-white font-bold uppercase tracking-wider md:tracking-[0.2em] hover:bg-white hover:!text-black transition-colors text-xs md:text-base" style="border: 2px solid #FFFFFF !important; color: #FFFFFF !important;" onmouseover="this.style.backgroundColor='#FFFFFF'; this.style.setProperty('color', '#1D1D1F', 'important');" onmouseout="this.style.backgroundColor='transparent'; this.style.setProperty('color', '#FFFFFF', 'important');">
                         <span class="relative z-10">ПОДРОБНЕЕ</span>
                     </a>
                 </div>
 
                 <!-- Compact Certificates under CTA -->
-                <div class="mt-6 md:mt-8 mb-10 md:mb-0 grid grid-cols-6 gap-1 md:gap-2 w-full max-w-[340px] md:max-w-[400px] lg:max-w-[500px]">
+                <div class="mt-6 md:mt-8 mb-0 md:mb-4 grid grid-cols-6 gap-1 md:gap-2 w-full max-w-[340px] md:max-w-[400px] lg:max-w-[500px]">
                     <!-- GMP -->
                                     <div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-brandgold/50 transition-all duration-300 cursor-default group overflow-hidden relative">
-                                        <div class="aspect-square h-full relative overflow-hidden flex items-center justify-center"><img src="https://matilda081133-sketch.github.io/lonvi/assets/cert-gmp.png" alt="GMP" class="w-full h-full object-cover object-left origin-left brightness-125 contrast-[2.0] grayscale invert mix-blend-screen opacity-80 group-hover:opacity-100 transition-opacity scale-[1.10] translate-x-0"></div>
+                                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-gmp-transparent.png" alt="GMP" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity scale-[0.88]">
                                     </div>
                                     <!-- FDA -->
                                     <div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-brandgold/50 transition-all duration-300 cursor-default group overflow-hidden relative">
-                                        <img src="https://matilda081133-sketch.github.io/lonvi/assets/cert-fda.jpg" alt="FDA" class="w-full h-full object-contain brightness-125 contrast-[2.0] grayscale invert mix-blend-screen opacity-80 group-hover:opacity-100 transition-opacity scale-[0.85]">
-                                    </div>
+                                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-fda-transparent.png" alt="FDA" class="w-full h-full object-contain  opacity-90 group-hover:opacity-100 transition-opacity scale-[0.45] brightness-0 invert [transform:translateZ(0)]"></div>
                                     <!-- HALAL -->
                                     <div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-brandgold/50 transition-all duration-300 cursor-default group overflow-hidden relative">
-                                        <div class="w-[90%] h-[90%] border border-white/50 rounded-full flex items-center justify-center p-1"><img src="https://matilda081133-sketch.github.io/lonvi/assets/cert-halal.png" alt="HALAL" class="w-full h-full object-contain brightness-125 contrast-[2.0] grayscale invert mix-blend-screen opacity-80 group-hover:opacity-100 transition-opacity scale-[1.25]"></div>
+                                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-halal-transparent.png" alt="HALAL" class="w-full h-full object-contain      opacity-90 group-hover:opacity-100 transition-opacity scale-[0.95] brightness-0 invert [transform:translateZ(0)]">
                                     </div>
                                     <!-- VEGAN -->
                                     <div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-brandgold/50 transition-all duration-300 cursor-default group overflow-hidden relative">
-                                        <img src="https://matilda081133-sketch.github.io/lonvi/assets/cert-vegan.png" alt="VEGAN" class="w-full h-full object-contain brightness-125 contrast-[2.0] grayscale invert mix-blend-screen opacity-80 group-hover:opacity-100 transition-opacity scale-[1.45]">
-                                    </div>
+                                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-vegan-transparent.png" alt="VEGAN" class="w-full h-full object-contain  opacity-90 group-hover:opacity-100 transition-opacity scale-[0.95] brightness-0 invert [transform:translateZ(0)]"></div>
                                     <!-- CHESTNY ZNAK -->
                                     <div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-brandgold/50 transition-all duration-300 cursor-default group overflow-hidden relative">
-                                        <svg viewBox="0 0 100 130" class="w-full h-full object-contain text-white opacity-80 group-hover:opacity-100 transition-opacity scale-[0.95]">
-                                            <rect x="5" y="5" width="90" height="120" rx="12" fill="none" stroke="currentColor" stroke-width="3"/>
-                                            <path d="M 35 25 h -10 a 10 10 0 0 0 -10 10 v 10" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="butt"/>
-                                            <path d="M 65 25 h 10 a 10 10 0 0 1 10 10 v 10" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="butt"/>
-                                            <path d="M 35 85 h -10 a 10 10 0 0 1 -10 -10 v -10" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="butt"/>
-                                            <path d="M 65 85 h 10 a 10 10 0 0 0 10 -10 v -10" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="butt"/>
-                                            <g style="transform-origin: 50px 52px; transform: scale(0.85);"><path d="M 30 55 L 45 70 L 75 35" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter"/></g>
-                                            <text x="50" y="100" font-family="Arial" font-size="8" font-weight="bold" fill="currentColor" text-anchor="middle">ЧЕСТНЫЙ</text>
-    <text x="50" y="115" font-family="Arial" font-size="14" font-weight="bold" fill="currentColor" text-anchor="middle">ЗНАК</text>
-                                        </svg>
+                                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-cz-transparent.png" alt="CHESTNY ZNAK" class="w-full h-full object-contain      opacity-90 group-hover:opacity-100 transition-opacity scale-[1.05] brightness-0 invert [transform:translateZ(0)]">
                                     </div>
                                     <!-- EAC -->
                                     <div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-brandgold/50 transition-all duration-300 cursor-default group overflow-hidden relative">
-                                        <svg viewBox="0 0 100 100" class="w-full h-full object-contain text-white opacity-80 group-hover:opacity-100 transition-opacity scale-[0.8]">
-                                            <rect x="2" y="2" width="96" height="96" rx="16" fill="none" stroke="currentColor" stroke-width="5"/>
-                                            <path d="M 18 20 h 16 v 12 h -10 v 12 h 10 v 12 h -10 v 12 h 10 v 12 h -16 z" fill="currentColor"/>
-                                            <path d="M 42 80 v -60 h 16 v 60 h -6 v -20 h -4 v 20 z M 48 32 v 16 h 4 v -16 z" fill="currentColor"/>
-                                            <path d="M 66 20 h 16 v 12 h -10 v 36 h 10 v 12 h -16 z" fill="currentColor"/>
-                                        </svg>
-                                    </div>
+                                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-eac-transparent.png" alt="EAC" class="w-full h-full object-contain  opacity-90 group-hover:opacity-100 transition-opacity scale-[0.90] brightness-0 invert [transform:translateZ(0)]"></div>
                 </div>
 
 
@@ -303,7 +641,7 @@
 
                 <div class="relative w-full max-w-[280px] md:max-w-none aspect-square md:aspect-auto md:h-[500px] lg:h-[600px] flex items-center justify-center mt-2 md:mt-0">
                     <div class="relative w-full h-full z-10 flex items-center justify-center animate-float" style="will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;">
-                        <img src="https://matilda081133-sketch.github.io/lonvi/assets/product-box-new.png" class="w-full h-auto object-contain scale-125 md:scale-150 drop-shadow-2xl brightness-100 -translate-x-6 md:-translate-x-10" alt="LONVI PCC1 Box" style="will-change: filter, transform; backface-visibility: hidden;">
+                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/product-box-new.png" class="w-full h-auto object-contain scale-125 md:scale-150 drop-shadow-2xl brightness-100 -translate-x-6 md:-translate-x-10" alt="LONVI PCC1 Box" style="will-change: filter, transform; backface-visibility: hidden;">
                     </div>
                     <div class="absolute inset-0 md:-inset-10 border-2 border-brandgold rounded-full z-0 opacity-50 border-dashed animate-spin-slow" style="will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;"></div>
                     <div class="absolute -inset-4 md:-inset-20 border border-brandgold border-dashed rounded-full z-0 opacity-30 animate-spin-slow-reverse" style="will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;"></div>
@@ -313,28 +651,21 @@
     </section>
 
 <!-- Video Section -->
-    <section class="relative py-10 md:py-24 text-white bg-cover bg-center bg-fixed" style="background-image: url('https://matilda081133-sketch.github.io/lonvi/assets/bg-cells.jpg')">
+    <section class="relative py-10 md:py-24 text-white bg-cover bg-center bg-fixed" style="background-image: url('https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/bg-cells.jpg')">
         <div class="absolute inset-0 bg-black/60 z-0 pointer-events-none"></div>
         <div class="container mx-auto px-6 max-w-6xl relative z-10">
             <div class="text-center mb-12 fade-in-section px-2">
                 <span class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-4 text-brandgold block break-words">[ ИННОВАЦИИ В ДЕЙСТВИИ ]</span>
                 <h2 class="text-3xl md:text-5xl font-wild font-bold tracking-tighter uppercase break-words">УЗНАЙТЕ <span class="font-black text-brandgold">БОЛЬШЕ О PCC1</span></h2>
             </div>
-            <div class="relative w-full aspect-video bg-neutral-900 border-2 border-neutral-700 shadow-hard-white flex items-center justify-center group cursor-pointer fade-in-section hover:border-brandgold transition-colors">
-                <!-- Play Button -->
-                <div class="absolute inset-0 flex items-center justify-center z-20">
-                    <div class="w-20 h-20 bg-[#FFD700] rounded-full flex items-center justify-center group-hover:scale-100 group-hover:bg-[#FFE866] transition-all shadow-xl border-4 border-white/20">
-                        <svg class="w-8 h-8 text-white ml-2 group-hover:text-neutral-900 transition-colors" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
-                    </div>
-                </div>
-                <!-- Thumbnail -->
-                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity mix-blend-overlay" alt="Video thumbnail">
+            <div class="relative w-full aspect-[21/9] bg-neutral-900 border-2 border-neutral-700 shadow-hard-white fade-in-section hover:border-brandgold transition-colors overflow-hidden">
+                <video src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/output2.mp4" class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline controls></video>
             </div>
         </div>
     </section>
 
     <!-- The Mechanism Section (with SVG icons like reference) -->
-    <section id="how-it-works" class="relative py-10 md:py-24 bg-cover bg-center bg-fixed border-t border-neutral-800 text-white" style="background-image: url('https://matilda081133-sketch.github.io/lonvi/assets/bg-cells.jpg')">
+    <section id="how-it-works" class="relative py-10 md:py-24 bg-cover bg-center bg-fixed border-t border-neutral-800 text-white" style="background-image: url('https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/bg-cells.jpg')">
         <div class="absolute inset-0 bg-black/60"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center mb-12 md:mb-16 fade-in-section px-2">
@@ -344,7 +675,7 @@
             
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <div class="relative bg-black/40 backdrop-blur-md border border-white/10 p-8 hover:bg-black/60 hover:border-brandgold hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 group fade-in-section">
-                    <div class="absolute -top-4 left-8 bg-brandgold text-neutral-900 px-4 py-1 text-sm font-bold tracking-wider">01</div>
+                    <div class="absolute -top-4 left-8 bg-brandgold text-black px-4 py-1 text-sm font-bold tracking-wider">01</div>
                     <div class="w-24 h-24 mx-auto mb-6 mt-2 relative group-hover:scale-100 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-full h-full">
                             <circle cx="20" cy="25" r="8" fill="#FFD700" opacity="0.8" class="animate-pulse" style="animation-duration: 4s; animation-delay: 0s"></circle>
@@ -363,7 +694,7 @@
                 </div>
                 
                 <div class="relative bg-black/40 backdrop-blur-md border border-white/10 p-8 hover:bg-black/60 hover:border-brandgold hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 group fade-in-section" style="transition-delay: 100ms">
-                    <div class="absolute -top-4 left-8 bg-brandgold text-neutral-900 px-4 py-1 text-sm font-bold tracking-wider">02</div>
+                    <div class="absolute -top-4 left-8 bg-brandgold text-black px-4 py-1 text-sm font-bold tracking-wider">02</div>
                     <div class="w-24 h-24 mx-auto mb-6 mt-2 relative group-hover:scale-100 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-full h-full">
                             <circle cx="20" cy="25" r="8" fill="#FFD700" opacity="0.8" class="animate-pulse" style="animation-duration: 4s;"></circle>
@@ -386,7 +717,7 @@
                 </div>
                 
                 <div class="relative bg-black/40 backdrop-blur-md border border-white/10 p-8 hover:bg-black/60 hover:border-brandgold hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 group fade-in-section" style="transition-delay: 200ms">
-                    <div class="absolute -top-4 left-8 bg-brandgold text-neutral-900 px-4 py-1 text-sm font-bold tracking-wider">03</div>
+                    <div class="absolute -top-4 left-8 bg-brandgold text-black px-4 py-1 text-sm font-bold tracking-wider">03</div>
                     <div class="w-24 h-24 mx-auto mb-6 mt-2 relative group-hover:scale-100 transition-transform duration-500">
                         <svg viewBox="0 0 80 80" fill="none" class="w-full h-full">
                             <circle cx="20" cy="25" r="8" fill="#FFD700" class="animate-pulse" style="animation-duration: 4s;"></circle>
@@ -418,7 +749,7 @@
                 <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center fade-in-section">
                     <div class="space-y-6">
                         <p class="text-lg md:text-xl font-mono leading-relaxed text-neutral-700">Процианидин C1 (PCC1) - это самый мощный природный сенолитик для биологического омоложения организма.</p>
-                        <p class="text-base md:text-lg font-mono leading-relaxed text-neutral-600">Он входит в семейство процианидинов и избирательно находит стареющие клетки, которые часто называют <span class="font-bold text-neutral-900">«клетками-зомби»</span>.</p>
+                        <p class="text-base md:text-lg font-mono leading-relaxed text-neutral-600">Он входит в семейство процианидинов и избирательно находит стареющие клетки, которые часто называют <span class="font-bold text-black">«клетками-зомби»</span>.</p>
                         <p class="text-base md:text-lg font-mono leading-relaxed text-neutral-600">Эти клетки выделяют токсичные вещества, ускоряя старение соседних здоровых тканей.</p>
                     </div>
                     <div class="bg-neutral-black text-white p-8 md:p-10 shadow-hard-white">
@@ -433,7 +764,7 @@
 
 
     <!-- 3x3 Grid (Системное омоложение) -->
-    <section class="relative py-10 md:py-24 text-white border-t border-neutral-800 bg-cover bg-center bg-fixed" style="background-image: url('https://matilda081133-sketch.github.io/lonvi/assets/bg-cells-new.png')">
+    <section class="relative py-10 md:py-24 text-white border-t border-neutral-800 bg-cover bg-center bg-fixed" style="background-image: url('https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/bg-cells-new.png')">
         <div class="absolute inset-0 bg-black/60"></div>
         <div class="container mx-auto px-6 max-w-6xl relative z-10">
             <div class="text-center mb-16 fade-in-section px-2">
@@ -569,11 +900,11 @@
     </section>
 
     <!-- Reviews Section -->
-    <section class="py-10 md:py-24 bg-neutral-100 text-neutral-900 border-t border-neutral-200">
+    <section class="py-10 md:py-24 bg-neutral-100 text-black border-t border-neutral-200">
         <div class="container mx-auto px-6 max-w-5xl fade-in-section">
             <div class="text-center mb-16 px-2">
                 <div class="mb-4"><span class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase inline-block bg-neutral-900 text-brandgold px-4 py-2 rounded-sm border border-neutral-800 break-words">[ ЧТО ГОВОРЯТ КЛИЕНТЫ ]</span></div>
-                <h2 class="text-3xl md:text-5xl font-wild font-bold tracking-tighter uppercase break-words mb-4">РЕАЛЬНЫЕ РЕЗУЛЬТАТЫ.<br><span class="font-light text-neutral-900">РЕАЛЬНЫЕ ЛЮДИ.</span></h2>
+                <h2 class="text-3xl md:text-5xl font-wild font-bold tracking-tighter uppercase break-words mb-4">РЕАЛЬНЫЕ РЕЗУЛЬТАТЫ.<br><span class="font-light text-black">РЕАЛЬНЫЕ ЛЮДИ.</span></h2>
                 <p class="font-mono text-sm text-neutral-500 max-w-2xl mx-auto">Честные отзывы. Подтверждённые успехи.</p>
             </div>
             
@@ -584,9 +915,9 @@
                         <p class="font-mono text-sm md:text-base leading-relaxed text-neutral-700 group-hover:text-white mb-8 font-normal transition-colors">«Для меня этот формат оказался очень удобным: легко встроился в мой рабочий ритм, без лишних усилий и перегрузки. Со временем я почувствовал больше энергии в течение дня, а сон стал заметно спокойнее. Обычно такие вещи ценишь особенно, когда видишь не только комфорт, но и реальный эффект.»</p>
                     </div>
                     <div class="flex items-center gap-4 border-t border-neutral-900 group-hover:border-neutral-100 pt-6 transition-colors">
-                        <div class="w-12 h-12 rounded-full bg-neutral-100 group-hover:bg-white flex items-center justify-center text-neutral-900 font-wild font-bold text-lg transition-colors">АГ</div>
+                        <div class="w-12 h-12 rounded-full bg-neutral-100 group-hover:bg-white flex items-center justify-center text-black font-wild font-bold text-lg transition-colors">АГ</div>
                         <div>
-                            <p class="font-bold text-neutral-900 group-hover:text-white uppercase tracking-widest text-sm transition-colors">Андрей Гордеев</p>
+                            <p class="font-bold text-black group-hover:text-white uppercase tracking-widest text-sm transition-colors">Андрей Гордеев</p>
                             <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest">Предприниматель, 43 года</p>
                         </div>
                     </div>
@@ -595,12 +926,12 @@
                 <!-- Review 2 -->
                 <div class="bg-white p-8 md:p-10 shadow-none hover:shadow-[10px_10px_0px_rgba(255,215,0,0.8)] border-2 border-neutral-900 hover:border-white hover:bg-neutral-900 hover:-translate-y-2 transition-all duration-500 group flex flex-col justify-between">
                     <div>
-                        <p class="font-mono text-sm md:text-base leading-relaxed text-neutral-700 group-hover:text-white mb-8 font-normal transition-colors">«Как человек, который много внимания уделяет самочувствию и качеству жизни, я сразу отметил перемены: колени стали меньше беспокоить, движения — свободнее, а общий тонус — выше. Появилось приятное ощущение легкости, которое хорошо чувствуется и в работе, и в повседневной активности.»</p>
+                        <p class="font-mono text-sm md:text-base leading-relaxed text-neutral-700 group-hover:text-white mb-8 font-normal transition-colors">«Как человек, который много внимания уделяет самочувствию и качеству жизни, я сразу отметила перемены: колени стали меньше беспокоить, движения — свободнее, а общий тонус — выше. Появилось приятное ощущение легкости, которое хорошо чувствуется и в работе, и в повседневной активности.»</p>
                     </div>
                     <div class="flex items-center gap-4 border-t border-neutral-900 group-hover:border-neutral-100 pt-6 transition-colors">
-                        <div class="w-12 h-12 rounded-full bg-neutral-100 group-hover:bg-white flex items-center justify-center text-neutral-900 font-wild font-bold text-lg transition-colors">АС</div>
+                        <div class="w-12 h-12 rounded-full bg-neutral-100 group-hover:bg-white flex items-center justify-center text-black font-wild font-bold text-lg transition-colors">АС</div>
                         <div>
-                            <p class="font-bold text-neutral-900 group-hover:text-white uppercase tracking-widest text-sm transition-colors">Анна Соловьева</p>
+                            <p class="font-bold text-black group-hover:text-white uppercase tracking-widest text-sm transition-colors">Анна Соловьева</p>
                             <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest">Врач, 47 лет</p>
                         </div>
                     </div>
@@ -612,9 +943,9 @@
                         <p class="font-mono text-sm md:text-base leading-relaxed text-neutral-700 group-hover:text-white mb-8 font-normal transition-colors">«С профессиональной точки зрения я всегда обращаю внимание на комплексный эффект, и здесь он действительно заметен: больше энергии, лучшее восстановление и более ровное состояние в течение дня. Особенно ценю мягкое, но уверенное действие, которое ощущается естественно и без лишнего шума.»</p>
                     </div>
                     <div class="flex items-center gap-4 border-t border-neutral-900 group-hover:border-neutral-100 pt-6 transition-colors">
-                        <div class="w-12 h-12 rounded-full bg-neutral-900 group-hover:bg-white flex items-center justify-center text-white group-hover:text-neutral-900 font-wild font-bold text-lg transition-colors">ПЗ</div>
+                        <div class="w-12 h-12 rounded-full bg-neutral-900 group-hover:bg-white flex items-center justify-center text-white group-hover:!text-black font-wild font-bold text-lg transition-colors">ПЗ</div>
                         <div>
-                            <p class="font-bold text-neutral-900 group-hover:text-white uppercase tracking-widest text-sm transition-colors">Павел Зимин</p>
+                            <p class="font-bold text-black group-hover:text-white uppercase tracking-widest text-sm transition-colors">Павел Зимин</p>
                             <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest">Фитнес Тренер, 39 лет</p>
                         </div>
                     </div>
@@ -624,21 +955,20 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-10 md:py-24 bg-neutral-100 text-neutral-900 border-t border-neutral-200">
+    <section id="faq" class="py-10 md:py-24 bg-neutral-100 text-black border-t border-neutral-200">
         <div class="container mx-auto px-6 max-w-6xl fade-in-section">
             <div class="flex flex-col md:flex-row gap-12 justify-between items-start">
                 <div class="md:w-1/3 md:sticky md:top-24">
                     <div class="mb-4 flex items-center gap-2">
-                        <span class="w-8 h-[1px] bg-brandgold"></span>
                         <span class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase inline-block bg-neutral-900 text-brandgold px-4 py-2 rounded-sm border border-neutral-800 break-words">[ ИНФОРМАЦИЯ ]</span>
                     </div>
-                    <h2 class="text-3xl md:text-5xl font-wild font-bold tracking-tighter uppercase mb-6 leading-none text-neutral-900">ПОЛЕЗНАЯ<br>ИНФОРМАЦИЯ</h2>
+                    <h2 class="text-3xl md:text-5xl font-wild font-bold tracking-tighter uppercase mb-6 leading-none text-black">ПОЛЕЗНАЯ<br>ИНФОРМАЦИЯ</h2>
                     <p class="font-mono text-neutral-600 text-sm md:text-base leading-relaxed mb-8">Всё, что вам нужно знать о протоколе применения, безопасности и эффективности LONVI PCC1.</p>
                     
                     <div class="p-6 bg-brandgold/5 border-l-4 border-brandgold mt-8">
-                        <h3 class="font-bold text-neutral-900 mb-2 uppercase tracking-widest text-sm">Остались вопросы?</h3>
+                        <h3 class="font-bold text-black mb-2 uppercase tracking-widest text-sm">Остались вопросы?</h3>
                         <p class="font-mono text-xs text-neutral-600 mb-4 leading-relaxed">Наш эксперт LONVI Biosciences Алекс на связи с вами. Задайте ему любой вопрос, и он мгновенно ответит!</p>
-                        <a href="#ai-assistant" class="inline-flex items-center justify-center px-6 py-3 bg-brandgold text-neutral-900 font-bold tracking-[0.1em] uppercase hover:bg-brandgoldHover transition-colors text-xs w-full text-center">
+                        <a href="#alex" onclick="if(typeof lonviOpenChat === 'function') { lonviOpenChat(); return false; }" class="inline-flex items-center justify-center px-6 py-3 bg-brandgold text-black font-bold tracking-[0.1em] uppercase hover:bg-brandgold hover:opacity-90 transition-colors text-xs w-full text-center">
                             СПРОСИТЬ У АЛЕКСА &rarr;
                         </a>
                     </div>
@@ -647,7 +977,7 @@
                 <div class="md:w-2/3 space-y-4">
                     <!-- FAQ 1 -->
                     <details class="group bg-neutral-50 border-2 border-neutral-900 p-6 md:p-8 hover:bg-neutral-900 hover:border-brandgold hover:shadow-xl transition-all duration-500 overflow-hidden relative">
-                        <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-neutral-900 relative z-10">
+                        <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-black relative z-10" style="display: flex !important; justify-content: space-between !important; align-items: center !important;">
                             <span class="pr-8 group-hover:text-brandgold transition-colors">Протокол применения</span>
                             <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 rounded-full group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
                                 <span class="absolute w-3 h-[2px] bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-180"></span>
@@ -662,7 +992,7 @@
                             <p>Пожалуйста, проконсультируйтесь с врачом, если у вас есть какие-либо заболевания или вы принимаете лекарства. Если вы принимаете лекарства, ознакомьтесь с нашим Руководством по применению, чтобы узнать о возможных клинических взаимодействиях.</p>
                             <p>Не принимайте, если вы беременны, кормите грудью или не достигли 18 лет. Храните в недоступном для детей месте.</p>
                             <div class="bg-white p-5 mt-6 border-l-2 border-brandgold shadow-sm">
-                                <p class="font-bold text-neutral-900 mb-3 uppercase tracking-widest text-xs">Контрольный список перед началом приема:</p>
+                                <p class="font-bold text-black mb-3 uppercase tracking-widest text-xs">Контрольный список перед началом приема:</p>
                                 <ul class="list-disc pl-5 space-y-2 text-neutral-600">
                                     <li>Прекращение приема антиоксидантов (≥ 24 часов).</li>
                                     <li>Проверка на прием статинов (не принимать с высокими дозами аторвастатина, симвастатина и т.д.).</li>
@@ -677,7 +1007,7 @@
 
                     <!-- FAQ 2 -->
                     <details class="group bg-neutral-50 border-2 border-neutral-900 p-6 md:p-8 hover:bg-neutral-900 hover:border-brandgold hover:shadow-xl transition-all duration-500 overflow-hidden relative">
-                        <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-neutral-900 relative z-10">
+                        <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-black relative z-10" style="display: flex !important; justify-content: space-between !important; align-items: center !important;">
                             <span class="pr-8 group-hover:text-brandgold transition-colors">Протокол мониторинга</span>
                             <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 rounded-full group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
                                 <span class="absolute w-3 h-[2px] bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-180"></span>
@@ -686,7 +1016,7 @@
                         </summary>
                         <div class="absolute -right-4 -bottom-10 text-9xl font-wild font-black text-neutral-300 opacity-20 select-none z-0 group-hover:scale-100 transition-transform duration-700 group-open:opacity-5">02</div>
                         <div class="mt-8 text-sm md:text-base font-mono leading-relaxed text-neutral-700 group-hover:text-neutral-300 space-y-4 relative z-10 border-t border-neutral-200 group-hover:border-neutral-700 pt-6 transition-colors duration-500">
-                            <p class="text-neutral-900 group-hover:text-white font-bold transition-colors">Комплексный анализ биологических показателей</p>
+                            <p class="text-black group-hover:text-white font-bold transition-colors">Комплексный анализ биологических показателей</p>
                             <p>Фармакологическое обоснование: Сенолитики (например, PCC1, дазатиниб, физетин) вызывают апоптоз стареющих клеток посредством «физического очищения», а не только химического ингибирования. Они применяются по принципу «удар и уход», что характеризуется крайне коротким периодом полувыведения препарата.</p>
                             <p>При взятии проб в строго определённое время влияние метаболизма препарата может быть полностью устранено, что позволяет объективно оценить степень очищения микросреды тканей, распад сети SASP (сенесцентно-ассоциированный секреторный фенотип) и прогресс восстановления функций систем организма.</p>
                         </div>
@@ -694,7 +1024,7 @@
 
                     <!-- FAQ 3 -->
                     <details class="group bg-neutral-50 border-2 border-neutral-900 p-6 md:p-8 hover:bg-neutral-900 hover:border-brandgold hover:shadow-xl transition-all duration-500 overflow-hidden relative">
-                        <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-neutral-900 relative z-10">
+                        <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-black relative z-10" style="display: flex !important; justify-content: space-between !important; align-items: center !important;">
                             <span class="pr-8 group-hover:text-brandgold transition-colors">Безопасность и экологичность</span>
                             <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 rounded-full group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
                                 <span class="absolute w-3 h-[2px] bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-180"></span>
@@ -711,7 +1041,7 @@
 
                     <!-- FAQ 4 -->
                     <details class="group bg-neutral-50 border-2 border-neutral-900 p-6 md:p-8 hover:bg-neutral-900 hover:border-brandgold hover:shadow-xl transition-all duration-500 overflow-hidden relative">
-                        <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-neutral-900 relative z-10">
+                        <summary class="flex justify-between items-center font-wild text-lg md:text-xl font-medium uppercase tracking-widest list-none cursor-pointer text-black relative z-10" style="display: flex !important; justify-content: space-between !important; align-items: center !important;">
                             <span class="pr-8 group-hover:text-brandgold transition-colors">Эффективность + Низкая стоимость</span>
                             <span class="relative w-8 h-8 flex shrink-0 items-center justify-center border border-neutral-300 rounded-full group-open:border-brandgold group-open:bg-brandgold group-hover:border-brandgold transition-all duration-300">
                                 <span class="absolute w-3 h-[2px] bg-neutral-900 group-open:bg-white group-hover:bg-brandgold transition-transform duration-300 group-open:rotate-180"></span>
@@ -723,7 +1053,7 @@
                             <p>Стандартные экстракты виноградных косточек обычно содержат большое количество процианидинов, но лишь 0,1–0,6 % PCC1. Кроме того, известно, что организм плохо усваивает PCC1.</p>
                             <p>Компания Lonvi разработала уникальный метод экстракции, который позволяет повысить концентрацию активного PCC1 до 20 % (в 30 раз выше стандартной концентрации). Кроме того, Lonvi создала фитосомальный барьер, который улучшает усвоение в 6–10 раз.</p>
                             <div class="p-4 bg-brandgold/10 border-l-2 border-brandgold mt-4">
-                                <p class="text-neutral-900 group-hover:text-white transition-colors font-bold">Одна доза Lonvi PCC1 эквивалентна употреблению трех метрических тонн винограда в пересчете на PCC1.</p>
+                                <p class="text-black group-hover:text-white transition-colors font-bold">Одна доза Lonvi PCC1 эквивалентна употреблению трех метрических тонн винограда в пересчете на PCC1.</p>
                             </div>
                             <p>Новый запатентованный метод экстракции Lonvi является эффективным и экономичным, снижая стоимость PCC1 более чем на 95%. При использовании традиционных методов экстракции количество PCC1, содержащееся всего в одной упаковке Lonvi, обошлось бы более чем в 290 000 рублей.</p>
                         </div>
@@ -734,7 +1064,7 @@
     </section>
 
     <!-- Contacts Section -->
-    <section class="relative text-white border-t border-neutral-800 bg-cover bg-center bg-fixed" style="background-image: url('https://matilda081133-sketch.github.io/lonvi/assets/bg-cells.jpg')" id="contact">
+    <section class="relative text-white border-t border-neutral-800 bg-cover bg-center bg-fixed" style="background-image: url('https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/bg-cells.jpg')" id="contact">
         <div class="absolute inset-0 bg-black/60"></div>
         <div class="container mx-auto px-6 py-10 md:py-24 max-w-6xl fade-in-section relative z-10">
             <div class="grid md:grid-cols-2 gap-12 lg:gap-24">
@@ -760,33 +1090,34 @@
 
                     <p class="font-mono text-xs tracking-[0.2em] text-neutral-500 uppercase mb-4">Наши социальные сети</p>
                     <div class="flex gap-4">
-                        <a href="https://www.facebook.com/lonvibio" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
-                            <svg width="24" height="24" stroke-width="1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                        <a href="https://www.facebook.com/lonvibio" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold !text-black flex items-center justify-center hover:bg-brandgold hover:opacity-90 transition-all duration-300">
+                            <svg class="w-5 h-5 flex-shrink-0" style="width: 18px !important; height: 18px !important;" stroke-width="1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
                         </a>
-                        <a href="https://www.instagram.com/lonvi_biosciences/" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
-                            <svg width="24" height="24" stroke-width="1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="24" height="24" stroke-width="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <a href="https://www.instagram.com/lonvi_biosciences/" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold !text-black flex items-center justify-center hover:bg-brandgold hover:opacity-90 transition-all duration-300">
+                            <svg class="w-5 h-5 flex-shrink-0" style="width: 20px !important; height: 20px !important;" stroke-width="1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" stroke-width="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </a>
-                        <a href="https://t.me/lonvi_russia" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
-                            <svg width="24" height="24" stroke-width="1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/></svg>
+                        <a href="https://t.me/lonvi_russia" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold !text-black flex items-center justify-center hover:bg-brandgold hover:opacity-90 transition-all duration-300">
+                            <svg class="w-5 h-5 flex-shrink-0" style="width: 20px !important; height: 20px !important; margin-right: 2px;" stroke-width="1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/></svg>
                         </a>
-                        <a href="https://www.tiktok.com/@lonvibio?_r=1&_t=ZS-96YFDr0DHT6" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
-                            <svg width="24" height="24" stroke-width="1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                        <a href="https://www.tiktok.com/@lonvibio?_r=1&_t=ZS-96YFDr0DHT6" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold !text-black flex items-center justify-center hover:bg-brandgold hover:opacity-90 transition-all duration-300">
+                            <!-- TikTok: shifted viewBox to ensure no cutting on bottom/right -->
+                            <svg class="w-5 h-5 flex-shrink-0" style="width: 20px !important; height: 20px !important;" stroke-width="1.5" fill="currentColor" viewBox="-1 -1 26 26"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
                         </a>
-                        <a href="https://vk.ru/lonvi_russia" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold text-neutral-900 flex items-center justify-center hover:bg-brandgoldHover hover:border-brandgoldHover transition-all duration-300">
-                            <svg width="24" height="24" stroke-width="1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M15.071 18.232c-.93 0-3.52-.073-6.528-3.32C5.467 11.583 3.633 6.012 3.513 5.652c-.105-.316.016-.48.337-.48h2.89c.273 0 .408.145.503.35 0 0 1.439 3.535 3.473 5.829.658.636.953.839 1.226.839.136 0 .337-.203.337-.803V5.626c0-.361-.106-.523-.41-.523h-1.32c-.179 0-.251-.237-.091-.397.35-.357 1.408-.475 2.502-.475 1.54 0 1.84.116 1.84.805v4.542c0 .438.2.6.337.6.196 0 .584-.162 1.624-1.18 1.002-1.026 1.802-3.13 1.802-3.13.085-.246.335-.367.625-.367h2.89c.35 0 .438.175.337.525-.136.466-1.503 2.527-3.056 4.316-.763.874-.958 1.107-.958 1.458 0 .35.253.641.778 1.185 1.487 1.457 1.854 2.894 1.954 3.342.062.29-.044.524-.467.524h-2.89c-.311 0-.584-.204-.778-.582 0 0-1.168-2.683-2.589-2.934-.407-.074-.583.133-.583.568v2.247c0 .29-.117.436-.61.436z"/></svg>
+                        <a href="https://vk.ru/lonvi_russia" target="_blank" class="w-10 h-10 rounded-full bg-brandgold border border-brandgold !text-black flex items-center justify-center hover:bg-brandgold hover:opacity-90 transition-all duration-300">
+                            <!-- VK: shifted viewBox to center perfectly and avoid cutting -->
+                            <svg class="w-5 h-5 flex-shrink-0" style="width: 20px !important; height: 20px !important;" stroke-width="1.5" fill="currentColor" viewBox="0.5 -0.5 25 25"><path d="M15.071 18.232c-.93 0-3.52-.073-6.528-3.32C5.467 11.583 3.633 6.012 3.513 5.652c-.105-.316.016-.48.337-.48h2.89c.273 0 .408.145.503.35 0 0 1.439 3.535 3.473 5.829.658.636.953.839 1.226.839.136 0 .337-.203.337-.803V5.626c0-.361-.106-.523-.41-.523h-1.32c-.179 0-.251-.237-.091-.397.35-.357 1.408-.475 2.502-.475 1.54 0 1.84.116 1.84.805v4.542c0 .438.2.6.337.6.196 0 .584-.162 1.624-1.18 1.002-1.026 1.802-3.13 1.802-3.13.085-.246.335-.367.625-.367h2.89c.35 0 .438.175.337.525-.136.466-1.503 2.527-3.056 4.316-.763.874-.958 1.107-.958 1.458 0 .35.253.641.778 1.185 1.487 1.457 1.854 2.894 1.954 3.342.062.29-.044.524-.467.524h-2.89c-.311 0-.584-.204-.778-.582 0 0-1.168-2.683-2.589-2.934-.407-.074-.583.133-.583.568v2.247c0 .29-.117.436-.61.436z"/></svg>
                         </a>
                     </div>
                 </div>
-                
                 <!-- Right: Form -->
                 <div class="bg-neutral-900 p-8 md:p-10 border border-neutral-800 shadow-hard-white">
                     <p class="font-mono text-xs tracking-[0.3em] uppercase mb-8 text-brandgold font-bold">[ ОСТАВИТЬ ЗАЯВКУ ]</p>
-                    <form class="flex flex-col gap-5 font-mono text-sm">
-                        <input type="text" placeholder="ВАШЕ ИМЯ" class="w-full px-5 py-4 bg-transparent border border-neutral-700 text-white placeholder:text-neutral-500 focus:border-brandgold outline-none transition-colors">
-                        <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full px-5 py-4 bg-transparent border border-neutral-700 text-white placeholder:text-neutral-500 focus:border-brandgold outline-none transition-colors">
-                        <button type="button" class="w-full px-6 py-4 bg-brandgold text-neutral-900 font-bold tracking-[0.2em] uppercase hover:bg-brandgoldHover transition-colors mt-4">ОСТАВИТЬ ЗАЯВКУ &rarr;</button>
+                    <form id="lead-form" class="flex flex-col gap-5 font-mono text-sm">
+                        <input type="text" name="name" required placeholder="ВАШЕ ИМЯ" class="w-full px-5 py-4 bg-transparent border border-neutral-700 text-white placeholder:text-neutral-500 focus:border-brandgold outline-none transition-colors">
+                        <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" class="w-full px-5 py-4 bg-transparent border border-neutral-700 text-white placeholder:text-neutral-500 focus:border-brandgold outline-none transition-colors">
+                        <button type="submit" class="w-full px-6 py-4 bg-brandgold text-black font-bold tracking-[0.2em] uppercase hover:bg-brandgold hover:opacity-90 transition-colors mt-4">ОСТАВИТЬ ЗАЯВКУ &rarr;</button>
                         <p class="text-xs text-neutral-500 mt-2 text-center leading-relaxed">
-                            Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="#" class="underline hover:text-white transition-colors">Политикой конфиденциальности</a> и <a href="#" class="underline hover:text-white transition-colors">Офертой</a>.
+                            Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="https://lonvibio.com.ru/privacy" target="_blank" class="underline hover:text-white transition-colors">Политикой конфиденциальности</a> и <a href="https://lonvibio.com.ru/offer" target="_blank" class="underline hover:text-white transition-colors">Офертой</a>.
                         </p>
                     </form>
                 </div>
@@ -798,7 +1129,7 @@
     <footer class="bg-[#1A1C20] border-t border-neutral-800">
         <div class="container mx-auto px-6 py-8 max-w-7xl flex flex-col lg:flex-row justify-between items-center text-xs text-neutral-400 font-mono gap-6">
             <div class="flex flex-col gap-2 text-center lg:text-left items-center lg:items-start">
-                <img src="https://matilda081133-sketch.github.io/lonvi/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-6 md:h-8 w-auto object-contain object-left mix-blend-screen mb-4 mx-auto lg:mx-0 translate-x-2 lg:translate-x-[3px]">
+                <a href="https://lonvibio.com.ru/" class="block hover:opacity-80 transition-opacity"><img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-6 md:h-8 w-auto object-contain object-left mix-blend-screen mb-4 mx-auto lg:mx-0 translate-x-2 lg:translate-x-[3px]"></a>
                 <p class="font-bold text-white">ООО «ЛОНВИ БИОСАЙЕНСИЗ».</p>
                 <p>ОГРН: 1267700015880 | ИНН: 9714086810</p>
                 <p>Адрес: 125252, г. Москва, б-р Ходынский, д. 2, помещ. 110Д</p>
@@ -827,40 +1158,9 @@
         });
     </script>
 
-    <!-- AI Assistant Floating Button -->
-    <a href="#ai-chat" id="ai-assistant" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 flex items-center justify-center w-16 h-16 bg-brandgold text-neutral-900 rounded-full shadow-2xl hover:scale-100 hover:bg-brandgoldHover transition-all duration-300 cursor-pointer group">
-        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-        </svg>
-        <span class="absolute -top-12 -left-20 bg-neutral-900 text-white text-xs font-mono font-bold py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg">Задайте вопрос ИИ!</span>
-    </a>
+
     <script>
-        // Dynamic Header Blur based on Section Background
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (!header) return;
-            
-            const sections = document.querySelectorAll('section, footer');
-            let currentDark = false;
-            
-            sections.forEach(sec => {
-                const rect = sec.getBoundingClientRect();
-                // Check if the middle of the header (y=40) is within this section
-                if (rect.top <= 40 && rect.bottom >= 40) {
-                    if (sec.classList.contains('metallic-dark-gray') || sec.classList.contains('text-white') || sec.classList.contains('bg-neutral-900')) {
-                        currentDark = true;
-                    }
-                }
-            });
-            
-            if (currentDark) {
-                header.classList.add('header-dark');
-            } else {
-                header.classList.remove('header-dark');
-            }
-        });
-        // Initial check
-        setTimeout(() => window.dispatchEvent(new Event('scroll')), 100);
+        // Dynamic Header removed - fixed light theme applied.
 
         // Mobile Menu Logic
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -959,5 +1259,187 @@
             if(favShopBtn) favShopBtn.addEventListener('click', closeFav);
         }
     </script>
+
+    <script>
+        // JS KILLER FOR TILDA WIDGET
+        (function() {
+            function destroyWidget() {
+                const widgets = document.querySelectorAll('.t801, .t801__widget, .t-member-icon, .t-member, div[data-module="member"], .t-menuburger_member, [id*="member-widget"], .t-members-icon, .t-rec[data-record-type="801"]');
+                widgets.forEach(w => {
+                    w.remove();
+                    w.style.setProperty('display', 'none', 'important');
+                });
+            }
+            // Run immediately
+            destroyWidget();
+            // Run on mutations
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.addedNodes.length) destroyWidget();
+                });
+            });
+            observer.observe(document.body, { childList: true, subtree: true });
+            // Run periodically just in case
+            setInterval(destroyWidget, 500);
+        })();
+    </script>
+
+    <!-- DOUBLE NUKE FOR TILDA WIDGET -->
+    <style>
+        .t801, .t801__widget, .t-member, .t-member-icon, .t-member-circle,
+        div[class*="t801"], div[class*="member"], div[data-module="member"],
+        #t-member-widget, .t-member-btn, .t-menuburger_member, .t-members-icon,
+        .t-rec[data-record-type="801"], .t-member-panel {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            width: 0 !important;
+            height: 0 !important;
+            position: absolute !important;
+            z-index: -9999 !important;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var nukeInterval = setInterval(function() {
+                var w = document.querySelectorAll('.t801, .t-member, .t-member-icon, [data-module="member"], #t-member-widget');
+                for (var i = 0; i < w.length; i++) {
+                    w[i].remove();
+                    w[i].style.display = 'none';
+                }
+            }, 100);
+            setTimeout(function() { clearInterval(nukeInterval); }, 5000);
+        });
+    </script>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var leadForm = document.getElementById('lead-form');
+            if(leadForm) {
+                leadForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var btn = leadForm.querySelector('button[type="submit"]');
+                    if(!btn) return;
+                    var originalText = btn.innerHTML;
+                    btn.innerHTML = 'ОТПРАВКА...';
+                    btn.disabled = true;
+                    btn.style.opacity = '0.7';
+
+                    var formData = new FormData(leadForm);
+                    var data = Object.fromEntries(formData.entries());
+                    
+                    data.name = (data.name || '').trim();
+                    var phoneDigits = (data.phone || '').replace(/\D/g, '');
+                    
+                    if (!data.name) {
+                        btn.innerHTML = 'УКАЖИТЕ ИМЯ';
+                        setTimeout(function() { btn.innerHTML = originalText; btn.disabled = false; btn.style.opacity = '1'; }, 2000);
+                        return;
+                    }
+                    if (phoneDigits.length < 10) {
+                        btn.innerHTML = 'НЕВЕРНЫЙ ТЕЛЕФОН';
+                        setTimeout(function() { btn.innerHTML = originalText; btn.disabled = false; btn.style.opacity = '1'; }, 2000);
+                        return;
+                    }
+
+                    fetch('https://lonvi-bot-lonvibio.amvera.io/webhooks/tilda-lead', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    }).then(function(res) {
+                        btn.innerHTML = 'УСПЕШНО!';
+                        leadForm.reset();
+                        setTimeout(function() { 
+                            btn.innerHTML = originalText; 
+                            btn.disabled = false; 
+                            btn.style.opacity = '1';
+                        }, 3000);
+                    }).catch(function(err) {
+                        btn.innerHTML = 'ОШИБКА';
+                        setTimeout(function() { 
+                            btn.innerHTML = originalText; 
+                            btn.disabled = false; 
+                            btn.style.opacity = '1';
+                        }, 3000);
+                    });
+                });
+            }
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var phoneInputs = document.querySelectorAll('input[type="tel"]');
+
+        var getInputNumbersValue = function (input) {
+            return input.value.replace(/\D/g, '');
+        }
+
+        var onPhonePaste = function (e) {
+            var input = e.target,
+                inputNumbersValue = getInputNumbersValue(input);
+            var pasted = e.clipboardData || window.clipboardData;
+            if (pasted) {
+                var pastedText = pasted.getData('Text');
+                if (/\D/g.test(pastedText)) {
+                    input.value = inputNumbersValue;
+                    return;
+                }
+            }
+        }
+
+        var onPhoneInput = function (e) {
+            var input = e.target,
+                inputNumbersValue = getInputNumbersValue(input),
+                selectionStart = input.selectionStart,
+                formattedInputValue = "";
+
+            if (!inputNumbersValue) {
+                return input.value = "";
+            }
+
+            if (input.value.length != selectionStart) {
+                if (e.data && /\D/g.test(e.data)) {
+                    input.value = inputNumbersValue;
+                }
+                return;
+            }
+
+            if (["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1) {
+                if (inputNumbersValue[0] == "9") inputNumbersValue = "7" + inputNumbersValue;
+                var firstSymbols = (inputNumbersValue[0] == "8") ? "8" : "+7";
+                formattedInputValue = input.value = firstSymbols + " ";
+                if (inputNumbersValue.length > 1) {
+                    formattedInputValue += "(" + inputNumbersValue.substring(1, 4);
+                }
+                if (inputNumbersValue.length >= 5) {
+                    formattedInputValue += ") " + inputNumbersValue.substring(4, 7);
+                }
+                if (inputNumbersValue.length >= 8) {
+                    formattedInputValue += "-" + inputNumbersValue.substring(7, 9);
+                }
+                if (inputNumbersValue.length >= 10) {
+                    formattedInputValue += "-" + inputNumbersValue.substring(9, 11);
+                }
+            } else {
+                formattedInputValue = "+" + inputNumbersValue.substring(0, 16);
+            }
+            input.value = formattedInputValue;
+        }
+        var onPhoneKeyDown = function (e) {
+            var inputValue = e.target.value.replace(/\D/g, '');
+            if (e.keyCode == 8 && inputValue.length == 1) {
+                e.target.value = "";
+            }
+        }
+        for (var phoneInput of phoneInputs) {
+            phoneInput.addEventListener('keydown', onPhoneKeyDown);
+            phoneInput.addEventListener('input', onPhoneInput, false);
+            phoneInput.addEventListener('paste', onPhonePaste, false);
+        }
+    });
+</script>
+
 </body>
 </html>
