@@ -1,4 +1,49 @@
 
+<style>
+    /* HIGH SPECIFICITY MONOCHROME TEXT OVERRIDES FOR DARK THEME */
+    #allrecords h1, #allrecords h2, #allrecords h3, #allrecords h4, #allrecords h5, #allrecords h6, 
+    #allrecords p, #allrecords span, #allrecords div, #allrecords li, #allrecords label, 
+    #allrecords input, #allrecords textarea, #allrecords select,
+    #allrecords .text-neutral-900, #allrecords .text-black, #allrecords .text-neutral-700 {
+        color: #FFFFFF !important;
+    }
+    
+    /* Silver-gray for subtexts to preserve hierarchy */
+    #allrecords .text-neutral-600, #allrecords .text-neutral-500, #allrecords .text-neutral-400, 
+    #allrecords p.text-neutral-600, #allrecords p.text-neutral-500, #allrecords span.text-neutral-600, 
+    #allrecords .text-neutral-300, #allrecords span.text-neutral-500, #allrecords p.text-neutral-900,
+    #allrecords .text-neutral-600 span, #allrecords p.text-neutral-600 span {
+        color: rgba(226, 229, 233, 0.75) !important;
+    }
+
+    /* Redefining animated text gradient for shop */
+    .gradient-text-animated {
+        background: linear-gradient(90deg, #FFFFFF 0%, #7E8694 25%, #F0F2F5 50%, #4C5363 75%, #FFFFFF 100%) !important;
+        background-size: 300% auto !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        animation: gradient-move 8s linear infinite !important;
+        display: inline-block !important;
+    }
+    
+    /* Form options background */
+    #allrecords form#subscription-form label {
+        background-color: rgba(19, 21, 26, 0.45) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    #allrecords form#subscription-form label:hover {
+        background-color: rgba(26, 28, 34, 0.65) !important;
+        border-color: rgba(255, 255, 255, 0.25) !important;
+    }
+
+    /* Ensure text inside selected option is also white */
+    #allrecords form#subscription-form input[type="radio"]:checked + div {
+        border-color: #FFFFFF !important;
+        background-color: rgba(255, 255, 255, 0.05) !important;
+    }
+</style>
+
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
