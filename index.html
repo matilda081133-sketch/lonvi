@@ -82,6 +82,9 @@
     </script>
     <style>
         body { background-color: #F5F5F5; color: #0A0A0A; overflow-x: hidden; scroll-behavior: smooth; }
+      .brand-metallic-slide-bg {
+        background: linear-gradient(90deg, #0d0e11 0%, #4c5363 45%, #e2e5e9 100%) !important;
+      }
         
         /* NEW BRAND GRADIENT BACKGROUNDS (CHARCOAL TO SILVER SLATE) */
         .brand-metallic-gradient {
@@ -581,91 +584,80 @@
     </div>
 
     <!-- Hero Section (Copied from reference structure) -->
-    <section class="relative min-h-screen pt-24 md:pt-40 pb-4 md:pb-8 flex flex-col justify-center overflow-hidden text-white metallic-dark-gray">
-        <div class="absolute top-1/4 -right-20 w-[200px] md:w-[450px] lg:w-[600px] h-[200px] md:h-[450px] lg:h-[600px] bg-brandgold/20 rounded-full blur-[80px] md:blur-[100px]"></div>
+    <section class="relative flex min-h-screen w-full items-center overflow-hidden brand-metallic-slide-bg text-white">
+        <div class="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 py-20 md:grid-cols-12 md:gap-8 md:py-24 relative z-10">
+            <!-- Left: copy -->
+            <div class="order-2 flex flex-col gap-7 md:order-1 md:col-span-7">
+                <span class="font-mono text-xs uppercase tracking-[0.35em] text-silver/70">
+                    Эксклюзивный дистрибьютор LONVI BIOSCIENCES
+                </span>
 
-        
-        <div class="container max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-12 gap-6 md:gap-12 items-center pt-4 md:pt-0">
-            <div class="md:col-span-7 relative fade-in-section is-visible flex flex-col order-2 md:order-1">
-                <p class="text-xs md:text-sm font-mono text-brandgold tracking-[0.3em] uppercase mb-4">Эксклюзивный дистрибьютор<br class="block md:hidden"/> LONVI BIOSCIENCES</p>
-                <h1 class="text-5xl sm:text-6xl md:text-[4rem] lg:text-[5.5rem] font-bold uppercase tracking-tight font-wild leading-none break-words">
-                    <span class="gradient-text-animated font-black drop-shadow-sm">КЛЕТОЧНОЕ</span><br/>
-                    <span class="text-white font-light">ОМОЛОЖЕНИЕ</span>
+                <h1 class="font-display text-5xl font-extrabold uppercase leading-[1.02] tracking-tight text-white text-balance sm:text-6xl lg:text-7xl">
+                    LONVI
+                    <span class="block text-silver">PCC1</span>
                 </h1>
 
-<!-- Mobile Creative (Under Heading) -->
-<div class="md:hidden mt-8 mb-4">
-<div class="relative w-full max-w-[280px] md:max-w-none aspect-square md:aspect-auto flex items-center justify-center mt-2 md:mt-0 mx-auto">
-                    <div class="relative w-full h-full z-10 flex items-center justify-center animate-float" style="will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;">
-                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/product-box-new.png" class="w-full h-auto object-contain scale-125 drop-shadow-2xl brightness-100 -translate-x-4" alt="LONVI PCC1 Box" style="will-change: filter, transform; backface-visibility: hidden;">
-                    </div>
-                    <div class="absolute inset-0 md:-inset-10 border-2 border-brandgold rounded-full z-0 opacity-50 border-dashed animate-spin-slow" style="will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;"></div>
-                    <div class="absolute -inset-4 md:-inset-20 border border-brandgold border-dashed rounded-full z-0 opacity-30 animate-spin-slow-reverse" style="will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;"></div>
-                </div>
-            </div>
+                <p class="max-w-xl text-base font-light leading-relaxed text-silver/80 md:text-lg">
+                    ИННОВАЦИОННЫЙ ФИТОСОМАЛЬНЫЙ КОМПЛЕКС ИЗ ЭКСТРАКТА ВИНОГРАДНОЙ КОСТОЧКИ.<br class="hidden md:inline"/> СЕНОЛИТИК НОВОГО ПОКОЛЕНИЯ — ЗАПУСК ВОССТАНОВЛЕНИЯ НА КЛЕТОЧНОМ УРОВНЕ.
+                </p>
 
-                <p class="mt-8 md:mt-12 text-lg md:text-xl font-mono text-neutral-300 max-w-4xl">
-                    <span class="block text-3xl md:text-4xl font-wild font-black gradient-text-animated drop-shadow-sm mb-2 uppercase tracking-tight">LONVI PCC1</span><!-- Mobile (3 lines) -->
-                    <span class="block md:hidden leading-relaxed">ИННОВАЦИОННЫЙ ФИТОСОМАЛЬНЫЙ<br/>КОМПЛЕКС ИЗ ЭКСТРАКТА<br/>ВИНОГРАДНОЙ КОСТОЧКИ.</span>
-                    <!-- Desktop (2 lines) -->
-                    <span class="hidden md:block leading-relaxed">ИННОВАЦИОННЫЙ ФИТОСОМАЛЬНЫЙ КОМПЛЕКС<br/>ИЗ ЭКСТРАКТА ВИНОГРАДНОЙ КОСТОЧКИ.</span>
-                    <!-- Mobile (3 lines) -->
-                    <span class="text-white font-semibold mt-8 md:hidden block">СЕНОЛИТИК НОВОГО ПОКОЛЕНИЯ —<br/>ЗАПУСК ВОССТАНОВЛЕНИЯ<br/>НА КЛЕТОЧНОМ УРОВНЕ.</span>
-                    <!-- Desktop (2 lines) -->
-                    <span class="text-white font-semibold mt-8 hidden md:block">СЕНОЛИТИК НОВОГО ПОКОЛЕНИЯ — ЗАПУСК<br/>ВОССТАНОВЛЕНИЯ НА КЛЕТОЧНОМ УРОВНЕ.</span>
-                </p>
-                <p class="mt-4 text-base md:text-lg font-mono text-brandgold font-semibold">
-                    <span class="block md:hidden">Одна упаковка активирует<br/>глобальные процессы<br/>оздоровления организма.</span>
-                    <span class="hidden md:block">Одна упаковка активирует глобальные<br/>процессы оздоровления организма.</span>
-                </p>
-                
-                <div class="mt-8 md:mt-12 grid grid-cols-2 gap-3 md:gap-4 w-full max-w-[340px] md:max-w-[400px] lg:max-w-[500px]">
-                    <a href="https://lonvibio.com.ru/page151461156.html" class="w-full flex items-center justify-center text-center group relative px-2 md:px-8 py-4 bg-brandgold border-2 border-transparent text-black font-bold uppercase tracking-wider md:tracking-[0.2em] overflow-visible hover:bg-brandgold hover:opacity-90 transition-colors text-xs md:text-base" style="color: #000000 !important;" onmouseover="this.style.setProperty('color', '#000000', 'important');" onmouseout="this.style.setProperty('color', '#000000', 'important');">
-                        <span class="relative z-10 flex items-center gap-2" style="color: #000000 !important;">ЗАКАЗАТЬ</span>
+                <!-- Technical accents -->
+                <div class="flex flex-wrap gap-x-8 gap-y-3 font-mono text-xs uppercase tracking-widest text-silver/60">
+                    <span>PCC1 · Procyanidin C1</span>
+                    <span>98.4% Purity</span>
+                    <span>Phytosome Delivery</span>
+                </div>
+
+                <!-- CTAs -->
+                <div class="mt-2 flex flex-col gap-4 sm:flex-row sm:items-center">
+                    <a href="https://lonvibio.com.ru/page151461156.html" class="inline-flex items-center justify-center rounded-md bg-black px-8 py-4 font-display text-sm font-bold uppercase tracking-[0.15em] text-white transition-colors duration-200 hover:bg-charcoal border border-black hover:border-charcoal">
+                        ЗАКАЗАТЬ
                     </a>
-                    <a href="#science" class="w-full flex items-center justify-center text-center group relative px-2 md:px-8 py-4 bg-transparent border-2 border-white text-white font-bold uppercase tracking-wider md:tracking-[0.2em] hover:bg-white hover:!text-black transition-colors text-xs md:text-base" style="border: 2px solid #FFFFFF !important; color: #FFFFFF !important;" onmouseover="this.style.backgroundColor='#FFFFFF'; this.style.setProperty('color', '#1D1D1F', 'important');" onmouseout="this.style.backgroundColor='transparent'; this.style.setProperty('color', '#FFFFFF', 'important');">
-                        <span class="relative z-10">ПОДРОБНЕЕ</span>
+                    <a href="#science" class="inline-flex items-center justify-center rounded-md border border-ink bg-transparent px-8 py-4 font-display text-sm font-bold uppercase tracking-[0.15em] text-ink transition-colors duration-200 hover:bg-ink hover:text-white">
+                        ПОДРОБНЕЕ
                     </a>
                 </div>
 
                 <!-- Compact Certificates under CTA -->
                 <div class="mt-6 md:mt-8 mb-0 md:mb-4 grid grid-cols-6 gap-1 md:gap-2 w-full max-w-[340px] md:max-w-[400px] lg:max-w-[500px]">
                     <!-- GMP -->
-                                    <div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-brandgold/50 transition-all duration-300 cursor-default group overflow-hidden relative">
-                                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-gmp-transparent.png" alt="GMP" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity scale-[0.88]">
-                                    </div>
-                                    <!-- FDA -->
-                                    <div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-brandgold/50 transition-all duration-300 cursor-default group overflow-hidden relative">
-                                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-fda-transparent.png" alt="FDA" class="w-full h-full object-contain  opacity-90 group-hover:opacity-100 transition-opacity scale-[0.45] brightness-0 invert [transform:translateZ(0)]"></div>
-                                    <!-- HALAL -->
-                                    <div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-brandgold/50 transition-all duration-300 cursor-default group overflow-hidden relative">
-                                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-halal-transparent.png" alt="HALAL" class="w-full h-full object-contain      opacity-90 group-hover:opacity-100 transition-opacity scale-[0.95] brightness-0 invert [transform:translateZ(0)]">
-                                    </div>
-                                    <!-- VEGAN -->
-                                    <div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-brandgold/50 transition-all duration-300 cursor-default group overflow-hidden relative">
-                                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-vegan-transparent.png" alt="VEGAN" class="w-full h-full object-contain  opacity-90 group-hover:opacity-100 transition-opacity scale-[0.95] brightness-0 invert [transform:translateZ(0)]"></div>
-                                    <!-- CHESTNY ZNAK -->
-                                    <div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-brandgold/50 transition-all duration-300 cursor-default group overflow-hidden relative">
-                                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-cz-transparent.png" alt="CHESTNY ZNAK" class="w-full h-full object-contain      opacity-90 group-hover:opacity-100 transition-opacity scale-[1.05] brightness-0 invert [transform:translateZ(0)]">
-                                    </div>
-                                    <!-- EAC -->
-                                    <div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-brandgold/50 transition-all duration-300 cursor-default group overflow-hidden relative">
-                                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-eac-transparent.png" alt="EAC" class="w-full h-full object-contain  opacity-90 group-hover:opacity-100 transition-opacity scale-[0.90] brightness-0 invert [transform:translateZ(0)]"></div>
-                </div>
-
-
-            </div>
-            
-            <!-- Right side image -->
-            <div class="md:col-span-5 relative hidden md:flex items-center justify-center pt-0 pb-4 md:py-0 fade-in-section is-visible order-1 md:order-2 mb-6 md:mb-0">
-                
-
-                <div class="relative w-full max-w-[280px] md:max-w-none aspect-square md:aspect-auto md:h-[500px] lg:h-[600px] flex items-center justify-center mt-2 md:mt-0">
-                    <div class="relative w-full h-full z-10 flex items-center justify-center animate-float" style="will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;">
-                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/product-box-new.png" class="w-full h-auto object-contain scale-125 md:scale-150 drop-shadow-2xl brightness-100 -translate-x-6 md:-translate-x-10" alt="LONVI PCC1 Box" style="will-change: filter, transform; backface-visibility: hidden;">
+                    <div class="w-full aspect-square rounded-none bg-white/5 border border-white/10 flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-white/30 transition-all duration-300 cursor-default group overflow-hidden relative">
+                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-gmp-transparent.png" alt="GMP" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity scale-[0.88] brightness-0 invert">
                     </div>
-                    <div class="absolute inset-0 md:-inset-10 border-2 border-brandgold rounded-full z-0 opacity-50 border-dashed animate-spin-slow" style="will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;"></div>
-                    <div class="absolute -inset-4 md:-inset-20 border border-brandgold border-dashed rounded-full z-0 opacity-30 animate-spin-slow-reverse" style="will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;"></div>
+                    <!-- FDA -->
+                    <div class="w-full aspect-square rounded-none bg-white/5 border border-white/10 flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-white/30 transition-all duration-300 cursor-default group overflow-hidden relative">
+                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-fda-transparent.png" alt="FDA" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity scale-[0.45] brightness-0 invert">
+                    </div>
+                    <!-- HALAL -->
+                    <div class="w-full aspect-square rounded-none bg-white/5 border border-white/10 flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-white/30 transition-all duration-300 cursor-default group overflow-hidden relative">
+                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-halal-transparent.png" alt="HALAL" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity scale-[0.95] brightness-0 invert">
+                    </div>
+                    <!-- VEGAN -->
+                    <div class="w-full aspect-square rounded-none bg-white/5 border border-white/10 flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-white/30 transition-all duration-300 cursor-default group overflow-hidden relative">
+                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-vegan-transparent.png" alt="VEGAN" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity scale-[0.95] brightness-0 invert">
+                    </div>
+                    <!-- CHESTNY ZNAK -->
+                    <div class="w-full aspect-square rounded-none bg-white/5 border border-white/10 flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-white/30 transition-all duration-300 cursor-default group overflow-hidden relative">
+                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-cz-transparent.png" alt="CHESTNY ZNAK" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity scale-[1.05] brightness-0 invert">
+                    </div>
+                    <!-- EAC -->
+                    <div class="w-full aspect-square rounded-none bg-white/5 border border-white/10 flex items-center justify-center p-2 md:p-3 hover:-translate-y-1 hover:border-white/30 transition-all duration-300 cursor-default group overflow-hidden relative">
+                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-eac-transparent.png" alt="EAC" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity scale-[0.90] brightness-0 invert">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: product showcase -->
+            <div class="order-1 flex items-center justify-center md:order-2 md:col-span-5">
+                <div class="relative flex aspect-square w-full max-w-[440px] items-center justify-center">
+                    <!-- Rotating dashed rings -->
+                    <div class="absolute inset-0 animate-spin-slow rounded-full border-2 border-dashed border-white/30"></div>
+                    <div class="absolute -inset-6 animate-spin-slow-reverse rounded-full border border-dashed border-white/20"></div>
+
+                    <!-- Framed product panel -->
+                    <div class="relative z-10 aspect-square w-[78%] animate-float overflow-hidden rounded-2xl border border-white/25 bg-charcoal shadow-[0_25px_80px_rgba(0,0,0,0.6)] flex items-center justify-center p-4">
+                        <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/product-box-new.png" alt="LONVI PCC1 supplement product box" class="w-full h-auto object-contain scale-110 drop-shadow-2xl" />
+                    </div>
                 </div>
             </div>
         </div>
