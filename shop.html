@@ -808,29 +808,39 @@
 
 
 
+
+
+
 <!-- ULTIMATE DESIGN CORRECTIONS AND CONTRAST FIXED -->
 <style>
-    @keyframes gradient-move-shop-v3 {
-        0% { background-position: 0% center; }
-        100% { background-position: 300% center; }
-    }
-
+    /* Force exact chrome white-silver animated text gradient using cache-busting keyframe name */
     #allrecords .gradient-text-animated, 
     #allrecords span.gradient-text-animated,
     body .gradient-text-animated,
     .gradient-text-animated {
-        background: linear-gradient(90deg, #FFFFFF 0%, #7E8694 25%, #F0F2F5 50%, #4C5363 75%, #FFFFFF 100%); /* NO !important here */
-        background-size: 300% auto; /* NO !important here */
-        -webkit-background-clip: text; /* NO !important here */
+        background: linear-gradient(90deg, #FFFFFF 0%, #7E8694 25%, #F0F2F5 50%, #4C5363 75%, #FFFFFF 100%);
+        background-size: 300% auto;
+        -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
         color: transparent;
         display: inline-block;
         animation: gradient-move-shop-v3 8s linear infinite;
     }
+    
+    @keyframes gradient-move-shop-v3 {
+        0% { background-position: 0% center; }
+        100% { background-position: 300% center; }
+    }
 
-    /* FAQ Accordion Icon Color Overrides - ONLY style the plus/cross icon, keeping card texts original */
-    /* Default state: black circle, black plus */
+    /* FAQ ACCORDION PERFECT 4-STATE OVERRIDES */
+    
+    /* State 1: Closed, Not Hovered (Default) */
+    #allrecords details.group summary span,
+    #allrecords details.group summary div {
+        color: #0D0E11 !important;
+        transition: color 0.3s ease !important;
+    }
     #allrecords details.group summary span.relative {
         border-color: #0D0E11 !important;
         background-color: transparent !important;
@@ -841,21 +851,14 @@
     #allrecords details.group summary svg line {
         color: #0D0E11 !important;
         stroke: #0D0E11 !important;
+        transition: stroke 0.3s ease !important;
     }
-    
-    /* Open state: black circle, white cross */
-    #allrecords details.group[open] summary span.relative {
-        background-color: #0D0E11 !important;
-        border-color: #0D0E11 !important;
-    }
-    #allrecords details.group[open] summary svg,
-    #allrecords details.group[open] summary svg path,
-    #allrecords details.group[open] summary svg line {
+
+    /* State 2: Closed, Hovered (Card turns black, text/icons turn white) */
+    #allrecords details.group:hover summary span,
+    #allrecords details.group:hover summary div {
         color: #FFFFFF !important;
-        stroke: #FFFFFF !important;
     }
-    
-    /* Hover state (card becomes black): white circle, white plus */
     #allrecords details.group:hover summary span.relative {
         border-color: #FFFFFF !important;
         background-color: transparent !important;
@@ -866,8 +869,28 @@
         color: #FFFFFF !important;
         stroke: #FFFFFF !important;
     }
-    
-    /* Open + Hover state (card is black): white circle, black cross */
+
+    /* State 3: Open, Not Hovered (Card is light, text is black, icon is black circle with white cross) */
+    #allrecords details.group[open] summary span,
+    #allrecords details.group[open] summary div {
+        color: #0D0E11 !important;
+    }
+    #allrecords details.group[open] summary span.relative {
+        background-color: #0D0E11 !important;
+        border-color: #0D0E11 !important;
+    }
+    #allrecords details.group[open] summary svg,
+    #allrecords details.group[open] summary svg path,
+    #allrecords details.group[open] summary svg line {
+        color: #FFFFFF !important;
+        stroke: #FFFFFF !important;
+    }
+
+    /* State 4: Open, Hovered (Card turns black, text becomes white, icon is white circle with black cross) */
+    #allrecords details.group[open]:hover summary span,
+    #allrecords details.group[open]:hover summary div {
+        color: #FFFFFF !important;
+    }
     #allrecords details.group[open]:hover summary span.relative {
         background-color: #FFFFFF !important;
         border-color: #FFFFFF !important;
