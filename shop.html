@@ -811,6 +811,9 @@
 
 
 
+
+
+
 <!-- ULTIMATE DESIGN CORRECTIONS AND CONTRAST FIXED -->
 <style>
     /* Force exact chrome white-silver animated text gradient using cache-busting keyframe name */
@@ -833,7 +836,7 @@
         100% { background-position: 300% center; }
     }
 
-    /* FAQ ACCORDION PERFECT 4-STATE OVERRIDES */
+    /* FAQ ACCORDION PERFECT 4-STATE OVERRIDES WITH MAXIMUM SPECIFICITY */
     
     /* State 1: Closed, Not Hovered (Default) */
     #allrecords details.group summary span,
@@ -841,17 +844,13 @@
         color: #0D0E11 !important;
         transition: color 0.3s ease !important;
     }
-    #allrecords details.group summary span.relative {
+    #allrecords details.group summary span.relative,
+    #allrecords details.group summary span.relative * {
         border-color: #0D0E11 !important;
         background-color: transparent !important;
-        transition: all 0.3s ease !important;
-    }
-    #allrecords details.group summary svg,
-    #allrecords details.group summary svg path,
-    #allrecords details.group summary svg line {
         color: #0D0E11 !important;
         stroke: #0D0E11 !important;
-        transition: stroke 0.3s ease !important;
+        transition: all 0.3s ease !important;
     }
 
     /* State 2: Closed, Hovered (Card turns black, text/icons turn white) */
@@ -859,13 +858,10 @@
     #allrecords details.group:hover summary div {
         color: #FFFFFF !important;
     }
-    #allrecords details.group:hover summary span.relative {
+    #allrecords details.group:hover summary span.relative,
+    #allrecords details.group:hover summary span.relative * {
         border-color: #FFFFFF !important;
         background-color: transparent !important;
-    }
-    #allrecords details.group:hover summary svg,
-    #allrecords details.group:hover summary svg path,
-    #allrecords details.group:hover summary svg line {
         color: #FFFFFF !important;
         stroke: #FFFFFF !important;
     }
@@ -879,9 +875,7 @@
         background-color: #0D0E11 !important;
         border-color: #0D0E11 !important;
     }
-    #allrecords details.group[open] summary svg,
-    #allrecords details.group[open] summary svg path,
-    #allrecords details.group[open] summary svg line {
+    #allrecords details.group[open] summary span.relative * {
         color: #FFFFFF !important;
         stroke: #FFFFFF !important;
     }
@@ -895,9 +889,7 @@
         background-color: #FFFFFF !important;
         border-color: #FFFFFF !important;
     }
-    #allrecords details.group[open]:hover summary svg,
-    #allrecords details.group[open]:hover summary svg path,
-    #allrecords details.group[open]:hover summary svg line {
+    #allrecords details.group[open]:hover summary span.relative * {
         color: #0D0E11 !important;
         stroke: #0D0E11 !important;
     }
