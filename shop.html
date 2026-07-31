@@ -767,3 +767,19 @@
         transition: stroke 0.3s ease, color 0.3s ease !important;
     }
 </style>
+
+
+<!-- FORCE GRADIENT TEXT ANIMATION OVER SPECIFICITY CONFLICTS -->
+<style>
+    #allrecords .gradient-text-animated, 
+    #allrecords span.gradient-text-animated,
+    body .gradient-text-animated,
+    .gradient-text-animated {
+        -webkit-text-fill-color: transparent !important;
+        color: transparent !important;
+        background-clip: text !important;
+        -webkit-background-clip: text !important;
+        display: inline-block !important;
+        animation: gradient-move 8s linear infinite !important;
+    }
+</style>
