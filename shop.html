@@ -817,11 +817,14 @@
 
 
 
+
+
+
 <!-- ULTIMATE DESIGN CORRECTIONS AND CONTRAST FIXED -->
 <style>
     /* Force exact chrome white-silver animated text gradient using cache-busting keyframe name */
-     .gradient-text-animated, 
-     span.gradient-text-animated,
+    #allrecords .gradient-text-animated, 
+    #allrecords span.gradient-text-animated,
     body .gradient-text-animated,
     .gradient-text-animated {
         background: linear-gradient(90deg, #FFFFFF 0%, #7E8694 25%, #F0F2F5 50%, #4C5363 75%, #FFFFFF 100%);
@@ -839,69 +842,60 @@
         100% { background-position: 300% center; }
     }
 
-    /* FAQ ACCORDION PERFECT 4-STATE OVERRIDES WITH EXPLICIT TAG-LEVEL SELECTORS */
+    /* FAQ ACCORDION PERFECT 4-STATE OVERRIDES FOR INNER ABSOLUTE SPAN LINES */
     
     /* State 1: Closed, Not Hovered (Default) */
-     details.group summary span,
-     details.group summary div {
+    details.group summary span.pr-8,
+    details.group summary div {
         color: #0D0E11 !important;
         transition: color 0.3s ease !important;
     }
-     details.group summary span.rounded-full,
-     details.group summary span.rounded-full svg,
-     details.group summary span.rounded-full svg line,
-     details.group summary span.rounded-full svg path {
-        border-color: #0D0E11 !important;
+    details.group summary span.rounded-full {
+        border-color: #D1D5DB !important;
         background-color: transparent !important;
-        color: #0D0E11 !important;
-        stroke: #0D0E11 !important;
         transition: all 0.3s ease !important;
     }
+    details.group summary span.rounded-full span.absolute {
+        background-color: #0D0E11 !important;
+        transition: background-color 0.3s ease !important;
+    }
 
-    /* State 2: Closed, Hovered (Card turns black, text/icons turn white) */
-     details.group:hover summary span,
-     details.group:hover summary div {
+    /* State 2: Closed, Hovered (Card turns black, text and icon lines turn white) */
+    details.group:hover summary span.pr-8,
+    details.group:hover summary div {
         color: #FFFFFF !important;
     }
-     details.group:hover summary span.rounded-full,
-     details.group:hover summary span.rounded-full svg,
-     details.group:hover summary span.rounded-full svg line,
-     details.group:hover summary span.rounded-full svg path {
+    details.group:hover summary span.rounded-full {
         border-color: #FFFFFF !important;
         background-color: transparent !important;
-        color: #FFFFFF !important;
-        stroke: #FFFFFF !important;
+    }
+    details.group:hover summary span.rounded-full span.absolute {
+        background-color: #FFFFFF !important;
     }
 
     /* State 3: Open, Not Hovered (Card is light, text is black, icon is black circle with white cross) */
-     details.group[open] summary span,
-     details.group[open] summary div {
+    details.group[open] summary span.pr-8,
+    details.group[open] summary div {
         color: #0D0E11 !important;
     }
-     details.group[open] summary span.rounded-full {
+    details.group[open] summary span.rounded-full {
         background-color: #0D0E11 !important;
         border-color: #0D0E11 !important;
     }
-     details.group[open] summary span.rounded-full svg,
-     details.group[open] summary span.rounded-full svg line,
-     details.group[open] summary span.rounded-full svg path {
-        color: #FFFFFF !important;
-        stroke: #FFFFFF !important;
+    details.group[open] summary span.rounded-full span.absolute {
+        background-color: #FFFFFF !important;
     }
 
     /* State 4: Open, Hovered (Card turns black, text becomes white, icon is white circle with black cross) */
-     details.group[open]:hover summary span,
-     details.group[open]:hover summary div {
+    details.group[open]:hover summary span.pr-8,
+    details.group[open]:hover summary div {
         color: #FFFFFF !important;
     }
-     details.group[open]:hover summary span.rounded-full {
+    details.group[open]:hover summary span.rounded-full {
         background-color: #FFFFFF !important;
         border-color: #FFFFFF !important;
     }
-     details.group[open]:hover summary span.rounded-full svg,
-     details.group[open]:hover summary span.rounded-full svg line,
-     details.group[open]:hover summary span.rounded-full svg path {
-        color: #0D0E11 !important;
-        stroke: #0D0E11 !important;
+    details.group[open]:hover summary span.rounded-full span.absolute {
+        background-color: #0D0E11 !important;
     }
 </style>
