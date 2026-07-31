@@ -1,5 +1,34 @@
 
 <style>
+    /* HIGH SPECIFICITY DYNAMIC SUMMARY BOX METALLIC GRADIENT */
+    #allrecords .bg-transparent.border.border-black\/20,
+    #allrecords div[class*="bg-transparent"][class*="border-black/20"] {
+        background: linear-gradient(135deg, #0D0E11 0%, #1A1C22 35%, #2F3542 70%, #4C5363 100%) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+        padding: 16px !important;
+    }
+    
+    /* Force white text inside summary box */
+    #allrecords .bg-transparent.border.border-black\/20 span,
+    #allrecords .bg-transparent.border.border-black\/20 div,
+    #allrecords .bg-transparent.border.border-black\/20 p {
+        color: #FFFFFF !important;
+    }
+    
+    #allrecords .bg-transparent.border.border-black\/20 #summary-savings {
+        color: #FFFFFF !important;
+        font-weight: 800 !important;
+    }
+    
+    /* Ensure summary-old line-through has some transparency */
+    #allrecords .bg-transparent.border.border-black\/20 #summary-old {
+        color: rgba(255, 255, 255, 0.5) !important;
+        text-decoration: line-through !important;
+    }
+</style>
+
+<style>
     @keyframes gradient-move {
         to { background-position: 300% center; }
     }
@@ -28,7 +57,7 @@
     
     /* Dark metallic animated text gradient for headings on light background */
     .gradient-text-animated {
-        background: linear-gradient(90deg, #FFFFFF 0%, #7E8694 25%, #F0F2F5 50%, #4C5363 75%, #FFFFFF 100%) !important;
+        background: linear-gradient(90deg, #0D0E11 0%, #4C5363 25%, #8A94A6 50%, #4C5363 75%, #0D0E11 100%) !important;
         background-size: 300% auto !important;
         -webkit-background-clip: text !important;
         background-clip: text !important;
