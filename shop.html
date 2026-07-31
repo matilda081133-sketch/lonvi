@@ -1,7 +1,77 @@
 
 <style>
-    @keyframes lv-chrome-anim {
-        0% { background-position: 0% 50%; }
+    @keyframes gradient-move {
+        0% { background-position: 0% center; }
+        100% { background-position: 300% center; }
+    }
+    
+    #allrecords .gradient-text-animated,
+    #allrecords span.gradient-text-animated,
+    body .gradient-text-animated,
+    .gradient-text-animated {
+        background: linear-gradient(90deg, #FFFFFF 0%, #7E8694 25%, #F0F2F5 50%, #4C5363 75%, #FFFFFF 100%) !important;
+        background-size: 300% auto !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        color: transparent !important;
+        display: inline-block !important;
+        animation: gradient-move 8s linear infinite !important;
+    }
+
+    /* FAQ Accordion Icon Color Overrides - ONLY style the plus/cross icon */
+    /* Default state: black circle, black plus */
+    #allrecords details.group summary span.relative {
+        border-color: #0D0E11 !important;
+        background-color: transparent !important;
+        transition: all 0.3s ease !important;
+    }
+    #allrecords details.group summary svg,
+    #allrecords details.group summary svg path,
+    #allrecords details.group summary svg line {
+        color: #0D0E11 !important;
+        stroke: #0D0E11 !important;
+    }
+    
+    /* Open state: black circle, white cross */
+    #allrecords details.group[open] summary span.relative {
+        background-color: #0D0E11 !important;
+        border-color: #0D0E11 !important;
+    }
+    #allrecords details.group[open] summary svg,
+    #allrecords details.group[open] summary svg path,
+    #allrecords details.group[open] summary svg line {
+        color: #FFFFFF !important;
+        stroke: #FFFFFF !important;
+    }
+    
+    /* Hover state (card becomes black): white circle, white plus */
+    #allrecords details.group:hover summary span.relative {
+        border-color: #FFFFFF !important;
+        background-color: transparent !important;
+    }
+    #allrecords details.group:hover summary svg,
+    #allrecords details.group:hover summary svg path,
+    #allrecords details.group:hover summary svg line {
+        color: #FFFFFF !important;
+        stroke: #FFFFFF !important;
+    }
+    
+    /* Open + Hover state (card is black): white circle, black cross */
+    #allrecords details.group[open]:hover summary span.relative {
+        background-color: #FFFFFF !important;
+        border-color: #FFFFFF !important;
+    }
+    #allrecords details.group[open]:hover summary svg,
+    #allrecords details.group[open]:hover summary svg path,
+    #allrecords details.group[open]:hover summary svg line {
+        color: #0D0E11 !important;
+        stroke: #0D0E11 !important;
+    }
+</style>
+
+<style>
+    
         50% { background-position: 100% 50%; }
         100% { background-position: 0% 50%; }
     }
@@ -36,11 +106,7 @@
     }
 </style>
 
-<style>
-    @keyframes gradient-move {
-        to { background-position: 300% center; }
-    }
-</style>
+
 
 <style>
     /* Absolute button overrides */
@@ -64,17 +130,8 @@
     }
     
     /* Dark metallic animated text gradient for headings on light background */
-    .gradient-text-animated {
-        background: linear-gradient(90deg, #FFFFFF 0%, #7E8694 25%, #F0F2F5 50%, #4C5363 75%, #FFFFFF 100%) !important;
-        background-size: 200% auto !important;
-        -webkit-background-clip: text !important;
-        background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        animation: lv-chrome-anim 8s linear infinite !important;
-        display: inline-block !important;
-    }
-    @keyframes shine {
-        to { background-position: 200% center; }
+    
+    
     }
 
     /* Force primary button to be dark charcoal with white text */
@@ -732,33 +789,7 @@
 </style>
 
 
-<!-- FAQ ACCORDION HOVER TEXT AND ICON COLOR OVERRIDES -->
-<style>
-    /* Force text and icon to turn white when accordion is hovered on white background */
-    #allrecords details.group:hover summary span,
-    #allrecords details.group:hover summary h3,
-    #allrecords details.group:hover summary p,
-    #allrecords details.group:hover summary div {
-        color: #FFFFFF !important;
-    }
-    
-    #allrecords details.group:hover summary svg,
-    #allrecords details.group:hover summary svg path,
-    #allrecords details.group:hover summary svg line,
-    #allrecords details.group:hover summary svg circle {
-        color: #FFFFFF !important;
-        stroke: #FFFFFF !important;
-        fill: none !important;
-    }
-    
-    /* Plus icon default state styling */
-    #allrecords details.group summary svg {
-        color: #0A0A0A !important;
-        stroke: #0A0A0A !important;
-        fill: none !important;
-        transition: stroke 0.3s ease, color 0.3s ease !important;
-    }
-</style>
+
 
 
 <!-- FORCE GRADIENT TEXT ANIMATION OVER SPECIFICITY CONFLICTS -->
@@ -766,57 +797,11 @@
     #allrecords .gradient-text-animated, 
     #allrecords span.gradient-text-animated,
     body .gradient-text-animated,
-    .gradient-text-animated {
-        -webkit-text-fill-color: transparent !important;
-        color: transparent !important;
-        background-clip: text !important;
-        -webkit-background-clip: text !important;
-        display: inline-block !important;
-        animation: gradient-move 8s linear infinite !important;
-    }
+    
 </style>
 
 
-<!-- FINAL OVERRIDES FOR ACCORDION OPEN STATE AND HEADING ANIMATION -->
-<style>
-    /* 1. Force exact background size and animation parameters for the heading */
-    #allrecords .gradient-text-animated, 
-    #allrecords span.gradient-text-animated,
-    body .gradient-text-animated,
-    .gradient-text-animated {
-        background: linear-gradient(90deg, #FFFFFF 0%, #7E8694 25%, #F0F2F5 50%, #4C5363 75%, #FFFFFF 100%) !important;
-        background-size: 300% auto !important;
-        -webkit-background-clip: text !important;
-        background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        color: transparent !important;
-        display: inline-block !important;
-        animation: gradient-move 8s linear infinite !important;
-    }
-    
-    @keyframes gradient-move {
-        0% { background-position: 0% center; }
-        100% { background-position: 300% center; }
-    }
 
-    /* 2. Force open state accordion icon visibility (white stroke inside dark circle) */
-    #allrecords details[open] summary svg,
-    #allrecords details[open] summary svg path,
-    #allrecords details[open] summary svg line {
-        color: #FFFFFF !important;
-        stroke: #FFFFFF !important;
-    }
-    
-    #allrecords details[open] summary span.relative {
-        border-color: #0D0E11 !important;
-        background-color: #0D0E11 !important;
-    }
-    
-    /* 3. When hovered, make the icon circle border white to contrast with the black hovered card */
-    #allrecords details.group:hover summary span.relative {
-        border-color: #FFFFFF !important;
-    }
-</style>
 
 
 
@@ -889,75 +874,4 @@
 </script>
 
 
-<!-- ULTIMATE DESIGN CORRECTIONS AND CONTRAST FIXED -->
-<style>
-    /* Force exact chrome white-silver animated text gradient using cache-busting keyframe name */
-    #allrecords .gradient-text-animated, 
-    #allrecords span.gradient-text-animated,
-    body .gradient-text-animated,
-    .gradient-text-animated {
-        background: linear-gradient(90deg, #FFFFFF 0%, #7E8694 25%, #F0F2F5 50%, #4C5363 75%, #FFFFFF 100%) !important;
-        background-size: 300% auto !important;
-        -webkit-background-clip: text !important;
-        background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        color: transparent !important;
-        display: inline-block !important;
-        animation: gradient-move-shop-v3 8s linear infinite !important;
-    }
-    
-    @keyframes gradient-move-shop-v3 {
-        0% { background-position: 0% center; }
-        100% { background-position: 300% center; }
-    }
 
-    /* FAQ Accordion Icon Color Overrides - ONLY style the plus/cross icon, keeping card texts original */
-    /* Default state: black circle, black plus */
-    #allrecords details.group summary span.relative {
-        border-color: #0D0E11 !important;
-        background-color: transparent !important;
-        transition: all 0.3s ease !important;
-    }
-    #allrecords details.group summary svg,
-    #allrecords details.group summary svg path,
-    #allrecords details.group summary svg line {
-        color: #0D0E11 !important;
-        stroke: #0D0E11 !important;
-    }
-    
-    /* Open state: black circle, white cross */
-    #allrecords details.group[open] summary span.relative {
-        background-color: #0D0E11 !important;
-        border-color: #0D0E11 !important;
-    }
-    #allrecords details.group[open] summary svg,
-    #allrecords details.group[open] summary svg path,
-    #allrecords details.group[open] summary svg line {
-        color: #FFFFFF !important;
-        stroke: #FFFFFF !important;
-    }
-    
-    /* Hover state (card becomes black): white circle, white plus */
-    #allrecords details.group:hover summary span.relative {
-        border-color: #FFFFFF !important;
-        background-color: transparent !important;
-    }
-    #allrecords details.group:hover summary svg,
-    #allrecords details.group:hover summary svg path,
-    #allrecords details.group:hover summary svg line {
-        color: #FFFFFF !important;
-        stroke: #FFFFFF !important;
-    }
-    
-    /* Open + Hover state (card is black): white circle, black cross */
-    #allrecords details.group[open]:hover summary span.relative {
-        background-color: #FFFFFF !important;
-        border-color: #FFFFFF !important;
-    }
-    #allrecords details.group[open]:hover summary svg,
-    #allrecords details.group[open]:hover summary svg path,
-    #allrecords details.group[open]:hover summary svg line {
-        color: #0D0E11 !important;
-        stroke: #0D0E11 !important;
-    }
-</style>
