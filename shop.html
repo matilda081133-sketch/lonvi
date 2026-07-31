@@ -139,7 +139,7 @@
                         <!-- Left Side: Sticky Title -->
                         <div class="md:w-1/3 md:sticky md:top-24">
                             <div class="mb-4 flex items-center gap-2">
-                                <span class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase inline-block bg-neutral-900 text-brandgold px-4 py-2 rounded-sm border border-neutral-200 break-words">[ ИНФОРМАЦИЯ ]</span>
+                                <span class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase inline-block bg-neutral-900 text-white px-4 py-2 rounded-sm border border-neutral-200 break-words" style="color: #FFFFFF !important;">[ ИНФОРМАЦИЯ ]</span>
                             </div>
                             <h2 class="text-3xl md:text-5xl font-wild font-bold tracking-tighter uppercase mb-6 leading-none text-neutral-900">О ПРОДУКТЕ</h2>
                             <p class="font-mono text-neutral-600 text-sm md:text-base leading-relaxed mb-8">Всё, что вам нужно знать о составе, применении и безопасности LONVI PCC1.</p>
@@ -699,5 +699,34 @@
         background: #20242D !important;
         color: #FFFFFF !important;
         border-color: #20242D !important;
+    }
+</style>
+
+
+<!-- FAQ ACCORDION HOVER TEXT AND ICON COLOR OVERRIDES -->
+<style>
+    /* Force text and icon to turn white when accordion is hovered on white background */
+    #allrecords details.group:hover summary span,
+    #allrecords details.group:hover summary h3,
+    #allrecords details.group:hover summary p,
+    #allrecords details.group:hover summary div {
+        color: #FFFFFF !important;
+    }
+    
+    #allrecords details.group:hover summary svg,
+    #allrecords details.group:hover summary svg path,
+    #allrecords details.group:hover summary svg line,
+    #allrecords details.group:hover summary svg circle {
+        color: #FFFFFF !important;
+        stroke: #FFFFFF !important;
+        fill: none !important;
+    }
+    
+    /* Plus icon default state styling */
+    #allrecords details.group summary svg {
+        color: #0A0A0A !important;
+        stroke: #0A0A0A !important;
+        fill: none !important;
+        transition: stroke 0.3s ease, color 0.3s ease !important;
     }
 </style>
