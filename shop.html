@@ -1,74 +1,5 @@
 
-<style>
-    @keyframes gradient-move {
-        0% { background-position: 0% center; }
-        100% { background-position: 300% center; }
-    }
-    
-    #allrecords .gradient-text-animated,
-    #allrecords span.gradient-text-animated,
-    body .gradient-text-animated,
-    .gradient-text-animated {
-        background: linear-gradient(90deg, #FFFFFF 0%, #7E8694 25%, #F0F2F5 50%, #4C5363 75%, #FFFFFF 100%) !important;
-        background-size: 300% auto !important;
-        -webkit-background-clip: text !important;
-        background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        color: transparent !important;
-        display: inline-block !important;
-        animation: gradient-move 8s linear infinite !important;
-    }
 
-    /* FAQ Accordion Icon Color Overrides - ONLY style the plus/cross icon */
-    /* Default state: black circle, black plus */
-    #allrecords details.group summary span.relative {
-        border-color: #0D0E11 !important;
-        background-color: transparent !important;
-        transition: all 0.3s ease !important;
-    }
-    #allrecords details.group summary svg,
-    #allrecords details.group summary svg path,
-    #allrecords details.group summary svg line {
-        color: #0D0E11 !important;
-        stroke: #0D0E11 !important;
-    }
-    
-    /* Open state: black circle, white cross */
-    #allrecords details.group[open] summary span.relative {
-        background-color: #0D0E11 !important;
-        border-color: #0D0E11 !important;
-    }
-    #allrecords details.group[open] summary svg,
-    #allrecords details.group[open] summary svg path,
-    #allrecords details.group[open] summary svg line {
-        color: #FFFFFF !important;
-        stroke: #FFFFFF !important;
-    }
-    
-    /* Hover state (card becomes black): white circle, white plus */
-    #allrecords details.group:hover summary span.relative {
-        border-color: #FFFFFF !important;
-        background-color: transparent !important;
-    }
-    #allrecords details.group:hover summary svg,
-    #allrecords details.group:hover summary svg path,
-    #allrecords details.group:hover summary svg line {
-        color: #FFFFFF !important;
-        stroke: #FFFFFF !important;
-    }
-    
-    /* Open + Hover state (card is black): white circle, black cross */
-    #allrecords details.group[open]:hover summary span.relative {
-        background-color: #FFFFFF !important;
-        border-color: #FFFFFF !important;
-    }
-    #allrecords details.group[open]:hover summary svg,
-    #allrecords details.group[open]:hover summary svg path,
-    #allrecords details.group[open]:hover summary svg line {
-        color: #0D0E11 !important;
-        stroke: #0D0E11 !important;
-    }
-</style>
 
 <style>
     
@@ -875,3 +806,76 @@
 
 
 
+
+
+<!-- ULTIMATE DESIGN CORRECTIONS AND CONTRAST FIXED -->
+<style>
+    @keyframes gradient-move-shop-v3 {
+        0% { background-position: 0% center; }
+        100% { background-position: 300% center; }
+    }
+
+    #allrecords .gradient-text-animated, 
+    #allrecords span.gradient-text-animated,
+    body .gradient-text-animated,
+    .gradient-text-animated {
+        background: linear-gradient(90deg, #FFFFFF 0%, #7E8694 25%, #F0F2F5 50%, #4C5363 75%, #FFFFFF 100%); /* NO !important here */
+        background-size: 300% auto; /* NO !important here */
+        -webkit-background-clip: text; /* NO !important here */
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        display: inline-block;
+        animation: gradient-move-shop-v3 8s linear infinite;
+    }
+
+    /* FAQ Accordion Icon Color Overrides - ONLY style the plus/cross icon, keeping card texts original */
+    /* Default state: black circle, black plus */
+    #allrecords details.group summary span.relative {
+        border-color: #0D0E11 !important;
+        background-color: transparent !important;
+        transition: all 0.3s ease !important;
+    }
+    #allrecords details.group summary svg,
+    #allrecords details.group summary svg path,
+    #allrecords details.group summary svg line {
+        color: #0D0E11 !important;
+        stroke: #0D0E11 !important;
+    }
+    
+    /* Open state: black circle, white cross */
+    #allrecords details.group[open] summary span.relative {
+        background-color: #0D0E11 !important;
+        border-color: #0D0E11 !important;
+    }
+    #allrecords details.group[open] summary svg,
+    #allrecords details.group[open] summary svg path,
+    #allrecords details.group[open] summary svg line {
+        color: #FFFFFF !important;
+        stroke: #FFFFFF !important;
+    }
+    
+    /* Hover state (card becomes black): white circle, white plus */
+    #allrecords details.group:hover summary span.relative {
+        border-color: #FFFFFF !important;
+        background-color: transparent !important;
+    }
+    #allrecords details.group:hover summary svg,
+    #allrecords details.group:hover summary svg path,
+    #allrecords details.group:hover summary svg line {
+        color: #FFFFFF !important;
+        stroke: #FFFFFF !important;
+    }
+    
+    /* Open + Hover state (card is black): white circle, black cross */
+    #allrecords details.group[open]:hover summary span.relative {
+        background-color: #FFFFFF !important;
+        border-color: #FFFFFF !important;
+    }
+    #allrecords details.group[open]:hover summary svg,
+    #allrecords details.group[open]:hover summary svg path,
+    #allrecords details.group[open]:hover summary svg line {
+        color: #0D0E11 !important;
+        stroke: #0D0E11 !important;
+    }
+</style>
