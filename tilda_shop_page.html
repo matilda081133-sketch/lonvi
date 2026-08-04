@@ -167,24 +167,16 @@
                         <div class="relative z-10 w-full overflow-hidden bg-white flex flex-col rounded-none border border-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-300">
                             <!-- Main Image Viewport -->
                             <div class="relative z-10 w-full aspect-square lg:aspect-[4/3] flex items-center justify-center p-4 md:p-8 bg-[#F8FAFC] border-b border-slate-100">
-                                <img id="main-gallery-img" src="https://raw.githubusercontent.com/matilda081133-sketch/lonvi/main/assets/gallery-leaves-square.png" alt="LONVI PCC1 Box" class="w-full h-full object-contain drop-shadow-xl transition-opacity duration-300 cursor-zoom-in">
-                                <video poster="https://raw.githubusercontent.com/matilda081133-sketch/lonvi/main/assets/gallery-leaves-square.png" id="main-gallery-video" src="https://raw.githubusercontent.com/matilda081133-sketch/lonvi/main/assets/product-video-1.mp4" class="w-full max-w-full h-auto max-h-full object-contain shadow-2xl rounded-none hidden" loop muted playsinline autoplay controls></video>
+                                <img id="main-gallery-img" src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/gallery-leaves-square.png" alt="LONVI PCC1 Box" class="w-full h-full object-contain drop-shadow-xl transition-opacity duration-300 cursor-zoom-in">
                             </div>
                             <!-- Gallery Thumbnails Footer -->
                             <div class="relative z-10 flex justify-center gap-3 py-4 md:py-6 overflow-x-auto hide-scrollbar px-4 border-t border-black/5">
-                                <button data-slide="0" data-type="image" data-src="https://raw.githubusercontent.com/matilda081133-sketch/lonvi/main/assets/gallery-leaves-square.png" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-brandgold">
-                                    <img src="https://raw.githubusercontent.com/matilda081133-sketch/lonvi/main/assets/gallery-leaves-square.png" alt="Thumbnail 0" class="w-full h-full object-cover">
+                                <button data-slide="0" data-src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/gallery-leaves-square.png" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-brandgold">
+                                    <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/gallery-leaves-square.png" alt="Thumbnail 0" class="w-full h-full object-cover">
                                 </button>
                                 
-                                <button data-slide="1" data-type="image" data-src="https://raw.githubusercontent.com/matilda081133-sketch/lonvi/main/assets/gallery-leaves.jpg" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-black/20 hover:border-brandgold/50">
-                                    <img src="https://raw.githubusercontent.com/matilda081133-sketch/lonvi/main/assets/gallery-leaves.jpg" alt="Thumbnail 1" class="w-full h-full object-cover">
-                                </button>
-                                
-                                <button data-slide="2" data-type="video" data-src="https://raw.githubusercontent.com/matilda081133-sketch/lonvi/main/assets/product-video-1.mp4" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-black/20 hover:border-brandgold/50">
-                                    <video src="https://raw.githubusercontent.com/matilda081133-sketch/lonvi/main/assets/product-video-1.mp4" class="w-full h-full object-cover" muted></video>
-                                    <div class="absolute inset-0 bg-[#E5E5E5]/40 flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-neutral-900" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                                    </div>
+                                <button data-slide="1" data-src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/gallery-leaves.jpg" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-black/20 hover:border-brandgold/50">
+                                    <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/gallery-leaves.jpg" alt="Thumbnail 1" class="w-full h-full object-cover">
                                 </button>
                             </div>
                         </div>
@@ -429,7 +421,6 @@
             // Gallery Slideshow Logic
             const thumbs = document.querySelectorAll('.gallery-thumb');
             const mainImg = document.getElementById('main-gallery-img');
-            const mainVideo = document.getElementById('main-gallery-video');
             let currentSlide = 0;
             let slideInterval;
             let transitionTimeout;
@@ -448,33 +439,17 @@
                 });
 
                 const activeThumb = thumbs[index];
-                if (activeThumb) {
-                    const type = activeThumb.dataset.type;
+                if (activeThumb && mainImg) {
                     const src = activeThumb.dataset.src;
                     
-                    if (type === 'video') {
-                        if (mainImg) mainImg.classList.add('hidden');
-                        if (mainVideo) {
-                            mainVideo.classList.remove('hidden');
-                            mainVideo.src = src;
-                            mainVideo.play().catch(e => console.log("Video auto-play blocked or failed", e));
-                        }
-                    } else {
-                        if (mainVideo) {
-                            mainVideo.classList.add('hidden');
-                            mainVideo.pause();
-                        }
-                        if (mainImg) {
-                            mainImg.classList.remove('hidden');
-                            // Smooth fade-in crossfade
-                            mainImg.classList.add('opacity-0');
-                            clearTimeout(transitionTimeout);
-                            transitionTimeout = setTimeout(() => {
-                                mainImg.src = src;
-                                mainImg.classList.remove('opacity-0');
-                            }, 150);
-                        }
-                    }
+                    mainImg.classList.remove('hidden');
+                    // Smooth fade-in crossfade
+                    mainImg.classList.add('opacity-0');
+                    clearTimeout(transitionTimeout);
+                    transitionTimeout = setTimeout(() => {
+                        mainImg.src = src;
+                        mainImg.classList.remove('opacity-0');
+                    }, 150);
                 }
                 currentSlide = index;
             }
