@@ -133,21 +133,29 @@
                         <!-- Inner rotating border (reverse) -->
                         <div class="absolute inset-6 md:inset-12 border border-black/5 border-dashed rounded-full z-0 opacity-60 animate-spin-slow-reverse" style="will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;"></div>
                         
-                        <!-- Central Circular Card Container -->
-                        <div id="slideshow-circle" class="relative z-10 w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] md:w-[380px] md:h-[380px] lg:w-[420px] lg:h-[420px] rounded-full overflow-hidden shadow-2xl transition-all duration-500 animate-float flex items-center justify-center bg-white" style="will-change: transform, background-color; backface-visibility: hidden; transform-style: preserve-3d;">
-                            <!-- Slide 1 (product-box-open) -->
-                            <div class="slide-item absolute inset-0 flex items-center justify-center transition-all duration-700 opacity-100 scale-100 z-10" data-bg="#FFFFFF">
-                                <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/product-box-open.jpg" alt="LONVI PCC1 Box" class="w-full h-full object-contain p-10 md:p-14 drop-shadow-xl cursor-zoom-in">
+                        <!-- Central Square Card Container with Metallic Gradient -->
+                        <div id="slideshow-card" class="relative z-10 w-full h-full border border-white/10 shadow-2xl transition-all duration-500 animate-float flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #0D0E11 0%, #1A1C22 35%, #2F3542 70%, #4C5363 100%); will-change: transform; backface-visibility: hidden; transform-style: preserve-3d;">
+                            <!-- Slide 1 (product-box-new) -->
+                            <div class="slide-item absolute inset-0 flex items-center justify-center transition-all duration-700 opacity-100 scale-100 z-10">
+                                <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/product-box-new.png" alt="LONVI PCC1 Box" class="w-4/5 h-4/5 object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] cursor-zoom-in">
                             </div>
                             <!-- Slide 2 (gallery-leaves) -->
-                            <div class="slide-item absolute inset-0 flex items-center justify-center transition-all duration-700 opacity-0 scale-95 z-0" data-bg="#171C17">
+                            <div class="slide-item absolute inset-0 flex items-center justify-center transition-all duration-700 opacity-0 scale-95 z-0">
                                 <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/gallery-leaves.jpg" alt="LONVI PCC1 Leaves" class="w-full h-full object-cover cursor-zoom-in">
                             </div>
                             <!-- Slide 3 (product-video-1) -->
-                            <div class="slide-item absolute inset-0 flex items-center justify-center transition-all duration-700 opacity-0 scale-95 z-0" data-bg="#000000">
+                            <div class="slide-item absolute inset-0 flex items-center justify-center transition-all duration-700 opacity-0 scale-95 z-0">
                                 <video id="slideshow-video" src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/product-video-1.mp4" class="w-full h-full object-cover" loop muted playsinline></video>
                             </div>
                         </div>
+                        
+                        <!-- Slideshow Navigation Dots (subtle, floating overlays) -->
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3 z-30 bg-white/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-black/5 shadow-sm">
+                            <button onclick="goToSlide(0)" class="slide-dot w-2.5 h-2.5 rounded-full bg-black/40 hover:bg-black transition-all duration-300 scale-125 bg-black" aria-label="Slide 1"></button>
+                            <button onclick="goToSlide(1)" class="slide-dot w-2.5 h-2.5 rounded-full bg-black/20 hover:bg-black transition-all duration-300" aria-label="Slide 2"></button>
+                            <button onclick="goToSlide(2)" class="slide-dot w-2.5 h-2.5 rounded-full bg-black/20 hover:bg-black transition-all duration-300" aria-label="Slide 3"></button>
+                        </div>
+                    </div>
                         
                         <!-- Slideshow Navigation Dots (subtle, floating overlays) -->
                         <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3 z-30 bg-white/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-black/5 shadow-sm">
