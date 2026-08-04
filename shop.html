@@ -353,19 +353,20 @@
             // Lightbox logic
             const lightbox = document.getElementById('lv-lightbox');
             const lightboxImg = document.getElementById('lv-lightbox-img');
-            const mainImgNode = document.getElementById('main-gallery-img');
             
-            if (mainImgNode && lightbox && lightboxImg) {
-                mainImgNode.classList.add('cursor-zoom-in');
-                mainImgNode.addEventListener('click', function() {
-                    lightboxImg.src = this.src;
-                    lightbox.classList.remove('hidden');
-                    lightbox.classList.add('flex');
-                    void lightbox.offsetWidth;
-                    lightbox.classList.remove('opacity-0');
-                    lightboxImg.classList.remove('scale-95');
-                    lightboxImg.classList.add('scale-100');
-                    document.body.style.overflow = 'hidden';
+            if (lightbox && lightboxImg) {
+                document.addEventListener('click', function(e) {
+                    const slideImg = e.target.closest('.slide-item img');
+                    if (slideImg) {
+                        lightboxImg.src = slideImg.src;
+                        lightbox.classList.remove('hidden');
+                        lightbox.classList.add('flex');
+                        void lightbox.offsetWidth;
+                        lightbox.classList.remove('opacity-0');
+                        lightboxImg.classList.remove('scale-95');
+                        lightboxImg.classList.add('scale-100');
+                        document.body.style.overflow = 'hidden';
+                    }
                 });
                 
                 lightbox.addEventListener('click', function() {
@@ -379,7 +380,7 @@
                     }, 300);
                 });
             }
-    
+     
 
             // Phone mask logic
             const phoneInput = document.getElementById('lv-phone');
@@ -398,40 +399,78 @@
                     e.target.value = formatted;
                 });
             }
-    
-            // Gallery Logic
-            const thumbs = document.querySelectorAll('.gallery-thumb');
-            const mainImg = document.getElementById('main-gallery-img');
-            const mainVideo = document.getElementById('main-gallery-video');
-            
-            if(thumbs && mainImg && mainVideo) {
-                thumbs.forEach(thumb => {
-                    thumb.addEventListener('click', () => {
-                        thumbs.forEach(t => {
-                            t.classList.remove('border-brandgold');
-                            t.classList.add('border-neutral-black/20');
-                        });
-                        thumb.classList.add('border-brandgold');
-                        thumb.classList.remove('border-neutral-black/20');
+     
+            // Slideshow Logic
+            const slides = document.querySelectorAll('.slide-item');
+            const dots = document.querySelectorAll('.slide-dot');
+            const video = document.getElementById('slideshow-video');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function showSlide(index) {
+                if (!slides.length) return;
+                
+                // Stop video if leaving video slide
+                if (currentSlide === 2 && video) {
+                    video.pause();
+                }
+
+                currentSlide = index;
+
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.remove('opacity-0', 'scale-95', 'z-0');
+                        slide.classList.add('opacity-100', 'scale-100', 'z-10');
                         
-                        const type = thumb.dataset.type;
-                        const src = thumb.dataset.src;
-                        
-                        if (type === 'image') {
-                            mainVideo.classList.add('hidden');
-                            mainVideo.pause();
-                            mainImg.src = src;
-                            mainImg.classList.remove('hidden');
-                        } else if (type === 'video') {
-                            mainImg.classList.add('hidden');
-                            mainVideo.src = src;
-                            mainVideo.classList.remove('hidden');
-                            mainVideo.play();
+                        // Play video if entering video slide
+                        if (i === 2 && video) {
+                            video.currentTime = 0;
+                            video.play().catch(e => console.log('Video autoplay blocked:', e));
+                        }
+                    } else {
+                        slide.classList.remove('opacity-100', 'scale-100', 'z-10');
+                        slide.classList.add('opacity-0', 'scale-95', 'z-0');
+                    }
+                });
+
+                // Update dots
+                if (dots.length) {
+                    dots.forEach((dot, i) => {
+                        if (i === index) {
+                            dot.classList.remove('bg-black/20');
+                            dot.classList.add('bg-black', 'scale-125');
+                        } else {
+                            dot.classList.remove('bg-black', 'scale-125');
+                            dot.classList.add('bg-black/20');
                         }
                     });
-                });
+                }
             }
 
+            window.goToSlide = function(index) {
+                showSlide(index);
+                resetInterval();
+            };
+
+            function nextSlide() {
+                const next = (currentSlide + 1) % slides.length;
+                showSlide(next);
+            }
+
+            function startInterval() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            function resetInterval() {
+                clearInterval(slideInterval);
+                startInterval();
+            }
+
+            if (slides.length) {
+                startInterval();
+            }
+            
+            
             // Options Selection Logic
             const planLabels = document.querySelectorAll('label.cursor-pointer');
             if(planLabels) {
