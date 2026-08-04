@@ -177,7 +177,7 @@
                                 </button>
                                 
                                 <button data-slide="1" data-type="image" data-src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/gallery-leaves.jpg" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-black/20 hover:border-brandgold/50">
-                                    <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/gallery-leaves.jpg" alt="Thumbnail 1" class="w-full h-full object-cover">
+                                    <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/gallery-leaves.jpg" alt="Thumbnail 1" class="w-full h-full object-cover">
                                 </button>
                                 <button data-slide="2" data-type="video" data-src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/product-video-1.mp4" class="gallery-thumb flex-shrink-0 relative w-14 h-14 md:w-20 md:h-20 border-2 transition-all overflow-hidden border-black/20 hover:border-brandgold/50">
                                     <video poster="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/product-box-open.jpg" src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/product-video-1.mp4" class="w-full h-full object-cover" poster="./assets/product-box-leaves.jpg" muted></video>
@@ -430,6 +430,7 @@
             const mainVideo = document.getElementById('main-gallery-video');
             let currentSlide = 0;
             let slideInterval;
+            let transitionTimeout;
 
             function showSlide(index) {
                 if (!thumbs.length) return;
@@ -455,12 +456,20 @@
                             mainVideo.pause();
                         }
                         if (mainImg) {
-                            mainImg.src = src;
                             mainImg.classList.remove('hidden');
+                            // Smooth fade-in crossfade
+                            mainImg.classList.add('opacity-0');
+                            clearTimeout(transitionTimeout);
+                            transitionTimeout = setTimeout(() => {
+                                mainImg.src = src;
+                                mainImg.classList.remove('opacity-0');
+                            }, 150);
                         }
                     } else if (type === 'video') {
+                        clearTimeout(transitionTimeout);
                         if (mainImg) {
                             mainImg.classList.add('hidden');
+                            mainImg.classList.add('opacity-0');
                         }
                         if (mainVideo) {
                             mainVideo.src = src;
