@@ -608,6 +608,9 @@
                 }
             };
 
+            const cartShopBtn = document.getElementById('cart-shop-btn');
+            if(cartShopBtn) cartShopBtn.addEventListener('click', closeCart);
+            
             if(cartBtn && closeCartBtn && cartOverlay) {
                 cartBtn.addEventListener('click', openCart);
                 closeCartBtn.addEventListener('click', closeCart);
