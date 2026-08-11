@@ -1,3 +1,25 @@
+<!-- BULLETPROOF DYNAMIC ROUTING FOR LOCAL TESTING & PRODUCTION TILDA -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var isLocal = window.location.protocol === 'file:' || 
+                      window.location.hostname === 'localhost' || 
+                      window.location.hostname === '127.0.0.1';
+        
+        if (isLocal) {
+            // Rewrite links for local browsing
+            document.querySelectorAll('a').forEach(function(a) {
+                var href = a.getAttribute('href');
+                if (href) {
+                    if (href.includes('page162990409.html') || href.includes('tilda_shop_page.html') || href.includes('shop.html')) {
+                        a.setAttribute('href', 'tilda_shop_page.html');
+                    } else if (href.includes('page151412406.html') || href.includes('tilda_main_page.html') || href === 'https://lonvibio.com.ru/' || href === 'https://lonvibio.com.ru') {
+                        a.setAttribute('href', 'tilda_main_page.html');
+                    }
+                }
+            });
+        }
+    });
+</script>
 
 
 
