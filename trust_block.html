@@ -1,212 +1,77 @@
 <!-- 
-  LONVI REDESIGN: PREMIUM TRUST BLOCK (PR & COOPERATION BANNER)
-  Вставьте этот HTML/CSS код напрямую в HTML-блок T123 на Тильде.
-  Этот блок полностью автономен, работает БЕЗ Tailwind CSS и использует чистый CSS.
+  LONVI REDESIGN: NATIVE TRUST SECTION (ROSTKI FORUM & COOPERATION)
+  Вставьте этот HTML-код напрямую в блок T123 на Главной странице Тильды.
+  Этот блок разработан строго в текущей стилистике главной страницы сайта:
+  он использует глобальные классы фона (brand-metallic-cells), анимированного
+  градиентного текста (gradient-text-animated), шрифты Outfit/JetBrains Mono
+  и карточки логотипов, индентичные сертификатам в первом экране.
 -->
-
-<div class="lonvi-trust-banner">
-    <div class="trust-container">
-        <!-- Left: Badge & Statement -->
-        <div class="trust-left">
-            <span class="trust-badge">[ РОСТКИ ФОРУМ ]</span>
-            <p class="trust-text">
-                <strong>LONVI</strong> — участник Медицинского симпозиума международного форума <strong>«РОСТКИ» (Россия–Китай)</strong>. Подписан меморандум о научном сотрудничестве в сфере биотехнологий и развития здорового долголетия.
-            </p>
-        </div>
-        
-        <!-- Right: Logos -->
-        <div class="trust-logos">
-            <!-- Logo 1: ROSTKI -->
-            <div class="trust-logo-item" title="Международный форум РОСТКИ">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22V10" />
-                    <path d="M12 10C12 10 8 7 8 4C8 2 10 2 12 5C14 2 16 2 16 4C16 7 12 10 12 10Z" />
-                    <path d="M12 15C12 15 17 14 19 12" />
-                    <path d="M12 18C12 18 7 17 5 15" />
-                </svg>
-                <div class="trust-logo-text">
-                    <span class="trust-logo-title" style="font-family:'Outfit', sans-serif;">РОСТКИ</span>
-                    <span class="trust-logo-sub">RUSSIA-CHINA</span>
-                </div>
+<section class="relative py-12 md:py-16 border-t border-neutral-800 text-white brand-metallic-cells">
+    <div class="container max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left Side: Badge, Title & Statement (8 cols on desktop) -->
+            <div class="lg:col-span-8 flex flex-col items-start text-left">
+                <!-- Spaced Mono Badge (Matches landing page style) -->
+                <span class="text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-4 text-[#B6BCC6] block font-mono">
+                    [ РОСТКИ ФОРУМ ]
+                </span>
+                
+                <!-- Section Title with animated text gradient -->
+                <h2 class="text-3xl md:text-5xl font-wild font-bold tracking-tighter uppercase mb-6 leading-none">
+                    Участник симпозиума <br>
+                    <span class="gradient-text-animated">«РОСТКИ: Россия–Китай»</span>
+                </h2>
+                
+                <!-- Main Statement Paragraph in JetBrains Mono -->
+                <p class="font-mono text-sm md:text-base leading-relaxed text-neutral-300 max-w-2xl">
+                    Компания <strong class="text-white">LONVI Biosciences</strong> совместно с эксклюзивным дистрибьютором в РФ приняла участие в IV Международном форуме в Казани. Подписан меморандум о научном сотрудничестве в сфере биотехнологий и развития здорового долголетия.
+                </p>
             </div>
             
-            <div class="trust-divider"></div>
-            
-            <!-- Logo 2: KFU -->
-            <div class="trust-logo-item" title="Казанский федеральный университет">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                    <path d="M4 20H20" />
-                    <path d="M6 20V12H8V20" />
-                    <path d="M10 20V12H12V20" />
-                    <path d="M14 20V12H16V20" />
-                    <path d="M18 20V12H20V20" />
-                    <path d="M4 12L12 6L20 12H4Z" />
-                    <path d="M12 6V2" />
-                </svg>
-                <div class="trust-logo-text">
-                    <span class="trust-logo-title" style="font-family:'JetBrains Mono', monospace;">КФУ</span>
-                    <span class="trust-logo-sub">Основан в 1804</span>
+            <!-- Right Side: Partner Logos styled exactly like Hero Certificates (4 cols on desktop) -->
+            <div class="lg:col-span-4 flex flex-wrap lg:grid lg:grid-cols-3 gap-3 w-full justify-center lg:justify-end">
+                
+                <!-- Logo 1: ROSTKI Forum -->
+                <div class="w-24 h-24 rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center p-2 hover:-translate-y-1 hover:border-white/40 transition-all duration-300 cursor-default group relative">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-white/70 group-hover:text-white transition-colors duration-300">
+                        <path d="M12 22V10" />
+                        <path d="M12 10C12 10 8 7 8 4C8 2 10 2 12 5C14 2 16 2 16 4C16 7 12 10 12 10Z" />
+                        <path d="M12 15C12 15 17 14 19 12" />
+                        <path d="M12 18C12 18 7 17 5 15" />
+                    </svg>
+                    <span class="text-[8px] font-wild font-black tracking-widest text-white/50 group-hover:text-white transition-colors duration-300 mt-2 uppercase text-center leading-none">РОСТКИ</span>
                 </div>
+                
+                <!-- Logo 2: KFU -->
+                <div class="w-24 h-24 rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center p-2 hover:-translate-y-1 hover:border-white/40 transition-all duration-300 cursor-default group relative">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="text-white/70 group-hover:text-white transition-colors duration-300">
+                        <path d="M4 20H20" />
+                        <path d="M6 20V12H8V20" />
+                        <path d="M10 20V12H12V20" />
+                        <path d="M14 20V12H16V20" />
+                        <path d="M18 20V12H20V20" />
+                        <path d="M4 12L12 6L20 12H4Z" />
+                        <path d="M12 6V2" />
+                    </svg>
+                    <span class="text-[8px] font-mono font-bold tracking-[0.05em] text-white/50 group-hover:text-white transition-colors duration-300 mt-2 uppercase text-center leading-none">КФУ</span>
+                </div>
+                
+                <!-- Logo 3: MINNAUKI / MINZDRAV -->
+                <div class="w-24 h-24 rounded-none bg-[#1A1C20]/75 border border-white/5 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center p-2 hover:-translate-y-1 hover:border-white/40 transition-all duration-300 cursor-default group relative">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="text-white/70 group-hover:text-white transition-colors duration-300">
+                        <path d="M12 22C12 22 20 18 20 8V4L12 2L4 4V8C4 18 12 22 12 22Z" />
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M12 5V9" />
+                        <path d="M12 15V19" />
+                        <path d="M5 12H9" />
+                        <path d="M15 12H19" />
+                    </svg>
+                    <span class="text-[8px] font-mono font-bold tracking-[0.05em] text-white/50 group-hover:text-white transition-colors duration-300 mt-2 uppercase text-center leading-none">МИННАУКИ</span>
+                </div>
+                
             </div>
             
-            <div class="trust-divider"></div>
-            
-            <!-- Logo 3: Ministry -->
-            <div class="trust-logo-item" title="Министерство науки и здравоохранения">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                    <path d="M12 22C12 22 20 18 20 8V4L12 2L4 4V8C4 18 12 22 12 22Z" />
-                    <circle cx="12" cy="12" r="3" />
-                    <path d="M12 5V9" />
-                    <path d="M12 15V19" />
-                    <path d="M5 12H9" />
-                    <path d="M15 12H19" />
-                </svg>
-                <div class="trust-logo-text">
-                    <span class="trust-logo-title" style="font-family:'JetBrains Mono', monospace;">МИННАУКИ</span>
-                    <span class="trust-logo-sub">И ЗДРАВООХРАНЕНИЯ</span>
-                </div>
-            </div>
         </div>
     </div>
-</div>
-
-<style>
-    /* ПРЕМИУМ СТИЛИ БЛОКА ДОВЕРИЯ */
-    .lonvi-trust-banner {
-        width: 100% !important;
-        background-color: #0D0E11 !important;
-        background: linear-gradient(90deg, #0d0e11 0%, #20242D 55%, #0d0e11 100%) !important;
-        padding: 24px 0 !important;
-        border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-        position: relative !important;
-        box-sizing: border-box !important;
-        font-family: 'JetBrains Mono', 'Inter', -apple-system, sans-serif !important;
-    }
-
-    .trust-container {
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-        padding: 0 24px !important;
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        gap: 32px !important;
-        box-sizing: border-box !important;
-    }
-
-    .trust-left {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        gap: 16px !important;
-        text-align: left !important;
-    }
-
-    .trust-badge {
-        display: inline-block !important;
-        padding: 4px 12px !important;
-        background-color: #1A1C20 !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
-        color: #FFFFFF !important;
-        font-family: 'JetBrains Mono', monospace !important;
-        font-size: 10px !important;
-        font-weight: 700 !important;
-        letter-spacing: 0.2em !important;
-        text-transform: uppercase !important;
-        white-space: nowrap !important;
-    }
-
-    .trust-text {
-        font-family: 'JetBrains Mono', monospace !important;
-        font-size: 13px !important;
-        line-height: 1.6 !important;
-        color: #D1D5DB !important;
-        margin: 0 !important;
-    }
-
-    .trust-text strong {
-        color: #FFFFFF !important;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-        font-weight: 600 !important;
-    }
-
-    .trust-logos {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        gap: 24px !important;
-        flex-shrink: 0 !important;
-    }
-
-    .trust-logo-item {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        gap: 8px !important;
-        color: rgba(255, 255, 255, 0.5) !important;
-        transition: color 0.3s ease !important;
-        text-decoration: none !important;
-        cursor: default !important;
-    }
-
-    .trust-logo-item:hover {
-        color: #FFFFFF !important;
-    }
-
-    .trust-logo-text {
-        display: flex !important;
-        flex-direction: column !important;
-        line-height: 1.1 !important;
-    }
-
-    .trust-logo-title {
-        font-size: 10px !important;
-        font-weight: 900 !important;
-        letter-spacing: 0.1em !important;
-        color: inherit !important;
-    }
-
-    .trust-logo-sub {
-        font-size: 7px !important;
-        color: rgba(255, 255, 255, 0.3) !important;
-        letter-spacing: 0.15em !important;
-        text-transform: uppercase !important;
-    }
-
-    .trust-divider {
-        height: 24px !important;
-        width: 1px !important;
-        background-color: rgba(255, 255, 255, 0.1) !important;
-    }
-
-    /* Адаптивность под планшеты и мобильные */
-    @media (max-width: 1024px) {
-        .trust-container {
-            flex-direction: column !important;
-            text-align: center !important;
-            gap: 24px !important;
-        }
-        .trust-left {
-            flex-direction: column !important;
-            align-items: center !important;
-            text-align: center !important;
-            gap: 12px !important;
-        }
-        .trust-logos {
-            justify-content: center !important;
-            width: 100% !important;
-        }
-    }
-
-    @media (max-width: 640px) {
-        .trust-logos {
-            flex-wrap: wrap !important;
-            gap: 16px !important;
-        }
-        .trust-divider {
-            display: none !important;
-        }
-    }
-</style>
+</section>
