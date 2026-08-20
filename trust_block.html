@@ -2,8 +2,9 @@
   LONVI REDESIGN: NATIVE TRUST SECTION (ROSTKI FORUM & COOPERATION)
   Вставьте этот HTML/CSS код напрямую в блок T123 на Главной странице Тильды.
   Этот блок разработан БЕЗ использования Tailwind CSS, на чистом Vanilla CSS.
-  Он импортирует оригинальные шрифты главной страницы (Outfit и JetBrains Mono)
-  и на 100% воспроизводит её дизайн, фоновые сетки, градиенты, отступы и шрифты.
+  Он импортирует оригинальные шрифты главной страницы (Outfit и JetBrains Mono),
+  использует официальные логотипы (форума РОСТКИ, КФУ и Минобрнауки) и на 100%
+  соответствует стилистике главной страницы (цвета, шрифты, отступы, карточки-сертификаты).
 -->
 
 <div class="lonvi-trust-section">
@@ -31,62 +32,19 @@
             
             <!-- Logo 1: ROSTKI Forum -->
             <div class="lonvi-partner-card" title="Международный форум РОСТКИ">
-                <!-- Highly accurate custom SVG for ROSTKI forum leaf sprout -->
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <!-- Sprout stem -->
-                    <path d="M12 22C12 17 12 10 12 6" />
-                    <!-- Left Leaf (Russian Flag Motif Sprout) -->
-                    <path d="M12 12C9 10 6 10 3 13C6 15 9 15 12 12Z" fill="currentColor" fill-opacity="0.15" />
-                    <path d="M5 12.5C7.5 13.5 9.5 13 11 12" />
-                    <!-- Right Leaf (Chinese Flag Motif Sprout) -->
-                    <path d="M12 9C15 7 18 7 21 10C18 12 15 12 12 9Z" fill="currentColor" fill-opacity="0.15" />
-                    <path d="M13 10C15.5 10.5 17.5 10 19 9" />
-                    <!-- Top Bud -->
-                    <path d="M12 6C10.5 4.5 11 2 12 1C13 2 13.5 4.5 12 6Z" fill="currentColor" fill-opacity="0.2" />
-                </svg>
+                <img class="lonvi-partner-img" src="https://static.tildacdn.com/tild3837-6536-4131-a362-333634656365/logo2.svg" alt="РОСТКИ">
                 <span class="lonvi-partner-label" style="font-family:'Outfit', sans-serif !important;">РОСТКИ</span>
             </div>
             
             <!-- Logo 2: KFU -->
             <div class="lonvi-partner-card" title="Казанский федеральный университет">
-                <!-- Highly accurate custom SVG for KFU (Heraldic Shield + winged Zilant dragon) -->
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                    <!-- Shield border -->
-                    <path d="M12 22C12 22 20 18.5 20 9V4L12 2L4 4V9C4 18.5 12 22 12 22Z" />
-                    <!-- Zilant Winged Dragon inside shield -->
-                    <path d="M12 7C11.5 6.5 10 6 9 7C8 8 8 10 9 10.5C10 11 11 10.5 11 9.5" /> <!-- Dragon head & crown -->
-                    <path d="M9 10.5C9 10.5 6 11 6 13C6 15 8 16 10 15C12 14 13.5 11 13.5 9" /> <!-- Body & neck -->
-                    <path d="M9.5 12.5C11 13 13 13.5 15 12C16.5 10.5 17 8.5 17 8.5" /> <!-- Wing 1 -->
-                    <path d="M9.5 12.5C10.5 12 11.5 11 13 10.5" /> <!-- Wing 2 -->
-                    <path d="M10 15C10 16 9.5 17.5 11 18.5C12.5 19.5 14.5 18 14 16C13.5 14 11 14 10 15Z" /> <!-- Coiled dragon tail -->
-                    <path d="M7 17.5H17" /> <!-- Pedestal line -->
-                </svg>
+                <img class="lonvi-partner-img" src="https://upload.wikimedia.org/wikipedia/ru/8/87/%D0%AD%D0%BC%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D0%9A%D0%A4%D0%A3_%D1%81_2015.svg" alt="КФУ">
                 <span class="lonvi-partner-label">КФУ</span>
             </div>
             
             <!-- Logo 3: MINNAUKI / MINZDRAV -->
             <div class="lonvi-partner-card" title="Министерство науки и здравоохранения">
-                <!-- Highly accurate custom SVG for Russian Ministry Emblem (Double-Headed Eagle outline) -->
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                    <!-- Double-Headed Eagle body -->
-                    <path d="M12 19L11.5 17.5L12 16.5L12.5 17.5Z" />
-                    <!-- Right wing detailed feathers -->
-                    <path d="M12 8C13 8 16.5 6 19.5 9C20.5 10 20 12.5 18 14C16.5 15.5 14 15 13.5 15" />
-                    <path d="M13.5 11C15 11 17.5 10 19 12.5" />
-                    <path d="M13 13.5C14.5 13.5 16 13 17 14.5" />
-                    <!-- Left wing detailed feathers -->
-                    <path d="M12 8C11 8 7.5 6 4.5 9C3.5 10 4 12.5 6 14C7.5 15.5 10 15 10.5 15" />
-                    <path d="M10.5 11C9 11 6.5 10 5 12.5" />
-                    <path d="M11 13.5C9.5 13.5 8 13 7 14.5" />
-                    <!-- Two heads & crowns -->
-                    <path d="M10.5 8.5C10.5 8.5 9.5 8 9.5 7C9.5 6 10.5 6 10.5 7.5" /> <!-- Left head -->
-                    <path d="M13.5 8.5C13.5 8.5 14.5 8 14.5 7C14.5 6 13.5 6 13.5 7.5" /> <!-- Right head -->
-                    <path d="M12 7.5V5.5" /> <!-- Center sceptre/crown stem -->
-                    <path d="M11 5.5H13V6.5H11Z" /> <!-- Imperial crown -->
-                    <!-- Central breast shield -->
-                    <path d="M10 9.5H14V13.5C14 15 12 16 12 16C12 16 10 15 10 13.5V9.5Z" />
-                    <path d="M12 10.5V13.5" /> <!-- Rod inside shield -->
-                </svg>
+                <img class="lonvi-partner-img" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Coat_of_arms_of_the_Ministry_of_Science_and_Higher_Education_of_the_Russian_Federation.svg" alt="МИНОБРНАУКИ">
                 <span class="lonvi-partner-label">МИННАУКИ</span>
             </div>
             
@@ -222,13 +180,18 @@
         border-color: rgba(255, 255, 255, 0.4) !important;
     }
     
-    .lonvi-partner-card svg {
-        color: rgba(255, 255, 255, 0.7) !important;
-        transition: color 0.3s ease !important;
+    /* Перевод оригинальных цветных логотипов в монохромный белый с помощью CSS фильтра */
+    .lonvi-partner-img {
+        width: 48px !important;
+        height: 48px !important;
+        object-fit: contain !important;
+        filter: brightness(0) invert(1) !important;
+        opacity: 0.65 !important;
+        transition: opacity 0.3s ease !important;
     }
     
-    .lonvi-partner-card:hover svg {
-        color: #FFFFFF !important;
+    .lonvi-partner-card:hover .lonvi-partner-img {
+        opacity: 1 !important;
     }
     
     .lonvi-partner-label {
@@ -255,6 +218,9 @@
         }
         .lonvi-trust-title {
             font-size: 48px !important; /* 3rem */
+        }
+        .lonvi-trust-text {
+            font-size: 16px !important;
         }
     }
     
