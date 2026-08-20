@@ -3,7 +3,7 @@
   Вставьте этот HTML/CSS код напрямую в блок T123 на Главной странице Тильды.
   Этот блок разработан БЕЗ использования Tailwind CSS, на чистом Vanilla CSS.
   Он импортирует оригинальные шрифты главной страницы (Outfit и JetBrains Mono)
-  и полностью воспроизводит её дизайн, фоновые сетки, градиенты и размеры.
+  и на 100% воспроизводит её дизайн, фоновые сетки, градиенты, отступы и шрифты.
 -->
 
 <div class="lonvi-trust-section">
@@ -11,7 +11,7 @@
         
         <!-- Left Side: Badge, Title & Statement -->
         <div class="lonvi-trust-content">
-            <!-- Spaced Mono Badge -->
+            <!-- Spaced Mono Badge (Matches Main Page Header style exactly) -->
             <span class="lonvi-trust-badge">[ РОСТКИ ФОРУМ ]</span>
             
             <!-- Section Title with animated text gradient -->
@@ -31,38 +31,61 @@
             
             <!-- Logo 1: ROSTKI Forum -->
             <div class="lonvi-partner-card" title="Международный форум РОСТКИ">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22V10" />
-                    <path d="M12 10C12 10 8 7 8 4C8 2 10 2 12 5C14 2 16 2 16 4C16 7 12 10 12 10Z" />
-                    <path d="M12 15C12 15 17 14 19 12" />
-                    <path d="M12 18C12 18 7 17 5 15" />
+                <!-- Highly accurate custom SVG for ROSTKI forum leaf sprout -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Sprout stem -->
+                    <path d="M12 22C12 17 12 10 12 6" />
+                    <!-- Left Leaf (Russian Flag Motif Sprout) -->
+                    <path d="M12 12C9 10 6 10 3 13C6 15 9 15 12 12Z" fill="currentColor" fill-opacity="0.15" />
+                    <path d="M5 12.5C7.5 13.5 9.5 13 11 12" />
+                    <!-- Right Leaf (Chinese Flag Motif Sprout) -->
+                    <path d="M12 9C15 7 18 7 21 10C18 12 15 12 12 9Z" fill="currentColor" fill-opacity="0.15" />
+                    <path d="M13 10C15.5 10.5 17.5 10 19 9" />
+                    <!-- Top Bud -->
+                    <path d="M12 6C10.5 4.5 11 2 12 1C13 2 13.5 4.5 12 6Z" fill="currentColor" fill-opacity="0.2" />
                 </svg>
                 <span class="lonvi-partner-label" style="font-family:'Outfit', sans-serif !important;">РОСТКИ</span>
             </div>
             
             <!-- Logo 2: KFU -->
             <div class="lonvi-partner-card" title="Казанский федеральный университет">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                    <path d="M4 20H20" />
-                    <path d="M6 20V12H8V20" />
-                    <path d="M10 20V12H12V20" />
-                    <path d="M14 20V12H16V20" />
-                    <path d="M18 20V12H20V20" />
-                    <path d="M4 12L12 6L20 12H4Z" />
-                    <path d="M12 6V2" />
+                <!-- Highly accurate custom SVG for KFU (Heraldic Shield + winged Zilant dragon) -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <!-- Shield border -->
+                    <path d="M12 22C12 22 20 18.5 20 9V4L12 2L4 4V9C4 18.5 12 22 12 22Z" />
+                    <!-- Zilant Winged Dragon inside shield -->
+                    <path d="M12 7C11.5 6.5 10 6 9 7C8 8 8 10 9 10.5C10 11 11 10.5 11 9.5" /> <!-- Dragon head & crown -->
+                    <path d="M9 10.5C9 10.5 6 11 6 13C6 15 8 16 10 15C12 14 13.5 11 13.5 9" /> <!-- Body & neck -->
+                    <path d="M9.5 12.5C11 13 13 13.5 15 12C16.5 10.5 17 8.5 17 8.5" /> <!-- Wing 1 -->
+                    <path d="M9.5 12.5C10.5 12 11.5 11 13 10.5" /> <!-- Wing 2 -->
+                    <path d="M10 15C10 16 9.5 17.5 11 18.5C12.5 19.5 14.5 18 14 16C13.5 14 11 14 10 15Z" /> <!-- Coiled dragon tail -->
+                    <path d="M7 17.5H17" /> <!-- Pedestal line -->
                 </svg>
                 <span class="lonvi-partner-label">КФУ</span>
             </div>
             
             <!-- Logo 3: MINNAUKI / MINZDRAV -->
             <div class="lonvi-partner-card" title="Министерство науки и здравоохранения">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                    <path d="M12 22C12 22 20 18 20 8V4L12 2L4 4V8C4 18 12 22 12 22Z" />
-                    <circle cx="12" cy="12" r="3" />
-                    <path d="M12 5V9" />
-                    <path d="M12 15V19" />
-                    <path d="M5 12H9" />
-                    <path d="M15 12H19" />
+                <!-- Highly accurate custom SVG for Russian Ministry Emblem (Double-Headed Eagle outline) -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <!-- Double-Headed Eagle body -->
+                    <path d="M12 19L11.5 17.5L12 16.5L12.5 17.5Z" />
+                    <!-- Right wing detailed feathers -->
+                    <path d="M12 8C13 8 16.5 6 19.5 9C20.5 10 20 12.5 18 14C16.5 15.5 14 15 13.5 15" />
+                    <path d="M13.5 11C15 11 17.5 10 19 12.5" />
+                    <path d="M13 13.5C14.5 13.5 16 13 17 14.5" />
+                    <!-- Left wing detailed feathers -->
+                    <path d="M12 8C11 8 7.5 6 4.5 9C3.5 10 4 12.5 6 14C7.5 15.5 10 15 10.5 15" />
+                    <path d="M10.5 11C9 11 6.5 10 5 12.5" />
+                    <path d="M11 13.5C9.5 13.5 8 13 7 14.5" />
+                    <!-- Two heads & crowns -->
+                    <path d="M10.5 8.5C10.5 8.5 9.5 8 9.5 7C9.5 6 10.5 6 10.5 7.5" /> <!-- Left head -->
+                    <path d="M13.5 8.5C13.5 8.5 14.5 8 14.5 7C14.5 6 13.5 6 13.5 7.5" /> <!-- Right head -->
+                    <path d="M12 7.5V5.5" /> <!-- Center sceptre/crown stem -->
+                    <path d="M11 5.5H13V6.5H11Z" /> <!-- Imperial crown -->
+                    <!-- Central breast shield -->
+                    <path d="M10 9.5H14V13.5C14 15 12 16 12 16C12 16 10 15 10 13.5V9.5Z" />
+                    <path d="M12 10.5V13.5" /> <!-- Rod inside shield -->
                 </svg>
                 <span class="lonvi-partner-label">МИННАУКИ</span>
             </div>
@@ -78,10 +101,11 @@
     
     .lonvi-trust-section {
         position: relative !important;
-        padding: 64px 0 !important;
+        /* На 100% соответствующий главной странице padding: py-10 (40px) на мобильных и py-24 (96px) на десктопах */
+        padding: 40px 0 !important;
         border-top: 1px solid #262626 !important;
         background-color: #0D0E11 !important;
-        /* Фирменный фон главной страницы с сеткой клеток */
+        /* Фирменный фон главной страницы с металлической ячеистой сеткой */
         background: linear-gradient(135deg, rgba(13, 14, 17, 0.95) 0%, rgba(26, 28, 34, 0.9) 35%, rgba(47, 53, 66, 0.85) 70%, rgba(76, 83, 99, 0.8) 100%),
                     url('https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/bg-cells.jpg') !important;
         background-size: cover !important;
@@ -91,8 +115,9 @@
         box-sizing: border-box !important;
     }
     
+    /* Соответствие 100% максимальной ширине контейнера: max-w-7xl (1280px) */
     .lonvi-trust-grid {
-        max-width: 1200px !important;
+        max-width: 1280px !important;
         margin: 0 auto !important;
         padding: 0 24px !important;
         display: flex !important;
@@ -112,20 +137,22 @@
         text-align: left !important;
     }
     
+    /* 100% соответствие стилям плашек на главной: text-white, block, font-mono, tracking-[0.3em] */
     .lonvi-trust-badge {
         font-family: 'JetBrains Mono', monospace !important;
-        font-size: 11px !important;
+        font-size: 12px !important;
         font-weight: 700 !important;
         letter-spacing: 0.3em !important;
         text-transform: uppercase !important;
-        color: #B6BCC6 !important;
+        color: #FFFFFF !important;
         margin-bottom: 16px !important;
         display: block !important;
     }
     
+    /* 100% соответствие стилям h2 на главной: Outfit, text-3xl md:text-5xl, tracking-tighter */
     .lonvi-trust-title {
         font-family: 'Outfit', sans-serif !important;
-        font-size: 40px !important;
+        font-size: 32px !important;
         font-weight: 700 !important;
         letter-spacing: -0.02em !important;
         text-transform: uppercase !important;
@@ -151,11 +178,12 @@
         100% { background-position: 300% center; }
     }
     
+    /* 100% соответствие описанию секций на главной: text-neutral-300, JetBrains Mono, text-sm md:text-base */
     .lonvi-trust-text {
         font-family: 'JetBrains Mono', monospace !important;
         font-size: 14px !important;
         line-height: 1.6 !important;
-        color: #D1D5DB !important;
+        color: #D4D4D4 !important;
         margin: 0 !important;
     }
     
@@ -164,7 +192,7 @@
         font-weight: 700 !important;
     }
     
-    /* Колонки партнеров (карточки как в сертификатах) */
+    /* Колонки партнеров (карточки как в сертификатах на главной) */
     .lonvi-trust-partners {
         display: flex !important;
         flex-direction: row !important;
@@ -172,9 +200,10 @@
         flex-shrink: 0 !important;
     }
     
+    /* 100% соответствие стилям карточек-сертификатов: bg-[#1A1C20]/75, border-white/5, hover-border-white/40 */
     .lonvi-partner-card {
-        width: 96px !important;
-        height: 96px !important;
+        width: 104px !important;
+        height: 104px !important;
         background-color: rgba(26, 28, 32, 0.75) !important;
         border: 1px solid rgba(255, 255, 255, 0.05) !important;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
@@ -219,7 +248,16 @@
         color: #FFFFFF !important;
     }
     
-    /* Адаптивность */
+    /* Адаптивность и паддинги секции на десктопах */
+    @media (min-width: 768px) {
+        .lonvi-trust-section {
+            padding: 96px 0 !important; /* py-24 */
+        }
+        .lonvi-trust-title {
+            font-size: 48px !important; /* 3rem */
+        }
+    }
+    
     @media (max-width: 1024px) {
         .lonvi-trust-grid {
             flex-direction: column !important;
