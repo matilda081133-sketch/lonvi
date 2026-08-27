@@ -754,121 +754,148 @@
                 </p>
             </div>
 
-            <!-- 4 Institutional Status Cards (Styled like bold review cards with 2px borders & hard hover shadow) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 fade-in-section">
+            <!-- 4 Institutional Status Cards (Styled EXACTLY like [ МЕХАНИЗМ ДЕЙСТВИЯ ] cards) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 fade-in-section">
                 
                 <!-- Card 1: ФОРУМ «РОСТКИ» -->
-                <div class="bg-white p-7 border-2 border-neutral-900 hover:bg-neutral-900 hover:border-neutral-900 hover:shadow-[8px_8px_0px_#101216] hover:-translate-y-1.5 transition-all duration-300 group flex flex-col justify-between">
+                <div class="relative bg-neutral-950 border-2 border-neutral-900 p-8 pt-10 hover:bg-black hover:border-neutral-700 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 group flex flex-col justify-between">
+                    <div class="absolute -top-4 left-6 bg-[#E2E5E9] text-black px-4 py-1 text-sm font-bold tracking-wider font-mono shadow-md border border-black/20">01</div>
                     <div>
-                        <div class="flex items-center justify-between gap-2 mb-6">
-                            <span class="text-[10px] font-mono font-bold text-white bg-neutral-900 group-hover:bg-white group-hover:text-black px-2.5 py-1 uppercase tracking-wider border border-neutral-900 transition-colors">
-                                01 • ФОРУМ
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 text-[11px] font-mono text-neutral-700 group-hover:text-neutral-300 font-bold transition-colors">
-                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                КАЗАНЬ
-                            </span>
-                        </div>
+                        <span class="text-[10px] font-mono text-neutral-400 tracking-[0.2em] uppercase block mb-3 font-bold text-center">[ МЕЖДУНАРОДНЫЙ ФОРУМ ]</span>
                         
-                        <div class="w-12 h-12 rounded-full bg-neutral-100 border-2 border-neutral-900 group-hover:bg-white group-hover:border-white text-neutral-900 group-hover:text-black flex items-center justify-center font-bold mb-5 transition-all">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        <!-- Animated SVG graphic -->
+                        <div class="w-20 h-20 mx-auto mb-6 mt-1 relative group-hover:scale-105 transition-transform duration-500">
+                            <svg viewBox="0 0 80 80" fill="none" class="w-full h-full">
+                                <circle cx="40" cy="40" r="32" stroke="#E2E5E9" stroke-width="1.5" stroke-dasharray="4 4" class="animate-[spin_12s_linear_infinite] opacity-60"></circle>
+                                <circle cx="40" cy="40" r="22" stroke="#E2E5E9" stroke-width="2" class="opacity-80"></circle>
+                                <circle cx="28" cy="32" r="5" fill="#E2E5E9" class="animate-pulse"></circle>
+                                <circle cx="52" cy="48" r="5" fill="#E2E5E9" class="animate-pulse" style="animation-delay: 1s;"></circle>
+                                <path d="M28 32 Q40 25 52 48" stroke="#E2E5E9" stroke-width="2" stroke-linecap="round"></path>
+                                <circle cx="40" cy="40" r="10" fill="#1a1a1a" stroke="#E2E5E9" stroke-width="1.5" opacity="0.9"></circle>
+                            </svg>
                         </div>
 
-                        <h3 class="font-wild text-xl font-bold uppercase tracking-tight text-neutral-900 group-hover:text-white leading-tight mb-3 transition-colors">
+                        <h3 class="text-xl font-wild font-bold text-center mb-2 text-white group-hover:text-[#E2E5E9] transition-colors uppercase leading-tight">
                             ФОРУМ «РОСТКИ»
                         </h3>
-                        <p class="font-mono text-xs leading-relaxed text-neutral-700 group-hover:text-neutral-300 mb-6 transition-colors">
-                            Масштабная площадка торгово-экономического и научно-технического диалога.
+                        <p class="text-xs font-mono font-bold text-neutral-400 text-center uppercase tracking-wider mb-4">
+                            Россия — Китай • Казань
+                        </p>
+                        <p class="text-xs font-mono text-neutral-300 text-center leading-relaxed">
+                            Масштабная площадка торгово-экономического и научно-технического диалога в Казань ЭКСПО.
                         </p>
                     </div>
 
-                    <div class="pt-5 border-t-2 border-neutral-900 group-hover:border-neutral-700 flex items-center justify-between transition-colors">
-                        <span class="text-[11px] font-mono font-bold text-neutral-900 group-hover:text-white transition-colors">Россия — Китай</span>
-                        <span class="text-[10px] font-mono text-neutral-700 group-hover:text-neutral-300 bg-neutral-100 group-hover:bg-white/10 px-2 py-0.5 border border-neutral-900 group-hover:border-white/20 transition-colors">Казань ЭКСПО</span>
+                    <div class="mt-6 pt-4 border-t border-neutral-800 flex items-center justify-between">
+                        <span class="text-[10px] font-mono text-neutral-400">Сотрудничество</span>
+                        <span class="text-[10px] font-mono text-white font-bold bg-white/10 px-2 py-0.5">17 направлений</span>
                     </div>
                 </div>
 
-                <!-- Card 2: НАУЧНЫЙ СОЮЗ С КФУ -->
-                <div class="bg-white p-7 border-2 border-neutral-900 hover:bg-neutral-900 hover:border-neutral-900 hover:shadow-[8px_8px_0px_#101216] hover:-translate-y-1.5 transition-all duration-300 group flex flex-col justify-between">
+                <!-- Card 2: НАУЧНЫЙ СОЮЗ КФУ -->
+                <div class="relative bg-neutral-950 border-2 border-neutral-900 p-8 pt-10 hover:bg-black hover:border-neutral-700 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 group flex flex-col justify-between" style="transition-delay: 100ms">
+                    <div class="absolute -top-4 left-6 bg-[#E2E5E9] text-black px-4 py-1 text-sm font-bold tracking-wider font-mono shadow-md border border-black/20">02</div>
                     <div>
-                        <div class="flex items-center justify-between gap-2 mb-6">
-                            <span class="text-[10px] font-mono font-bold text-white bg-neutral-900 group-hover:bg-white group-hover:text-black px-2.5 py-1 uppercase tracking-wider border border-neutral-900 transition-colors">
-                                02 • ПАРТНЕРСТВО
-                            </span>
-                            <span class="text-[11px] font-mono text-neutral-700 group-hover:text-neutral-300 font-bold transition-colors">R&amp;D СОЮЗ</span>
-                        </div>
+                        <span class="text-[10px] font-mono text-neutral-400 tracking-[0.2em] uppercase block mb-3 font-bold text-center">[ НАУЧНЫЙ СОЮЗ ]</span>
                         
-                        <div class="w-12 h-12 rounded-full bg-neutral-100 border-2 border-neutral-900 group-hover:bg-white group-hover:border-white text-neutral-900 group-hover:text-black flex items-center justify-center font-bold mb-5 transition-all">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                        <!-- Animated SVG graphic -->
+                        <div class="w-20 h-20 mx-auto mb-6 mt-1 relative group-hover:scale-105 transition-transform duration-500">
+                            <svg viewBox="0 0 80 80" fill="none" class="w-full h-full">
+                                <path d="M40 16 L65 28 L40 40 L15 28 Z" stroke="#E2E5E9" stroke-width="2" fill="rgba(226,229,233,0.1)"></path>
+                                <path d="M22 36 L22 52 C22 58 40 64 40 64 C40 64 58 58 58 52 L58 36" stroke="#E2E5E9" stroke-width="2" stroke-linecap="round" fill="none"></path>
+                                <circle cx="40" cy="50" r="4" fill="#E2E5E9" class="animate-pulse"></circle>
+                                <line x1="65" y1="28" x2="65" y2="48" stroke="#E2E5E9" stroke-width="2" stroke-linecap="round"></line>
+                                <circle cx="65" cy="50" r="3" fill="#E2E5E9"></circle>
+                            </svg>
                         </div>
 
-                        <h3 class="font-wild text-xl font-bold uppercase tracking-tight text-neutral-900 group-hover:text-white leading-tight mb-3 transition-colors">
+                        <h3 class="text-xl font-wild font-bold text-center mb-2 text-white group-hover:text-[#E2E5E9] transition-colors uppercase leading-tight">
                             КФУ (КАЗАНЬ)
                         </h3>
-                        <p class="font-mono text-xs leading-relaxed text-neutral-700 group-hover:text-neutral-300 mb-6 transition-colors">
+                        <p class="text-xs font-mono font-bold text-neutral-400 text-center uppercase tracking-wider mb-4">
+                            Научный меморандум
+                        </p>
+                        <p class="text-xs font-mono text-neutral-300 text-center leading-relaxed">
                             Казанский федеральный университет: совместные исследования и доклинические тесты.
                         </p>
                     </div>
 
-                    <div class="pt-5 border-t-2 border-neutral-900 group-hover:border-neutral-700 flex items-center justify-between transition-colors">
-                        <span class="text-[11px] font-mono font-bold text-neutral-900 group-hover:text-white transition-colors">Научный союз</span>
-                        <span class="text-[10px] font-mono text-neutral-700 group-hover:text-neutral-300 bg-neutral-100 group-hover:bg-white/10 px-2 py-0.5 border border-neutral-900 group-hover:border-white/20 transition-colors">Меморандум</span>
+                    <div class="mt-6 pt-4 border-t border-neutral-800 flex items-center justify-between">
+                        <span class="text-[10px] font-mono text-neutral-400">Партнерство</span>
+                        <span class="text-[10px] font-mono text-white font-bold bg-white/10 px-2 py-0.5">R&amp;D Меморандум</span>
                     </div>
                 </div>
 
                 <!-- Card 3: МЕДИЦИНА & НАУКА -->
-                <div class="bg-white p-7 border-2 border-neutral-900 hover:bg-neutral-900 hover:border-neutral-900 hover:shadow-[8px_8px_0px_#101216] hover:-translate-y-1.5 transition-all duration-300 group flex flex-col justify-between">
+                <div class="relative bg-neutral-950 border-2 border-neutral-900 p-8 pt-10 hover:bg-black hover:border-neutral-700 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 group flex flex-col justify-between" style="transition-delay: 200ms">
+                    <div class="absolute -top-4 left-6 bg-[#E2E5E9] text-black px-4 py-1 text-sm font-bold tracking-wider font-mono shadow-md border border-black/20">03</div>
                     <div>
-                        <div class="flex items-center justify-between gap-2 mb-6">
-                            <span class="text-[10px] font-mono font-bold text-white bg-neutral-900 group-hover:bg-white group-hover:text-black px-2.5 py-1 uppercase tracking-wider border border-neutral-900 transition-colors">
-                                03 • СИМПОЗИУМ
-                            </span>
-                            <span class="text-[11px] font-mono text-neutral-700 group-hover:text-neutral-300 font-bold transition-colors">СЕНОЛИТИКИ</span>
-                        </div>
+                        <span class="text-[10px] font-mono text-neutral-400 tracking-[0.2em] uppercase block mb-3 font-bold text-center">[ МЕДИЦИНА &amp; НАУКА ]</span>
                         
-                        <div class="w-12 h-12 rounded-full bg-neutral-100 border-2 border-neutral-900 group-hover:bg-white group-hover:border-white text-neutral-900 group-hover:text-black flex items-center justify-center font-bold mb-5 transition-all">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        <!-- Animated SVG graphic -->
+                        <div class="w-20 h-20 mx-auto mb-6 mt-1 relative group-hover:scale-105 transition-transform duration-500">
+                            <svg viewBox="0 0 80 80" fill="none" class="w-full h-full">
+                                <circle cx="40" cy="40" r="28" stroke="#E2E5E9" stroke-width="1" stroke-dasharray="3 3" class="animate-pulse opacity-40"></circle>
+                                <path d="M28 24 Q40 40 52 24" stroke="#E2E5E9" stroke-width="2" stroke-linecap="round" fill="none"></path>
+                                <path d="M28 56 Q40 40 52 56" stroke="#E2E5E9" stroke-width="2" stroke-linecap="round" fill="none"></path>
+                                <line x1="32" y1="28" x2="48" y2="52" stroke="#E2E5E9" stroke-width="1.5" stroke-dasharray="2 2"></line>
+                                <line x1="48" y1="28" x2="32" y2="52" stroke="#E2E5E9" stroke-width="1.5" stroke-dasharray="2 2"></line>
+                                <circle cx="40" cy="40" r="6" fill="#E2E5E9" class="animate-ping origin-center" style="animation-duration: 3s;"></circle>
+                                <circle cx="40" cy="40" r="4" fill="#E2E5E9"></circle>
+                            </svg>
                         </div>
 
-                        <h3 class="font-wild text-xl font-bold uppercase tracking-tight text-neutral-900 group-hover:text-white leading-tight mb-3 transition-colors">
-                            МЕДИЦИНА &amp; НАУКА
+                        <h3 class="text-xl font-wild font-bold text-center mb-2 text-white group-hover:text-[#E2E5E9] transition-colors uppercase leading-tight">
+                            СИМПОЗИУМ
                         </h3>
-                        <p class="font-mono text-xs leading-relaxed text-neutral-700 group-hover:text-neutral-300 mb-6 transition-colors">
+                        <p class="text-xs font-mono font-bold text-neutral-400 text-center uppercase tracking-wider mb-4">
+                            Биотехнологии долголетия
+                        </p>
+                        <p class="text-xs font-mono text-neutral-300 text-center leading-relaxed">
                             Клинические доклады и экспертные панели по сенотерапии и таргетированному омоложению.
                         </p>
                     </div>
 
-                    <div class="pt-5 border-t-2 border-neutral-900 group-hover:border-neutral-700 flex items-center justify-between transition-colors">
-                        <span class="text-[11px] font-mono font-bold text-neutral-900 group-hover:text-white transition-colors">Биотехнологии</span>
-                        <span class="text-[10px] font-mono text-neutral-700 group-hover:text-neutral-300 bg-neutral-100 group-hover:bg-white/10 px-2 py-0.5 border border-neutral-900 group-hover:border-white/20 transition-colors">Формула PCC1</span>
+                    <div class="mt-6 pt-4 border-t border-neutral-800 flex items-center justify-between">
+                        <span class="text-[10px] font-mono text-neutral-400">Направление</span>
+                        <span class="text-[10px] font-mono text-white font-bold bg-white/10 px-2 py-0.5">Сенолитики PCC1</span>
                     </div>
                 </div>
 
                 <!-- Card 4: LONVI BIOSCIENCES -->
-                <div class="bg-white p-7 border-2 border-neutral-900 hover:bg-neutral-900 hover:border-neutral-900 hover:shadow-[8px_8px_0px_#101216] hover:-translate-y-1.5 transition-all duration-300 group flex flex-col justify-between">
+                <div class="relative bg-neutral-950 border-2 border-neutral-900 p-8 pt-10 hover:bg-black hover:border-neutral-700 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-all duration-500 group flex flex-col justify-between" style="transition-delay: 300ms">
+                    <div class="absolute -top-4 left-6 bg-[#E2E5E9] text-black px-4 py-1 text-sm font-bold tracking-wider font-mono shadow-md border border-black/20">04</div>
                     <div>
-                        <div class="flex items-center justify-between gap-2 mb-6">
-                            <span class="text-[10px] font-mono font-bold text-white bg-neutral-900 group-hover:bg-white group-hover:text-black px-2.5 py-1 uppercase tracking-wider border border-neutral-900 transition-colors">
-                                04 • R&amp;D ЦЕНТР
-                            </span>
-                            <span class="text-[11px] font-mono text-neutral-700 group-hover:text-neutral-300 font-bold transition-colors">GMP СТАНДАРТ</span>
-                        </div>
+                        <span class="text-[10px] font-mono text-neutral-400 tracking-[0.2em] uppercase block mb-3 font-bold text-center">[ БИОТЕХ РАЗРАБОТКИ ]</span>
                         
-                        <div class="w-12 h-12 rounded-full bg-neutral-100 border-2 border-neutral-900 group-hover:bg-white group-hover:border-white text-neutral-900 group-hover:text-black flex items-center justify-center font-bold mb-5 transition-all">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        <!-- Animated SVG graphic -->
+                        <div class="w-20 h-20 mx-auto mb-6 mt-1 relative group-hover:scale-105 transition-transform duration-500">
+                            <svg viewBox="0 0 80 80" fill="none" class="w-full h-full">
+                                <polygon points="40,14 62,27 62,53 40,66 18,53 18,27" stroke="#E2E5E9" stroke-width="2" fill="rgba(226,229,233,0.06)"></polygon>
+                                <circle cx="40" cy="14" r="3" fill="#E2E5E9"></circle>
+                                <circle cx="62" cy="27" r="3" fill="#E2E5E9"></circle>
+                                <circle cx="62" cy="53" r="3" fill="#E2E5E9"></circle>
+                                <circle cx="40" cy="66" r="3" fill="#E2E5E9"></circle>
+                                <circle cx="18" cy="53" r="3" fill="#E2E5E9"></circle>
+                                <circle cx="18" cy="27" r="3" fill="#E2E5E9"></circle>
+                                <path d="M32 40 L38 46 L48 34" stroke="#E2E5E9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="animate-pulse"></path>
+                            </svg>
                         </div>
 
-                        <h3 class="font-wild text-xl font-bold uppercase tracking-tight text-neutral-900 group-hover:text-white leading-tight mb-3 transition-colors">
+                        <h3 class="text-xl font-wild font-bold text-center mb-2 text-white group-hover:text-[#E2E5E9] transition-colors uppercase leading-tight">
                             LONVI BIOSCIENCES
                         </h3>
-                        <p class="font-mono text-xs leading-relaxed text-neutral-700 group-hover:text-neutral-300 mb-6 transition-colors">
+                        <p class="text-xs font-mono font-bold text-neutral-400 text-center uppercase tracking-wider mb-4">
+                            Шэньчжэнь • Москва
+                        </p>
+                        <p class="text-xs font-mono text-neutral-300 text-center leading-relaxed">
                             Штаб-квартира (Шэньчжэнь) и представитель в РФ: прямые поставки и контроль качества.
                         </p>
                     </div>
 
-                    <div class="pt-5 border-t-2 border-neutral-900 group-hover:border-neutral-700 flex items-center justify-between transition-colors">
-                        <span class="text-[11px] font-mono font-bold text-neutral-900 group-hover:text-white transition-colors">Шэньчжэнь • Москва</span>
-                        <span class="text-[10px] font-mono text-neutral-700 group-hover:text-neutral-300 bg-neutral-100 group-hover:bg-white/10 px-2 py-0.5 border border-neutral-900 group-hover:border-white/20 transition-colors">ISO / GMP</span>
+                    <div class="mt-6 pt-4 border-t border-neutral-800 flex items-center justify-between">
+                        <span class="text-[10px] font-mono text-neutral-400">Стандарты</span>
+                        <span class="text-[10px] font-mono text-white font-bold bg-white/10 px-2 py-0.5">ISO / GMP</span>
                     </div>
                 </div>
 
