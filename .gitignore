@@ -1,9 +1,9 @@
-
 ffmpeg.zip
 ffmpeg_folder/
 *.mov
-*.mp4
 *.zip
 *.log
 node_modules/
 temp/
+!assets/lonvi_official_interview.mp4
+!output2.mp4
