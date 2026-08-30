@@ -530,39 +530,41 @@
 
     <!-- Main Header -->
     <header class="fixed top-0 left-0 w-full z-50 bg-white/85 backdrop-blur-md border-b border-neutral-200/60 transition-all duration-300">
-        <div class="w-full max-w-[1600px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between relative">
-            <!-- Left: Account & Icons + [Магазин, О нас] -->
-            <div class="flex items-center gap-4 xl:gap-6 shrink-0 z-20">
+        <div class="container max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between lg:justify-center lg:gap-8 xl:gap-12 relative">
+            <!-- Left: Account & Icons + [Магазин, О нас] (Moved closer to logo) -->
+            <div class="flex items-center gap-3 xl:gap-5 shrink-0 z-20">
                 <a href="#openmembersbar" id="custom-login-btn" class="hidden lg:flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors whitespace-nowrap">
                     МОЙ АККАУНТ
                 </a>
-                <button id="search-btn" class="text-neutral-black hover:text-brandgold transition-colors p-1" aria-label="Поиск">
+                <button id="search-btn" class="text-neutral-black hover:text-brandgold transition-colors p-1 shrink-0" aria-label="Поиск">
                     <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
                 </button>
                 
-                <button id="cart-btn" class="text-neutral-black hover:text-brandgold transition-colors relative p-1 mr-1 xl:mr-2" aria-label="Корзина">
+                <button id="cart-btn" class="text-neutral-black hover:text-brandgold transition-colors relative p-1 shrink-0" aria-label="Корзина">
                     <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 22A2 2 0 109 18a2 2 0 000 4zM20 22A2 2 0 1020 18a2 2 0 000 4z"></path><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
                     <span class="absolute -top-1 -right-1 bg-brandgold text-black font-bold text-[9px] w-3.5 h-3.5 flex items-center justify-center rounded-full font-mono">0</span>
                 </button>
 
                 <!-- Left Links: Магазин & О нас -->
-                <nav class="hidden lg:flex items-center gap-4 xl:gap-6 border-l border-neutral-300/70 pl-4 xl:pl-6">
+                <nav class="hidden lg:flex items-center gap-3 xl:gap-5 border-l border-neutral-300/70 pl-3 xl:pl-5">
                     <a href="https://lonvibio.com.ru/page162990409.html" class="text-[11px] xl:text-xs font-bold uppercase tracking-[0.08em] xl:tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors whitespace-nowrap">Магазин</a>
                     <a href="https://lonvibio.com.ru/company" class="text-[11px] xl:text-xs font-bold uppercase tracking-[0.08em] xl:tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors whitespace-nowrap">О нас</a>
                 </nav>
             </div>
             
-            <!-- Center: Logo (Centered perfectly with vast clearance on both sides) -->
-            <a href="https://lonvibio.com.ru/" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-5 md:h-7 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity z-10">
-                <div id="logo-blur-light" class="absolute inset-[-20px] bg-white/90 blur-md rounded-full -z-10 pointer-events-none transition-all duration-300"></div>
-                <div id="logo-blur" class="hidden absolute inset-[-20px] bg-[#1A1C20] blur-md rounded-full -z-10 pointer-events-none transition-all duration-300"></div>
-                <img id="logo-light" src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain mix-blend-multiply contrast-[1.2] invert contrast-125 grayscale relative z-10 transition-all duration-300">
-                <img id="logo-dark" src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain hidden mix-blend-screen relative z-10 transition-all duration-300">
-            </a>
+            <!-- Center: Logo -->
+            <div class="flex items-center justify-center shrink-0 px-2 xl:px-4 z-20">
+                <a href="https://lonvibio.com.ru/" class="h-5 md:h-7 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
+                    <div id="logo-blur-light" class="absolute inset-[-20px] bg-white/90 blur-md rounded-full -z-10 pointer-events-none transition-all duration-300"></div>
+                    <div id="logo-blur" class="hidden absolute inset-[-20px] bg-[#1A1C20] blur-md rounded-full -z-10 pointer-events-none transition-all duration-300"></div>
+                    <img id="logo-light" src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain mix-blend-multiply contrast-[1.2] invert contrast-125 grayscale relative z-10 transition-all duration-300">
+                    <img id="logo-dark" src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain hidden mix-blend-screen relative z-10 transition-all duration-300">
+                </a>
+            </div>
 
-            <!-- Right: Navigation Links (Форум РОСТКИ, СМИ, Галерея, FAQ, Производство, Новости) -->
+            <!-- Right: Navigation Links (Moved closer to logo) -->
             <nav class="hidden lg:block shrink-0 z-20">
-                <ul class="flex gap-4 xl:gap-6 items-center whitespace-nowrap">
+                <ul class="flex gap-3 xl:gap-5 items-center whitespace-nowrap">
                     <li><a href="#media" class="text-[11px] xl:text-xs font-bold uppercase tracking-[0.08em] xl:tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors whitespace-nowrap">СМИ &amp; Интервью</a></li>
                     <li><a href="#forum-gallery" class="text-[11px] xl:text-xs font-bold uppercase tracking-[0.08em] xl:tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors whitespace-nowrap">Галерея</a></li>
                     <li><a href="https://lonvibio.com.ru/useful-info" class="text-[11px] xl:text-xs font-bold uppercase tracking-[0.08em] xl:tracking-[0.1em] hover:text-brandgold text-neutral-black transition-colors whitespace-nowrap">FAQ</a></li>
