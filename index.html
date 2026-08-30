@@ -555,11 +555,12 @@
                 </nav>
             </div>
             
-            <!-- Center: Logo (Guaranteed 100% Visible, Crisp, Centered & Clean) -->
-            <a href="https://lonvibio.com.ru/" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer hover:opacity-85 transition-all z-30">
-                <div class="flex items-center justify-center px-3.5 py-1.5 bg-white/95 rounded-lg shadow-sm border border-neutral-200/60 backdrop-blur-sm">
-                    <img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-5 md:h-6 w-auto object-contain mix-blend-multiply invert contrast-125 grayscale block">
-                </div>
+            <!-- Center: Logo (Exact original yesterday's version with blur) -->
+            <a href="https://lonvibio.com.ru/" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-5 md:h-7 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
+                <div id="logo-blur-light" class="absolute inset-[-20px] bg-white/90 blur-md rounded-full -z-10 pointer-events-none transition-all duration-300"></div>
+                <div id="logo-blur" class="hidden absolute inset-[-20px] bg-[#1A1C20] blur-md rounded-full -z-10 pointer-events-none transition-all duration-300"></div>
+                <img id="logo-light" src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain mix-blend-multiply contrast-[1.2] invert contrast-125 grayscale relative z-10 transition-all duration-300">
+                <img id="logo-dark" src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain hidden mix-blend-screen relative z-10 transition-all duration-300">
             </a>
 
             <!-- Right Side: Navigation Links (СМИ, Галерея, FAQ, Производство, Новости) -->
