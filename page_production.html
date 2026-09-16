@@ -50,10 +50,16 @@
 		-webkit-background-clip: text;
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
-		animation: gradient-move 7s linear infinite;
+		animation: gradient-move 18s linear infinite !important;
+		-webkit-animation: gradient-move 18s linear infinite !important;
 	}
 	@keyframes gradient-move {
-		to { background-position: 300% center; }
+		0% { background-position: 0% 50%; }
+		100% { background-position: 300% 50%; }
+	}
+	@-webkit-keyframes gradient-move {
+		0% { background-position: 0% 50%; }
+		100% { background-position: 300% 50%; }
 	}
 	@keyframes textShimmer {
 		0% { background-position: 0% 50%; }
