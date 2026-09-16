@@ -43,21 +43,17 @@
 		overflow-x: hidden !important;
 	}
 
-	/* Animated Titanium Text Shimmer */
+	/* Template Animated Chrome / Metallic Text matching index.html */
 	.gradient-text-animated {
-		background: linear-gradient(135deg, #FFFFFF 0%, #D4D8E2 25%, #8E95A5 50%, #E9ECF2 75%, #FFFFFF 100%);
-		background-size: 200% auto;
+		background: linear-gradient(90deg, #FFFFFF 0%, #7E8694 25%, #F0F2F5 50%, #4C5363 75%, #FFFFFF 100%);
+		background-size: 300% auto;
 		-webkit-background-clip: text;
+		background-clip: text;
 		-webkit-text-fill-color: transparent;
-		animation: textShimmer 4.5s linear infinite;
+		animation: gradient-move 5s linear infinite;
 	}
-	/* Animated Titanium Text Shimmer for Light Background */
-	.gradient-text-animated-light {
-		background: linear-gradient(135deg, #111317 0%, #4A5160 25%, #8E95A5 50%, #2D323C 75%, #111317 100%);
-		background-size: 200% auto;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		animation: textShimmer 8s linear infinite;
+	@keyframes gradient-move {
+		to { background-position: 300% center; }
 	}
 	@keyframes textShimmer {
 		0% { background-position: 0% 50%; }
@@ -268,41 +264,41 @@
 	</header>
 
 	<!-- ====================================================== -->
-	<!-- HERO SECTION: ОРГАНИЧЕСКИЙ МИНИМАЛИЗМ И МЕТАЛЛИК -->
+	<!-- HERO SECTION: СВЕТЛЫЙ ОРГАНИЧЕСКИЙ ФОН + ШАБЛОННЫЙ МЕТАЛЛИК -->
 	<!-- ====================================================== -->
-	<section class="relative pt-36 sm:pt-44 pb-20 sm:pb-28 px-6 sm:px-8 lg:px-12 text-center border-b border-white/10 overflow-hidden bg-[#0A0B0E]">
+	<section class="relative pt-36 sm:pt-44 pb-20 sm:pb-28 px-6 sm:px-8 lg:px-12 text-center border-b border-neutral-300 overflow-hidden bg-[#F0F2F5]">
 		<!-- Minimalist Organic Botanical Background Layer -->
-		<div class="absolute inset-0 z-0 bg-cover bg-[position:75%_center] opacity-40 pointer-events-none" style="background-image: url('https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/bg-organic-leaf.jpg'); filter: contrast(1.1) brightness(0.95);"></div>
-		<!-- Ambient Vignette and Soft Depth Gradients -->
-		<div class="absolute inset-0 z-0 bg-gradient-to-t from-[#0A0B0E] via-transparent to-[#0A0B0E]/80 pointer-events-none"></div>
-		<div class="absolute inset-0 z-0 bg-gradient-to-r from-[#0A0B0E] via-[#0A0B0E]/70 lg:to-transparent pointer-events-none"></div>
+		<div class="absolute inset-0 z-0 bg-cover bg-center md:bg-[position:70%_center] opacity-80 pointer-events-none" style="background-image: url('https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/bg-organic-leaf.jpg');"></div>
+		<!-- Ambient Readability Gradients -->
+		<div class="absolute inset-0 z-0 bg-gradient-to-b from-[#F0F2F5]/60 via-[#F0F2F5]/40 to-[#F0F2F5] pointer-events-none"></div>
+		<div class="absolute inset-0 z-0 bg-gradient-to-r from-[#F0F2F5] via-[#F0F2F5]/70 md:to-transparent pointer-events-none"></div>
 
 		<div class="relative z-10 max-w-4xl mx-auto">
 			
 			<!-- Badge -->
-			<div class="inline-flex items-center gap-2 px-3.5 py-1.5 border border-white/15 bg-[#141721]/80 backdrop-blur-md mb-8 shadow-sm">
-				<span class="w-1.5 h-1.5 bg-emerald-400 animate-pulse shrink-0"></span>
-				<span class="text-xs font-mono text-neutral-300 tracking-[0.2em] uppercase font-semibold">НАУЧНО-ПРОИЗВОДСТВЕННЫЙ КОМПЛЕКС</span>
+			<div class="inline-flex items-center gap-2 px-3.5 py-1.5 border border-neutral-300 bg-white/90 backdrop-blur-md mb-8 shadow-sm">
+				<span class="w-1.5 h-1.5 bg-emerald-500 animate-pulse shrink-0"></span>
+				<span class="text-xs font-mono text-neutral-700 tracking-[0.2em] uppercase font-bold">НАУЧНО-ПРОИЗВОДСТВЕННЫЙ КОМПЛЕКС</span>
 			</div>
 
-			<!-- Title -->
+			<!-- Title: Template Metallic + drop-shadow-sm -->
 			<h1 class="text-4xl sm:text-6xl md:text-7xl font-wild uppercase tracking-tight mb-8 leading-tight">
-				<span class="gradient-text-animated font-black">ПРОИЗВОДСТВО</span><br/>
-				<span class="text-white font-semibold">LONVI PCC1</span>
+				<span class="gradient-text-animated font-black drop-shadow-sm">ПРОИЗВОДСТВО</span><br/>
+				<span class="text-neutral-900 font-semibold">LONVI PCC1</span>
 			</h1>
 
 			<!-- Subtitle -->
-			<p class="text-lg sm:text-xl md:text-2xl font-light text-neutral-300 leading-relaxed max-w-2xl mx-auto mb-12">
+			<p class="text-lg sm:text-xl md:text-2xl font-light text-neutral-600 leading-relaxed max-w-2xl mx-auto mb-12">
 				Мы контролируем весь процесс — от сбора урожая на винограднике до получения LONVI PCC1 потребителем. Качество нашей продукции соответствует мировым стандартам.
 			</p>
 
 			<!-- Quick Navigation Anchor Pills -->
 			<div class="flex flex-wrap items-center justify-center gap-4 text-xs font-mono tracking-widest uppercase">
-				<a href="#workflow" class="inline-flex items-center gap-2 px-6 py-3.5 bg-white hover:bg-neutral-200 text-black font-semibold transition-all shadow-md group">
+				<a href="#workflow" class="inline-flex items-center gap-2 px-6 py-3.5 bg-neutral-950 hover:bg-neutral-800 text-white transition-all shadow-md group">
 					<span>01 // ЭТАПЫ ПРОИЗВОДСТВА</span>
 					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-y-0.5 transition-transform"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
 				</a>
-				<a href="#certificates" class="inline-flex items-center gap-2 px-6 py-3.5 border border-white/20 bg-white/5 hover:border-white/50 text-white transition-all shadow-sm group">
+				<a href="#certificates" class="inline-flex items-center gap-2 px-6 py-3.5 border border-neutral-300 bg-white hover:border-neutral-900 text-neutral-800 hover:text-black transition-all shadow-sm group">
 					<span>02 // СЕРТИФИКАЦИЯ И СТАНДАРТЫ</span>
 					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-y-0.5 transition-transform"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
 				</a>
