@@ -1,0 +1,765 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+window.tailwind = {
+config: {
+theme: {
+extend: {
+colors: {
+brandgold: '#E2E5E9',
+brandgoldHover: '#FFFFFF',
+secondary: '#1A1C20',
+neutral: { 850: '#1A1C22', 900: '#141414', 950: '#0A0A0A' }
+},
+fontFamily: {
+mono: ['JetBrains Mono', 'monospace'],
+sans: ['Inter', 'sans-serif'],
+wild: ['Outfit', 'sans-serif']
+}
+}
+}
+}
+};
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+html { scroll-behavior: smooth; background-color: #0A0B0E !important; }
+body, body.t-body, #allrecords, .t-records, .t-rec, .t123, .lonvi-production-root {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+background-color: #0A0B0E !important;
+background: linear-gradient(135deg, rgba(13, 14, 17, 0.65) 0%, rgba(26, 28, 34, 0.50) 35%, rgba(47, 53, 66, 0.35) 70%, rgba(76, 83, 99, 0.20) 100%),
+url('https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/bg-cells.jpg') !important;
+background-size: cover !important;
+background-position: center top !important;
+background-attachment: fixed !important;
+background-repeat: no-repeat !important;
+color: #FFFFFF !important;
+overflow-x: hidden !important;
+}
+/* Animated Titanium Text Shimmer */
+.gradient-text-animated {
+background: linear-gradient(135deg, #FFFFFF 0%, #D4D8E2 25%, #8E95A5 50%, #E9ECF2 75%, #FFFFFF 100%);
+background-size: 200% auto;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: textShimmer 8s linear infinite;
+}
+/* Animated Titanium Text Shimmer for Light Background */
+.gradient-text-animated-light {
+background: linear-gradient(135deg, #111317 0%, #4A5160 25%, #8E95A5 50%, #2D323C 75%, #111317 100%);
+background-size: 200% auto;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: textShimmer 8s linear infinite;
+}
+@keyframes textShimmer {
+0% { background-position: 0% 50%; }
+100% { background-position: 200% 50%; }
+}
+/* Titanium Glass Card */
+.production-card {
+background: linear-gradient(165deg, rgba(23, 27, 37, 0.90) 0%, rgba(13, 15, 22, 0.95) 100%) !important;
+border: 1px solid rgba(255, 255, 255, 0.15) !important;
+box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.10) !important;
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+position: relative;
+overflow: hidden;
+transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.production-card:hover {
+border-color: rgba(255, 255, 255, 0.35) !important;
+box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 255, 255, 0.08) !important;
+}
+/* Certificate Document Card */
+.cert-card {
+background: linear-gradient(165deg, rgba(20, 24, 34, 0.90) 0%, rgba(12, 14, 20, 0.96) 100%) !important;
+border: 1px solid rgba(255, 255, 255, 0.15) !important;
+box-shadow: 0 12px 35px -8px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+backdrop-filter: blur(14px);
+-webkit-backdrop-filter: blur(14px);
+position: relative;
+transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+cursor: pointer;
+}
+.cert-card:hover {
+border-color: rgba(255, 255, 255, 0.45) !important;
+transform: translateY(-4px);
+box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.9), 0 0 25px rgba(255, 255, 255, 0.12) !important;
+}
+/* Image Zoom on hover */
+.card-img {
+transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.production-card:hover .card-img, .gallery-card:hover .card-img {
+transform: scale(1.04);
+}
+/* Silky-Smooth 3D Fan Deck of Certificates */
+.fan-container {
+perspective: 1600px;
+height: 460px;
+}
+.fan-card {
+position: absolute;
+width: 240px;
+aspect-ratio: 1 / 1.4;
+background: #FFFFFF;
+padding: 10px;
+cursor: pointer;
+transform-origin: 50% 120%;
+transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+filter 0.4s ease;
+box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.2);
+border-radius: 2px;
+will-change: transform;
+backface-visibility: hidden;
+}
+@media (max-width: 768px) {
+.fan-card { width: 170px; padding: 6px; }
+.fan-container { height: 360px; }
+}
+.fan-card-1 { transform: translate3d(-190px, 16px, 0) rotate(-11deg) scale(0.90); z-index: 2; }
+.fan-card-2 { transform: translate3d(-95px, 6px, 0) rotate(-5.5deg) scale(0.95); z-index: 3; }
+.fan-card-3 { transform: translate3d(0, 0, 0) rotate(0deg) scale(1.02); z-index: 10; box-shadow: 0 25px 60px -8px rgba(0,0,0,0.95), 0 0 30px rgba(255,255,255,0.18); }
+.fan-card-4 { transform: translate3d(95px, 6px, 0) rotate(5.5deg) scale(0.95); z-index: 3; }
+.fan-card-5 { transform: translate3d(190px, 16px, 0) rotate(11deg) scale(0.90); z-index: 2; }
+.fan-container:hover .fan-card-1:not(:hover) { transform: translate3d(-215px, 20px, 0) rotate(-13deg) scale(0.88); filter: brightness(0.85); }
+.fan-container:hover .fan-card-2:not(:hover) { transform: translate3d(-108px, 8px, 0) rotate(-6.5deg) scale(0.93); filter: brightness(0.9); }
+.fan-container:hover .fan-card-3:not(:hover) { transform: translate3d(0, 0, 0) rotate(0deg) scale(1.0); filter: brightness(0.92); }
+.fan-container:hover .fan-card-4:not(:hover) { transform: translate3d(108px, 8px, 0) rotate(6.5deg) scale(0.93); filter: brightness(0.9); }
+.fan-container:hover .fan-card-5:not(:hover) { transform: translate3d(215px, 20px, 0) rotate(13deg) scale(0.88); filter: brightness(0.85); }
+.fan-card-1:hover { transform: translate3d(-200px, -36px, 40px) rotate(-3deg) scale(1.06) !important; z-index: 50 !important; filter: brightness(1) !important; box-shadow: 0 35px 70px -10px rgba(0, 0, 0, 0.95), 0 0 35px rgba(255, 255, 255, 0.35) !important; }
+.fan-card-2:hover { transform: translate3d(-100px, -38px, 40px) rotate(-1.5deg) scale(1.07) !important; z-index: 50 !important; filter: brightness(1) !important; box-shadow: 0 35px 70px -10px rgba(0, 0, 0, 0.95), 0 0 35px rgba(255, 255, 255, 0.35) !important; }
+.fan-card-3:hover { transform: translate3d(0, -42px, 40px) rotate(0deg) scale(1.08) !important; z-index: 50 !important; filter: brightness(1) !important; box-shadow: 0 35px 70px -10px rgba(0, 0, 0, 0.95), 0 0 35px rgba(255, 255, 255, 0.4) !important; }
+.fan-card-4:hover { transform: translate3d(100px, -38px, 40px) rotate(1.5deg) scale(1.07) !important; z-index: 50 !important; filter: brightness(1) !important; box-shadow: 0 35px 70px -10px rgba(0, 0, 0, 0.95), 0 0 35px rgba(255, 255, 255, 0.35) !important; }
+.fan-card-5:hover { transform: translate3d(200px, -36px, 40px) rotate(3deg) scale(1.06) !important; z-index: 50 !important; filter: brightness(1) !important; box-shadow: 0 35px 70px -10px rgba(0, 0, 0, 0.95), 0 0 35px rgba(255, 255, 255, 0.35) !important; }
+@media (max-width: 768px) {
+.fan-card-1 { transform: translate3d(-120px, 12px, 0) rotate(-10deg) scale(0.90); }
+.fan-card-2 { transform: translate3d(-60px, 4px, 0) rotate(-5deg) scale(0.95); }
+.fan-card-3 { transform: translate3d(0, 0, 0) rotate(0deg) scale(1.02); }
+.fan-card-4 { transform: translate3d(60px, 4px, 0) rotate(5deg) scale(0.95); }
+.fan-card-5 { transform: translate3d(120px, 12px, 0) rotate(10deg) scale(0.90); }
+.fan-card-1:hover { transform: translate3d(-120px, -20px, 0) rotate(0deg) scale(1.04) !important; }
+.fan-card-2:hover { transform: translate3d(-60px, -22px, 0) rotate(0deg) scale(1.04) !important; }
+.fan-card-3:hover { transform: translate3d(0, -25px, 0) rotate(0deg) scale(1.06) !important; }
+.fan-card-4:hover { transform: translate3d(60px, -22px, 0) rotate(0deg) scale(1.04) !important; }
+.fan-card-5:hover { transform: translate3d(120px, -20px, 0) rotate(0deg) scale(1.04) !important; }
+}
+</style>
+<div class="lonvi-production-root min-h-screen text-white relative w-full overflow-x-clip">
+<div class="fixed top-1/4 right-0 w-[550px] h-[550px] bg-white/[0.02] rounded-full blur-[150px] pointer-events-none -z-10"></div>
+<div class="fixed top-2/3 left-0 w-[500px] h-[500px] bg-slate-400/[0.02] rounded-full blur-[130px] pointer-events-none -z-10"></div>
+<header class="fixed top-0 left-0 w-full z-50 bg-[#0D0E11]/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-20 flex items-center justify-between relative">
+<div class="flex items-center gap-3 xl:gap-4 shrink-0 z-10">
+<a href="https://lonvibio.com.ru/club#openmembersbar" class="hidden lg:flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-300 transition-colors whitespace-nowrap cursor-pointer">
+МОЙ АККАУНТ
+</a>
+<div class="hidden lg:block w-px h-3 bg-white/20"></div>
+<a href="https://lonvibio.com.ru/#shop" class="hidden lg:flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-300 transition-colors whitespace-nowrap">
+МАГАЗИН
+</a>
+<div class="hidden lg:block w-px h-3 bg-white/20"></div>
+<a href="https://lonvibio.com.ru/company" class="hidden lg:flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-300 transition-colors whitespace-nowrap">
+О НАС
+</a>
+<div class="hidden lg:block w-px h-3 bg-white/20"></div>
+<a href="https://lonvibio.com.ru/production" class="hidden lg:flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.1em] text-white border-b-2 border-white pb-0.5 whitespace-nowrap">
+ПРОИЗВОДСТВО
+</a>
+</div>
+<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-auto z-20">
+<a href="https://lonvibio.com.ru/" class="relative h-6 sm:h-7 flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
+<div class="absolute inset-[-12px] sm:inset-[-16px] bg-[#0A0B0E]/95 blur-md rounded-full -z-10 pointer-events-none"></div>
+<img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/logo.jpg" alt="LONVI" class="h-full w-auto object-contain mix-blend-screen relative z-10 transition-all duration-300">
+</a>
+</div>
+<div class="hidden lg:flex items-center gap-3 xl:gap-4 shrink-0 z-10">
+<a href="https://lonvibio.com.ru/#news" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-300 transition-colors whitespace-nowrap">
+НОВОСТИ
+</a>
+<div class="w-px h-3 bg-white/20"></div>
+<a href="https://lonvibio.com.ru/partners" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-300 transition-colors whitespace-nowrap">
+ПАРТНЕРЫ
+</a>
+<div class="w-px h-3 bg-white/20"></div>
+<a href="https://lonvibio.com.ru/#consult" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-300 transition-colors whitespace-nowrap">
+КОНСУЛЬТАЦИЯ
+</a>
+<div class="w-px h-3 bg-white/20"></div>
+<a href="https://lonvibio.com.ru/club" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-300 transition-colors whitespace-nowrap">
+КЛУБ ЗДОРОВЬЯ
+</a>
+<div class="w-px h-3 bg-white/20"></div>
+<a href="https://lonvibio.com.ru/#trust" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-300 transition-colors whitespace-nowrap">
+СМИ
+</a>
+<div class="w-px h-3 bg-white/20"></div>
+<a href="https://lonvibio.com.ru/#faq" class="text-xs font-bold uppercase tracking-[0.1em] hover:text-brandgold text-neutral-300 transition-colors whitespace-nowrap">
+FAQ
+</a>
+</div>
+<div class="lg:hidden z-20 flex items-center">
+<button id="mobile-menu-btn" class="p-2 text-white hover:text-brandgold focus:outline-none" aria-label="Меню">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="lg:hidden fixed top-20 left-0 w-full bg-[#0D0E11]/98 border-b border-white/10 p-6 flex flex-col gap-4 transform translate-x-full transition-transform duration-300 backdrop-blur-xl">
+<ul class="flex flex-col gap-3 text-sm font-mono uppercase tracking-widest text-neutral-300">
+<li><a href="https://lonvibio.com.ru/club#openmembersbar" class="block py-2 hover:text-brandgold">Мой аккаунт</a></li>
+<li><a href="https://lonvibio.com.ru/#shop" class="block py-2 hover:text-brandgold">Магазин</a></li>
+<li><a href="https://lonvibio.com.ru/company" class="block py-2 hover:text-brandgold">О нас</a></li>
+<li><a href="https://lonvibio.com.ru/production" class="block py-2 text-white font-bold">Производство</a></li>
+<li><a href="https://lonvibio.com.ru/#news" class="block py-2 hover:text-brandgold">Новости</a></li>
+<li><a href="https://lonvibio.com.ru/partners" class="block py-2 hover:text-brandgold">Партнеры</a></li>
+<li><a href="https://lonvibio.com.ru/#consult" class="block py-2 hover:text-brandgold">Консультация</a></li>
+<li><a href="https://lonvibio.com.ru/club" class="block py-2 hover:text-brandgold">Клуб здоровья</a></li>
+<li><a href="https://lonvibio.com.ru/#trust" class="block py-2 hover:text-brandgold">СМИ</a></li>
+<li><a href="https://lonvibio.com.ru/#faq" class="block py-2 hover:text-brandgold">FAQ</a></li>
+</ul>
+<div class="border-t border-white/10 pt-6 text-center text-xs font-mono text-neutral-500">
+LONVI BIOSCIENCES • LIFE SCIENCES & LONGEVITY
+</div>
+</div>
+</header>
+<section class="relative pt-36 sm:pt-44 pb-20 sm:pb-28 px-6 sm:px-8 lg:px-12 text-center border-b border-neutral-300 overflow-hidden bg-[#F0F2F5]">
+<div class="absolute inset-0 z-0 bg-cover bg-center md:bg-[position:70%_center] opacity-80 pointer-events-none" style="background-image: url('https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/bg-organic-leaf.jpg');"></div>
+<div class="absolute inset-0 z-0 bg-gradient-to-b from-[#F0F2F5]/60 via-[#F0F2F5]/40 to-[#F0F2F5] pointer-events-none"></div>
+<div class="absolute inset-0 z-0 bg-gradient-to-r from-[#F0F2F5] via-[#F0F2F5]/70 md:to-transparent pointer-events-none"></div>
+<div class="relative z-10 max-w-4xl mx-auto">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 border border-neutral-300 bg-white/90 backdrop-blur-md mb-8 shadow-sm">
+<span class="w-1.5 h-1.5 bg-emerald-500 animate-pulse shrink-0"></span>
+<span class="text-xs font-mono text-neutral-700 tracking-[0.2em] uppercase font-bold">НАУЧНО-ПРОИЗВОДСТВЕННЫЙ КОМПЛЕКС</span>
+</div>
+<h1 class="text-4xl sm:text-6xl md:text-7xl font-wild uppercase tracking-tight mb-8 leading-tight">
+<span class="gradient-text-animated-light font-black">ПРОИЗВОДСТВО</span><br/>
+<span class="text-neutral-900 font-semibold">LONVI PCC1</span>
+</h1>
+<p class="text-lg sm:text-xl md:text-2xl font-light text-neutral-600 leading-relaxed max-w-2xl mx-auto mb-12">
+Мы контролируем весь процесс — от сбора урожая на винограднике до получения LONVI PCC1 потребителем. Качество нашей продукции соответствует мировым стандартам.
+</p>
+<div class="flex flex-wrap items-center justify-center gap-4 text-xs font-mono tracking-widest uppercase">
+<a href="#workflow" class="inline-flex items-center gap-2 px-6 py-3.5 bg-neutral-950 hover:bg-neutral-800 text-white transition-all shadow-md group">
+<span>01 // ЭТАПЫ ПРОИЗВОДСТВА</span>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-y-0.5 transition-transform"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+</a>
+<a href="#certificates" class="inline-flex items-center gap-2 px-6 py-3.5 border border-neutral-300 bg-white hover:border-neutral-900 text-neutral-800 hover:text-black transition-all shadow-sm group">
+<span>02 // СЕРТИФИКАЦИЯ И СТАНДАРТЫ</span>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-y-0.5 transition-transform"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+</a>
+</div>
+</div>
+</section>
+<section id="workflow" class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 lg:py-28">
+<div class="text-center max-w-4xl mx-auto mb-16 sm:mb-20">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-[#0D0F14] border border-white/30 text-white font-mono text-xs tracking-[0.2em] uppercase mb-6 font-bold">
+<span class="w-1.5 h-1.5 bg-emerald-400 animate-pulse shrink-0"></span>
+<span>[ 01 // PRODUCTION WORKFLOW ]</span>
+</div>
+<h2 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-wild uppercase tracking-tight leading-tight mb-6">
+<span class="gradient-text-animated font-black">ЦЕПОЧКА</span><br/>
+<span class="text-white font-semibold">ПРОИЗВОДСТВЕННОГО ПРОЦЕССА</span>
+</h2>
+<p class="text-base sm:text-lg md:text-xl text-neutral-300 font-light leading-relaxed max-w-2xl mx-auto">
+Каждый этап сопровождается лабораторным анализом, стандартизацией активных сенолитических компонентов и строгим контролем безопасности.
+</p>
+</div>
+<div class="production-card mb-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
+<div class="lg:col-span-6 relative min-h-[300px] sm:min-h-[400px] lg:min-h-[440px] overflow-hidden bg-neutral-900">
+<img
+src="https://static.tildacdn.com/tild3739-3335-4066-b936-636366613238/nano-banana-2-428636.jpg"
+alt="Экологичное сырье в лаборатории"
+class="w-full h-full object-cover object-center absolute inset-0 card-img"
+loading="eager"
+>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-3.5 py-1.5 bg-black/75 backdrop-blur-md border border-white/25 text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold">
+ЭТАП 01 // СЫРЬЕ
+</span>
+</div>
+</div>
+<div class="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 text-xs font-mono text-neutral-400 uppercase tracking-widest mb-3">
+<span>// ВХОДНОЙ КОНТРОЛЬ</span>
+<span class="text-neutral-600">•</span>
+<span>СПЕКТРАЛЬНЫЙ АНАЛИЗ</span>
+</div>
+<h3 class="text-2xl sm:text-3xl font-wild font-bold uppercase tracking-tight text-white mb-6">
+Экологичное сырье в лаборатории
+</h3>
+<p class="text-sm sm:text-base font-light text-neutral-200 leading-relaxed mb-6">
+На первом этапе происходит отбор и анализ виноградных косточек, которые служат сырьем для производства PCC1. В лаборатории исследуют их состав, чтобы определить оптимальные условия для извлечения активных компонентов.
+</p>
+<p class="text-sm sm:text-base font-light text-neutral-300 leading-relaxed">
+Специалисты применяют современные технологии для извлечения полезных веществ, максимально сохраняя их свойства. Результаты анализов позволяют скорректировать технологический процесс и гарантировать высокое качество конечного продукта.
+</p>
+</div>
+<div class="pt-8 border-t border-white/10 mt-8 flex flex-wrap gap-2 text-xs font-mono">
+<span class="px-3 py-1 bg-white/[0.06] border border-white/20 text-neutral-300">Селекция сырья</span>
+<span class="px-3 py-1 bg-white/[0.06] border border-white/20 text-neutral-300">Сохранение биоактивности</span>
+<span class="px-3 py-1 bg-white/[0.06] border border-white/20 text-emerald-400">100% Эко-стандарт</span>
+</div>
+</div>
+</div>
+</div>
+<div class="production-card mb-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
+<div class="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-between order-2 lg:order-1">
+<div>
+<div class="flex items-center gap-3 text-xs font-mono text-neutral-400 uppercase tracking-widest mb-3">
+<span>// ВЫСОКОТЕХНОЛОГИЧНЫЙ ЦИКЛ</span>
+<span class="text-neutral-600">•</span>
+<span>GMP СТАНДАРТ</span>
+</div>
+<h3 class="text-2xl sm:text-3xl font-wild font-bold uppercase tracking-tight text-white mb-6">
+Производство, упаковка в капсулы и в тару для товара
+</h3>
+<p class="text-sm sm:text-base font-light text-neutral-200 leading-relaxed mb-6">
+На следующем этапе экстрагированные вещества подвергаются процессу концентрирования, в результате которого получается высококонцентрированный PCC1.
+</p>
+<p class="text-sm sm:text-base font-light text-neutral-300 leading-relaxed">
+Полученный продукт фасуется в капсулы, что обеспечивает удобство его использования и дозирования. Кроме того, продукт упаковывается в тару, которая защищает его от внешних воздействий и сохраняет свежесть. На этом этапе также уделяется внимание безопасности и качеству упаковки.
+</p>
+</div>
+<div class="pt-8 border-t border-white/10 mt-8 flex flex-wrap gap-2 text-xs font-mono">
+<span class="px-3 py-1 bg-white/[0.06] border border-white/20 text-neutral-300">Фарм-чистота</span>
+<span class="px-3 py-1 bg-white/[0.06] border border-white/20 text-neutral-300">Защитная атмосфера</span>
+<span class="px-3 py-1 bg-white/[0.06] border border-white/20 text-emerald-400">Стабильность формулы</span>
+</div>
+</div>
+<div class="lg:col-span-6 relative min-h-[300px] sm:min-h-[400px] lg:min-h-[440px] overflow-hidden bg-neutral-900 order-1 lg:order-2">
+<img
+src="https://static.tildacdn.com/tild3939-6238-4033-b332-623039346531/Product_Reshoot_-___.png"
+alt="Производство и капсулирование PCC1"
+class="w-full h-full object-cover object-center absolute inset-0 card-img"
+loading="eager"
+>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-3.5 py-1.5 bg-black/75 backdrop-blur-md border border-white/25 text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold">
+ЭТАП 02 // КАПСУЛИРОВАНИЕ
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="production-card">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
+<div class="lg:col-span-6 relative min-h-[300px] sm:min-h-[400px] lg:min-h-[440px] overflow-hidden bg-neutral-900">
+<img
+src="https://static.tildacdn.com/tild3264-3963-4230-b837-643934333862/nano-banana-2-428601.jpg"
+alt="Логистика и отправка PCC1"
+class="w-full h-full object-cover object-center absolute inset-0 card-img"
+loading="eager"
+>
+<div class="absolute top-4 left-4 z-10">
+<span class="px-3.5 py-1.5 bg-black/75 backdrop-blur-md border border-white/25 text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold">
+ЭТАП 03 // ЛОГИСТИКА
+</span>
+</div>
+</div>
+<div class="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 text-xs font-mono text-neutral-400 uppercase tracking-widest mb-3">
+<span>// ПРЯМЫЕ ПОСТАВКИ</span>
+<span class="text-neutral-600">•</span>
+<span>ТЕМПЕРАТУРНЫЙ КОНТРОЛЬ</span>
+</div>
+<h3 class="text-2xl sm:text-3xl font-wild font-bold uppercase tracking-tight text-white mb-6">
+Логистика, упаковка и отправка
+</h3>
+<p class="text-sm sm:text-base font-light text-neutral-200 leading-relaxed mb-6">
+На завершающем этапе организуется логистика, которая включает в себя упаковку готовой продукции и ее отправку дистрибьюторам и во флагманские торговые точки. Упаковка осуществляется с соблюдением всех стандартов безопасности и сохранности, чтобы товар дошел до потребителя в идеальном состоянии.
+</p>
+<p class="text-sm sm:text-base font-light text-neutral-300 leading-relaxed">
+Логистическая сеть настроена таким образом, чтобы минимизировать время доставки и обеспечить широкий ассортимент продукции PCC1 на рынке. Благодаря эффективной системе управления мы можем гарантировать, что каждый клиент получит свой заказ вовремя и в полном объеме.
+</p>
+</div>
+<div class="pt-8 border-t border-white/10 mt-8 flex flex-wrap gap-2 text-xs font-mono">
+<span class="px-3 py-1 bg-white/[0.06] border border-white/20 text-neutral-300">Прямой маршрут Шэньчжэнь — Москва</span>
+<span class="px-3 py-1 bg-white/[0.06] border border-white/20 text-neutral-300">Сохранность цепи</span>
+<span class="px-3 py-1 bg-white/[0.06] border border-white/20 text-emerald-400">Быстрая доставка</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="certificates" class="w-full py-24 sm:py-28 px-6 sm:px-8 lg:px-12 border-t border-white/10 relative overflow-hidden scroll-mt-24">
+<div class="max-w-7xl mx-auto">
+<div class="w-full mb-20 relative">
+<div class="flex items-center justify-between text-xs font-mono text-neutral-400 border-b border-white/10 pb-4 mb-10 max-w-5xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="tracking-widest uppercase font-bold text-neutral-200">LONVI BIOSCIENCES // GLOBAL COMPLIANCE ARCHIVE</span>
+</div>
+<span class="hidden sm:inline">6 МЕЖДУНАРОДНЫХ СЕРТИФИКАТОВ</span>
+</div>
+<div class="fan-container relative flex items-center justify-center mb-12 max-w-4xl mx-auto">
+<div class="fan-card fan-card-1" onclick="openCertModal('fda')" title="FDA Регистрация">
+<div class="w-full h-full border border-neutral-300 overflow-hidden bg-white">
+<img src="https://static.tildacdn.com/tild6532-6535-4330-a666-306636303437/noroot.png" alt="FDA" class="w-full h-full object-contain">
+</div>
+<div class="absolute bottom-2 left-2 right-2 bg-neutral-900/90 text-white text-[10px] font-mono text-center py-1 font-bold">FDA REGISTRATION</div>
+</div>
+<div class="fan-card fan-card-2" onclick="openCertModal('haccp')" title="HACCP Сертификат">
+<div class="w-full h-full border border-neutral-300 overflow-hidden bg-white">
+<img src="https://static.tildacdn.com/tild3131-3361-4161-b034-336133303936/noroot.png" alt="HACCP" class="w-full h-full object-contain">
+</div>
+<div class="absolute bottom-2 left-2 right-2 bg-neutral-900/90 text-white text-[10px] font-mono text-center py-1 font-bold">HACCP SYSTEM</div>
+</div>
+<div class="fan-card fan-card-3 border-2 border-white/90" onclick="openCertModal('eaeu')" title="ЕАЭС Свидетельство">
+<div class="w-full h-full border border-neutral-300 overflow-hidden bg-white">
+<img src="https://static.tildacdn.com/tild6135-6537-4339-b065-366631353863/noroot.png" alt="ЕАЭС" class="w-full h-full object-contain">
+</div>
+<div class="absolute bottom-2.5 left-2.5 right-2.5 bg-black text-white text-[11px] font-mono text-center py-1 font-bold tracking-wider">ЕАЭС СВИДЕТЕЛЬСТВО</div>
+</div>
+<div class="fan-card fan-card-4" onclick="openCertModal('gmp')" title="GMP Intertek">
+<div class="w-full h-full border border-neutral-300 overflow-hidden bg-white">
+<img src="https://static.tildacdn.com/tild6638-3136-4130-b232-313435396162/noroot.png" alt="GMP" class="w-full h-full object-contain">
+</div>
+<div class="absolute bottom-2 left-2 right-2 bg-neutral-900/90 text-white text-[10px] font-mono text-center py-1 font-bold">GMP INTERTEK</div>
+</div>
+<div class="fan-card fan-card-5" onclick="openCertModal('halal')" title="Halal Certified">
+<div class="w-full h-full border border-neutral-300 overflow-hidden bg-white">
+<img src="https://static.tildacdn.com/tild6330-3635-4465-b335-346538376632/Product_Reshoot_-___.png" alt="HALAL" class="w-full h-full object-contain">
+</div>
+<div class="absolute bottom-2 left-2 right-2 bg-neutral-900/90 text-white text-[10px] font-mono text-center py-1 font-bold">HALAL CERTIFIED</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col items-center justify-center gap-4 max-w-5xl mx-auto">
+<div class="grid grid-cols-6 gap-2 sm:gap-3 w-full max-w-[360px] sm:max-w-[460px] md:max-w-[540px] mx-auto">
+<div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 sm:p-3 hover:-translate-y-1 hover:border-white/40 transition-all duration-300 cursor-default group overflow-hidden relative" title="GMP">
+<img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-gmp-transparent.png" alt="GMP" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity scale-[0.88]">
+</div>
+<div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 sm:p-3 hover:-translate-y-1 hover:border-white/40 transition-all duration-300 cursor-default group overflow-hidden relative" title="FDA">
+<img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-fda-transparent.png" alt="FDA" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity scale-[0.45] brightness-0 invert [transform:translateZ(0)]">
+</div>
+<div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 sm:p-3 hover:-translate-y-1 hover:border-white/40 transition-all duration-300 cursor-default group overflow-hidden relative" title="HALAL">
+<img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-halal-transparent.png" alt="HALAL" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity scale-[0.95] brightness-0 invert [transform:translateZ(0)]">
+</div>
+<div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 sm:p-3 hover:-translate-y-1 hover:border-white/40 transition-all duration-300 cursor-default group overflow-hidden relative" title="VEGAN">
+<img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-vegan-transparent.png" alt="VEGAN" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity scale-[0.95] brightness-0 invert [transform:translateZ(0)]">
+</div>
+<div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 sm:p-3 hover:-translate-y-1 hover:border-white/40 transition-all duration-300 cursor-default group overflow-hidden relative" title="CHESTNY ZNAK">
+<img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-cz-transparent.png" alt="CHESTNY ZNAK" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity scale-[1.05] brightness-0 invert [transform:translateZ(0)]">
+</div>
+<div class="w-full aspect-square rounded-none bg-[#1A1C20]/75 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.5)] flex items-center justify-center p-2 sm:p-3 hover:-translate-y-1 hover:border-white/40 transition-all duration-300 cursor-default group overflow-hidden relative" title="EAC">
+<img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/cert-eac-transparent.png" alt="EAC" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity scale-[0.90] brightness-0 invert [transform:translateZ(0)]">
+</div>
+</div>
+<div class="text-xs sm:text-sm font-mono text-white font-bold uppercase tracking-[0.18em] text-center drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] mt-1">
+МЕЖДУНАРОДНЫЕ СТАНДАРТЫ И ГОСУДАРСТВЕННАЯ СЕРТИФИКАЦИЯ
+</div>
+</div>
+</div>
+<div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-[#0D0F14] border border-white/30 text-white font-mono text-xs tracking-[0.2em] uppercase mb-4 font-bold">
+<span class="w-1.5 h-1.5 bg-emerald-400 animate-pulse shrink-0"></span>
+<span>[ 02 // CERTIFIED STANDARDS ]</span>
+</div>
+<h2 class="text-3xl sm:text-4xl md:text-5xl font-wild uppercase tracking-tight mb-4">
+<span class="gradient-text-animated font-black">БЕЗОПАСНОСТЬ</span> <span class="text-white font-semibold">И КАЧЕСТВО</span>
+</h2>
+<p class="text-base sm:text-lg text-neutral-200 font-light leading-relaxed">
+Международные стандарты — гарантия вашего выбора
+</p>
+<p class="text-xs font-mono text-neutral-400 mt-3 uppercase tracking-wider">
+Нажмите на любой сертификат, чтобы открыть скан
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="cert-card p-6 sm:p-7 flex flex-col justify-between group" onclick="openCertModal('gmp')">
+<div>
+<div class="relative w-full h-[360px] sm:h-[400px] mb-6 overflow-hidden bg-neutral-900 border border-white/15 flex items-center justify-center p-3">
+<img
+src="https://static.tildacdn.com/tild6638-3136-4130-b232-313435396162/noroot.png"
+alt="GMP СЕРТИФИКАТ"
+class="max-w-full max-h-full object-contain card-img"
+loading="eager"
+>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<span class="px-4 py-2 bg-white text-black font-mono font-bold text-xs uppercase tracking-wider shadow-lg">
+Открыть скан ↗
+</span>
+</div>
+</div>
+<h3 class="text-xl sm:text-2xl font-wild font-bold uppercase tracking-tight text-white mb-3 group-hover:text-emerald-300 transition-colors">
+GMP СЕРТИФИКАТ
+</h3>
+<p class="text-xs sm:text-sm font-light text-neutral-300 leading-relaxed">
+Удостоверяет, что производственные процессы соответствуют высоким стандартам качества и безопасности, обеспечивая надежность и эффективность продукции.
+</p>
+</div>
+<div class="pt-4 border-t border-white/10 mt-6 flex items-center justify-between text-xs font-mono text-neutral-400 group-hover:text-white transition-colors">
+<span>СТАНДАРТ КАЧЕСТВА GMP</span>
+<span class="text-emerald-400 font-bold">ПОДТВЕРЖДЕНО ✓</span>
+</div>
+</div>
+<div class="cert-card p-6 sm:p-7 flex flex-col justify-between group" onclick="openCertModal('fda')">
+<div>
+<div class="relative w-full h-[360px] sm:h-[400px] mb-6 overflow-hidden bg-neutral-900 border border-white/15 flex items-center justify-center p-3">
+<img
+src="https://static.tildacdn.com/tild6532-6535-4330-a666-306636303437/noroot.png"
+alt="FDA СЕРТИФИКАТ"
+class="max-w-full max-h-full object-contain card-img"
+loading="eager"
+>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<span class="px-4 py-2 bg-white text-black font-mono font-bold text-xs uppercase tracking-wider shadow-lg">
+Открыть скан ↗
+</span>
+</div>
+</div>
+<h3 class="text-xl sm:text-2xl font-wild font-bold uppercase tracking-tight text-white mb-3 group-hover:text-emerald-300 transition-colors">
+FDA СЕРТИФИКАТ
+</h3>
+<p class="text-xs sm:text-sm font-light text-neutral-300 leading-relaxed">
+Подтверждает, что продукт прошел оценку безопасности и эффективности и соответствует стандартам, установленным Управлением по санитарному надзору за качеством пищевых продуктов и медикаментов США.
+</p>
+</div>
+<div class="pt-4 border-t border-white/10 mt-6 flex items-center justify-between text-xs font-mono text-neutral-400 group-hover:text-white transition-colors">
+<span>РЕГИСТРАЦИЯ FDA (США)</span>
+<span class="text-emerald-400 font-bold">ПОДТВЕРЖДЕНО ✓</span>
+</div>
+</div>
+<div class="cert-card p-6 sm:p-7 flex flex-col justify-between group" onclick="openCertModal('eaeu')">
+<div>
+<div class="relative w-full h-[360px] sm:h-[400px] mb-6 overflow-hidden bg-neutral-900 border border-white/15 flex items-center justify-center p-3">
+<img
+src="https://static.tildacdn.com/tild6135-6537-4339-b065-366631353863/noroot.png"
+alt="ЕАЭС СВИДЕТЕЛЬСТВО"
+class="max-w-full max-h-full object-contain card-img"
+loading="eager"
+>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<span class="px-4 py-2 bg-white text-black font-mono font-bold text-xs uppercase tracking-wider shadow-lg">
+Открыть скан ↗
+</span>
+</div>
+</div>
+<h3 class="text-xl sm:text-2xl font-wild font-bold uppercase tracking-tight text-white mb-3 group-hover:text-emerald-300 transition-colors">
+ЕАЭС СВИДЕТЕЛЬСТВО
+</h3>
+<p class="text-xs sm:text-sm font-light text-neutral-300 leading-relaxed">
+Подтверждает, что продукт соответствует требованиям безопасности и качества, установленным Евразийским экономическим союзом для обращения на территории государств - членов ЕАЭС.
+</p>
+</div>
+<div class="pt-4 border-t border-white/10 mt-6 flex items-center justify-between text-xs font-mono text-neutral-400 group-hover:text-white transition-colors">
+<span>РЕЕСТР ЕАЭС / EAC</span>
+<span class="text-emerald-400 font-bold">ПОДТВЕРЖДЕНО ✓</span>
+</div>
+</div>
+<div class="cert-card p-6 sm:p-7 flex flex-col justify-between group" onclick="openCertModal('haccp')">
+<div>
+<div class="relative w-full h-[360px] sm:h-[400px] mb-6 overflow-hidden bg-neutral-900 border border-white/15 flex items-center justify-center p-3">
+<img
+src="https://static.tildacdn.com/tild3131-3361-4161-b034-336133303936/noroot.png"
+alt="HACCP СЕРТИФИКАТ"
+class="max-w-full max-h-full object-contain card-img"
+loading="eager"
+>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<span class="px-4 py-2 bg-white text-black font-mono font-bold text-xs uppercase tracking-wider shadow-lg">
+Открыть скан ↗
+</span>
+</div>
+</div>
+<h3 class="text-xl sm:text-2xl font-wild font-bold uppercase tracking-tight text-white mb-3 group-hover:text-emerald-300 transition-colors">
+HACCP СЕРТИФИКАТ
+</h3>
+<p class="text-xs sm:text-sm font-light text-neutral-300 leading-relaxed">
+Научно обоснованная система обеспечения пищевой безопасности, которая направлена на выявление, оценку и контроль от первичного производства до конечного потребления
+</p>
+</div>
+<div class="pt-4 border-t border-white/10 mt-6 flex items-center justify-between text-xs font-mono text-neutral-400 group-hover:text-white transition-colors">
+<span>СИСТЕМА БЕЗОПАСНОСТИ HACCP</span>
+<span class="text-emerald-400 font-bold">ПОДТВЕРЖДЕНО ✓</span>
+</div>
+</div>
+<div class="cert-card p-6 sm:p-7 flex flex-col justify-between group" onclick="openCertModal('halal')">
+<div>
+<div class="relative w-full h-[360px] sm:h-[400px] mb-6 overflow-hidden bg-neutral-900 border border-white/15 flex items-center justify-center p-3">
+<img
+src="https://static.tildacdn.com/tild6330-3635-4465-b335-346538376632/Product_Reshoot_-___.png"
+alt="HALAL СЕРТИФИКАТ"
+class="max-w-full max-h-full object-contain card-img"
+loading="eager"
+>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<span class="px-4 py-2 bg-white text-black font-mono font-bold text-xs uppercase tracking-wider shadow-lg">
+Открыть скан ↗
+</span>
+</div>
+</div>
+<h3 class="text-xl sm:text-2xl font-wild font-bold uppercase tracking-tight text-white mb-3 group-hover:text-emerald-300 transition-colors">
+HALAL СЕРТИФИКАТ
+</h3>
+<p class="text-xs sm:text-sm font-light text-neutral-300 leading-relaxed">
+Подтверждает, что процесс производства, хранения, упаковки и транспортировки соответствуют исламским нормам и требованиям шариата
+</p>
+</div>
+<div class="pt-4 border-t border-white/10 mt-6 flex items-center justify-between text-xs font-mono text-neutral-400 group-hover:text-white transition-colors">
+<span>СТАНДАРТ ХАЛЯЛЬ</span>
+<span class="text-emerald-400 font-bold">ПОДТВЕРЖДЕНО ✓</span>
+</div>
+</div>
+<div class="cert-card p-6 sm:p-7 flex flex-col justify-between group" onclick="openCertModal('sgs')">
+<div>
+<div class="relative w-full h-[360px] sm:h-[400px] mb-6 overflow-hidden bg-neutral-900 border border-white/15 flex items-center justify-center p-3">
+<img
+src="https://static.tildacdn.com/tild3139-3531-4163-a437-346564353838/noroot.png"
+alt="ТЕСТ COA SGS"
+class="max-w-full max-h-full object-contain card-img"
+loading="eager"
+>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<span class="px-4 py-2 bg-white text-black font-mono font-bold text-xs uppercase tracking-wider shadow-lg">
+Открыть скан ↗
+</span>
+</div>
+</div>
+<h3 class="text-xl sm:text-2xl font-wild font-bold uppercase tracking-tight text-white mb-3 group-hover:text-emerald-300 transition-colors">
+ТЕСТ COA SGS
+</h3>
+<p class="text-xs sm:text-sm font-light text-neutral-300 leading-relaxed">
+Подтверждает результаты лабораторных испытаний, которые удостоверяют соответствие продукта установленным стандартам качества и безопасности
+</p>
+</div>
+<div class="pt-4 border-t border-white/10 mt-6 flex items-center justify-between text-xs font-mono text-neutral-400 group-hover:text-white transition-colors">
+<span>ЛАБОРАТОРИЯ SGS (ШВЕЙЦАРИЯ)</span>
+<span class="text-emerald-400 font-bold">ПОДТВЕРЖДЕНО ✓</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer id="contact" class="w-full bg-[#07080A] border-t border-white/10 pt-20 pb-16 px-6 sm:px-8 text-center sm:text-left">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+<div>
+<a href="https://lonvibio.com.ru/" class="inline-block h-7 mb-6">
+<img src="https://cdn.jsdelivr.net/gh/matilda081133-sketch/lonvi@main/assets/logo.jpg" alt="LONVI BIOSCIENCES" class="h-full w-auto object-contain mix-blend-screen">
+</a>
+<p class="text-sm text-neutral-400 font-light leading-relaxed max-w-sm">
+Свяжитесь с нами, чтобы узнать больше о технологиях долголетия и услугах дистрибуции.
+</p>
+</div>
+<div>
+<div class="text-xs font-mono text-neutral-400 uppercase tracking-widest mb-4">КОНТАКТЫ</div>
+<div class="space-y-2 text-sm text-neutral-300 font-light">
+<p>Москва, б-р. Ходынский, д. 2, офис 110Д</p>
+<p>Телефон: <a href="tel:+79394999909" class="text-white hover:underline">+7 939 499-99-09</a></p>
+<p>Email: <a href="mailto:lonvibio@mail.ru" class="text-white hover:underline">lonvibio@mail.ru</a></p>
+</div>
+</div>
+<div>
+<div class="text-xs font-mono text-neutral-400 uppercase tracking-widest mb-4">РАЗДЕЛЫ САЙТА</div>
+<div class="grid grid-cols-2 gap-2 text-sm text-neutral-400 font-light">
+<a href="https://lonvibio.com.ru/production" class="hover:text-white transition-colors">Производство</a>
+<a href="https://lonvibio.com.ru/company" class="hover:text-white transition-colors">О компании</a>
+<a href="https://lonvibio.com.ru/#shop" class="hover:text-white transition-colors">Магазин</a>
+<a href="https://lonvibio.com.ru/partners" class="hover:text-white transition-colors">Партнерам</a>
+<a href="https://lonvibio.com.ru/club" class="hover:text-white transition-colors">Клуб здоровья</a>
+<a href="https://lonvibio.com.ru/#trust" class="hover:text-white transition-colors">Пресса о нас</a>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-400 font-light gap-4">
+<div>
+© 2026 LONVI Biosciences. Все права защищены. Эксклюзивный дистрибьютор в РФ.
+</div>
+<div class="flex gap-6">
+<a href="https://lonvibio.com.ru/privacy" class="hover:text-white transition-colors">Политика конфиденциальности</a>
+<a href="https://lonvibio.com.ru/offer" class="hover:text-white transition-colors">Публичная оферта</a>
+</div>
+</div>
+</div>
+</footer>
+<div id="media-modal" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300">
+<div class="relative max-w-4xl w-full bg-[#0E1015] border border-white/20 p-4 sm:p-6 shadow-2xl flex flex-col max-h-[90vh] overflow-hidden">
+<div class="flex items-center justify-between pb-3 mb-3 border-b border-white/10">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-emerald-400 animate-pulse"></span>
+<span id="modal-title" class="text-xs sm:text-sm font-mono uppercase tracking-widest text-neutral-200 font-bold">
+ПРОСМОТР
+</span>
+</div>
+<button onclick="closeMediaModal()" class="text-neutral-400 hover:text-white transition-colors p-1" aria-label="Закрыть">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+</button>
+</div>
+<div class="flex-1 flex items-center justify-center overflow-hidden min-h-[300px] sm:min-h-[480px]">
+<img id="modal-cert-img" src="" alt="Скан" class="max-w-full max-h-[75vh] object-contain shadow-2xl">
+</div>
+<div class="pt-3 mt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-neutral-400">
+<span id="modal-subtitle">LONVI Biosciences</span>
+<button onclick="closeMediaModal()" class="px-4 py-1.5 bg-white text-black font-mono font-bold text-xs uppercase hover:bg-neutral-200 transition-colors">
+ЗАКРЫТЬ
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+(function() {
+const certificatesData = [{"key":"gmp","title":"GMP СЕРТИФИКАТ","badge":"СТАНДАРТ КАЧЕСТВА GMP","desc":"Удостоверяет, что производственные процессы соответствуют высоким стандартам качества и безопасности, обеспечивая надежность и эффективность продукции.","img":"https://static.tildacdn.com/tild6638-3136-4130-b232-313435396162/noroot.png","status":"ПОДТВЕРЖДЕНО ✓"},{"key":"fda","title":"FDA СЕРТИФИКАТ","badge":"РЕГИСТРАЦИЯ FDA (США)","desc":"Подтверждает, что продукт прошел оценку безопасности и эффективности и соответствует стандартам, установленным Управлением по санитарному надзору за качеством пищевых продуктов и медикаментов США.","img":"https://static.tildacdn.com/tild6532-6535-4330-a666-306636303437/noroot.png","status":"ПОДТВЕРЖДЕНО ✓"},{"key":"eaeu","title":"ЕАЭС СВИДЕТЕЛЬСТВО","badge":"РЕЕСТР ЕАЭС / EAC","desc":"Подтверждает, что продукт соответствует требованиям безопасности и качества, установленным Евразийским экономическим союзом для обращения на территории государств - членов ЕАЭС.","img":"https://static.tildacdn.com/tild6135-6537-4339-b065-366631353863/noroot.png","status":"ПОДТВЕРЖДЕНО ✓"},{"key":"haccp","title":"HACCP СЕРТИФИКАТ","badge":"СИСТЕМА БЕЗОПАСНОСТИ HACCP","desc":"Научно обоснованная система обеспечения пищевой безопасности, которая направлена на выявление, оценку и контроль от первичного производства до конечного потребления","img":"https://static.tildacdn.com/tild3131-3361-4161-b034-336133303936/noroot.png","status":"ПОДТВЕРЖДЕНО ✓"},{"key":"halal","title":"HALAL СЕРТИФИКАТ","badge":"СТАНДАРТ ХАЛЯЛЬ","desc":"Подтверждает, что процесс производства, хранения, упаковки и транспортировки соответствуют исламским нормам и требованиям шариата","img":"https://static.tildacdn.com/tild6330-3635-4465-b335-346538376632/Product_Reshoot_-___.png","status":"ПОДТВЕРЖДЕНО ✓"},{"key":"sgs","title":"ТЕСТ COA SGS","badge":"ЛАБОРАТОРИЯ SGS (ШВЕЙЦАРИЯ)","desc":"Подтверждает результаты лабораторных испытаний, которые удостоверяют соответствие продукта установленным стандартам качества и безопасности","img":"https://static.tildacdn.com/tild3139-3531-4163-a437-346564353838/noroot.png","status":"ПОДТВЕРЖДЕНО ✓"}];
+window.openCertModal = function(key) {
+const cert = certificatesData.find(c => c.key === key);
+if (!cert) return;
+const modal = document.getElementById('media-modal');
+const title = document.getElementById('modal-title');
+const subtitle = document.getElementById('modal-subtitle');
+const img = document.getElementById('modal-cert-img');
+if (modal) {
+if (title) title.textContent = cert.title + ' // ' + cert.badge;
+if (subtitle) subtitle.textContent = cert.desc;
+if (img) {
+img.src = cert.img;
+img.alt = cert.title;
+}
+modal.classList.remove('pointer-events-none');
+modal.classList.remove('opacity-0');
+document.body.style.overflow = 'hidden';
+}
+};
+window.closeMediaModal = function() {
+const modal = document.getElementById('media-modal');
+if (modal) {
+modal.classList.add('opacity-0');
+setTimeout(() => {
+modal.classList.add('pointer-events-none');
+document.body.style.overflow = '';
+}, 300);
+}
+};
+// Close modal on click outside or ESC
+const modalEl = document.getElementById('media-modal');
+if (modalEl) {
+modalEl.addEventListener('click', function(e) {
+if (e.target === modalEl) window.closeMediaModal();
+});
+}
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape') window.closeMediaModal();
+});
+// Mobile Menu Toggle
+const menuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+if (menuBtn && mobileMenu) {
+menuBtn.addEventListener('click', function() {
+mobileMenu.classList.toggle('translate-x-full');
+});
+mobileMenu.querySelectorAll('a').forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+});
+}
+})();
+</script>
