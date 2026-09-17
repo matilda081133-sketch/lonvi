@@ -1,0 +1,862 @@
+<!-- ========================================================== -->
+<!-- LONVI CONSULTATION — TILDA PART 3 (SECTIONS 9-14 & SCRIPTS) -->
+<!-- ========================================================== -->
+
+  <!-- ====================================================== -->
+  <!-- 9. ЛИЧНЫЙ КАБИНЕТ: ЦИФРОВОЙ МАРШРУТ LONVI -->
+  <!-- ====================================================== -->
+  <section class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 lg:py-28 border-b border-white/10">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#141721] border border-white/20 text-white font-mono text-xs tracking-widest uppercase mb-4">
+        <span>[ ИНТЕРФЕЙС КЛИЕНТА ]</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-wild uppercase tracking-tight mb-6">
+        ЛИЧНЫЙ КАБИНЕТ <span class="gradient-text-animated font-black drop-shadow-sm">LONVI</span>
+      </h2>
+      <p class="text-neutral-300 text-base sm:text-lg leading-relaxed">
+        Собственный цифровой маршрут: документы, анализы, цели, биомаркеры, PCC1, нутрицевтики, план и напоминания в едином защищенном пространстве.
+      </p>
+    </div>
+
+    <div class="consult-card rounded-lg overflow-hidden border border-white/20 shadow-2xl">
+      <div class="bg-[#11141C] p-4 sm:p-6 border-b border-white/10 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
+          <div>
+            <div class="text-xs font-mono text-neutral-400">ТЕКУЩИЙ ЭТАП</div>
+            <div class="text-sm font-bold text-white uppercase">02 // Загрузка и верификация анализов</div>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-xs font-mono">
+          <div><span class="text-neutral-400">Ближайшее действие:</span> <strong class="text-emerald-400">Онлайн-сессия 22.09 в 15:00</strong></div>
+          <div><span class="text-neutral-400">Статус PCC1:</span> <strong class="text-cyan-400">Подготовка к 1-му циклу</strong></div>
+          <div><span class="text-neutral-400">Документов:</span> <strong class="text-white">4 файла</strong></div>
+        </div>
+      </div>
+
+      <div class="bg-[#0B0D13] px-4 sm:px-6 border-b border-white/10 flex gap-2 overflow-x-auto custom-scrollbar">
+        <button onclick="openCabinetTab('cab-dash')" id="cab-btn-dash" class="cabinet-tab-btn active px-4 py-3 text-xs font-mono uppercase tracking-wider border-b-2 border-transparent transition-all whitespace-nowrap">Дашборд</button>
+        <button onclick="openCabinetTab('cab-docs')" id="cab-btn-docs" class="cabinet-tab-btn px-4 py-3 text-xs font-mono uppercase tracking-wider border-b-2 border-transparent text-neutral-400 hover:text-white transition-all whitespace-nowrap">Документы (4)</button>
+        <button onclick="openCabinetTab('cab-goals')" id="cab-btn-goals" class="cabinet-tab-btn px-4 py-3 text-xs font-mono uppercase tracking-wider border-b-2 border-transparent text-neutral-400 hover:text-white transition-all whitespace-nowrap">Цели & Прогресс</button>
+        <button onclick="openCabinetTab('cab-biomarkers')" id="cab-btn-biomarkers" class="cabinet-tab-btn px-4 py-3 text-xs font-mono uppercase tracking-wider border-b-2 border-transparent text-neutral-400 hover:text-white transition-all whitespace-nowrap">Биомаркеры</button>
+        <button onclick="openCabinetTab('cab-pcc1')" id="cab-btn-pcc1" class="cabinet-tab-btn px-4 py-3 text-xs font-mono uppercase tracking-wider border-b-2 border-transparent text-neutral-400 hover:text-white transition-all whitespace-nowrap">Протокол PCC1</button>
+        <button onclick="openCabinetTab('cab-nutri')" id="cab-btn-nutri" class="cabinet-tab-btn px-4 py-3 text-xs font-mono uppercase tracking-wider border-b-2 border-transparent text-neutral-400 hover:text-white transition-all whitespace-nowrap">Нутрицевтики</button>
+        <button onclick="openCabinetTab('cab-plan')" id="cab-btn-plan" class="cabinet-tab-btn px-4 py-3 text-xs font-mono uppercase tracking-wider border-b-2 border-transparent text-neutral-400 hover:text-white transition-all whitespace-nowrap">План на 30–90 дней</button>
+        <button onclick="openCabinetTab('cab-history')" id="cab-btn-history" class="cabinet-tab-btn px-4 py-3 text-xs font-mono uppercase tracking-wider border-b-2 border-transparent text-neutral-400 hover:text-white transition-all whitespace-nowrap">История</button>
+      </div>
+
+      <div class="p-6 sm:p-8 bg-[#0D0F16]">
+        <div id="cab-dash" class="cabinet-view-content space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4 border border-white/10 bg-white/5">
+              <div class="text-[10px] font-mono text-neutral-400 uppercase">Ближайшая онлайн-встреча</div>
+              <div class="text-lg font-bold text-white mt-1">22 сентября, 15:00 МСК</div>
+              <div class="text-xs text-emerald-400 mt-1">Эксперт: д.м.н. Карпов А.В.</div>
+            </div>
+            <div class="p-4 border border-white/10 bg-white/5">
+              <div class="text-[10px] font-mono text-neutral-400 uppercase">Статус загрузки анализов</div>
+              <div class="text-lg font-bold text-white mt-1">Верифицировано 3 из 4</div>
+              <div class="text-xs text-amber-300 mt-1">Требуется дозагрузить: hs-CRP</div>
+            </div>
+            <div class="p-4 border border-white/10 bg-white/5">
+              <div class="text-[10px] font-mono text-neutral-400 uppercase">Персональный протокол</div>
+              <div class="text-lg font-bold text-white mt-1">Версия v1.2 подготовлена</div>
+              <a href="#result-protocol" class="text-xs text-cyan-400 underline mt-1 inline-block">Открыть персональный план →</a>
+            </div>
+          </div>
+          
+          <div class="border border-white/10 p-5 bg-black/40">
+            <h4 class="text-xs font-mono uppercase tracking-wider text-neutral-400 mb-3">Задачи на текущую неделю:</h4>
+            <div class="space-y-2 text-xs">
+              <label class="flex items-center gap-3 text-neutral-300">
+                <input type="checkbox" checked disabled class="accent-emerald-500">
+                <span class="line-through text-neutral-500">Заполнить вводную анкету по образу жизни и препаратам</span>
+              </label>
+              <label class="flex items-center gap-3 text-neutral-300">
+                <input type="checkbox" checked disabled class="accent-emerald-500">
+                <span class="line-through text-neutral-500">Прикрепить выписку биохимического анализа крови</span>
+              </label>
+              <label class="flex items-center gap-3 text-white font-medium">
+                <input type="checkbox" class="accent-emerald-500">
+                <span>Пройти 60-минутную видеоконсультацию со специалистом</span>
+              </label>
+              <label class="flex items-center gap-3 text-neutral-400">
+                <input type="checkbox" class="accent-emerald-500">
+                <span>Подтвердить получение персонального протокола на 60 дней</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div id="cab-docs" class="cabinet-view-content hidden space-y-4">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xs font-mono text-neutral-400">АРХИВ МЕДИЦИНСКИХ ФАЙЛОВ</span>
+            <button onclick="document.getElementById('file-upload-input').click()" class="px-3 py-1.5 border border-white/20 bg-white/10 hover:bg-white hover:text-black text-xs font-mono transition-all">
+              + ЗАГРУЗИТЬ НОВЫЙ ФАЙЛ
+            </button>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs font-mono">
+              <thead>
+                <tr class="border-b border-white/10 text-neutral-400">
+                  <th class="py-2">Дата</th>
+                  <th class="py-2">Категория</th>
+                  <th class="py-2">Название документа</th>
+                  <th class="py-2">Статус проверки</th>
+                  <th class="py-2 text-right">Действие</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/5 text-neutral-200">
+                <tr>
+                  <td class="py-3">12.08.2026</td>
+                  <td class="text-cyan-400">Анализы</td>
+                  <td>Клинический и биохимический анализ крови (Инвитро)</td>
+                  <td><span class="text-emerald-400">● Проверено врачом</span></td>
+                  <td class="text-right"><button class="text-neutral-400 hover:text-white underline">Заменить</button></td>
+                </tr>
+                <tr>
+                  <td class="py-3">14.08.2026</td>
+                  <td class="text-purple-400">Заключения</td>
+                  <td>УЗИ органов брюшной полости и сосудов шеи</td>
+                  <td><span class="text-emerald-400">● Проверено врачом</span></td>
+                  <td class="text-right"><button class="text-neutral-400 hover:text-white underline">Заменить</button></td>
+                </tr>
+                <tr>
+                  <td class="py-3">01.09.2026</td>
+                  <td class="text-amber-400">Добавки</td>
+                  <td>Список текущих нутрицевтиков и дозировок</td>
+                  <td><span class="text-emerald-400">● Учтено в плане</span></td>
+                  <td class="text-right"><button class="text-neutral-400 hover:text-white underline">Заменить</button></td>
+                </tr>
+                <tr>
+                  <td class="py-3">03.09.2026</td>
+                  <td class="text-blue-400">PCC1</td>
+                  <td>Индивидуальный дневник переносимости сенолитиков</td>
+                  <td><span class="text-cyan-400">● В процессе оценки</span></td>
+                  <td class="text-right"><button class="text-neutral-400 hover:text-white underline">Заменить</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="cab-goals" class="cabinet-view-content hidden space-y-4">
+          <div class="p-4 border border-white/10 bg-white/5">
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-xs font-mono text-emerald-400 uppercase">ГЛАВНАЯ ЦЕЛЬ</span>
+              <span class="text-xs font-mono text-white">Срок: 90 дней (до 15.11.2026)</span>
+            </div>
+            <div class="text-lg font-bold text-white">Снижение сосудистого воспаления и нормализация клеточного энергообмена</div>
+            <div class="w-full bg-neutral-800 h-2 mt-3 rounded-full overflow-hidden">
+              <div class="bg-emerald-400 h-full w-[65%]"></div>
+            </div>
+            <div class="flex justify-between text-[11px] font-mono text-neutral-400 mt-1">
+              <span>Прогресс: 65%</span>
+              <span>Этап 2 из 3</span>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div class="p-3 border border-white/10 bg-black/30">
+              <span class="text-neutral-400 font-mono">Подцель 1:</span>
+              <div class="font-bold text-white mt-1">Снижение hs-CRP ниже 0.9 мг/л</div>
+              <span class="text-emerald-400 font-mono text-[11px]">Статус: Достигнуто (0.82 мг/л)</span>
+            </div>
+            <div class="p-3 border border-white/10 bg-black/30">
+              <span class="text-neutral-400 font-mono">Подцель 2:</span>
+              <div class="font-bold text-white mt-1">Завершение 1-го цикла LONVI PCC1</div>
+              <span class="text-cyan-400 font-mono text-[11px]">Статус: Запланирован старт</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="cab-biomarkers" class="cabinet-view-content hidden space-y-4 text-xs font-mono">
+          <div class="text-neutral-400 mb-2">ДИНАМИЧЕСКИЙ ТРЕКЕР ПОКАЗАТЕЛЕЙ</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="p-3 border border-white/10 bg-black/40">
+              <div class="text-neutral-400">hs-CRP: <strong class="text-white">0.82 мг/л</strong> (Базовый был 1.15)</div>
+              <div class="text-emerald-400 mt-1">Динамика: ↓ -28% (Положительный тренд)</div>
+            </div>
+            <div class="p-3 border border-white/10 bg-black/40">
+              <div class="text-neutral-400">Гомоцистеин: <strong class="text-white">9.4 мкмоль/л</strong></div>
+              <div class="text-amber-400 mt-1">Статус: Требуется контроль кофакторов</div>
+            </div>
+            <div class="p-3 border border-white/10 bg-black/40">
+              <div class="text-neutral-400">ApoB: <strong class="text-white">78 мг/дл</strong></div>
+              <div class="text-cyan-400 mt-1">Динамика: Стабильно в целевом диапазоне</div>
+            </div>
+            <div class="p-3 border border-white/10 bg-black/40">
+              <div class="text-neutral-400">HOMA-IR: <strong class="text-white">1.1</strong></div>
+              <div class="text-emerald-400 mt-1">Статус: Оптимальная чувствительность</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="cab-pcc1" class="cabinet-view-content hidden space-y-4 text-xs text-neutral-300">
+          <div class="p-4 border border-white/10 bg-white/5 space-y-2">
+            <div class="flex justify-between font-mono text-neutral-400">
+              <span>СТАТУС КУРСА:</span>
+              <span class="text-emerald-400">ПОДГОТОВИТЕЛЬНЫЙ ЭТАП</span>
+            </div>
+            <div class="font-bold text-white text-sm">Циклический сенолитический протокол LONVI PCC1</div>
+            <p>Текущий этап: Согласование индивидуального тайминга приема и даты первого 3-дневного цикла.</p>
+            <div class="pt-2 text-neutral-400 font-mono text-[11px]">Контрольная дата оценки самочувствия: 10 октября 2026</div>
+          </div>
+        </div>
+
+        <div id="cab-nutri" class="cabinet-view-content hidden space-y-3 text-xs">
+          <div class="p-3 border border-white/10 bg-black/30 flex justify-between items-center">
+            <div>
+              <strong class="text-white">LONVI NMN Synergy</strong>
+              <div class="text-neutral-400">500 мг утром с водой // Энергия и репарация ДНК</div>
+            </div>
+            <span class="font-mono text-emerald-400">Курс: 60 дней</span>
+          </div>
+          <div class="p-3 border border-white/10 bg-black/30 flex justify-between items-center">
+            <div>
+              <strong class="text-white">LONVI Spermidine Pure</strong>
+              <div class="text-neutral-400">2 мг днем во время еды // Клеточная аутофагия</div>
+            </div>
+            <span class="font-mono text-cyan-400">Курс: 90 дней</span>
+          </div>
+        </div>
+
+        <div id="cab-plan" class="cabinet-view-content hidden space-y-4">
+          <div class="text-xs font-mono text-neutral-400">КАЛЕНДАРНЫЙ ГРАФИК ДЕЙСТВИЙ (30–90 ДНЕЙ)</div>
+          <div class="space-y-3 text-xs">
+            <div class="p-3 border-l-2 border-emerald-400 bg-white/5">
+              <div class="font-bold text-white">День 1–7: Завершение подготовки</div>
+              <div class="text-neutral-400 mt-0.5">Консультация, согласование списка препаратов и графика цикла PCC1.</div>
+            </div>
+            <div class="p-3 border-l-2 border-cyan-400 bg-white/5">
+              <div class="font-bold text-white">День 8–10: Первый сенолитический цикл PCC1</div>
+              <div class="text-neutral-400 mt-0.5">Прием строго по согласованной инструкции, дневник самочувствия.</div>
+            </div>
+            <div class="p-3 border-l-2 border-purple-400 bg-white/5">
+              <div class="font-bold text-white">День 11–45: Фаза восстановления и нутрицевтической поддержки</div>
+              <div class="text-neutral-400 mt-0.5">Курс NMN + Spermidine, оптимизация циркадных ритмов.</div>
+            </div>
+            <div class="p-3 border-l-2 border-amber-400 bg-white/5">
+              <div class="font-bold text-white">День 60–90: Лабораторный контроль и повторная сессия</div>
+              <div class="text-neutral-400 mt-0.5">Контрольный забор hs-CRP и липидного профиля, фиксация прогресса.</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="cab-history" class="cabinet-view-content hidden space-y-3 text-xs font-mono text-neutral-400">
+          <div class="p-2.5 border-b border-white/5 flex justify-between">
+            <span>17.09.2026 // 10:14</span>
+            <span class="text-white">Создан черновик предварительной анкеты</span>
+          </div>
+          <div class="p-2.5 border-b border-white/5 flex justify-between">
+            <span>01.09.2026 // 16:30</span>
+            <span class="text-white">Загружен документ: Липидограмма_август.pdf</span>
+          </div>
+          <div class="p-2.5 border-b border-white/5 flex justify-between">
+            <span>14.08.2026 // 11:00</span>
+            <span class="text-white">Проведена первичная сессия PCC1 Start</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 10. МНОГОШАГОВАЯ АНКЕТА (7 ШАГОВ С АВТОСОХРАНЕНИЕМ) -->
+  <!-- ====================================================== -->
+  <section id="consultation-form" class="max-w-4xl mx-auto px-6 sm:px-8 py-20 lg:py-28 border-b border-white/10">
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#141721] border border-white/20 text-white font-mono text-xs tracking-widest uppercase mb-4">
+        <span>[ ОФОРМЛЕНИЕ ЗАЯВКИ ]</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-wild uppercase tracking-tight mb-4">
+        ПРЕДВАРИТЕЛЬНАЯ <span class="gradient-text-animated font-black drop-shadow-sm">АНКЕТА</span>
+      </h2>
+      <p class="text-neutral-400 text-sm sm:text-base">
+        Заполните данные для подготовки эксперта к консультации. Черновик автоматически сохраняется в вашем браузере.
+      </p>
+    </div>
+
+    <div class="consult-card p-6 sm:p-10 relative">
+      <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-8">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span id="step-indicator-text" class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold">ШАГ 1 ИЗ 7</span>
+        </div>
+        <span id="draft-status" class="text-[11px] font-mono text-neutral-400">Черновик сохранен</span>
+      </div>
+
+      <form id="lonvi-multistep-form" onsubmit="event.preventDefault();">
+        <!-- STEP 1: ЗАПРОС -->
+        <div class="form-step-content" id="step-1">
+          <h3 class="text-lg font-wild font-bold uppercase mb-4 text-white">Шаг 1. Ваш запрос и формат</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Главная цель консультации *</label>
+              <select id="field-goal" class="form-input w-full p-3 text-sm">
+                <option value="Готовлюсь к PCC1">Готовлюсь к первому приему LONVI PCC1</option>
+                <option value="Уже прохожу протокол">Уже прохожу протокол PCC1, нужны уточнения</option>
+                <option value="Хочу разобраться в анализах">Хочу разобраться в анализах и маркерах воспаления</option>
+                <option value="Принимаю несколько добавок">Принимаю добавки, нужен аудит совместимости</option>
+                <option value="Хочу контролировать динамику">Долгосрочный контроль динамики и биомаркеров</option>
+                <option value="Нужна повторная консультация">Повторная консультация по итогам курса</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Выбранный формат *</label>
+              <select id="field-format" class="form-input w-full p-3 text-sm">
+                <option value="PCC1 Start">PCC1 Start (35 мин // 4 500 ₽)</option>
+                <option value="PCC1 + биомаркеры" selected>PCC1 + Биомаркеры (60 мин // 8 500 ₽)</option>
+                <option value="PCC1 + нутрицевтики">PCC1 + Нутрицевтики (60 мин // 7 500 ₽)</option>
+                <option value="Сопровождение">Сопровождение 90 дней (28 000 ₽)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Главный вопрос к специалисту</label>
+              <textarea id="field-main-question" rows="3" class="form-input w-full p-3 text-sm" placeholder="Например: как синхронизировать прием PCC1 с моим текущим графиком тренировок и сном?"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2: PCC1 СТАТУС -->
+        <div class="form-step-content hidden" id="step-2">
+          <h3 class="text-lg font-wild font-bold uppercase mb-4 text-white">Шаг 2. Ваш опыт и статус по PCC1</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Принимаете ли вы PCC1 сейчас? *</label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <label class="p-3 border border-white/10 bg-white/5 flex items-center gap-2 cursor-pointer text-xs">
+                  <input type="radio" name="pcc1_status" value="Нет, только планирую" checked class="accent-emerald-500">
+                  <span>Только планирую</span>
+                </label>
+                <label class="p-3 border border-white/10 bg-white/5 flex items-center gap-2 cursor-pointer text-xs">
+                  <input type="radio" name="pcc1_status" value="Принимаю сейчас" class="accent-emerald-500">
+                  <span>Принимаю сейчас</span>
+                </label>
+                <label class="p-3 border border-white/10 bg-white/5 flex items-center gap-2 cursor-pointer text-xs">
+                  <input type="radio" name="pcc1_status" value="Принимал ранее" class="accent-emerald-500">
+                  <span>Принимал ранее</span>
+                </label>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Когда начали или планируете начать?</label>
+              <input type="text" id="field-pcc1-date" class="form-input w-full p-3 text-sm" placeholder="Например: через 2 недели после консультации">
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Какая версия продукта у вас на руках?</label>
+              <input type="text" id="field-pcc1-version" class="form-input w-full p-3 text-sm" placeholder="LONVI PCC1 60 капсул / Пока не приобретал">
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: БЕЗОПАСНОСТЬ -->
+        <div class="form-step-content hidden" id="step-3">
+          <h3 class="text-lg font-wild font-bold uppercase mb-4 text-white">Шаг 3. Безопасность и противопоказания</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Постоянно принимаемые лекарственные препараты</label>
+              <textarea id="field-meds" rows="2" class="form-input w-full p-3 text-sm" placeholder="Например: Эутирокс 50 мкг, Аспирин кардио (или 'Нет')"></textarea>
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Хронические диагнозы и перенесенные заболевания</label>
+              <textarea id="field-diagnoses" rows="2" class="form-input w-full p-3 text-sm" placeholder="Например: гастрит в ремиссии, гипертония 1 ст."></textarea>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Аллергические реакции</label>
+                <input type="text" id="field-allergies" class="form-input w-full p-3 text-sm" placeholder="Например: на пыльцу, пенициллин">
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Беременность / Лактация</label>
+                <select id="field-pregnancy" class="form-input w-full p-3 text-sm">
+                  <option value="Не актуально">Не актуально</option>
+                  <option value="Беременность (противопоказание)">Беременность</option>
+                  <option value="Период лактации (противопоказание)">Период лактации</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4: ОБРАЗ ЖИЗНИ -->
+        <div class="form-step-content hidden" id="step-4">
+          <h3 class="text-lg font-wild font-bold uppercase mb-4 text-white">Шаг 4. Образ жизни и ритм</h3>
+          <div class="space-y-4 text-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-mono text-neutral-300 uppercase mb-2">Качество и длительность сна</label>
+                <input type="text" id="field-sleep" class="form-input w-full p-3 text-sm" placeholder="6-7 часов, пробуждения в 3 ночи">
+              </div>
+              <div>
+                <label class="block font-mono text-neutral-300 uppercase mb-2">Характер питания</label>
+                <input type="text" id="field-diet" class="form-input w-full p-3 text-sm" placeholder="Интервальное голодание 16/8, кето, обычное">
+              </div>
+              <div>
+                <label class="block font-mono text-neutral-300 uppercase mb-2">Физическая активность</label>
+                <input type="text" id="field-activity" class="form-input w-full p-3 text-sm" placeholder="Силовые 2 раза в нед., шаги 8 000">
+              </div>
+              <div>
+                <label class="block font-mono text-neutral-300 uppercase mb-2">Уровень стресса (от 1 до 10)</label>
+                <input type="number" min="1" max="10" id="field-stress" class="form-input w-full p-3 text-sm" placeholder="7">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 5: ДАННЫЕ И ФАЙЛЫ -->
+        <div class="form-step-content hidden" id="step-5">
+          <h3 class="text-lg font-wild font-bold uppercase mb-4 text-white">Шаг 5. Лабораторные данные и документы</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Какие анализы у вас есть на руках и их даты?</label>
+              <textarea id="field-lab-info" rows="2" class="form-input w-full p-3 text-sm" placeholder="Например: Общий анализ и биохимия от августа 2026, УЗИ брюшной полости"></textarea>
+            </div>
+            <div class="border-2 border-dashed border-white/20 p-6 text-center bg-white/5 hover:border-white/50 transition-colors cursor-pointer" onclick="document.getElementById('file-upload-input').click()">
+              <input type="file" id="file-upload-input" multiple class="hidden" onchange="handleFileSelect(this)">
+              <div class="text-2xl mb-2">📄</div>
+              <div class="text-sm font-bold text-white mb-1">Нажмите или перетащите файлы анализов (PDF, JPG, PNG)</div>
+              <div class="text-xs text-neutral-400 font-mono">Файлы защищены сквозным шифрованием медицинских данных</div>
+              <div id="file-list-preview" class="mt-3 text-xs text-emerald-400 font-mono"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 6: КОНТАКТЫ -->
+        <div class="form-step-content hidden" id="step-6">
+          <h3 class="text-lg font-wild font-bold uppercase mb-4 text-white">Шаг 6. Контактные данные</h3>
+          <div class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Ваше имя *</label>
+                <input type="text" id="field-name" required class="form-input w-full p-3 text-sm" placeholder="Александр">
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Телефон (для связи) *</label>
+                <input type="tel" id="field-phone" required class="form-input w-full p-3 text-sm" placeholder="+7 (999) 000-00-00">
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Telegram (@username)</label>
+                <input type="text" id="field-telegram" class="form-input w-full p-3 text-sm" placeholder="@username">
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Email (для отчета) *</label>
+                <input type="email" id="field-email" required class="form-input w-full p-3 text-sm" placeholder="name@example.com">
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Город и часовой пояс</label>
+                <input type="text" id="field-city" class="form-input w-full p-3 text-sm" placeholder="Москва (МСК)">
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-neutral-300 uppercase mb-2">Удобное время для встречи</label>
+                <input type="text" id="field-time" class="form-input w-full p-3 text-sm" placeholder="Будни с 14:00 до 18:00">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 7: СОГЛАСИЯ И ДИСКЛЕЙМЕР -->
+        <div class="form-step-content hidden" id="step-7">
+          <h3 class="text-lg font-wild font-bold uppercase mb-4 text-white">Шаг 7. Согласия и подтверждение</h3>
+          <div class="space-y-3 text-xs text-neutral-300">
+            <label class="flex items-start gap-3 p-3 border border-white/10 bg-white/5 cursor-pointer">
+              <input type="checkbox" id="consent-pd" checked required class="mt-0.5 accent-emerald-500">
+              <span>Я даю согласие на обработку персональных данных в соответствии с политикой конфиденциальности LONVI.</span>
+            </label>
+            <label class="flex items-start gap-3 p-3 border border-white/10 bg-white/5 cursor-pointer">
+              <input type="checkbox" id="consent-med" checked required class="mt-0.5 accent-emerald-500">
+              <span>Я подтверждаю добровольное предоставление медицинской информации и анализов для экспертной оценки.</span>
+            </label>
+            <label class="flex items-start gap-3 p-3 border border-white/10 bg-white/5 cursor-pointer">
+              <input type="checkbox" id="consent-info" checked class="mt-0.5 accent-emerald-500">
+              <span>Согласен получать информационные материалы и протоколы по электронной почте и в Telegram.</span>
+            </label>
+            <label class="flex items-start gap-3 p-3 border border-white/10 bg-white/5 cursor-pointer">
+              <input type="checkbox" id="consent-limits" checked required class="mt-0.5 accent-emerald-500">
+              <span>Подтверждаю ознакомление с регламентом и ограничениями консультации (консультация не заменяет врачебную помощь).</span>
+            </label>
+
+            <div class="p-4 border border-amber-500/30 bg-amber-950/20 text-neutral-300 text-[11px] leading-relaxed mt-4">
+              <strong>Медицинский дисклеймер:</strong> Информация носит ознакомительный характер и не предназначена для самодиагностики, самолечения или самостоятельной отмены назначений врача. Консультация по PCC1 и нутрицевтическим продуктам не заменяет медицинскую помощь. При заболеваниях, беременности, приёме лекарств, аллергиях или изменении самочувствия необходимо обратиться к квалифицированному медицинскому специалисту.
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between border-t border-white/10 pt-6 mt-8">
+          <button type="button" id="prev-step-btn" onclick="navStep(-1)" class="px-5 py-3 border border-white/20 hover:border-white text-xs font-mono uppercase tracking-wider text-neutral-300 hover:text-white transition-all hidden">
+            ← НАЗАД
+          </button>
+          <div class="ml-auto flex items-center gap-3">
+            <button type="button" id="next-step-btn" onclick="navStep(1)" class="px-7 py-3 bg-white hover:bg-neutral-200 text-black text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-md">
+              ДАЛЕЕ →
+            </button>
+            <button type="button" id="submit-form-btn" onclick="submitConsultation()" class="px-8 py-3 bg-emerald-400 hover:bg-emerald-300 text-black text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-md hidden">
+              ОТПРАВИТЬ АНКЕТУ И ЗАПИСАТЬСЯ
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <div id="form-success-overlay" class="hidden absolute inset-0 bg-[#0A0B0E]/95 backdrop-blur-md z-30 flex flex-col items-center justify-center p-8 text-center">
+        <div class="w-16 h-16 rounded-full bg-emerald-400/20 border border-emerald-400 flex items-center justify-center text-emerald-400 text-2xl mb-4">
+          ✓
+        </div>
+        <h3 class="text-2xl sm:text-3xl font-wild font-bold text-white uppercase mb-2">АНКЕТА УСПЕШНО ПРИНЯТА</h3>
+        <p class="text-neutral-300 text-sm max-w-md mb-6 leading-relaxed">
+          Ваш персональный черновик передан медицинскому координатору. Мы свяжемся с вами в Telegram или по телефону в течение 2 рабочих часов для согласования времени онлайн-встречи.
+        </p>
+        <a href="#result-protocol" onclick="document.getElementById('form-success-overlay').classList.add('hidden')" class="px-6 py-3 border border-white/30 text-xs font-mono uppercase tracking-widest text-white hover:border-white">
+          ПОСМОТРЕТЬ ОБРАЗЕЦ ПРОТОКОЛА ↓
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 11. РЕЗУЛЬТАТ КОНСУЛЬТАЦИИ (ОБРАЗЕЦ ИТОГОВОГО ДОКУМЕНТА) -->
+  <!-- ====================================================== -->
+  <section id="result-protocol" class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 lg:py-28 border-b border-white/10">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#141721] border border-white/20 text-white font-mono text-xs tracking-widest uppercase mb-4">
+        <span>[ ФИНАЛЬНЫЙ АРТЕФАКТ ]</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-wild uppercase tracking-tight mb-6">
+        РЕЗУЛЬТАТ <span class="gradient-text-animated font-black drop-shadow-sm">КОНСУЛЬТАЦИИ</span>
+      </h2>
+      <p class="text-neutral-300 text-base sm:text-lg leading-relaxed">
+        По итогам сессии в личном кабинете формируется официальный документ LONVI Protocol. Он доступен в веб-интерфейсе и в виде защищенного PDF.
+      </p>
+    </div>
+
+    <div class="consult-card max-w-4xl mx-auto p-6 sm:p-10 border border-white/20 bg-[#0E1118]">
+      <div class="border-b border-white/10 pb-6 mb-6 flex flex-wrap justify-between items-center gap-4">
+        <div>
+          <div class="text-xs font-mono text-emerald-400 uppercase tracking-widest">LONVI BIOSCIENCES // EXPERT REPORT</div>
+          <h3 class="text-xl sm:text-2xl font-wild font-bold text-white uppercase mt-1">ПЕРСОНАЛЬНЫЙ ПРОТОКОЛ ДОЛГОЛЕТИЯ #LN-8942</h3>
+        </div>
+        <button onclick="downloadPdfMock()" class="px-4 py-2 border border-white/20 hover:border-white bg-white/5 hover:bg-white hover:text-black text-xs font-mono uppercase tracking-wider transition-all flex items-center gap-2">
+          <span>СКАЧАТЬ ЗАЩИЩЕННЫЙ PDF</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        </button>
+      </div>
+
+      <div class="space-y-6 text-xs sm:text-sm text-neutral-300">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 border-b border-white/10 pb-4">
+          <div>
+            <span class="text-neutral-400 font-mono text-xs block mb-1">ЗАПРОС КЛИЕНТА:</span>
+            <p class="text-white font-medium">Безопасный старт курса LONVI PCC1, нормализация профиля воспаления (hs-CRP) и подбор поддерживающих нутрицевтиков.</p>
+          </div>
+          <div>
+            <span class="text-neutral-400 font-mono text-xs block mb-1">РАССМОТРЕННЫЕ ДАННЫЕ:</span>
+            <p class="text-white font-medium">Лабораторная панель от 12.08.2026 (биохимия, hs-CRP, ApoB, HOMA-IR). Отсутствие абсолютных противопоказаний.</p>
+          </div>
+        </div>
+
+        <div>
+          <span class="text-neutral-400 font-mono text-xs block mb-1">ОБСУЖДЕНИЕ И НАЗНАЧЕНИЕ ПРОТОКОЛА PCC1:</span>
+          <p class="leading-relaxed">
+            Утвержден 1-й цикл LONVI PCC1 длительностью 3 последовательных дня. Прием строго после легкого приема пищи в утренние часы. Контроль питьевого режима (не менее 2.2 л воды в день курса).
+          </p>
+        </div>
+
+        <div>
+          <span class="text-neutral-400 font-mono text-xs block mb-1">ДОПОЛНИТЕЛЬНЫЕ НУТРИЦЕВТИКИ И КОФАКТОРЫ:</span>
+          <ul class="list-disc list-inside space-y-1 text-neutral-200">
+            <li><strong>LONVI NMN Synergy:</strong> 500 мг ежедневно утром натощак (курс 60 дней, поддержка пула NAD+).</li>
+            <li><strong>LONVI Spermidine:</strong> 2 мг во время обеда (курс 90 дней, активация аутофагии).</li>
+            <li><strong>Бисглицинат магния:</strong> 300 мг за 1 час до сна (снижение нейронального напряжения).</li>
+          </ul>
+        </div>
+
+        <div class="p-4 border border-white/10 bg-black/40">
+          <span class="text-neutral-400 font-mono text-xs block mb-1">ПЛАН НА 30–90 ДНЕЙ И ЧТО НЕЛЬЗЯ МЕНЯТЬ БЕЗ ВРАЧА:</span>
+          <p class="text-neutral-200 leading-relaxed">
+            Категорически запрещается самовольно увеличивать дозировку PCC1 или сокращать интервал между курсами сенолитиков. При приеме любых антикоагулянтов требуется немедленное согласование.
+          </p>
+        </div>
+
+        <div class="pt-2 flex flex-wrap justify-between items-center text-xs font-mono text-neutral-400 border-t border-white/10">
+          <span>ДАТА СЛЕДУЮЩЕЙ КОНСУЛЬТАЦИИ: 20 НОЯБРЯ 2026</span>
+          <span class="text-emerald-400">ПОДПИСЬ ЭКСПЕРТА: Д.М.Н. КАРПОВ А.В. (ЭЦП ВАЛИДНА)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 12. FAQ (АККОРДЕОН ЧАСТЫХ ВОПРОСОВ) -->
+  <!-- ====================================================== -->
+  <section class="max-w-4xl mx-auto px-6 sm:px-8 py-20 lg:py-28 border-b border-white/10">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#141721] border border-white/20 text-white font-mono text-xs tracking-widest uppercase mb-4">
+        <span>[ ВОПРОСЫ И ОТВЕТЫ ]</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-wild uppercase tracking-tight mb-4">
+        ЧАСТО ЗАДАВАЕМЫЕ <span class="gradient-text-animated font-black drop-shadow-sm">ВОПРОСЫ</span>
+      </h2>
+    </div>
+
+    <div class="space-y-4">
+      <div class="consult-card">
+        <button onclick="toggleFaq('faq-1')" class="w-full p-6 text-left flex justify-between items-center text-sm sm:text-base font-bold text-white uppercase font-wild">
+          <span>Обязательно ли сдавать анализы перед консультацией?</span>
+          <span id="faq-1-icon" class="text-emerald-400 text-lg font-mono">+</span>
+        </button>
+        <div id="faq-1" class="hidden px-6 pb-6 text-xs sm:text-sm text-neutral-300 leading-relaxed border-t border-white/5 pt-4">
+          Для формата PCC1 Start анализы не являются строго обязательными — мы разберем сам протокол, инструкцию и ответим на базовые вопросы. Однако для форматов «PCC1 + биомаркеры» и «Сопровождение» наличие свежих анализов (hs-CRP, биохимия крови, липидный профиль) позволяет составить максимально точный и безопасный персональный план.
+        </div>
+      </div>
+
+      <div class="consult-card">
+        <button onclick="toggleFaq('faq-2')" class="w-full p-6 text-left flex justify-between items-center text-sm sm:text-base font-bold text-white uppercase font-wild">
+          <span>Кто именно проводит онлайн-консультацию?</span>
+          <span id="faq-2-icon" class="text-emerald-400 text-lg font-mono">+</span>
+        </button>
+        <div id="faq-2" class="hidden px-6 pb-6 text-xs sm:text-sm text-neutral-300 leading-relaxed border-t border-white/5 pt-4">
+          Консультации проводят сертифицированные врачи превентивной и антивозрастной медицины, а также клинические нутрициологи научной команды LONVI BIOSCIENCES, прошедшие внутреннюю сертификацию по сенолитическим протоколам PCC1.
+        </div>
+      </div>
+
+      <div class="consult-card">
+        <button onclick="toggleFaq('faq-3')" class="w-full p-6 text-left flex justify-between items-center text-sm sm:text-base font-bold text-white uppercase font-wild">
+          <span>Безопасен ли протокол PCC1 при приеме обычных лекарств?</span>
+          <span id="faq-3-icon" class="text-emerald-400 text-lg font-mono">+</span>
+        </button>
+        <div id="faq-3" class="hidden px-6 pb-6 text-xs sm:text-sm text-neutral-300 leading-relaxed border-t border-white/5 pt-4">
+          Именно для оценки совместимости и проводится предварительная анкета. Врач сопоставляет назначенные вам лекарства с метаболизмом процианидинов, чтобы исключить конкуренцию на уровне ферментов цитохрома P450 и гарантировать безопасность курса.
+        </div>
+      </div>
+
+      <div class="consult-card">
+        <button onclick="toggleFaq('faq-4')" class="w-full p-6 text-left flex justify-between items-center text-sm sm:text-base font-bold text-white uppercase font-wild">
+          <span>Как сохраняются мои медицинские данные?</span>
+          <span id="faq-4-icon" class="text-emerald-400 text-lg font-mono">+</span>
+        </button>
+        <div id="faq-4" class="hidden px-6 pb-6 text-xs sm:text-sm text-neutral-300 leading-relaxed border-t border-white/5 pt-4">
+          Все загруженные выписки и анкеты хранятся в защищенном контуре в соответствии с ФЗ-152 о персональных данных. Доступ к документам имеет исключительно закрепленный за вами специалист.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 13. ДИСКЛЕЙМЕР (МЕДИЦИНСКИЙ И ЮРИДИЧЕСКИЙ) -->
+  <!-- ====================================================== -->
+  <section class="max-w-4xl mx-auto px-6 sm:px-8 py-12">
+    <div class="p-6 border border-white/10 bg-[#0C0E14] text-neutral-400 text-xs leading-relaxed">
+      <strong class="text-white block mb-2 font-mono uppercase text-[11px]">ОФИЦИАЛЬНЫЙ ДИСКЛЕЙМЕР LONVI BIOSCIENCES:</strong>
+      Информация, представленная на данной странице и озвучиваемая в рамках консультаций, носит сугубо ознакомительный характер и не предназначена для самодиагностики, самолечения или самостоятельной отмены назначений врача. Консультация по PCC1 и нутрицевтическим продуктам не заменяет квалифицированную медицинскую помощь. При наличии острых или хронических заболеваний, беременности, лактации, приёме сильнодействующих рецептурных лекарств, аллергических реакциях или изменении самочувствия необходимо обратиться к профильному лечащему врачу.
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- 14. СТАЦИОНАРНЫЙ И МОБИЛЬНЫЙ ФУТЕР + ЛИПКАЯ КНОПКА -->
+  <!-- ====================================================== -->
+  <footer class="border-t border-white/10 py-10 px-6 sm:px-8 text-center text-xs font-mono text-neutral-500">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
+      <div>© 2026 LONVI BIOSCIENCES. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</div>
+      <div class="flex gap-4">
+        <a href="https://lonvibio.com.ru/privacy" class="hover:text-white transition-colors">Политика конфиденциальности</a>
+        <a href="https://lonvibio.com.ru/terms" class="hover:text-white transition-colors">Пользовательское соглашение</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sm:hidden fixed bottom-0 left-0 w-full p-3 bg-[#0A0B0E]/95 backdrop-blur-md border-t border-white/20 z-40">
+    <a href="#consultation-form" class="block w-full py-3.5 bg-white text-black text-center font-mono font-bold text-xs uppercase tracking-widest shadow-xl">
+      ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+    </a>
+  </div>
+
+</div>
+
+<!-- JAVASCRIPT: ИНТЕРАКТИВ И АВТОСОХРАНЕНИЕ В LOCALSTORAGE -->
+<script>
+  function openPccTab(tabId) {
+    document.querySelectorAll('.pcc-tab-content').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    const target = document.getElementById(tabId);
+    if (target) target.classList.remove('hidden');
+    const btn = document.getElementById('btn-' + tabId);
+    if (btn) btn.classList.add('active');
+  }
+
+  function openCabinetTab(tabId) {
+    document.querySelectorAll('.cabinet-view-content').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.cabinet-tab-btn').forEach(el => el.classList.remove('active'));
+    const target = document.getElementById(tabId);
+    if (target) target.classList.remove('hidden');
+    const btn = document.getElementById('cab-btn-' + tabId.replace('cab-', ''));
+    if (btn) btn.classList.add('active');
+  }
+
+  function selectGoal(goalText) {
+    const select = document.getElementById('field-goal');
+    if (select) {
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].value.includes(goalText) || goalText.includes(select.options[i].value)) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+    }
+    document.getElementById('consultation-form').scrollIntoView({ behavior: 'smooth' });
+    saveDraft();
+  }
+
+  function selectFormat(formatName) {
+    const select = document.getElementById('field-format');
+    if (select) {
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].value.includes(formatName)) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+    }
+    document.getElementById('consultation-form').scrollIntoView({ behavior: 'smooth' });
+    saveDraft();
+  }
+
+  let currentStep = 1;
+  const totalSteps = 7;
+
+  function updateStepUI() {
+    for (let i = 1; i <= totalSteps; i++) {
+      const stepEl = document.getElementById('step-' + i);
+      if (stepEl) {
+        if (i === currentStep) stepEl.classList.remove('hidden');
+        else stepEl.classList.add('hidden');
+      }
+    }
+    const ind = document.getElementById('step-indicator-text');
+    if (ind) ind.innerText = 'ШАГ ' + currentStep + ' ИЗ ' + totalSteps;
+    const prevBtn = document.getElementById('prev-step-btn');
+    const nextBtn = document.getElementById('next-step-btn');
+    const submitBtn = document.getElementById('submit-form-btn');
+    if (prevBtn) prevBtn.classList.toggle('hidden', currentStep === 1);
+    if (nextBtn) nextBtn.classList.toggle('hidden', currentStep === totalSteps);
+    if (submitBtn) submitBtn.classList.toggle('hidden', currentStep !== totalSteps);
+  }
+
+  function navStep(delta) {
+    const next = currentStep + delta;
+    if (next >= 1 && next <= totalSteps) {
+      currentStep = next;
+      updateStepUI();
+      saveDraft();
+    }
+  }
+
+  function handleFileSelect(input) {
+    const preview = document.getElementById('file-list-preview');
+    if (input.files && input.files.length > 0) {
+      const names = Array.from(input.files).map(f => f.name).join(', ');
+      preview.innerText = '✓ Выбрано файлов (' + input.files.length + '): ' + names;
+    }
+  }
+
+  const STORAGE_KEY = 'lonvi_consultation_draft';
+
+  function saveDraft() {
+    try {
+      const data = {
+        step: currentStep,
+        goal: document.getElementById('field-goal')?.value || '',
+        format: document.getElementById('field-format')?.value || '',
+        question: document.getElementById('field-main-question')?.value || '',
+        pccDate: document.getElementById('field-pcc1-date')?.value || '',
+        pccVer: document.getElementById('field-pcc1-version')?.value || '',
+        meds: document.getElementById('field-meds')?.value || '',
+        diagnoses: document.getElementById('field-diagnoses')?.value || '',
+        allergies: document.getElementById('field-allergies')?.value || '',
+        pregnancy: document.getElementById('field-pregnancy')?.value || '',
+        sleep: document.getElementById('field-sleep')?.value || '',
+        diet: document.getElementById('field-diet')?.value || '',
+        activity: document.getElementById('field-activity')?.value || '',
+        stress: document.getElementById('field-stress')?.value || '',
+        labInfo: document.getElementById('field-lab-info')?.value || '',
+        name: document.getElementById('field-name')?.value || '',
+        phone: document.getElementById('field-phone')?.value || '',
+        telegram: document.getElementById('field-telegram')?.value || '',
+        email: document.getElementById('field-email')?.value || '',
+        city: document.getElementById('field-city')?.value || '',
+        time: document.getElementById('field-time')?.value || ''
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      const status = document.getElementById('draft-status');
+      if (status) status.innerText = 'Черновик сохранен (' + new Date().toLocaleTimeString().slice(0, 5) + ')';
+    } catch(e) {}
+  }
+
+  function loadDraft() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const d = JSON.parse(saved);
+        if (d.goal && document.getElementById('field-goal')) document.getElementById('field-goal').value = d.goal;
+        if (d.format && document.getElementById('field-format')) document.getElementById('field-format').value = d.format;
+        if (d.question && document.getElementById('field-main-question')) document.getElementById('field-main-question').value = d.question;
+        if (d.pccDate && document.getElementById('field-pcc1-date')) document.getElementById('field-pcc1-date').value = d.pccDate;
+        if (d.pccVer && document.getElementById('field-pcc1-version')) document.getElementById('field-pcc1-version').value = d.pccVer;
+        if (d.meds && document.getElementById('field-meds')) document.getElementById('field-meds').value = d.meds;
+        if (d.diagnoses && document.getElementById('field-diagnoses')) document.getElementById('field-diagnoses').value = d.diagnoses;
+        if (d.allergies && document.getElementById('field-allergies')) document.getElementById('field-allergies').value = d.allergies;
+        if (d.pregnancy && document.getElementById('field-pregnancy')) document.getElementById('field-pregnancy').value = d.pregnancy;
+        if (d.sleep && document.getElementById('field-sleep')) document.getElementById('field-sleep').value = d.sleep;
+        if (d.diet && document.getElementById('field-diet')) document.getElementById('field-diet').value = d.diet;
+        if (d.activity && document.getElementById('field-activity')) document.getElementById('field-activity').value = d.activity;
+        if (d.stress && document.getElementById('field-stress')) document.getElementById('field-stress').value = d.stress;
+        if (d.labInfo && document.getElementById('field-lab-info')) document.getElementById('field-lab-info').value = d.labInfo;
+        if (d.name && document.getElementById('field-name')) document.getElementById('field-name').value = d.name;
+        if (d.phone && document.getElementById('field-phone')) document.getElementById('field-phone').value = d.phone;
+        if (d.telegram && document.getElementById('field-telegram')) document.getElementById('field-telegram').value = d.telegram;
+        if (d.email && document.getElementById('field-email')) document.getElementById('field-email').value = d.email;
+        if (d.city && document.getElementById('field-city')) document.getElementById('field-city').value = d.city;
+        if (d.time && document.getElementById('field-time')) document.getElementById('field-time').value = d.time;
+        if (d.step && d.step > 1 && d.step <= totalSteps) {
+          currentStep = d.step;
+          updateStepUI();
+        }
+      }
+    } catch(e) {}
+  }
+
+  document.querySelectorAll('#lonvi-multistep-form input, #lonvi-multistep-form select, #lonvi-multistep-form textarea').forEach(el => {
+    el.addEventListener('input', saveDraft);
+    el.addEventListener('change', saveDraft);
+  });
+
+  function submitConsultation() {
+    const name = document.getElementById('field-name')?.value;
+    const phone = document.getElementById('field-phone')?.value;
+    if (!name || !phone) {
+      alert('Пожалуйста, заполните обязательные поля: имя и телефон на шаге 6.');
+      currentStep = 6;
+      updateStepUI();
+      return;
+    }
+    const overlay = document.getElementById('form-success-overlay');
+    if (overlay) overlay.classList.remove('hidden');
+    localStorage.removeItem(STORAGE_KEY);
+  }
+
+  function toggleFaq(id) {
+    const el = document.getElementById(id);
+    const icon = document.getElementById(id + '-icon');
+    if (el) {
+      const isHidden = el.classList.contains('hidden');
+      el.classList.toggle('hidden', !isHidden);
+      if (icon) icon.innerText = isHidden ? '−' : '+';
+    }
+  }
+
+  function downloadPdfMock() {
+    alert('Формирование защищенного PDF протокола #LN-8942... Файл готов к отправке на указанный вами Email.');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    loadDraft();
+  });
+</script>
+
